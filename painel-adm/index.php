@@ -9,15 +9,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- CSS Boostrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
-    <link rel="stylesheet" href=".../css/painel.css">
+    <link rel="stylesheet" href="../css/painel.css">
     <link rel="shortcut icon" href="../img/favicon/favicon.ico" type="image/x-icon">
     <link rel="icon" href="../img/favicon/favicon.ico" type="image/x-icon">  
     
 </head>
 <body>
+<nav class="navbar bg-light">
+<div class="col-md-12">
+    <img  class="float-start" src="../img/logo-horizontal.png">
+    <li class="float-end nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          Administrador - Gustavo Oliveira
+          </a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="../index.php">Sair</a>
+          </div>
+        </li>
+</div>
+</nav>
+
     <div class="text-center">
         <h2>Pagína em Construção</h2>
-
     </div>
 
 <!-- JavaScript Bundle with Popper -->
