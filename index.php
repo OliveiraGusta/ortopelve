@@ -39,11 +39,11 @@
             </div>
 
             <div class="clearfix">
-                <label class="pull-left checkbox-inline">
+                <label class="float-start checkbox-inline">
                 <input type="checkbox">
                 Lembrar-me
             </label>
-            <a href="#" class="pull-right">Recuperar Senha</a>
+            <a href="#" class="float-end">Recuperar Senha</a>
             </div>
 
         </form> 
