@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="../css/login.css">
     <link rel="shortcut icon" href="../img/favicon/favicon.ico" type="image/x-icon">
     <link rel="icon" href="../img/favicon/favicon.ico" type="image/x-icon">  
+    <script src="https://kit.fontawesome.com/fdc765080b.js" crossorigin="anonymous"></script>
     
 </head>
 <body>
@@ -36,8 +37,8 @@
             </div>
 
             <div class="form-group d-grid gap-2">
-                <button class="btn btn-primary" type="submit" name="btn-login"> 
-                    Entrar </button>
+                <div class="btn btn-primary" type="submit" name="btn-login"> 
+                    Entrar </div>
             </div>
 
             <div class="clearfix">

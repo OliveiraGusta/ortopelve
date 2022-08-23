@@ -12,6 +12,8 @@
     <link rel="stylesheet" href="../css/login.css">
     <link rel="shortcut icon" href="../img/favicon/favicon.ico" type="image/x-icon">
     <link rel="icon" href="../img/favicon/favicon.ico" type="image/x-icon">  
+    <script src="https://kit.fontawesome.com/fdc765080b.js" crossorigin="anonymous"></script>
+
     
 </head>
 <body>

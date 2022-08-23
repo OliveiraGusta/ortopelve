@@ -1,5 +1,5 @@
 <?php
-$notificacoes = 3;
+$notificacoes = 1;
 ?>
 
 <!DOCTYPE html>
@@ -18,6 +18,7 @@ $notificacoes = 3;
     <link rel="stylesheet" href="../css/painel.css">
     <link rel="shortcut icon" href="../img/favicon/favicon.ico" type="image/x-icon">
     <link rel="icon" href="../img/favicon/favicon.ico" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/fdc765080b.js" crossorigin="anonymous"></script>
 
 </head>
 
@@ -39,38 +40,56 @@ $notificacoes = 3;
 
 
     <div class="container-fluid mt-4">
-        <div class="d-flex align-items-start mb-4">
+        <div class="d-flex align-items-start center mb-4">
             <div class="nav flex-column nav-pills me-5" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+
                 <div class="nav-link active" id="v-pills-home-tab" data-bs-toggle="pill" data-bs-target="#v-pills-home"
-                    type="button" role="tab" aria-controls="v-pills-home" aria-selected="true">Home</div>
-                <div class="nav-link" id="v-pills-profile-tab" data-bs-toggle="pill" data-bs-target="#v-pills-profile"
-                    type="button" role="tab" aria-controls="v-pills-profile" aria-selected="false">Lista de Paciente
+                    type="button" role="tab" aria-controls="v-pills-home" aria-selected="true"><i
+                        class="fa-solid fa-hospital pacientes"></i> Home</div>
+                        
+                    
+
+                <div class="nav-link" id="v-pills-pacientes-tab" data-bs-toggle="pill"
+                    data-bs-target="#v-pills-pacientes" type="button" role="tab" aria-controls="v-pills-pacientes"
+                    aria-selected="false"><i class="fa-solid fa-syringe pacientes"></i> Lista de Paciente
                 </div>
-                <div class="nav-link" id="v-pills-disabled-tab" data-bs-toggle="pill" data-bs-target="#v-pills-disabled"
-                    type="button" role="tab" aria-controls="v-pills-disabled" aria-selected="false" disabled>Controle
+
+
+                <div class="nav-link" id="v-pills-financeiro-tab" data-bs-toggle="pill"
+                    data-bs-target="#v-pills-financeiro" type="button" role="tab" aria-controls="v-pills-financeiro"
+                    aria-selected="false"> <i class="fa-solid fa-money-check-dollar pacientes"></i> Controle
                     Financeiro</div>
                 <?php if($notificacoes > 0) {?>
-                <div class="nav-link" id="v-pills-messages-tab" data-bs-toggle="pill" data-bs-target="#v-pills-messages"
-                    type="button" role="tab" aria-controls="v-pills-messages" aria-selected="false">
-                    Mensagens <span class="badge text-bg-dark"> <?php echo  $notificacoes;?>
-                        </span>
+                <div class="nav-link" id="v-pills-notificacao-tab" data-bs-toggle="pill"
+                    data-bs-target="#v-pills-notificacao" type="button" role="tab" aria-controls="v-pills-notificacao"
+                    aria-selected="false">
+                    <i class="fa-solid fa-bell pacientes"></i> Mensagens <span class="badge text-bg-dark">
+                        <?php echo  $notificacoes;?>
+                    </span>
                 </div>
                 <?php } ?>
 
             </div>
 
             <div class="tab-content" id="v-pills-tabContent">
+
                 <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel"
                     aria-labelledby="v-pills-home-tab" tabindex="0"> <?php 
             include_once("home.php");
             ?></div>
-                <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab"
-                    tabindex="0">...</div>
-                <div class="tab-pane fade" id="v-pills-disabled" role="tabpanel" aria-labelledby="v-pills-disabled-tab"
-                    tabindex="0">...</div>
-                <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab"
-                    tabindex="0">Notificacoes</div>
 
+
+                
+
+                <div class="tab-pane fade" id="v-pills-pacientes" role="tabpanel"
+                    aria-labelledby="v-pills-pacientes-tab" tabindex="0"><?php 
+            include_once("medicos.php");?></div>
+
+                <div class="tab-pane fade" id="v-pills-financeiro" role="tabpanel"
+                    aria-labelledby="v-pills-financeiro-tab" tabindex="0">Teste - Financeiro</div>
+
+                <div class="tab-pane fade" id="v-pills-notificacao" role="tabpanel"
+                    aria-labelledby="v-pills-notificacao-tab" tabindex="0">Teste - Notificacoes</div>
 
             </div>
         </div>
