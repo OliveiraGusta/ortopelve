@@ -123,3 +123,8 @@ body {
     text-align: center !important;
     font-size:15px;
 }
+
+/**/
+.centerItens{
+    margin: 1em auto !important;
+}

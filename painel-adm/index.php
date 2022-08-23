@@ -71,7 +71,7 @@ $notificacoes = 1;
 
             </div>
 
-            <div class="tab-content" id="v-pills-tabContent">
+            <div class="tab-content centerItens" id="v-pills-tabContent">
 
                 <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel"
                     aria-labelledby="v-pills-home-tab" tabindex="0"> <?php 
