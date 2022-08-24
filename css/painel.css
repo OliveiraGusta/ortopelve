@@ -44,7 +44,7 @@ body{
 }
 
 .nav a{
-	color:#071e51;
+	color:var(--cor-roxo-principal)1;
 	font-size:14px;
 }
 

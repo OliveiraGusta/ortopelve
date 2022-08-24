@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-	<title>Ortopelve</title>
+	<title>Ortopelve Login</title>
 
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -21,7 +21,7 @@
 <body>
 
 	<div class="login-form">
-		<form action="" method="post">
+		<form action="authenticar.php" method="post">
 			<div class="logo">
 				<img src="img/logo.jpg" alt="Ortopelve">
 			</div>
