@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-	<title>SYS MEDICAL</title>
+	<title>Ortopelve</title>
 
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -23,11 +23,14 @@
 	<div class="login-form">
 		<form action="" method="post">
 			<div class="logo">
-				<img src="img/logo.jpg" alt="Sys Medical">
+				<img src="img/logo.jpg" alt="Ortopelve">
 			</div>
-			<h2 class="text-center">
+			<h2 class="text-center mb-0">
 				Entre no Sistema
 			</h2>
+			<h3 class="text-center mb-4">
+				Fisioterapeuta
+			</h3>
 			<div class="form-group">
 				<input class="form-control" type="email" name="usuario" placeholder="Insira seu Email!" required>
 			</div>

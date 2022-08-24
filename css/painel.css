@@ -1,9 +1,23 @@
+/*CORES PADRAO*/
+:root{
+	--cor-branco-principal:#fcfcfc;
+	--cor-branco-secundario:#e4ddf0;
+
+	--cor-lilas-principal:#d4cae9;
+	--cor-lilas-secundario:#c2acf3;
+	
+	--cor-roxo-principal:#422680;
+	
+	--cor-cinza-principal:#e8e8e8;
+}
+
+
 body{
-	background-color:#fcfcfc;
+	background-color:var(--cor-branco-principal);
 }
 
 .navbar{
-	background-color:#e8e8e8 !important;
+	background-color:var(--cor-cinza-principal) !important;
 }
 
 .navbar img{
@@ -15,18 +29,18 @@ body{
 }
 
 .navbar a{
-	color:#071e51;
+	color:var(--cor-roxo-principal);
 	font-size:15px;
 }
 
 .navbar a:hover{
-	color:#244181;
+	color:var(--cor-lilas-principal);
 	
 }
 
 
 .nav{
-	background-color:#f4f4f4 !important;
+	background-color:var(--cor-branco-principal)!important;
 }
 
 .nav a{
@@ -35,7 +49,7 @@ body{
 }
 
 .nav .active{
-	background-color:#8d2525 !important;
+	background-color:var(--cor-roxo-principal) !important;
 }
 
 
@@ -82,24 +96,24 @@ body{
 
 
 .badge{
-	background-color:#4A4A4A !important;
-	color:#FFF;
+	background-color:var(--cor-cinza-principal) !important;
+	color: var(--cor-branco-principal);
 
 }
 
 
 .nav .active .badge{
-	background-color:#FFF !important;
-	color:#2C2B2B !important;
+	background-color:var(--cor-branco-principal) !important;
+	color:var(--cor-cinza-principal)  !important;
 }
 
 
 .btn-secondary{
-	background-color:#878787 !important;
+	background-color:var(--cor-lilas-principal)  !important;
 }
 
 .btn-secondary:hover{
-	background-color:#616161 !important;
+	background-color:var(--cor-roxo-principal)  !important;
 }
 
 

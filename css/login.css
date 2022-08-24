@@ -1,6 +1,21 @@
+/*CORES PADRAO*/
+:root{
+		--cor-branco-principal:#fcfcfc;
+		--cor-branco-secundario:#e4ddf0;
+
+		--cor-lilas-principal:#d4cae9;
+		--cor-lilas-secundario:#c2acf3;
+
+		--cor-roxo-principal:#422680;
+
+		--cor-cinza-principal:#e8e8e8;
+}
+
+
+
+
 body{
-	color:#fff;
-	background-color:#c8c8c8;
+	background-color: var(--cor-lilas-principal);
 }
 
 .login-form{
@@ -11,11 +26,11 @@ body{
 
 
 .login-form form{
-	color:#7a7a7a;
+	color:var(--cor-roxo-principal);
 	border-radius:2px;
 	margin-bottom:15px;
 	font-size:13px;
-	background:#ececec;
+	background:var(--cor-branco-principal);
 	padding:30px;
 	position:relative;
 	box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
@@ -48,14 +63,14 @@ body{
 
 .form-control{
 	min-height:40px;
-	background:#fff;
+	background: var(--cor-branco-secundario);
 	box-shadow:none !important;
-	border-color:#e3e3e3;
+	border-color:var(--cor-cinza-principal);
 }
 
 
 .form-control:focus{
-	border-color:#4073ac;
+	border-color:var(--cor-roxo-principal);
 }
 
 .form-control, .btn{
@@ -65,14 +80,14 @@ body{
 .login-form .btn{
 	font-size:16px;
 	
-	background:#4073ac;
+	background:var(--cor-roxo-principal);
 	border:none;
 	margin-bottom:20px;
 }
 
 
 .login-form .btn:hover, .login-form .btn:focus{
-	background:#426286;
+	background:var(--cor-roxo-principal);
 	outline: none !important;
 	
 }
@@ -84,7 +99,7 @@ body{
 
 
 .login-form form a{
-	color:#7a7a7a;
+	color:var(--cor-roxo-principal);
 	text-decoration:none;
 	
 }

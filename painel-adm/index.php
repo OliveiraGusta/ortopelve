@@ -57,7 +57,7 @@ if(@$_GET['acao'] == $item1){
 			<img class="float-left" src="../img/logo-painel.png">
 			<li class="float-right nav-item dropdown">
 				<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-					Administrador - Hugo Vasconcelos
+					Administrador - Gustavo Oliveira
 				</a>
 				<div class="dropdown-menu" aria-labelledby="navbarDropdown">
 					<a class="dropdown-item" href="#">Sair</a>
