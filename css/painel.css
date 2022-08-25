@@ -16,6 +16,10 @@ body{
 	background-color:var(--cor-branco-principal);
 }
 
+.colorRoxo{
+	color: var(--cor-roxo-principal) !important;
+	}
+
 .navbar{
 	background-color:var(--cor-cinza-principal) !important;
 }
