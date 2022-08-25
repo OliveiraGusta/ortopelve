@@ -1,6 +1,6 @@
-<?php
+<?php 
     require_once("conexao.php");
-    @session_start();
+   @session_start();
 
 
 if(empty($_POST['usuario']) || empty($_POST['senha'])){
@@ -21,7 +21,7 @@ $linhas = count($dados);
 
 if($linhas > 0){
     $_SESSION['nome_usuario'] = $dados[0]['nome'];
-    $_SESSION['nome_usuario'] = $dados[0]['nivel'];
+    $_SESSION['nivel'] = $dados[0]['nivel'];
     header("location:painel-adm/index.php");
 }else{
     echo "

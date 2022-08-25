@@ -2,7 +2,7 @@
 
  
 <div class="area_cards">
-    <h3>Olá Dr. Gustavo</h3>
+    <h3>Olá Dr. <?php echo $_SESSION['nome_usuario'] ?></h3>
 	<div class="row">
 
 	<div class="col-lg-4 col-md-6 col-sm-6 mb-4">

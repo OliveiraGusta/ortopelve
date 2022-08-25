@@ -1,5 +1,5 @@
 <?php 	
-
+@session_start(); 
 $notificacoes = 3;
 
 //VARIÁVEIS DOS MENUS
@@ -58,10 +58,10 @@ if(@$_GET['acao'] == $item1){
 			<img class="float-left" src="../img/logo-painel.png">
 			<li class="float-right nav-item dropdown">
 				<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-					Administrador - Gustavo Oliveira
+					Administrador - <?php echo $_SESSION['nome_usuario'] ?>
 				</a>
 				<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-					<a class="dropdown-item" href="../index.php">Sair</a>
+					<a class="dropdown-item" href="../logout.php">Sair</a>
 				</div>
 			</li>
 
