@@ -1,5 +1,12 @@
 <?php 	
+
+//Verificacoes para o login
 @session_start(); 
+if(!isset($_SESSION['nome_usuario']) || $_SESSION['nivel'] != 'admin'){
+	header("location:../index.php");
+}
+
+
 $notificacoes = 3;
 
 //VARIÁVEIS DOS MENUS

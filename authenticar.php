@@ -8,7 +8,7 @@ if(empty($_POST['usuario']) || empty($_POST['senha'])){
 }
 
 $usuario = $_POST['usuario'];
-$senha = $_POST['senha'];
+$senha = md5($_POST['senha']);
 
 $res = $pdo->prepare ("SELECT * FROM usuarios WHERE usuario = :usuario AND senha = :senha ");
 
@@ -22,7 +22,22 @@ $linhas = count($dados);
 if($linhas > 0){
     $_SESSION['nome_usuario'] = $dados[0]['nome'];
     $_SESSION['nivel'] = $dados[0]['nivel'];
-    header("location:painel-adm/index.php");
+
+
+    if($_SESSION['nivel'] == 'admin'){
+        header("location:painel-adm/index.php");
+    }
+
+    if($_SESSION['nivel'] == 'medico'){
+        header("location:painel-adm/index.php");
+    }
+
+    if($_SESSION['nivel'] == 'paciente'){
+        header("location:painel-adm/index.php");
+    }
+
+
+
 }else{
     echo "
     <script language='javascript'>window.alert('Desculpe, não encontramos uma conta com essas credenciais. Tente novamente ou crie um nova conta.')</script>";
