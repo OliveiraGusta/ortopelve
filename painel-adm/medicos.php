@@ -24,7 +24,7 @@
 
 		<div class="float-right mr-4">
 			<form class="form-inline my-2 my-lg-0">
-				<input class="form-control form-control-sm mr-sm-2" type="search" placeholder="Nome ou CRM" aria-label="Search" name="txtbuscar">
+				<input class="form-control form-control-sm mr-sm-2" type="search" placeholder="CREFITO ou CRM" aria-label="Search" name="txtbuscar">
 				<button class="btn btn-outline-secondary btn-sm my-2 my-sm-0" type="submit" name="<?php echo $item2; ?>"><i class="fas fa-search"></i></button>
 			</form>
 		</div>
@@ -40,7 +40,7 @@
 		<tr>
 			<th scope="col">Nome</th>
 			<th scope="col">Especialidade</th>
-			<th scope="col">CRM</th>
+			<th scope="col">CRM/Crefito</th>
 			<th scope="col">Telefone</th>
 			<th scope="col">Ações</th>
 		</tr>

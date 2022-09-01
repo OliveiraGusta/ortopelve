@@ -42,7 +42,6 @@ if($linhas > 0){
     echo "
     <script language='javascript'>window.alert('Desculpe, não encontramos uma conta com essas credenciais. Tente novamente ou crie um nova conta.')</script>";
     echo " <script language='javascript'>window.location='index.php'</script>";
-    
 
 }
 
