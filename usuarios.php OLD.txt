@@ -17,15 +17,9 @@ if(isset($_GET[$item4]) and $_GET['txtbuscar'] != ''){
 }	
 		?>
 
-
-<?php
-$editar = '';
-
-?>
 <div class="row botao-novo">
     <div class="col-md-12">
-        <button id="btn-novo" data-toggle="modal" data-target="#modal" type="button" class="btn btn-secondary">Novo
-            Usuarios</button>
+        <button data-toggle="modal" data-target="#modal" type="button" class="btn btn-secondary">Novo Usuarios</button>
     </div>
 </div>
 
@@ -93,8 +87,7 @@ $editar = '';
             <td>
                 <a href="index.php?acao=usuarios&funcao=editar&id=<?php echo $id ?>"><i
                         class="fas fa-edit text-info"></i></a>
-                <a href="index.php?acao=usuarios&funcao=excluir&id=<?php echo $id ?>"><i
-                        class="far fa-trash-alt text-danger"></i></a>
+                <a href="index.php?acao=usuarios&funcao=excluir&id=<?php echo $id ?>"><i class="far fa-trash-alt text-danger"></i></a>
             </td>
         </tr>
         <?php
@@ -208,24 +201,62 @@ $editar = '';
         $email_usuario_rec = $dados[0]['usuario'];
 		?>
 
-<?php
-     $editar = 'sim';
-             
-?>
-<script>
-$('#btn-novo').click();
-</script>
+<!-- Modal Editar -->
+<div class="modal fade" id="modalEditar" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Cadastro de Usuarios</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+
+
+                <form method="post">
+
+                    <div class="form-group">
+                        <label for="exampleFormControlInput1">Nome</label>
+                        <input type="text" name="nome" class="form-control" id="" placeholder="Insira o Nome"
+                            value="<?php echo "$nome_usuario" ?>">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="exampleFormControlInput1">Email</label>
+                        <input type="email" name="usuario" class="form-control" id="" placeholder="Insira o Email"
+                            value="<?php echo "$email_usuario" ?>">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="exampleFormControlInput1">Senha</label>
+                        <input type="text" name="senha" class="form-control" id="" placeholder="Insira a senha"
+                            value="<?php echo "$senha_usuario" ?>">
+                    </div>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+
+                <button type="submit" name="btn-editar" class="btn btn-primary">Salvar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
 
 <?php 
-	if(@$_POST['btn-editar']){
-		$nome = $_POST['nome'];
-		$usuario = $_POST['usuario'];
-		$senha = $_POST['senha'];
-		$senha_cript = md5($senha);
-
-		//VERIFICAR SE O USUARIO JÁ ESTA CADASTRADO SOMENTE SE FOR TROCADO O USUARIO
-        if($email_usuario_rec != $usuario){   
-		    $res_c = $pdo->query ("SELECT * FROM usuarios WHERE usuario = '$usuario'");
+		if(@$_POST['btn-editar']){
+			$nome = $_POST['nome'];
+			$usuario = $_POST['usuario'];
+			$senha = $_POST['senha'];
+			$senha_cript = md5($senha);
+	
+	
+			//VERIFICAR SE O USUARIO JÁ ESTA CADASTRADO SOMENTE SE FOR TROCADO O USUARIO
+            if($email_usuario_rec != $usuario){   
+			$res_c = $pdo->query ("SELECT * FROM usuarios WHERE usuario = '$usuario'");
 	
 			$dados_c = $res_c->fetchAll(PDO::FETCH_ASSOC);
 			$linhas = count($dados_c);
@@ -260,6 +291,10 @@ $('#btn-novo').click();
     }   
 ?>
 
+<!-- Chamar Modal Editar -->
+<script>
+$("#modalEditar").modal("show");
+</script>
 
 <!--MASCARAS -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.11/jquery.mask.min.js"></script>
