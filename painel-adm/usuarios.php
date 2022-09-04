@@ -85,8 +85,9 @@ if(isset($_GET[$item4]) and $_GET['txtbuscar'] != ''){
             <td><?php echo $senha_original ?></td>
             <td><?php echo $nivel ?></td>
             <td>
-                <a href="index.php?acao=usuarios&funcao=editar&id=<?php echo $id ?>"><i class="fas fa-edit text-info"></i></a>
-                <a href="#"><i class="far fa-trash-alt text-danger"></i></a>
+                <a href="index.php?acao=usuarios&funcao=editar&id=<?php echo $id ?>"><i
+                        class="fas fa-edit text-info"></i></a>
+                <a href="index.php?acao=usuarios&funcao=excluir&id=<?php echo $id ?>"><i class="far fa-trash-alt text-danger"></i></a>
             </td>
         </tr>
         <?php
@@ -196,11 +197,13 @@ if(isset($_GET[$item4]) and $_GET['txtbuscar'] != ''){
 		$dados = $res->fetchAll(PDO::FETCH_ASSOC);
 		$nome_usuario = $dados[0]['nome'];
 		$email_usuario = $dados[0]['usuario'];
-		$senha_usuario = $dados[0]['senha'];
+		$senha_usuario = $dados[0]['senha_original'];
+        $email_usuario_rec = $dados[0]['usuario'];
 		?>
- 
+
 <!-- Modal Editar -->
-<div class="modal fade" id="modalEditar" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="modalEditar" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
     <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">
             <div class="modal-header">
@@ -216,17 +219,20 @@ if(isset($_GET[$item4]) and $_GET['txtbuscar'] != ''){
 
                     <div class="form-group">
                         <label for="exampleFormControlInput1">Nome</label>
-                        <input type="text" name="nome" class="form-control" id="" placeholder="Insira o Nome" value="<?php echo "$nome_usuario" ?>">
+                        <input type="text" name="nome" class="form-control" id="" placeholder="Insira o Nome"
+                            value="<?php echo "$nome_usuario" ?>">
                     </div>
 
                     <div class="form-group">
                         <label for="exampleFormControlInput1">Email</label>
-                        <input type="email" name="usuario" class="form-control" id="" placeholder="Insira o Email" value="<?php echo "$email_usuario" ?>">
+                        <input type="email" name="usuario" class="form-control" id="" placeholder="Insira o Email"
+                            value="<?php echo "$email_usuario" ?>">
                     </div>
 
                     <div class="form-group">
                         <label for="exampleFormControlInput1">Senha</label>
-                        <input type="text" name="senha" class="form-control" id="" placeholder="Insira a senha" value="<?php echo "$senha" ?>">
+                        <input type="text" name="senha" class="form-control" id="" placeholder="Insira a senha"
+                            value="<?php echo "$senha_usuario" ?>">
                     </div>
 
             </div>
@@ -240,46 +246,55 @@ if(isset($_GET[$item4]) and $_GET['txtbuscar'] != ''){
     </div>
 </div>
 
-	<?php 
-		if(isset($_POST['btn-editar'])){
+<?php 
+		if(@$_POST['btn-editar']){
 			$nome = $_POST['nome'];
 			$usuario = $_POST['usuario'];
-			$senha = $_POST['senha_original'];
+			$senha = $_POST['senha'];
 			$senha_cript = md5($senha);
 	
 	
-			//VERIFICAR SE O USUARIO JÁ ESTA CADASTRADO
+			//VERIFICAR SE O USUARIO JÁ ESTA CADASTRADO SOMENTE SE FOR TROCADO O USUARIO
+            if($email_usuario_rec != $usuario){   
 			$res_c = $pdo->query ("SELECT * FROM usuarios WHERE usuario = '$usuario'");
 	
 			$dados_c = $res_c->fetchAll(PDO::FETCH_ASSOC);
 			$linhas = count($dados_c);
-	
-			if($linhas == 0){
-				$res = $pdo->prepare ("UPDATE usuarios SET nome = :nome, usuario = :usuario. senha = :senha_cript, senha_original = :senha WHERE id = :id");
+	 
+			if($linhas != 0){
+				echo "<script language='javascript'>window.alert('Usuario já cadastrado')</script>";
+                exit();
+			}
+        }
+			$res = $pdo->prepare ("UPDATE usuarios SET nome = :nome, usuario = :usuario, senha = :senha_cript, senha_original = :senha WHERE id = :id");
 	
 				$res->bindValue(":nome", $nome);  
 				$res->bindValue(":usuario", $usuario);  
-				$res->bindValue(":senha", $senha_cript);  
-				$res->bindValue(":senha_original", $senha);  
+				$res->bindValue(":senha", $senha);  
+				$res->bindValue(":senha_cript", $senha_cript);  
 				$res->bindValue(":id", $id_usuario);
 				$res->execute();
 	
-				echo "<script language='javascript'>window.alert('Registro Inserido')</script>";
+				echo "<script language='javascript'>window.alert('Registro Atualizado')</script>";
 				echo "<script language='javascript'>window.location='index.php?acao=usuarios'</script>"; 
-			}
-			
-			else{
-				echo "
-		<script language='javascript'>window.alert('Usuario já cadastrado')</script>";
-		
-			}
 		} 
 	?>
-	<?php } ?>
+<?php } ?>
 
+<!--Código do Botão EXCLUIR -->
+<?php
+	if(@$_GET['funcao'] == 'excluir'){
+		$id_usuario = $_GET['id'];
+        $res = $pdo->query ("DELETE FROM usuarios WHERE id = '$id_usuario'");
+        echo "<script language='javascript'>window.alert('Registro Excluido')</script>";
+				echo "<script language='javascript'>window.location='index.php?acao=usuarios'</script>"; 
+    }   
+?>
 
 <!-- Chamar Modal Editar -->
-<script>$("#modalEditar").modal("show");</script>
+<script>
+$("#modalEditar").modal("show");
+</script>
 
 <!--MASCARAS -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.11/jquery.mask.min.js"></script>
