@@ -1,89 +1,232 @@
  
+<?php 
 
- 
+
+$res_1 = $pdo->query("SELECT * from medicos ");
+$dados_1 = $res_1->fetchAll(PDO::FETCH_ASSOC);
+$valor_1 = count($dados_1);
+
+
+//TOTALIZAR AS MOVIMENTAÇÕES
+$mes_atual = Date('m');
+$ano_atual = Date('Y');
+$data_inicial = $ano_atual.'-'.$mes_atual.'-01';
+
+
+$res = $pdo->query("SELECT * from movimentacoes where data >= '$data_inicial' and data <= curDate()");
+
+$dados = $res->fetchAll(PDO::FETCH_ASSOC);
+
+$total_entradas = 0;
+$total_saidas = 0;
+
+for ($i=0; $i < count($dados); $i++) { 
+	foreach ($dados[$i] as $key => $value) {
+	}
+
+	$id = $dados[$i]['id'];	
+	$tipo = $dados[$i]['tipo'];
+	$valor = $dados[$i]['valor'];
+	
+
+	if($tipo == 'Entrada'){
+		@$total_entradas = $total_entradas + $valor;
+	}else{
+		@$total_saidas = $total_saidas + $valor;
+	}
+
+}
+
+@$total = @$total_entradas - @$total_saidas;
+if(@$total >= 0){
+	$classe_valor = 'text-success';
+}else{
+	$classe_valor = 'text-danger';
+}
+
+$total = number_format($total, 2, ',', '.');
+$total_entradas = number_format($total_entradas, 2, ',', '.');
+$total_saidas = number_format($total_saidas, 2, ',', '.');
+
+
+$res_3 = $pdo->query("SELECT * from consultas where status = 'Finalizada' and (data >= '$data_inicial' and data <= curDate() ) ");
+$dados_3 = $res_3->fetchAll(PDO::FETCH_ASSOC);
+$valor_3 = count($dados_3);
+
+
+$res_4 = $pdo->query("SELECT * from funcionarios ");
+$dados_4 = $res_4->fetchAll(PDO::FETCH_ASSOC);
+$valor_4 = count($dados_4);
+
+
+$res_6 = $pdo->query("SELECT * from consultas where pgto_confirmado != 'Sim' ");
+$dados_6 = $res_6->fetchAll(PDO::FETCH_ASSOC);
+$valor_6 = count($dados_6);
+
+ ?>
+
+
 <div class="area_cards">
-    <h3>Olá Dr. <?php echo $_SESSION['nome_usuario'] ?></h3>
 	<div class="row">
 
-	<div class="col-lg-4 col-md-6 col-sm-6 mb-4">
-             <div class="card card-stats">
-                 <div class="card-body ">
-                     <div class="row">
-                         <div class="col-5 col-md-4">
-                             <div class="icone-card text-center icon-warning">
-                                 <span class="colorRoxo">
-                                     <i class="fa-solid fa-money-bill mr-1"></i>
-                                 </span>
-                             </div>
-                         </div>
-                         <div class="col-7 col-md-8">
-                             <div class="numbers">
+		<div class="col-sm-12 col-lg-4 col-md-6 col-sm-6 mb-4">
+			<div class="card card-stats">
+				<div class="card-body ">
+					<div class="row">
+						<div class="col-5 col-md-4">
+							<div class="icone-card text-center text-info">
+								<i class="fas fa-user-md"></i>
+							</div>
+						</div>
+						<div class="col-7 col-md-8">
+							<div class="numbers">
+								<p class="titulo-card">Total de Profissionais </p>
+								<p class="subtitulo-card"><?php echo $valor_1 ?><p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="card-footer rodape-card">
+						Total de Profissionais Cadastrados
+					</div>
 
-                                 <p class="titulo-card">Balanço semanal</p>
-                                 <p class="subtitulo-card">R$00
+				</div>
+			</div>
 
-                             </div>
-                         </div>
-                     </div>
-                 </div>
-                 <div class="card-footer rodape-card">
-                     Calculo de ganhos e gastos semanais
 
-                 </div>
-             </div>
-         </div>
+			<div class="col-lg-4 col-md-6 col-sm-6 mb-4">
+			<div class="card card-stats">
+				<div class="card-body ">
+					<div class="row">
+						<div class="col-5 col-md-4">
+							<div class="icone-card text-center <?php echo $classe_valor ?>">
+								<i class="fas fa-dollar-sign"></i>
+							</div>
+						</div>
+						<div class="col-7 col-md-8">
+							<div class="numbers">
+								<p class="titulo-card">Total de Receita</p>
+								<p class="subtitulo-card <?php echo $classe_valor ?>"><small><small>R$<?php echo $total ?></small></small><p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="card-footer rodape-card">
+						Valor Total do Mês
 
-         <div class="col-sm-12 col-lg-4 col-md-6 col-sm-6 mb-4">
-             <div class="card card-stats">
-                 <div class="card-body ">
-                     <div class="row">
-                         <div class="col-5 col-md-4">
-                             <div class="icone-card text-center icon-warning">
-                                 <span class="colorRoxo">
-                                     <i class="fa-solid fa-calendar"></i>
-                                 </span>
-                             </div>
-                         </div>
-                         <div class="col-7 col-md-8">
-                             <div class="numbers">
-                                 <p class="titulo-card">Total de consultas</p>
-                                 <p class="subtitulo-card">3
-                                 <p>
-                             </div>
-                         </div>
-                     </div>
-                 </div>
-                 <div class="card-footer rodape-card">
-                     Total de consultas hoje dia 24/08/2022
-                 </div>
-             </div>
-         </div>
+					</div>
+				</div>
+			</div>
 
-         <div class="col-lg-4 col-md-6 col-sm-6 mb-4">
-             <div class="card card-stats">
-                 <div class="card-body ">
-                     <div class="row">
-                         <div class="col-5 col-md-4">
-                             <div class="icone-card text-center icon-warning">
-                                 <span class="colorRoxo">
-                                     <i class="far fa-user"></i>
-                                 </span>
-                             </div>
-                         </div>
-                         <div class="col-7 col-md-8">
-                             <div class="numbers">
-                                 <p class="titulo-card">Total de pacientes</p>
-                                 <p class="subtitulo-card">50
-                                 <p>
-                             </div>
-                         </div>
-                     </div>
-                 </div>
-                 <div class="card-footer rodape-card">
-                     Total de pacientes cadastrados
-                 </div>
-             </div>
-         </div>
+
+			<div class="col-lg-4 col-md-6 col-sm-6 mb-4">
+			<div class="card card-stats">
+				<div class="card-body ">
+					<div class="row">
+						<div class="col-5 col-md-4">
+							<div class="icone-card text-center text-info">
+								<i class="fas fa-notes-medical"></i>
+							</div>
+						</div>
+						<div class="col-7 col-md-8">
+							<div class="numbers">
+								<p class="titulo-card">Total de Consultas</p>
+								<p class="subtitulo-card"><?php echo $valor_3 ?><p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="card-footer rodape-card">
+						Total de Consultas no Mês
+
+					</div>
+				</div>
+			</div>
+
+
+
+
+			<div class="col-lg-4 col-md-6 col-sm-6 mb-4 card-adm">
+			<div class="card card-stats">
+				<div class="card-body ">
+					<div class="row">
+						<div class="col-5 col-md-4">
+							<div class="icone-card text-center icon-warning">
+								<i class="fas fa-user-nurse"></i>
+							</div>
+						</div>
+						<div class="col-7 col-md-8">
+							<div class="numbers">
+								<p class="titulo-card">Total de Funcionários</p>
+								<p class="subtitulo-card"><?php echo $valor_4 ?><p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="card-footer rodape-card">
+						Total de Funcionários Cadastrados
+
+					</div>
+				</div>
+			</div>
+
+
+
+
+
+			<div class="col-lg-4 col-md-6 col-sm-6 mb-4 card-adm">
+			<div class="card card-stats">
+				<div class="card-body ">
+					<div class="row">
+						<div class="col-5 col-md-4">
+							<div class="icone-card text-center text-danger">
+								<i class="fas fa-money-check-alt"></i>
+							</div>
+						</div>
+						<div class="col-7 col-md-8">
+							<div class="numbers">
+								<p class="titulo-card">Total de Gastos</p>
+								<p class="subtitulo-card"><span class="text-danger"><small><small>R$<?php echo $total_saidas ?></small></small></span><p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="card-footer rodape-card">
+						Total de Gastos no Mês
+
+					</div>
+				</div>
+			</div>
+
+
+
+
+			<div class="col-lg-4 col-md-6 col-sm-6 mb-4 card-adm">
+			<div class="card card-stats">
+				<div class="card-body ">
+					<div class="row">
+						<div class="col-5 col-md-4">
+							<div class="icone-card text-center text-warning">
+								<i class="fas fa-stethoscope"></i>
+							</div>
+						</div>
+						<div class="col-7 col-md-8">
+							<div class="numbers">
+								<p class="titulo-card">Consultas Agendadas</p>
+								<p class="subtitulo-card"><?php echo $valor_6 ?><p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="card-footer rodape-card">
+						Total de Consultas Agendadas
+
+					</div>
+				</div>
+			</div>
+
+
+
 
 		</div>
 	</div>
