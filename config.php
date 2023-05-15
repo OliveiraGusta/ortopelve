@@ -3,9 +3,9 @@
 //DADOS PARA CONEXÃO COM BANCO DE DADOS LOCAL
 
 $host = 'localhost';
-$usuario = 'ortopelv_user';
-$senha = '8OO5OnRxeMTE';
-$banco = 'ortopelv_db';
+$usuario = 'root';
+$senha = '';
+$banco = 'ortopelve_db';
 $senhaEncrypt = 'ortopelve_encrypt#3817w';
 
 //VALORES PARA A COMBOBOX DE PAGINAÇÃO
@@ -15,8 +15,8 @@ $opcao3 = 30;
 
 
 //VARIAVEL PARA DEFINIR O CAMINHO DO SISTEMA
-$url_sistema = 'https://app.ortopelve.com.br/';
-$email_adm = 'cliente@ortopelve.com.br';
+$url_sistema = 'http://localhost/App-Ortopelve/';
+$email_adm = 'suporte@4wsites.com.br';
 $cidade = 'São Paulo';
 
 //DADOS PARA OS RELATÓRIOSS

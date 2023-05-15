@@ -37,18 +37,18 @@ $medico_resp = $_SESSION['nome_usuario'];
 
     <?php /* 
 
-    //DEFINIR O NUMERO DE ITENS POR PÁGINA
-    if (isset($_POST['itens-pagina'])) {
-        $itens_por_pagina = $_POST['itens-pagina'];
-        @$_GET['pagina'] = 0;
-    } elseif (isset($_GET['itens'])) {
-        $itens_por_pagina = $_GET['itens'];
-    } else {
-        $itens_por_pagina = $opcao1;
+//DEFINIR O NUMERO DE ITENS POR PÁGINA
+if (isset($_POST['itens-pagina'])) {
+   $itens_por_pagina = $_POST['itens-pagina'];
+   @$_GET['pagina'] = 0;
+} elseif (isset($_GET['itens'])) {
+   $itens_por_pagina = $_GET['itens'];
+} else {
+   $itens_por_pagina = $opcao1;
 
-    }
+}
 
-    */?>
+*/?>
 
 
     <div class="col-md-6 col-sm-12">
@@ -84,7 +84,7 @@ $medico_resp = $_SESSION['nome_usuario'];
                     <?php if (@$_GET['funcao'] == 'editar') {
 
                         $nome_botao = 'Editar';
-                        
+
                         $id_reg = openssl_decrypt($_GET['id'], "BF-CBC", $senhaEncrypt);
                         $res = $pdo->query("select * from pacientes where id = '$id_reg'");
 
@@ -143,26 +143,40 @@ $medico_resp = $_SESSION['nome_usuario'];
                                     value="<?php echo $medico_resp ?>" required>
 
 
-                                <label for="exampleFormControlInput1">Nome<?php if(!isset($nome)){echo'<span class="text-danger"> *</span>';}; ?></label>
+                                <label for="exampleFormControlInput1">Nome<?php if (!isset($nome)) {
+                                    echo '<span class="text-danger"> *</span>';
+                                }
+                                ; ?></label>
                               
                                 <input type="text" class="form-control" id="nome" placeholder="Insira o Nome (Campo Obrigatório)"
-                                    name="nome" value="<?php echo @$nome ?>"  <?php if(isset($nome)){
-                                        echo "disabled";
-                                    } ;?>>
-                                <?php if(!isset($nome)){echo'<span class="text-danger"> Esse campo não poderá ser editado</span>';}; ?>
+                                    name="nome" value="<?php echo @$nome ?>"  <?php if (isset($nome)) {
+                                           echo "disabled";
+                                       }
+                                       ; ?>>
+                                <?php if (!isset($nome)) {
+                                    echo '<span class="text-danger"> Esse campo não poderá ser editado</span>';
+                                }
+                                ; ?>
 
                             </div>
                         </div>
 
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label for="exampleFormControlInput1">CPF<?php if(!isset($cpf)){echo'<span class="text-danger"> *</span>';}; ?></label>
+                                <label for="exampleFormControlInput1">CPF<?php if (!isset($cpf)) {
+                                    echo '<span class="text-danger"> *</span>';
+                                }
+                                ; ?></label>
 
                                 <input type="text" class="form-control" id="cpf" placeholder="Insira o CPF (Campo Obrigatório)" name="cpf"
-                                    value="<?php echo @$cpf ?>" <?php if(isset($cpf)){
-                                        echo "disabled";
-                                    } ;?> >
-                                     <?php if(!isset($cpf)){echo'<span class="text-danger"> Esse campo não poderá ser editado</span>';}; ?>
+                                    value="<?php echo @$cpf ?>" <?php if (isset($cpf)) {
+                                           echo "disabled";
+                                       }
+                                       ; ?> >
+                                     <?php if (!isset($cpf)) {
+                                         echo '<span class="text-danger"> Esse campo não poderá ser editado</span>';
+                                     }
+                                     ; ?>
                             </div>
                            
                         </div>
@@ -222,7 +236,10 @@ $medico_resp = $_SESSION['nome_usuario'];
 
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label for="exampleFormControlInput1">Data Nascimento <?php if(!isset($data)){echo'<span class="text-danger">*(Campo Obrigatório)</span>';}; ?></label>
+                                <label for="exampleFormControlInput1">Data Nascimento <?php if (!isset($data)) {
+                                    echo '<span class="text-danger">*(Campo Obrigatório)</span>';
+                                }
+                                ; ?></label>
                                 <input type="date" class="form-control" id="data" name="data"
                                     value="<?php echo @$data ?>">
                             </div>
@@ -357,7 +374,10 @@ $medico_resp = $_SESSION['nome_usuario'];
 
 
                     </div>
-                    <?php if(!isset($cpf,$nome, $data )){echo' <span class="text-muted">Nome, CPF e Data de Nascimento são informações <span class="text-danger">* Obrigatórias</span></span><br><br>';}; ?>
+                    <?php if (!isset($cpf, $nome, $data)) {
+                        echo ' <span class="text-muted">Nome, CPF e Data de Nascimento são informações <span class="text-danger">* Obrigatórias</span></span><br><br>';
+                    }
+                    ; ?>
                    
                     <!--BOTOES PARA ESCOLHER ESPECIALIDADE -->
                     <div class="modal-header">
@@ -380,10 +400,10 @@ $medico_resp = $_SESSION['nome_usuario'];
                                 aria-controls="collapseExample">
                                 UROGINECOLOGIA
                             </button>
-                            <!-- <button class="btn btn-secondary" type="button" data-toggle="collapse"
+                            <button class="btn btn-secondary" type="button" data-toggle="collapse"
                                 data-target="#collapseORTOPEDIA" aria-expanded="false" aria-controls="collapseExample">
                                 ORTOPEDIA
-                            </button>-->
+                            </button>
                         </p>
                     </div>
 
@@ -1945,91 +1965,91 @@ $medico_resp = $_SESSION['nome_usuario'];
                                 <!-- Uroginecologia -->
                                 <?php if (@$_GET['funcao'] == 'editar') {
 
-                        //BUSCAR DADOS DO REGISTRO A SER EDITADO
-                        $res = $pdo->query("select * from ficha_uroginecologia where fkcpf = '$cpf'");
-                        $dados = $res->fetchAll(PDO::FETCH_ASSOC);
+                                    //BUSCAR DADOS DO REGISTRO A SER EDITADO
+                                    $res = $pdo->query("select * from ficha_uroginecologia where fkcpf = '$cpf'");
+                                    $dados = $res->fetchAll(PDO::FETCH_ASSOC);
 
-                        $queixa_prin_urogine = $dados[0]['queixa_prin_urogine'];
-                        $antecedentes_pessoais_urogine = $dados[0]['antecedentes_pessoais_urogine'];
-                        $antecedentes_cirurgicos_urogine = $dados[0]['antecedentes_cirurgicos_urogine'];
-                        $antecedentes_familiares_urogine = $dados[0]['antecedentes_familiares_urogine'];
+                                    $queixa_prin_urogine = $dados[0]['queixa_prin_urogine'];
+                                    $antecedentes_pessoais_urogine = $dados[0]['antecedentes_pessoais_urogine'];
+                                    $antecedentes_cirurgicos_urogine = $dados[0]['antecedentes_cirurgicos_urogine'];
+                                    $antecedentes_familiares_urogine = $dados[0]['antecedentes_familiares_urogine'];
 
-                        $fase_de_enchimento_urogine = $dados[0]['fase_de_enchimento_urogine'];
-                        $fase_de_esvaziamento_urogine = $dados[0]['fase_de_esvaziamento_urogine'];
-                        $outros_fase_de_esvaziamento_urogine = $dados[0]['outros_fase_de_esvaziamento_urogine'];
-                        $sensibilidade_fase_de_esvaziamento_urogine = $dados[0]['sensibilidade_fase_de_esvaziamento_urogine'];
-                        $itu_fase_de_esvaziamento_urogine = $dados[0]['itu_fase_de_esvaziamento_urogine'];
-                        $perdas_urogine = $dados[0]['perdas_urogine'];
-                        $outras_circunstancias_perdas_urogine = $dados[0]['outras_circunstancias_perdas_urogine'];
-                        $perdas_durante_o_esforco_urogine = $dados[0]['perdas_durante_o_esforco_urogine'];
-                        $outras_perdas_durante_o_esforco_urogine = $dados[0]['outras_perdas_durante_o_esforco_urogine'];
-                        $qualidade_da_perda_urinariao_urogine = $dados[0]['qualidade_da_perda_urinariao_urogine'];
-                        $quanto_tempo_iniciou_os_sintomas_urogine = $dados[0]['quanto_tempo_iniciou_os_sintomas_urogine'];
-                        $quanto_tempo_demorou_para_procurar_ajuda_medica_urogine = $dados[0]['quanto_tempo_demorou_para_procurar_ajuda_medica_urogine'];
-                        $desde_que_comecaram_os_sintomas_o_seu_estado_urogine = $dados[0]['desde_que_comecaram_os_sintomas_o_seu_estado_urogine'];
-                        $frequencia_urinaria_urogine = $dados[0]['frequencia_urinaria_urogine'];
-                        $protecoes_urogine = $dados[0]['protecoes_urogine'];
-                        $numero_de_trocas_urogine = $dados[0]['numero_de_trocas_urogine'];
+                                    $fase_de_enchimento_urogine = $dados[0]['fase_de_enchimento_urogine'];
+                                    $fase_de_esvaziamento_urogine = $dados[0]['fase_de_esvaziamento_urogine'];
+                                    $outros_fase_de_esvaziamento_urogine = $dados[0]['outros_fase_de_esvaziamento_urogine'];
+                                    $sensibilidade_fase_de_esvaziamento_urogine = $dados[0]['sensibilidade_fase_de_esvaziamento_urogine'];
+                                    $itu_fase_de_esvaziamento_urogine = $dados[0]['itu_fase_de_esvaziamento_urogine'];
+                                    $perdas_urogine = $dados[0]['perdas_urogine'];
+                                    $outras_circunstancias_perdas_urogine = $dados[0]['outras_circunstancias_perdas_urogine'];
+                                    $perdas_durante_o_esforco_urogine = $dados[0]['perdas_durante_o_esforco_urogine'];
+                                    $outras_perdas_durante_o_esforco_urogine = $dados[0]['outras_perdas_durante_o_esforco_urogine'];
+                                    $qualidade_da_perda_urinariao_urogine = $dados[0]['qualidade_da_perda_urinariao_urogine'];
+                                    $quanto_tempo_iniciou_os_sintomas_urogine = $dados[0]['quanto_tempo_iniciou_os_sintomas_urogine'];
+                                    $quanto_tempo_demorou_para_procurar_ajuda_medica_urogine = $dados[0]['quanto_tempo_demorou_para_procurar_ajuda_medica_urogine'];
+                                    $desde_que_comecaram_os_sintomas_o_seu_estado_urogine = $dados[0]['desde_que_comecaram_os_sintomas_o_seu_estado_urogine'];
+                                    $frequencia_urinaria_urogine = $dados[0]['frequencia_urinaria_urogine'];
+                                    $protecoes_urogine = $dados[0]['protecoes_urogine'];
+                                    $numero_de_trocas_urogine = $dados[0]['numero_de_trocas_urogine'];
 
-                        $corpo_perineal_uroginecologia = $dados[0]['corpo_perineal_uroginecologia'];
-                        $tonus_do_eae_uroginecologia = $dados[0]['tonus_do_eae_uroginecologia'];
-                        $puborretal_uroginecologia = $dados[0]['puborretal_uroginecologia'];
-                        $mmii_uroginecologia = $dados[0]['mmii_uroginecologia'];
-                        $fibrose_uroginecologia = $dados[0]['fibrose_uroginecologia'];
-                        $afa_uroginecologia = $dados[0]['afa_uroginecologia'];
-                        $perfect_uroginecologia = $dados[0]['perfect_uroginecologia'];
-                        $elasticidade_uroginecologia = $dados[0]['elasticidade_uroginecologia'];
-                        $coordenacao_uroginecologia = $dados[0]['coordenacao_uroginecologia'];
-                        $relaxamento_do_pr_a_manobra_de_evacuacao_uroginecologia = $dados[0]['relaxamento_do_pr_a_manobra_de_evacuacao_uroginecologia'];
-                        $pontos_dolorosos_uroginecologia = $dados[0]['pontos_dolorosos_uroginecologia'];
+                                    $corpo_perineal_uroginecologia = $dados[0]['corpo_perineal_uroginecologia'];
+                                    $tonus_do_eae_uroginecologia = $dados[0]['tonus_do_eae_uroginecologia'];
+                                    $puborretal_uroginecologia = $dados[0]['puborretal_uroginecologia'];
+                                    $mmii_uroginecologia = $dados[0]['mmii_uroginecologia'];
+                                    $fibrose_uroginecologia = $dados[0]['fibrose_uroginecologia'];
+                                    $afa_uroginecologia = $dados[0]['afa_uroginecologia'];
+                                    $perfect_uroginecologia = $dados[0]['perfect_uroginecologia'];
+                                    $elasticidade_uroginecologia = $dados[0]['elasticidade_uroginecologia'];
+                                    $coordenacao_uroginecologia = $dados[0]['coordenacao_uroginecologia'];
+                                    $relaxamento_do_pr_a_manobra_de_evacuacao_uroginecologia = $dados[0]['relaxamento_do_pr_a_manobra_de_evacuacao_uroginecologia'];
+                                    $pontos_dolorosos_uroginecologia = $dados[0]['pontos_dolorosos_uroginecologia'];
 
-                        
-                        //Obstétrica
 
-                        $gestacoes_uroginecologia = $dados[0]['gestacoes_uroginecologia'];
-                        $partos_uroginecologia = $dados[0]['partos_uroginecologia'];
-                        $abortos_uroginecologia = $dados[0]['abortos_uroginecologia'];
+                                    //Obstétrica
+                                
+                                    $gestacoes_uroginecologia = $dados[0]['gestacoes_uroginecologia'];
+                                    $partos_uroginecologia = $dados[0]['partos_uroginecologia'];
+                                    $abortos_uroginecologia = $dados[0]['abortos_uroginecologia'];
 
-                        $parto1_uroginecologia = $dados[0]['parto1_uroginecologia'];
-                        $idade_materna1_uroginecologia = $dados[0]['idade_materna1_uroginecologia'];
-                        $peso_da_crianca1_uroginecologia = $dados[0]['peso_da_crianca1_uroginecologia'];
-                        
-                        $parto2_uroginecologia = $dados[0]['parto2_uroginecologia'];
-                        $idade_materna2_uroginecologia = $dados[0]['idade_materna2_uroginecologia'];
-                        $peso_da_crianca2_uroginecologia = $dados[0]['peso_da_crianca2_uroginecologia'];
+                                    $parto1_uroginecologia = $dados[0]['parto1_uroginecologia'];
+                                    $idade_materna1_uroginecologia = $dados[0]['idade_materna1_uroginecologia'];
+                                    $peso_da_crianca1_uroginecologia = $dados[0]['peso_da_crianca1_uroginecologia'];
 
-                        $parto3_uroginecologia = $dados[0]['parto3_uroginecologia'];
-                        $idade_materna3_uroginecologia = $dados[0]['idade_materna3_uroginecologia'];
-                        $peso_da_crianca3_uroginecologia = $dados[0]['peso_da_crianca3_uroginecologia'];
+                                    $parto2_uroginecologia = $dados[0]['parto2_uroginecologia'];
+                                    $idade_materna2_uroginecologia = $dados[0]['idade_materna2_uroginecologia'];
+                                    $peso_da_crianca2_uroginecologia = $dados[0]['peso_da_crianca2_uroginecologia'];
 
-                        $realizou_episiotomia_uroginecologia = $dados[0]['realizou_episiotomia_uroginecologia'];
-                        $forceps_uroginecologia = $dados[0]['forceps_uroginecologia'];
-                        $complicacoes_obstetricas_uroginecologia = $dados[0]['complicacoes_obstetricas_uroginecologia'];
-                        
-                        //Ginecológia
-                        $data_da_ultima_menstruacao_uroginecologia = $dados[0]['data_da_ultima_menstruacao_uroginecologia'];
-                
-                        
-                        $menopausa_uroginecologia = $dados[0]['menopausa_uroginecologia'];
-                        $metodo_anticoncepcional_uroginecologia = $dados[0]['metodo_anticoncepcional_uroginecologia'];
-                        $terapia_de_reposicao_hormonal_uroginecologia = $dados[0]['terapia_de_reposicao_hormonal_uroginecologia'];
-                        $complicacoes_ginecologicas_uroginecologia = $dados[0]['complicacoes_ginecologicas_uroginecologia'];
-                        $realizou_cirurgia_ginecologica_uroginecologia = $dados[0]['realizou_cirurgia_ginecologica_uroginecologia'];
-                        
-                        //Sexualidade
+                                    $parto3_uroginecologia = $dados[0]['parto3_uroginecologia'];
+                                    $idade_materna3_uroginecologia = $dados[0]['idade_materna3_uroginecologia'];
+                                    $peso_da_crianca3_uroginecologia = $dados[0]['peso_da_crianca3_uroginecologia'];
+
+                                    $realizou_episiotomia_uroginecologia = $dados[0]['realizou_episiotomia_uroginecologia'];
+                                    $forceps_uroginecologia = $dados[0]['forceps_uroginecologia'];
+                                    $complicacoes_obstetricas_uroginecologia = $dados[0]['complicacoes_obstetricas_uroginecologia'];
+
+                                    //Ginecológia
+                                    $data_da_ultima_menstruacao_uroginecologia = $dados[0]['data_da_ultima_menstruacao_uroginecologia'];
+
+
+                                    $menopausa_uroginecologia = $dados[0]['menopausa_uroginecologia'];
+                                    $metodo_anticoncepcional_uroginecologia = $dados[0]['metodo_anticoncepcional_uroginecologia'];
+                                    $terapia_de_reposicao_hormonal_uroginecologia = $dados[0]['terapia_de_reposicao_hormonal_uroginecologia'];
+                                    $complicacoes_ginecologicas_uroginecologia = $dados[0]['complicacoes_ginecologicas_uroginecologia'];
+                                    $realizou_cirurgia_ginecologica_uroginecologia = $dados[0]['realizou_cirurgia_ginecologica_uroginecologia'];
+
+                                    //Sexualidade
                                 
 
-                        $auto_conhecimento_vaginal_uroginecologia = $dados[0]['auto_conhecimento_vaginal_uroginecologia'];
-                        $vida_sexual_uroginecologia = $dados[0]['vida_sexual_uroginecologia'];
-                        $perdeu_a_virgindade_uroginecologia = $dados[0]['perdeu_a_virgindade_uroginecologia'];
-                        $com_quem_perdeu_a_virgindade_uroginecologia = $dados[0]['com_quem_perdeu_a_virgindade_uroginecologia'];
-                        $experiencia_a_virgindade_uroginecologia = $dados[0]['experiencia_a_virgindade_uroginecologia'];
-                        $abuso_sexual_uroginecologia = $dados[0]['abuso_sexual_uroginecologia'];
-                        $permissao_abuso_sexual_uroginecologia = $dados[0]['permissao_abuso_sexual_uroginecologia'];
-                        $relato_abuso_sexual_uroginecologia = $dados[0]['relato_abuso_sexual_uroginecologia'];
+                                    $auto_conhecimento_vaginal_uroginecologia = $dados[0]['auto_conhecimento_vaginal_uroginecologia'];
+                                    $vida_sexual_uroginecologia = $dados[0]['vida_sexual_uroginecologia'];
+                                    $perdeu_a_virgindade_uroginecologia = $dados[0]['perdeu_a_virgindade_uroginecologia'];
+                                    $com_quem_perdeu_a_virgindade_uroginecologia = $dados[0]['com_quem_perdeu_a_virgindade_uroginecologia'];
+                                    $experiencia_a_virgindade_uroginecologia = $dados[0]['experiencia_a_virgindade_uroginecologia'];
+                                    $abuso_sexual_uroginecologia = $dados[0]['abuso_sexual_uroginecologia'];
+                                    $permissao_abuso_sexual_uroginecologia = $dados[0]['permissao_abuso_sexual_uroginecologia'];
+                                    $relato_abuso_sexual_uroginecologia = $dados[0]['relato_abuso_sexual_uroginecologia'];
 
 
-                    } ?>
+                                } ?>
 
 
                                 <h3>História Clínica</h3>
@@ -2707,18 +2727,18 @@ $medico_resp = $_SESSION['nome_usuario'];
                                 <select class="form-control" id="complicacoes_obstetricas_uroginecologia "
                                     name="complicacoes_obstetricas_uroginecologia">
                                     <?php
-                                            if (@$_GET['funcao'] == 'editar') {
-                                                echo '<option value="' . $complicacoes_obstetricas_uroginecologia . '">' . $complicacoes_obstetricas_uroginecologia . '</option>';
-                                            }
-                                            ?>
+                                    if (@$_GET['funcao'] == 'editar') {
+                                        echo '<option value="' . $complicacoes_obstetricas_uroginecologia . '">' . $complicacoes_obstetricas_uroginecologia . '</option>';
+                                    }
+                                    ?>
                                     <?php if ($complicacoes_obstetricas_uroginecologia != 'laceração')
-                                                echo '<option value="laceração">Laceração</option>'; ?>
+                                        echo '<option value="laceração">Laceração</option>'; ?>
                                     <?php if ($complicacoes_obstetricas_uroginecologia != 'aderências')
-                                                echo '<option value="aderências">Aderências</option>'; ?>
+                                        echo '<option value="aderências">Aderências</option>'; ?>
                                     <?php if ($complicacoes_obstetricas_uroginecologia != 'quelóides')
-                                                echo '<option value="quelóides">Quelóides</option>'; ?>
+                                        echo '<option value="quelóides">Quelóides</option>'; ?>
                                     <?php if ($complicacoes_obstetricas_uroginecologia != 'fibrose')
-                                                echo '<option value="fibrose">Fibrose</option>'; ?>
+                                        echo '<option value="fibrose">Fibrose</option>'; ?>
 
                                 </select>
                             </div>
@@ -2926,35 +2946,201 @@ $medico_resp = $_SESSION['nome_usuario'];
                                     maxlength="300"><?php echo @$relato_abuso_sexual_uroginecologia ?></textarea>
                             </div>
 
+                            
+
 
 
                         </div>
                         <!-- FIM UROGINECOLOGIA -->
 
-
+                        
                         <div id="mensagem" class="">
                         </div>
                     </div>
 
 
-
+                    <!-- ORTOPEDIA  -->
                     <div class="collapse" id="collapseORTOPEDIA">
                         <div class="modal-body">
                             <div class="modal-header">
                                 <h5>ORTOPEDIA</h5>
-                                <h3>História Clínica</h3>
-                            </div>
-                            <br>
+                                 <!-- collapseORTOPEDIA -->
+                                 <?php if (@$_GET['funcao'] == 'editar') {
+                                     //BUSCAR DADOS DO REGISTRO A SER EDITADO
+                                     $res = $pdo->query("select * from ficha_ortopedia where fkcpf = '$cpf'");
+                                     $dados = $res->fetchAll(PDO::FETCH_ASSOC);
 
+                                     $historia_molestia_progressa_ortopedia = $dados[0]['historia_molestia_progressa_ortopedia'];
+                                     $historia_molestia_atual_ortopedia = $dados[0]['historia_molestia_atual_ortopedia'];
+                                     $historia_molestia_sintomas_ortopedia = $dados[0]['historia_molestia_sintomas_ortopedia'];
+                                     $inspecao_ortopedia = $dados[0]['inspecao_ortopedia'];
+                                     $obs_inspecao_ortopedia = $dados[0]['obs_inspecao_ortopedia'];
+
+
+                                 } ?>
+                                <h3>História da Moléstia</h3>
+                            </div>
+                            <br>                          
                         </div>
+
+
+                        <div class="form-group">
+                                <label for="exampleFormControlInput1">Pregressa</label>
+                                <textarea class="form-control" id="historia_molestia_progressa_ortopedia"
+                                    name="historia_molestia_progressa_ortopedia"
+                                    maxlength="300"><?php echo @$historia_molestia_progressa_ortopedia ?></textarea>
+                        </div>
+                        
+
+                        <div class="form-group">
+                                <label for="exampleFormControlInput1">Atual</label>
+                                <textarea class="form-control" id="historia_molestia_atual_ortopedia"
+                                    name="historia_molestia_atual_ortopedia"
+                                    maxlength="300"><?php echo @$historia_molestia_atual_ortopedia ?></textarea>
+                        </div>
+                        
+
+                        <div class="form-group">
+                                <label for="exampleFormControlInput1">Inspeção</label>
+                                <textarea class="form-control" id="historia_molestia_sintomas_ortopedia"
+                                    name="historia_molestia_sintomas_ortopedia"
+                                    maxlength="300"><?php echo @$historia_molestia_sintomas_ortopedia ?></textarea>
+                        </div>
+                        
+                        <div class="form-group">
+                                        <label for="exampleFormControlInput1">Poderia relatar como foi?</label>
+                                        <select class="form-control" id="inspecao_ortopedia "
+                                            name="inspecao_ortopedia">
+                                            <?php
+                                            if (@$_GET['funcao'] == 'editar') {
+                                                echo '<option value="' . $inspecao_ortopedia . '">' . $inspecao_ortopedia . '</option>';
+                                            }
+                                            ?>
+                                            <?php if ($inspecao_ortopedia != 'Coluna Vertical')
+                                                echo '<option value="Coluna Vertical">Coluna Vertical</option>'; ?>
+                                            <?php if ($inspecao_ortopedia != 'Temperatura')
+                                                echo '<option value="Temperatura">Temperatura</option>'; ?>     
+                                            <?php if ($inspecao_ortopedia != 'Estado de Nutricao')
+                                                echo '<option value="Estado de Nutricao">Estado de Nutricao</option>'; ?>
+                                            <?php if ($inspecao_ortopedia != 'Respiração')
+                                                echo '<option value="Respiração">Respiração</option>'; ?>
+                                            <?php if ($inspecao_ortopedia != 'Fáceis')
+                                                echo '<option value="Fáceis">Fáceis</option>'; ?>
+                                            <?php if ($inspecao_ortopedia != 'Trofismo')
+                                                echo '<option value="Fáceis">Trofismo</option>'; ?>
+
+                                        </select>   
+                        </div>
+
+                        <div class="form-group">
+                                    <textarea class="form-control" id="obs_inspecao_ortopedia"
+                                    name="obs_inspecao_ortopedia"
+                                    maxlength="300"><?php echo @$obs_inspecao_ortopedia ?></textarea>
+                        </div>
+
+                        <div class="modal-header">
+                                <h5>Força Muscular</h5>
+                                <br>
+                        </div>
+                        <div class="form-group">
+                            Obs: A força muscular necessita da compreenssão do paciente a frente  à solicitção do movimento. <br>
+                         </div>  
+                            <div class="form-group">
+                                    (0) Ausencia de Contração.<br>
+                                    (1) Há uma leve contração porém incapaz de produzir movimento.<br>
+                                    (2) Há movimento somente na ausência de gravidade.<br>
+                                    (3) Consegue realizar movimento vencendo a gravidade.<br>
+                                    (4) Consegue realizar movimento vencendo a gravidade e também uma resistência externa.<br>
+                                    (5) Consegue realizar movimento superando uma resistencia maior que o musculo bom.<br>
+                                    <br>
+                                    Realizar se possivel o teste, caso não seja possivel observar a movimento espontânea.<br>
+                            </div>  
+                            <div class="modal-header">
+                                <h5>Ombro</h5>
+                                <br>
+                            </div>
+
+                            <div class="row">
+                               
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="exampleFormControlInput1">Flexão</label>
+                                        <select class="form-control" id="inspecao_ortopedia "
+                                            name="inspecao_ortopedia">
+                                            <?php
+                                            if (@$_GET['funcao'] == 'editar') {
+                                                echo '<option value="' . $inspecao_ortopedia . '">' . $inspecao_ortopedia . '</option>';
+                                            }
+                                            ?>
+                                              <?php if ($ombro_flexao_ortopedia != '(0) Ausencia de Contração.')
+                                                echo '<option value="(0) Ausencia de Contração.">(0) Ausencia de Contração.</option>'; ?>
+                                            <?php if ($ombro_flexao_ortopedia != '(1) Há uma leve contração porém incapaz de produzir movimento.')
+                                                echo '<option value="(1) Há uma leve contração porém incapaz de produzir movimento.">(1) Há uma leve contração porém incapaz de produzir movimento.</option>'; ?>     
+                                            <?php if ($ombro_flexao_ortopedia != 'Estado de Nutricao')
+                                                echo '<option value="(2) Há movimento somente na ausência de gravidade.
+                                                ">(2) Há movimento somente na ausência de gravidade.
+                                                </option>'; ?>
+                                            <?php if (
+                                                $ombro_flexao_ortopedia != '(3) Consegue realizar movimento vencendo a gravidade.
+'
+                                            )
+                                                echo '<option value="(3) Consegue realizar movimento vencendo a gravidade.
+                                                ">(3) Consegue realizar movimento vencendo a gravidade.
+                                                </option>'; ?>
+                                            <?php if ($ombro_flexao_ortopedia != '(4) Consegue realizar movimento vencendo a gravidade e também uma resistência externa.')
+                                                echo '<option value="(4) Consegue realizar movimento vencendo a gravidade e também uma resistência externa.">(4) Consegue realizar movimento vencendo a gravidade e também uma resistência externa.</option>'; ?>
+                                            <?php if ($ombro_flexao_ortopedia != '(5) Consegue realizar movimento superando uma resistencia maior que o musculo bom.')
+                                                echo '<option value="(5) Consegue realizar movimento superando uma resistencia maior que o musculo bom.">(5) Consegue realizar movimento superando uma resistencia maior que o musculo bom.</option>'; ?>
+
+
+                                        </select>   
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="exampleFormControlInput1">Extensão</label>
+
+                                        <select class="form-control" id="ombro_flexao_ortopedia "
+                                            name="ombro_flexao_ortopedia">
+                                            <?php
+                                            if (@$_GET['funcao'] == 'editar') {
+                                                echo '<option value="' . $ombro_flexao_ortopedia . '">' . $ombro_flexao_ortopedia . '</option>';
+                                            }
+                                            ?>
+                                            <?php if ($ombro_flexao_ortopedia != '(0) Ausencia de Contração.')
+                                                echo '<option value="(0) Ausencia de Contração.">(0) Ausencia de Contração.</option>'; ?>
+                                            <?php if ($ombro_flexao_ortopedia != '(1) Há uma leve contração porém incapaz de produzir movimento.')
+                                                echo '<option value="(1) Há uma leve contração porém incapaz de produzir movimento.">(1) Há uma leve contração porém incapaz de produzir movimento.</option>'; ?>     
+                                            <?php if ($ombro_flexao_ortopedia != 'Estado de Nutricao')
+                                                echo '<option value="(2) Há movimento somente na ausência de gravidade.
+                                                ">(2) Há movimento somente na ausência de gravidade.
+                                                </option>'; ?>
+                                            <?php if (
+                                                $ombro_flexao_ortopedia != '(3) Consegue realizar movimento vencendo a gravidade.
+'
+                                            )
+                                                echo '<option value="(3) Consegue realizar movimento vencendo a gravidade.
+                                                ">(3) Consegue realizar movimento vencendo a gravidade.
+                                                </option>'; ?>
+                                            <?php if ($ombro_flexao_ortopedia != '(4) Consegue realizar movimento vencendo a gravidade e também uma resistência externa.')
+                                                echo '<option value="(4) Consegue realizar movimento vencendo a gravidade e também uma resistência externa.">(4) Consegue realizar movimento vencendo a gravidade e também uma resistência externa.</option>'; ?>
+                                            <?php if ($ombro_flexao_ortopedia != '(5) Consegue realizar movimento superando uma resistencia maior que o musculo bom.')
+                                                echo '<option value="(5) Consegue realizar movimento superando uma resistencia maior que o musculo bom.">(5) Consegue realizar movimento superando uma resistencia maior que o musculo bom.</option>'; ?>
+
+                                        </select>   
+                                    </div>
+                                </div>
+                            </div>
+
                     </div>
-            </div>
+                <!-- FIM ORTOPEDIA  -->
+
+
 
             <div class="modal-footer">
 
               
-                <span class="text-muted">Lembre-se que o limite por campo é de no máximo <span class="text-danger"> 300
-                        caracteres.</span></span>
+                <span class="text-muted">Lembre-se que o limite por campo é de no máximo <span class="text-danger"> 300 caracteres.</span></span>
                 <button id="btn-fechar" type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
 
                 <button type="submit" name="<?php echo $nome_botao ?>" id="<?php echo $nome_botao ?>"
@@ -2971,23 +3157,23 @@ $medico_resp = $_SESSION['nome_usuario'];
 
 <!--CHAMADA DA MODAL NOVO -->
 <?php
-    if (@$_GET['funcao'] == 'novo' && @$item_paginado == '') {
+if (@$_GET['funcao'] == 'novo' && @$item_paginado == '') {
 
-        ?>
-<script>
-$('#btn-novo').click();
-</script>
+    ?>
+    <script>
+    $('#btn-novo').click();
+    </script>
 <?php } ?>
 
 
 <!--CHAMADA DA MODAL EDITAR -->
 <?php
-    if (@$_GET['funcao'] == 'editar' && @$item_paginado == '') {
+if (@$_GET['funcao'] == 'editar' && @$item_paginado == '') {
 
-        ?>
-<script>
-$('#btn-novo').click();
-</script>
+    ?>
+    <script>
+    $('#btn-novo').click();
+    </script>
 <?php } ?>
 
 
@@ -2996,36 +3182,36 @@ $('#btn-novo').click();
 
 <!--CHAMADA DA MODAL DELETAR -->
 <?php
-    if (@$_GET['funcao'] == 'excluir' && @$item_paginado == '') {
-        $id = openssl_decrypt($_GET['id'], "BF-CBC", $senhaEncrypt);
+if (@$_GET['funcao'] == 'excluir' && @$item_paginado == '') {
+    $id = openssl_decrypt($_GET['id'], "BF-CBC", $senhaEncrypt);
 
-        ?>
+    ?>
 
-<div class="modal" id="modal-deletar" tabindex="-1" role="dialog">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title">Excluir Registro</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
+    <div class="modal" id="modal-deletar" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Excluir Registro</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
 
-                <p>Deseja realmente Excluir este Registro?</p>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal"
-                    id="btn-cancelar-excluir">Cancelar</button>
-                <form method="post">
-                    <input type="hidden" id="id" name="id" value="<?php echo @$id ?>" required>
+                    <p>Deseja realmente Excluir este Registro?</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal"
+                        id="btn-cancelar-excluir">Cancelar</button>
+                    <form method="post">
+                        <input type="hidden" id="id" name="id" value="<?php echo @$id ?>" required>
 
-                    <button type="button" id="btn-deletar" name="btn-deletar" class="btn btn-danger">Excluir</button>
-                </form>
+                        <button type="button" id="btn-deletar" name="btn-deletar" class="btn btn-danger">Excluir</button>
+                    </form>
+                </div>
             </div>
         </div>
     </div>
-</div>
 
 
 <?php } ?>
@@ -3037,93 +3223,93 @@ $('#btn-novo').click();
 
 <!--CHAMADA DA MODAL CRIAR LOGIN -->
 <?php
-    if (@$_GET['funcao'] == 'login' && @$item_paginado == '') {
+if (@$_GET['funcao'] == 'login' && @$item_paginado == '') {
 
-        ?>
+    ?>
 
-<!-- Modal -->
-<div class="modal fade" id="modalLogin" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-    aria-hidden="true">
-    <div class="modal-dialog modal-lg" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel"><?php
+    <!-- Modal -->
+    <div class="modal fade" id="modalLogin" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel"><?php
 
                     $id_reg = openssl_decrypt($_GET['id'], "BF-CBC", $senhaEncrypt);
 
 
-                        $res = $pdo->query("select * from pacientes where id = '$id_reg'");
-                        $dados = $res->fetchAll(PDO::FETCH_ASSOC);
-                        $nome_pac = $dados[0]['nome'];
-                        $email = $dados[0]['email'];
+                    $res = $pdo->query("select * from pacientes where id = '$id_reg'");
+                    $dados = $res->fetchAll(PDO::FETCH_ASSOC);
+                    $nome_pac = $dados[0]['nome'];
+                    $email = $dados[0]['email'];
 
-                        ?>
-                    Criar Login do Paciente - <?php echo $nome_pac ?>
-                </h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-
-
-                <form method="post">
-
-                    <div class="row">
-                        <div class="col-md-4">
-                            <div class="form-group">
-
-                                <input type="hidden" id="id" name="id" value="<?php echo @$id_reg ?>" required>
-                                <input type="hidden" id="nome_pac" name="nome_pac" value="<?php echo @$nome_pac ?>"
-                                    required>
+                    ?>
+                        Criar Login do Paciente - <?php echo $nome_pac ?>
+                    </h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
 
 
-                                <input type="hidden" id="id-resp" name="id-resp" value="<?php echo @$id_resp ?>"
-                                    required>
+                    <form method="post">
 
-                                <input type="hidden" id="email" name="email" value="<?php echo @$email ?>" required>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="form-group">
 
-                                <label for="exampleFormControlInput1">Usuario</label>
-                                <input type="text" class="form-control" id="email" placeholder="" name="email"
-                                    value="<?php echo @$email ?>" disabled required>
+                                    <input type="hidden" id="id" name="id" value="<?php echo @$id_reg ?>" required>
+                                    <input type="hidden" id="nome_pac" name="nome_pac" value="<?php echo @$nome_pac ?>"
+                                        required>
+
+
+                                    <input type="hidden" id="id-resp" name="id-resp" value="<?php echo @$id_resp ?>"
+                                        required>
+
+                                    <input type="hidden" id="email" name="email" value="<?php echo @$email ?>" required>
+
+                                    <label for="exampleFormControlInput1">Usuario</label>
+                                    <input type="text" class="form-control" id="email" placeholder="" name="email"
+                                        value="<?php echo @$email ?>" disabled required>
+                                </div>
+                            </div>
+
+
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label for="exampleFormControlInput1">Senha</label>
+                                    <?php
+                                    $res = $pdo->query("select * from usuarios where usuario = '$email'");
+                                    $dados = $res->fetchAll(PDO::FETCH_ASSOC);
+
+                                    $senha_paciente = $dados[0]['senha_original'];
+                                    ?>
+
+                                    <input type="text" class="form-control" id="senha_paciente" name="senha_paciente"
+                                        value="<?php echo @$senha_paciente ?>" required>
+                                </div>
                             </div>
                         </div>
 
 
-                        <div class="col-md-4">
-                            <div class="form-group">
-                                <label for="exampleFormControlInput1">Senha</label>
-                                <?php
-                                            $res = $pdo->query("select * from usuarios where usuario = '$email'");
-                                            $dados = $res->fetchAll(PDO::FETCH_ASSOC);
-                                        
-                                            $senha_paciente = $dados[0]['senha_original'];
-                                        ?>
 
-                                <input type="text" class="form-control" id="senha_paciente" name="senha_paciente"
-                                    value="<?php echo @$senha_paciente ?>" required>
-                            </div>
+                        <div id="mensagem_login" class="">
+
                         </div>
-                    </div>
 
+                </div>
+                <div class="modal-footer">
+                    <button id="btn-fechar_login" type="button" class="btn btn-secondary"
+                        data-dismiss="modal">Cancelar</button>
 
+                    <button type="submit" name="btn-login" id="btn-login" class="btn btn-primary">Salvar</button>
 
-                    <div id="mensagem_login" class="">
-
-                    </div>
-
+                </div>
+                </form>
             </div>
-            <div class="modal-footer">
-                <button id="btn-fechar_login" type="button" class="btn btn-secondary"
-                    data-dismiss="modal">Cancelar</button>
-
-                <button type="submit" name="btn-login" id="btn-login" class="btn btn-primary">Salvar</button>
-
-            </div>
-            </form>
         </div>
     </div>
-</div>
 
 
 
@@ -3141,101 +3327,101 @@ $('#modalResp').modal("show");
 
 <!--CHAMADA DA MODAL RESP -->
 <?php
-    if (@$_GET['funcao'] == 'resp' && @$item_paginado == '') {
+if (@$_GET['funcao'] == 'resp' && @$item_paginado == '') {
 
-        ?>
-<!-- Modal -->
-<div class="modal fade" id="modalResp" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-    aria-hidden="true">
-    <div class="modal-dialog modal-lg" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel"><?php
+    ?>
+    <!-- Modal -->
+    <div class="modal fade" id="modalResp" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel"><?php
 
-                        $id_reg = openssl_decrypt($_GET['id'], "BF-CBC", $senhaEncrypt);
-
-
-                        $res = $pdo->query("select * from pacientes where id = '$id_reg'");
-                        $dados = $res->fetchAll(PDO::FETCH_ASSOC);
-                        $nome_pac = $dados[0]['nome'];
-
-                        //BUSCAR DADOS DO REGISTRO A SER EDITADO
-                        $res = $pdo->query("select * from responsaveis where paciente = '$id_reg'");
-                        $dados = $res->fetchAll(PDO::FETCH_ASSOC);
-                        if (count($dados) > 0) {
-                            $nome_resp = $dados[0]['nome'];
-                            $cpf_resp = $dados[0]['cpf'];
-                            $data_nasc_resp = $dados[0]['data_nasc'];
-                            $id_resp = $dados[0]['id'];
-                        }
-
-                        ?>
-                    Responsável do Paciente : <?php echo $nome_pac ?>
-                </h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
+                    $id_reg = openssl_decrypt($_GET['id'], "BF-CBC", $senhaEncrypt);
 
 
-                <form method="post">
+                    $res = $pdo->query("select * from pacientes where id = '$id_reg'");
+                    $dados = $res->fetchAll(PDO::FETCH_ASSOC);
+                    $nome_pac = $dados[0]['nome'];
 
-                    <div class="row">
-                        <div class="col-md-4">
-                            <div class="form-group">
+                    //BUSCAR DADOS DO REGISTRO A SER EDITADO
+                    $res = $pdo->query("select * from responsaveis where paciente = '$id_reg'");
+                    $dados = $res->fetchAll(PDO::FETCH_ASSOC);
+                    if (count($dados) > 0) {
+                        $nome_resp = $dados[0]['nome'];
+                        $cpf_resp = $dados[0]['cpf'];
+                        $data_nasc_resp = $dados[0]['data_nasc'];
+                        $id_resp = $dados[0]['id'];
+                    }
 
-                                <input type="hidden" id="id" name="id" value="<?php echo @$id_reg ?>" required>
+                    ?>
+                        Responsável do Paciente : <?php echo $nome_pac ?>
+                    </h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
 
-                                <input type="hidden" id="id-resp" name="id-resp" value="<?php echo @$id_resp ?>"
-                                    required>
 
-                                <input type="hidden" id="campo_antigo" name="campo_antigo" value="<?php echo @$cpf ?>"
-                                    required>
+                    <form method="post">
+
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="form-group">
+
+                                    <input type="hidden" id="id" name="id" value="<?php echo @$id_reg ?>" required>
+
+                                    <input type="hidden" id="id-resp" name="id-resp" value="<?php echo @$id_resp ?>"
+                                        required>
+
+                                    <input type="hidden" id="campo_antigo" name="campo_antigo" value="<?php echo @$cpf ?>"
+                                        required>
 
 
-                                <label for="exampleFormControlInput1">Nome</label>
-                                <input type="text" class="form-control" id="nome_resp" placeholder="Insira o Nome "
-                                    name="nome" value="<?php echo @$nome_resp ?>" required>
+                                    <label for="exampleFormControlInput1">Nome</label>
+                                    <input type="text" class="form-control" id="nome_resp" placeholder="Insira o Nome "
+                                        name="nome" value="<?php echo @$nome_resp ?>" required>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4">
+                                <div class="form-group disabled">
+                                    <label for="exampleFormControlInput1">CPF</label>
+                                    <input type="text" class="form-control" id="cpf_resp" placeholder="Insira o CPF "
+                                        name="cpf" value="<?php echo @$cpf_resp ?>"  required >
+                                </div>
+                            </div>
+
+
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label for="exampleFormControlInput1">Data Nascimento</label>
+                                    <input type="date" class="form-control" id="data" name="data"
+                                        value="<?php echo @$data_nasc_resp ?>" required>
+                                </div>
                             </div>
                         </div>
 
-                        <div class="col-md-4">
-                            <div class="form-group disabled">
-                                <label for="exampleFormControlInput1">CPF</label>
-                                <input type="text" class="form-control" id="cpf_resp" placeholder="Insira o CPF "
-                                    name="cpf" value="<?php echo @$cpf_resp ?>"  required >
-                            </div>
+
+
+                        <div id="mensagem_resp" class="">
+
                         </div>
 
+                </div>
+                <div class="modal-footer">
+                    <button id="btn-fechar_resp" type="button" class="btn btn-secondary"
+                        data-dismiss="modal">Cancelar</button>
 
-                        <div class="col-md-4">
-                            <div class="form-group">
-                                <label for="exampleFormControlInput1">Data Nascimento</label>
-                                <input type="date" class="form-control" id="data" name="data"
-                                    value="<?php echo @$data_nasc_resp ?>" required>
-                            </div>
-                        </div>
-                    </div>
+                    <button type="submit" onclick="cpfMensagem()" name="btn-resp" id="btn-resp" class="btn btn-primary">Salvar</button>
 
-
-
-                    <div id="mensagem_resp" class="">
-
-                    </div>
-
+                </div>
+                </form>
             </div>
-            <div class="modal-footer">
-                <button id="btn-fechar_resp" type="button" class="btn btn-secondary"
-                    data-dismiss="modal">Cancelar</button>
-
-                <button type="submit" onclick="cpfMensagem()" name="btn-resp" id="btn-resp" class="btn btn-primary">Salvar</button>
-
-            </div>
-            </form>
         </div>
     </div>
-</div>
 
 
 <?php } ?>
