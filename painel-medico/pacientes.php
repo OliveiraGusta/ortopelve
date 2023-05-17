@@ -2966,24 +2966,26 @@ if (isset($_POST['itens-pagina'])) {
                                 <h5>ORTOPEDIA</h5>
                                  <!-- collapseORTOPEDIA -->
                                  <?php if (@$_GET['funcao'] == 'editar') {
-                                     //BUSCAR DADOS DO REGISTRO A SER EDITADO
-                                     $res = $pdo->query("select * from ficha_ortopedia where fkcpf = '$cpf'");
-                                     $dados = $res->fetchAll(PDO::FETCH_ASSOC);
+                                    //BUSCAR DADOS DO REGISTRO A SER EDITADO
+                                    $res = $pdo->query("select * from ficha_ortopedia where fkcpf = '$cpf'");
+                                    $dados = $res->fetchAll(PDO::FETCH_ASSOC);
 
-                                     $historia_molestia_progressa_ortopedia = $dados[0]['historia_molestia_progressa_ortopedia'];
-                                     $historia_molestia_atual_ortopedia = $dados[0]['historia_molestia_atual_ortopedia'];
-                                     $historia_molestia_sintomas_ortopedia = $dados[0]['historia_molestia_sintomas_ortopedia'];
-                                     $inspecao_ortopedia = $dados[0]['inspecao_ortopedia'];
+                                    $historia_molestia_progressa_ortopedia = $dados[0]['historia_molestia_progressa_ortopedia'];
+                                    $historia_molestia_atual_ortopedia = $dados[0]['historia_molestia_atual_ortopedia'];
+                                    $historia_molestia_sintomas_ortopedia = $dados[0]['historia_molestia_sintomas_ortopedia'];
+                                    $inspecao_ortopedia = $dados[0]['inspecao_ortopedia'];
                                     
-                                     //OMBRO
-                                     $ombro_flexaoD_ortopedia = $dados[0]['ombro_flexaoD_ortopedia'];
-                                     $ombro_flexaoE_ortopedia = $dados[0]['ombro_flexaoE_ortopedia'];
-                                     $obs_inspecao_ortopedia = $dados[0]['obs_inspecao_ortopedia'];
-                                     $ombro_extensaoE_ortopedia = $dados[0]['ombro_extensaoE_ortopedia'];
-                                     $ombro_extensaoD_ortopedia = $dados[0]['ombro_extensaoD_ortopedia'];
-                                     $ombro_abducaoE_ortopedia  = $dados[0]['ombro_abducaoE_ortopedia'];
-                                     $ombro_abducaoD_ortopedia  = $dados[0]['ombro_abducaoE_ortopedia'];
+                                    //OMBRO
+                                    $ombro_flexaoD_ortopedia = $dados[0]['ombro_flexaoD_ortopedia'];
+                                    $ombro_flexaoE_ortopedia = $dados[0]['ombro_flexaoE_ortopedia'];
+                                    $obs_inspecao_ortopedia = $dados[0]['obs_inspecao_ortopedia'];
+                                    $ombro_extensaoE_ortopedia = $dados[0]['ombro_extensaoE_ortopedia'];
+                                    $ombro_extensaoD_ortopedia = $dados[0]['ombro_extensaoD_ortopedia'];
+                                    $ombro_abducaoE_ortopedia  = $dados[0]['ombro_abducaoE_ortopedia'];
+                                    $ombro_abducaoD_ortopedia  = $dados[0]['ombro_abducaoE_ortopedia'];
 
+                                    //COTOVELO
+                                    $cotovelo_supinacaoE_ortopedia = $dados[0]['cotovelo_supinacaoE_ortopedia'];
 
                                  } ?>
                                 <h3>História da Moléstia</h3>
@@ -3057,9 +3059,10 @@ if (isset($_POST['itens-pagina'])) {
                                 Realizar se possivel o teste, caso não seja possivel observar a movimento espontânea.<br>
                             </div>  
                             <div class="modal-header">
-                                <h5>Ombro</h5>
+                                <h5><a data-toggle="collapse" href="#ombro" aria-expanded="false" aria-controls="ombro"> Ombro</a></h5>
                                 <br>
                             </div>
+                            <div class="collapse" id="ombro">
                                 <!-- FLEXAO -->
                                 <div class="row">
                                     <div class="col-md-6">
@@ -3230,9 +3233,9 @@ if (isset($_POST['itens-pagina'])) {
                                                     echo '<option value="(3) Consegue realizar movimento vencendo a gravidade.
                                                     ">(3) Consegue realizar movimento vencendo a gravidade.
                                                     </option>'; ?>
-                                                <?php if ($ombro_extensaoE_ortopedia != '(4) Consegue realizar movimento vencendo a gravidade e também uma resistência externa.')
+                                                <?php if ($ombro_abducaoE_ortopedia != '(4) Consegue realizar movimento vencendo a gravidade e também uma resistência externa.')
                                                     echo '<option value="(4) Consegue realizar movimento vencendo a gravidade e também uma resistência externa.">(4) Consegue realizar movimento vencendo a gravidade e também uma resistência externa.</option>'; ?>
-                                                <?php if ($ombro_extensaoE_ortopedia != '(5) Consegue realizar movimento superando uma resistencia maior que o musculo bom.')
+                                                <?php if ($ombro_abducaoE_ortopedia != '(5) Consegue realizar movimento superando uma resistencia maior que o musculo bom.')
                                                     echo '<option value="(5) Consegue realizar movimento superando uma resistencia maior que o musculo bom.">(5) Consegue realizar movimento superando uma resistencia maior que o musculo bom.</option>'; ?>
                                             </select>   
                                         </div>
@@ -3241,31 +3244,31 @@ if (isset($_POST['itens-pagina'])) {
                                         <div class="form-group">
                                             <label for="exampleFormControlInput1">Abdução D</label>
 
-                                            <select class="form-control" id="ombro_extensaoD_ortopedia "
-                                                name="ombro_extensaoD_ortopedia">
+                                            <select class="form-control" id="ombro_abducaoD_ortopedia "
+                                                name="ombro_abducaoD_ortopedia">
                                                 <?php
                                                 if (@$_GET['funcao'] == 'editar') {
-                                                    echo '<option value="' . $ombro_extensaoD_ortopedia . '">' . $ombro_extensaoD_ortopedia . '</option>';
+                                                    echo '<option value="' . $ombro_abducaoD_ortopedia . '">' . $ombro_abducaoD_ortopedia . '</option>';
                                                 }
                                                 ?>
-                                                <?php if ($ombro_extensaoD_ortopedia != '(0) Ausencia de Contração.')
+                                                <?php if ($ombro_abducaoD_ortopedia != '(0) Ausencia de Contração.')
                                                     echo '<option value="(0) Ausencia de Contração.">(0) Ausencia de Contração.</option>'; ?>
-                                                <?php if ($ombro_extensaoD_ortopedia != '(1) Há uma leve contração porém incapaz de produzir movimento.')
+                                                <?php if ($ombro_abducaoD_ortopedia != '(1) Há uma leve contração porém incapaz de produzir movimento.')
                                                     echo '<option value="(1) Há uma leve contração porém incapaz de produzir movimento.">(1) Há uma leve contração porém incapaz de produzir movimento.</option>'; ?>     
-                                                <?php if ($ombro_extensaoD_ortopedia != 'Estado de Nutricao')
+                                                <?php if ($ombro_abducaoD_ortopedia != 'Estado de Nutricao')
                                                     echo '<option value="(2) Há movimento somente na ausência de gravidade.
                                                     ">(2) Há movimento somente na ausência de gravidade.
                                                     </option>'; ?>
                                                 <?php if (
-                                                    $ombro_extensaoD_ortopedia != '(3) Consegue realizar movimento vencendo a gravidade.
+                                                    $ombro_abducaoD_ortopedia != '(3) Consegue realizar movimento vencendo a gravidade.
     '
                                                 )
                                                     echo '<option value="(3) Consegue realizar movimento vencendo a gravidade.
                                                     ">(3) Consegue realizar movimento vencendo a gravidade.
                                                     </option>'; ?>
-                                                <?php if ($ombro_extensaoD_ortopedia != '(4) Consegue realizar movimento vencendo a gravidade e também uma resistência externa.')
+                                                <?php if ($ombro_abducaoD_ortopedia != '(4) Consegue realizar movimento vencendo a gravidade e também uma resistência externa.')
                                                     echo '<option value="(4) Consegue realizar movimento vencendo a gravidade e também uma resistência externa.">(4) Consegue realizar movimento vencendo a gravidade e também uma resistência externa.</option>'; ?>
-                                                <?php if ($ombro_extensaoD_ortopedia != '(5) Consegue realizar movimento superando uma resistencia maior que o musculo bom.')
+                                                <?php if ($ombro_abducaoD_ortopedia != '(5) Consegue realizar movimento superando uma resistencia maior que o musculo bom.')
                                                     echo '<option value="(5) Consegue realizar movimento superando uma resistencia maior que o musculo bom.">(5) Consegue realizar movimento superando uma resistencia maior que o musculo bom.</option>'; ?>
 
                                             </select>   
@@ -3278,65 +3281,65 @@ if (isset($_POST['itens-pagina'])) {
                                 <div class="row">
                                     <div class="col-md-6">
                                         <div class="form-group">
-                                            <label for="exampleFormControlInput1">Extensão E</label>
-                                            <select class="form-control" id="ombro_extensaoE_ortopedia "
-                                                name="ombro_extensaoE_ortopedia">
+                                            <label for="exampleFormControlInput1">Adução E</label>
+                                            <select class="form-control" id="ombro_aducaoE_ortopedia "
+                                                name="ombro_aducaoE_ortopedia">
                                                 <?php
                                                 if (@$_GET['funcao'] == 'editar') {
-                                                    echo '<option value="' . $ombro_extensaoE_ortopedia . '">' . $ombro_extensaoE_ortopedia . '</option>';
+                                                    echo '<option value="' . $ombro_aducaoE_ortopedia . '">' . $ombro_aducaoE_ortopedia . '</option>';
                                                 }
                                                 ?>
-                                                <?php if ($ombro_extensaoE_ortopedia != '(0) Ausencia de Contração.')
+                                                <?php if ($ombro_aducaoE_ortopedia != '(0) Ausencia de Contração.')
                                                     echo '<option value="(0) Ausencia de Contração.">(0) Ausencia de Contração.</option>'; ?>
-                                                <?php if ($ombro_extensaoE_ortopedia != '(1) Há uma leve contração porém incapaz de produzir movimento.')
+                                                <?php if ($ombro_aducaoE_ortopedia != '(1) Há uma leve contração porém incapaz de produzir movimento.')
                                                     echo '<option value="(1) Há uma leve contração porém incapaz de produzir movimento.">(1) Há uma leve contração porém incapaz de produzir movimento.</option>'; ?>     
-                                                <?php if ($ombro_extensaoE_ortopedia != 'Estado de Nutricao')
+                                                <?php if ($ombro_aducaoE_ortopedia != 'Estado de Nutricao')
                                                     echo '<option value="(2) Há movimento somente na ausência de gravidade.
                                                     ">(2) Há movimento somente na ausência de gravidade.
                                                     </option>'; ?>
                                                 <?php if (
-                                                    $ombro_extensaoE_ortopedia != '(3) Consegue realizar movimento vencendo a gravidade.
+                                                    $ombro_aducaoE_ortopedia != '(3) Consegue realizar movimento vencendo a gravidade.
     '
                                                 )
                                                     echo '<option value="(3) Consegue realizar movimento vencendo a gravidade.
                                                     ">(3) Consegue realizar movimento vencendo a gravidade.
                                                     </option>'; ?>
-                                                <?php if ($ombro_extensaoE_ortopedia != '(4) Consegue realizar movimento vencendo a gravidade e também uma resistência externa.')
+                                                <?php if ($ombro_aducaoE_ortopedia != '(4) Consegue realizar movimento vencendo a gravidade e também uma resistência externa.')
                                                     echo '<option value="(4) Consegue realizar movimento vencendo a gravidade e também uma resistência externa.">(4) Consegue realizar movimento vencendo a gravidade e também uma resistência externa.</option>'; ?>
-                                                <?php if ($ombro_extensaoE_ortopedia != '(5) Consegue realizar movimento superando uma resistencia maior que o musculo bom.')
+                                                <?php if ($ombro_aducaoE_ortopedia != '(5) Consegue realizar movimento superando uma resistencia maior que o musculo bom.')
                                                     echo '<option value="(5) Consegue realizar movimento superando uma resistencia maior que o musculo bom.">(5) Consegue realizar movimento superando uma resistencia maior que o musculo bom.</option>'; ?>
                                             </select>   
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-group">
-                                            <label for="exampleFormControlInput1">Extensão D</label>
+                                            <label for="exampleFormControlInput1">Adução D</label>
 
-                                            <select class="form-control" id="ombro_extensaoD_ortopedia "
-                                                name="ombro_extensaoD_ortopedia">
+                                            <select class="form-control" id="ombro_aducaoD_ortopedia "
+                                                name="ombro_aducaoD_ortopedia">
                                                 <?php
                                                 if (@$_GET['funcao'] == 'editar') {
-                                                    echo '<option value="' . $ombro_extensaoD_ortopedia . '">' . $ombro_extensaoD_ortopedia . '</option>';
+                                                    echo '<option value="' . $ombro_aducaoD_ortopedia . '">' . $ombro_aducaoD_ortopedia . '</option>';
                                                 }
                                                 ?>
-                                                <?php if ($ombro_extensaoD_ortopedia != '(0) Ausencia de Contração.')
+                                                <?php if ($ombro_aducaoD_ortopedia != '(0) Ausencia de Contração.')
                                                     echo '<option value="(0) Ausencia de Contração.">(0) Ausencia de Contração.</option>'; ?>
-                                                <?php if ($ombro_extensaoD_ortopedia != '(1) Há uma leve contração porém incapaz de produzir movimento.')
+                                                <?php if ($ombro_aducaoD_ortopedia != '(1) Há uma leve contração porém incapaz de produzir movimento.')
                                                     echo '<option value="(1) Há uma leve contração porém incapaz de produzir movimento.">(1) Há uma leve contração porém incapaz de produzir movimento.</option>'; ?>     
-                                                <?php if ($ombro_extensaoD_ortopedia != 'Estado de Nutricao')
+                                                <?php if ($ombro_aducaoD_ortopedia != 'Estado de Nutricao')
                                                     echo '<option value="(2) Há movimento somente na ausência de gravidade.
                                                     ">(2) Há movimento somente na ausência de gravidade.
                                                     </option>'; ?>
                                                 <?php if (
-                                                    $ombro_extensaoD_ortopedia != '(3) Consegue realizar movimento vencendo a gravidade.
+                                                    $ombro_aducaoD_ortopedia != '(3) Consegue realizar movimento vencendo a gravidade.
     '
                                                 )
                                                     echo '<option value="(3) Consegue realizar movimento vencendo a gravidade.
                                                     ">(3) Consegue realizar movimento vencendo a gravidade.
                                                     </option>'; ?>
-                                                <?php if ($ombro_extensaoD_ortopedia != '(4) Consegue realizar movimento vencendo a gravidade e também uma resistência externa.')
+                                                <?php if ($ombro_aducaoD_ortopedia != '(4) Consegue realizar movimento vencendo a gravidade e também uma resistência externa.')
                                                     echo '<option value="(4) Consegue realizar movimento vencendo a gravidade e também uma resistência externa.">(4) Consegue realizar movimento vencendo a gravidade e também uma resistência externa.</option>'; ?>
-                                                <?php if ($ombro_extensaoD_ortopedia != '(5) Consegue realizar movimento superando uma resistencia maior que o musculo bom.')
+                                                <?php if ($ombro_aducaoD_ortopedia != '(5) Consegue realizar movimento superando uma resistencia maior que o musculo bom.')
                                                     echo '<option value="(5) Consegue realizar movimento superando uma resistencia maior que o musculo bom.">(5) Consegue realizar movimento superando uma resistencia maior que o musculo bom.</option>'; ?>
 
                                             </select>   
@@ -3345,36 +3348,254 @@ if (isset($_POST['itens-pagina'])) {
                                 </div>
                                 <!-- FIM ADUÇÃO -->
 
-                                <!-- ADUÇÃO -->
+                                <!-- ROTAÇÃO INTERNA -->
                                 <div class="row">
                                     <div class="col-md-6">
                                         <div class="form-group">
-                                            <label for="exampleFormControlInput1">Extensão E</label>
-                                            <select class="form-control" id="ombro_extensaoE_ortopedia "
-                                                name="ombro_extensaoE_ortopedia">
+                                            <label for="exampleFormControlInput1">Rotação Interna E</label>
+                                            <select class="form-control" id="ombro_rotacaoInternaE_ortopedia "
+                                                name="ombro_rotacaoInternaE_ortopedia">
                                                 <?php
                                                 if (@$_GET['funcao'] == 'editar') {
-                                                    echo '<option value="' . $ombro_extensaoE_ortopedia . '">' . $ombro_extensaoE_ortopedia . '</option>';
+                                                    echo '<option value="' . $ombro_rotacaoInternaE_ortopedia . '">' . $ombro_rotacaoInternaE_ortopedia . '</option>';
                                                 }
                                                 ?>
-                                                <?php if ($ombro_extensaoE_ortopedia != '(0) Ausencia de Contração.')
+                                                <?php if ($ombro_rotacaoInternaE_ortopedia != '(0) Ausencia de Contração.')
                                                     echo '<option value="(0) Ausencia de Contração.">(0) Ausencia de Contração.</option>'; ?>
-                                                <?php if ($ombro_extensaoE_ortopedia != '(1) Há uma leve contração porém incapaz de produzir movimento.')
+                                                <?php if ($ombro_rotacaoInternaE_ortopedia != '(1) Há uma leve contração porém incapaz de produzir movimento.')
                                                     echo '<option value="(1) Há uma leve contração porém incapaz de produzir movimento.">(1) Há uma leve contração porém incapaz de produzir movimento.</option>'; ?>     
-                                                <?php if ($ombro_extensaoE_ortopedia != 'Estado de Nutricao')
+                                                <?php if ($ombro_rotacaoInternaE_ortopedia != 'Estado de Nutricao')
                                                     echo '<option value="(2) Há movimento somente na ausência de gravidade.
                                                     ">(2) Há movimento somente na ausência de gravidade.
                                                     </option>'; ?>
                                                 <?php if (
-                                                    $ombro_extensaoE_ortopedia != '(3) Consegue realizar movimento vencendo a gravidade.
+                                                    $ombro_rotacaoInternaE_ortopedia != '(3) Consegue realizar movimento vencendo a gravidade.
     '
                                                 )
                                                     echo '<option value="(3) Consegue realizar movimento vencendo a gravidade.
                                                     ">(3) Consegue realizar movimento vencendo a gravidade.
                                                     </option>'; ?>
-                                                <?php if ($ombro_extensaoE_ortopedia != '(4) Consegue realizar movimento vencendo a gravidade e também uma resistência externa.')
+                                                <?php if ($ombro_rotacaoInternaE_ortopedia != '(4) Consegue realizar movimento vencendo a gravidade e também uma resistência externa.')
                                                     echo '<option value="(4) Consegue realizar movimento vencendo a gravidade e também uma resistência externa.">(4) Consegue realizar movimento vencendo a gravidade e também uma resistência externa.</option>'; ?>
-                                                <?php if ($ombro_extensaoE_ortopedia != '(5) Consegue realizar movimento superando uma resistencia maior que o musculo bom.')
+                                                <?php if ($ombro_rotacaoInternaE_ortopedia != '(5) Consegue realizar movimento superando uma resistencia maior que o musculo bom.')
+                                                    echo '<option value="(5) Consegue realizar movimento superando uma resistencia maior que o musculo bom.">(5) Consegue realizar movimento superando uma resistencia maior que o musculo bom.</option>'; ?>
+                                            </select>   
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="exampleFormControlInput1">Rotação Interna D</label>
+
+                                            <select class="form-control" id="ombro_rotacaoInternaD_ortopedia "
+                                                name="ombro_rotacaoInternaD_ortopedia">
+                                                <?php
+                                                if (@$_GET['funcao'] == 'editar') {
+                                                    echo '<option value="' . $ombro_rotacaoInternaD_ortopedia . '">' . $ombro_rotacaoInternaD_ortopedia . '</option>';
+                                                }
+                                                ?>
+                                                <?php if ($ombro_rotacaoInternaD_ortopedia != '(0) Ausencia de Contração.')
+                                                    echo '<option value="(0) Ausencia de Contração.">(0) Ausencia de Contração.</option>'; ?>
+                                                <?php if ($ombro_rotacaoInternaD_ortopedia != '(1) Há uma leve contração porém incapaz de produzir movimento.')
+                                                    echo '<option value="(1) Há uma leve contração porém incapaz de produzir movimento.">(1) Há uma leve contração porém incapaz de produzir movimento.</option>'; ?>     
+                                                <?php if ($ombro_rotacaoInternaD_ortopedia != 'Estado de Nutricao')
+                                                    echo '<option value="(2) Há movimento somente na ausência de gravidade.
+                                                    ">(2) Há movimento somente na ausência de gravidade.
+                                                    </option>'; ?>
+                                                <?php if (
+                                                    $ombro_rotacaoInternaD_ortopedia != '(3) Consegue realizar movimento vencendo a gravidade.
+    '
+                                                )
+                                                    echo '<option value="(3) Consegue realizar movimento vencendo a gravidade.
+                                                    ">(3) Consegue realizar movimento vencendo a gravidade.
+                                                    </option>'; ?>
+                                                <?php if ($ombro_rotacaoInternaD_ortopedia != '(4) Consegue realizar movimento vencendo a gravidade e também uma resistência externa.')
+                                                    echo '<option value="(4) Consegue realizar movimento vencendo a gravidade e também uma resistência externa.">(4) Consegue realizar movimento vencendo a gravidade e também uma resistência externa.</option>'; ?>
+                                                <?php if ($ombro_rotacaoInternaD_ortopedia != '(5) Consegue realizar movimento superando uma resistencia maior que o musculo bom.')
+                                                    echo '<option value="(5) Consegue realizar movimento superando uma resistencia maior que o musculo bom.">(5) Consegue realizar movimento superando uma resistencia maior que o musculo bom.</option>'; ?>
+
+                                            </select>   
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- FIM ROTAÇÃO INTERNA -->
+
+                                <!-- ROTAÇÃO EXTERNA -->
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="exampleFormControlInput1">Rotação Externa E</label>
+                                            <select class="form-control" id="ombro_rotacaoExternaE_ortopedia "
+                                                name="ombro_rotacaoExternaE_ortopedia">
+                                                <?php
+                                                if (@$_GET['funcao'] == 'editar') {
+                                                    echo '<option value="' . $ombro_rotacaoExternaE_ortopedia . '">' . $ombro_rotacaoExternaE_ortopedia . '</option>';
+                                                }
+                                                ?>
+                                                <?php if ($ombro_rotacaoExternaE_ortopedia != '(0) Ausencia de Contração.')
+                                                    echo '<option value="(0) Ausencia de Contração.">(0) Ausencia de Contração.</option>'; ?>
+                                                <?php if ($ombro_rotacaoExternaE_ortopedia != '(1) Há uma leve contração porém incapaz de produzir movimento.')
+                                                    echo '<option value="(1) Há uma leve contração porém incapaz de produzir movimento.">(1) Há uma leve contração porém incapaz de produzir movimento.</option>'; ?>     
+                                                <?php if ($ombro_rotacaoExternaE_ortopedia != 'Estado de Nutricao')
+                                                    echo '<option value="(2) Há movimento somente na ausência de gravidade.
+                                                    ">(2) Há movimento somente na ausência de gravidade.
+                                                    </option>'; ?>
+                                                <?php if (
+                                                    $ombro_rotacaoExternaE_ortopedia != '(3) Consegue realizar movimento vencendo a gravidade.
+    '
+                                                )
+                                                    echo '<option value="(3) Consegue realizar movimento vencendo a gravidade.
+                                                    ">(3) Consegue realizar movimento vencendo a gravidade.
+                                                    </option>'; ?>
+                                                <?php if ($ombro_rotacaoExternaE_ortopedia != '(4) Consegue realizar movimento vencendo a gravidade e também uma resistência externa.')
+                                                    echo '<option value="(4) Consegue realizar movimento vencendo a gravidade e também uma resistência externa.">(4) Consegue realizar movimento vencendo a gravidade e também uma resistência externa.</option>'; ?>
+                                                <?php if ($ombro_rotacaoExternaE_ortopedia != '(5) Consegue realizar movimento superando uma resistencia maior que o musculo bom.')
+                                                    echo '<option value="(5) Consegue realizar movimento superando uma resistencia maior que o musculo bom.">(5) Consegue realizar movimento superando uma resistencia maior que o musculo bom.</option>'; ?>
+                                            </select>   
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="exampleFormControlInput1">Rotação Externa D</label>
+
+                                            <select class="form-control" id="ombro_rotacaoExternaD_ortopedia "
+                                                name="ombro_rotacaoExternaD_ortopedia">
+                                                <?php
+                                                if (@$_GET['funcao'] == 'editar') {
+                                                    echo '<option value="' . $ombro_rotacaoExternaD_ortopedia . '">' . $ombro_rotacaoExternaD_ortopedia . '</option>';
+                                                }
+                                                ?>
+                                                <?php if ($ombro_rotacaoExternaD_ortopedia != '(0) Ausencia de Contração.')
+                                                    echo '<option value="(0) Ausencia de Contração.">(0) Ausencia de Contração.</option>'; ?>
+                                                <?php if ($ombro_rotacaoExternaD_ortopedia != '(1) Há uma leve contração porém incapaz de produzir movimento.')
+                                                    echo '<option value="(1) Há uma leve contração porém incapaz de produzir movimento.">(1) Há uma leve contração porém incapaz de produzir movimento.</option>'; ?>     
+                                                <?php if ($ombro_rotacaoExternaD_ortopedia != 'Estado de Nutricao')
+                                                    echo '<option value="(2) Há movimento somente na ausência de gravidade.
+                                                    ">(2) Há movimento somente na ausência de gravidade.
+                                                    </option>'; ?>
+                                                <?php if (
+                                                    $ombro_rotacaoExternaD_ortopedia != '(3) Consegue realizar movimento vencendo a gravidade.
+    '
+                                                )
+                                                    echo '<option value="(3) Consegue realizar movimento vencendo a gravidade.
+                                                    ">(3) Consegue realizar movimento vencendo a gravidade.
+                                                    </option>'; ?>
+                                                <?php if ($ombro_rotacaoExternaD_ortopedia != '(4) Consegue realizar movimento vencendo a gravidade e também uma resistência externa.')
+                                                    echo '<option value="(4) Consegue realizar movimento vencendo a gravidade e também uma resistência externa.">(4) Consegue realizar movimento vencendo a gravidade e também uma resistência externa.</option>'; ?>
+                                                <?php if ($ombro_rotacaoExternaD_ortopedia != '(5) Consegue realizar movimento superando uma resistencia maior que o musculo bom.')
+                                                    echo '<option value="(5) Consegue realizar movimento superando uma resistencia maior que o musculo bom.">(5) Consegue realizar movimento superando uma resistencia maior que o musculo bom.</option>'; ?>
+
+                                            </select>   
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- FIM ROTAÇÃO EXTERNA -->
+                            <!-- FIM OMBRO -->
+                            </div>
+                            <div class="modal-header">
+                                <h5>Cotovelo</h5>
+                                <br>
+                            </div>
+                              <!-- FLEXAO -->
+                              <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="exampleFormControlInput1">Flexão E</label>
+                                            <select class="form-control" id="cotovelo_flexaoE_ortopedia "
+                                                name="cotovelo_flexaoE_ortopedia">
+                                                <?php
+                                                if (@$_GET['funcao'] == 'editar') {
+                                                    echo '<option value="' . $cotovelo_flexaoE_ortopedia . '">' . $cotovelo_flexaoE_ortopedia . '</option>';
+                                                }
+                                                ?>
+                                                <?php if ($cotovelo_flexaoE_ortopedia != '(0) Ausencia de Contração.')
+                                                    echo '<option value="(0) Ausencia de Contração.">(0) Ausencia de Contração.</option>'; ?>
+                                                <?php if ($cotovelo_flexaoE_ortopedia != '(1) Há uma leve contração porém incapaz de produzir movimento.')
+                                                    echo '<option value="(1) Há uma leve contração porém incapaz de produzir movimento.">(1) Há uma leve contração porém incapaz de produzir movimento.</option>'; ?>     
+                                                <?php if ($cotovelo_flexaoE_ortopedia != 'Estado de Nutricao')
+                                                    echo '<option value="(2) Há movimento somente na ausência de gravidade.
+                                                    ">(2) Há movimento somente na ausência de gravidade.
+                                                    </option>'; ?>
+                                                <?php if (
+                                                    $cotovelo_flexaoE_ortopedia != '(3) Consegue realizar movimento vencendo a gravidade.
+    '
+                                                )
+                                                    echo '<option value="(3) Consegue realizar movimento vencendo a gravidade.
+                                                    ">(3) Consegue realizar movimento vencendo a gravidade.
+                                                    </option>'; ?>
+                                                <?php if ($cotovelo_flexaoE_ortopedia != '(4) Consegue realizar movimento vencendo a gravidade e também uma resistência externa.')
+                                                    echo '<option value="(4) Consegue realizar movimento vencendo a gravidade e também uma resistência externa.">(4) Consegue realizar movimento vencendo a gravidade e também uma resistência externa.</option>'; ?>
+                                                <?php if ($cotovelo_flexaoE_ortopedia != '(5) Consegue realizar movimento superando uma resistencia maior que o musculo bom.')
+                                                    echo '<option value="(5) Consegue realizar movimento superando uma resistencia maior que o musculo bom.">(5) Consegue realizar movimento superando uma resistencia maior que o musculo bom.</option>'; ?>
+                                            </select>   
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="exampleFormControlInput1">Flexão D</label>
+
+                                            <select class="form-control" id="cotovelo_flexaoD_ortopedia "
+                                                name="cotovelo_flexaoD_ortopedia">
+                                                <?php
+                                                if (@$_GET['funcao'] == 'editar') {
+                                                    echo '<option value="' . $cotovelo_flexaoD_ortopedia . '">' . $cotovelo_flexaoD_ortopedia . '</option>';
+                                                }
+                                                ?>
+                                                <?php if ($cotovelo_flexaoD_ortopedia != '(0) Ausencia de Contração.')
+                                                    echo '<option value="(0) Ausencia de Contração.">(0) Ausencia de Contração.</option>'; ?>
+                                                <?php if ($cotovelo_flexaoD_ortopedia != '(1) Há uma leve contração porém incapaz de produzir movimento.')
+                                                    echo '<option value="(1) Há uma leve contração porém incapaz de produzir movimento.">(1) Há uma leve contração porém incapaz de produzir movimento.</option>'; ?>     
+                                                <?php if ($cotovelo_flexaoD_ortopedia != 'Estado de Nutricao')
+                                                    echo '<option value="(2) Há movimento somente na ausência de gravidade.
+                                                    ">(2) Há movimento somente na ausência de gravidade.
+                                                    </option>'; ?>
+                                                <?php if (
+                                                    $cotovelo_flexaoD_ortopedia != '(3) Consegue realizar movimento vencendo a gravidade.
+    '
+                                                )
+                                                    echo '<option value="(3) Consegue realizar movimento vencendo a gravidade.
+                                                    ">(3) Consegue realizar movimento vencendo a gravidade.
+                                                    </option>'; ?>
+                                                <?php if ($cotovelo_flexaoD_ortopedia != '(4) Consegue realizar movimento vencendo a gravidade e também uma resistência externa.')
+                                                    echo '<option value="(4) Consegue realizar movimento vencendo a gravidade e também uma resistência externa.">(4) Consegue realizar movimento vencendo a gravidade e também uma resistência externa.</option>'; ?>
+                                                <?php if ($cotovelo_flexaoD_ortopedia != '(5) Consegue realizar movimento superando uma resistencia maior que o musculo bom.')
+                                                    echo '<option value="(5) Consegue realizar movimento superando uma resistencia maior que o musculo bom.">(5) Consegue realizar movimento superando uma resistencia maior que o musculo bom.</option>'; ?>
+
+                                            </select>   
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- FIM FLEXAO -->
+                
+                                <!-- EXTENSAO -->
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="exampleFormControlInput1">Extensão E</label>
+                                            <select class="form-control" id="cotovelo_extensaoE_ortopedia "
+                                                name="cotovelo_extensaoE_ortopedia">
+                                                <?php
+                                                if (@$_GET['funcao'] == 'editar') {
+                                                    echo '<option value="' . $cotovelo_extensaoE_ortopedia . '">' . $cotovelo_extensaoE_ortopedia . '</option>';
+                                                }
+                                                ?>
+                                                <?php if ($cotovelo_extensaoE_ortopedia != '(0) Ausencia de Contração.')
+                                                    echo '<option value="(0) Ausencia de Contração.">(0) Ausencia de Contração.</option>'; ?>
+                                                <?php if ($cotovelo_extensaoE_ortopedia != '(1) Há uma leve contração porém incapaz de produzir movimento.')
+                                                    echo '<option value="(1) Há uma leve contração porém incapaz de produzir movimento.">(1) Há uma leve contração porém incapaz de produzir movimento.</option>'; ?>     
+                                                <?php if ($cotovelo_extensaoE_ortopedia != 'Estado de Nutricao')
+                                                    echo '<option value="(2) Há movimento somente na ausência de gravidade.
+                                                    ">(2) Há movimento somente na ausência de gravidade.
+                                                    </option>'; ?>
+                                                <?php if (
+                                                    $cotovelo_extensaoE_ortopedia != '(3) Consegue realizar movimento vencendo a gravidade.
+    '
+                                                )
+                                                    echo '<option value="(3) Consegue realizar movimento vencendo a gravidade.
+                                                    ">(3) Consegue realizar movimento vencendo a gravidade.
+                                                    </option>'; ?>
+                                                <?php if ($cotovelo_extensaoE_ortopedia != '(4) Consegue realizar movimento vencendo a gravidade e também uma resistência externa.')
+                                                    echo '<option value="(4) Consegue realizar movimento vencendo a gravidade e também uma resistência externa.">(4) Consegue realizar movimento vencendo a gravidade e também uma resistência externa.</option>'; ?>
+                                                <?php if ($cotovelo_extensaoE_ortopedia != '(5) Consegue realizar movimento superando uma resistencia maior que o musculo bom.')
                                                     echo '<option value="(5) Consegue realizar movimento superando uma resistencia maior que o musculo bom.">(5) Consegue realizar movimento superando uma resistencia maior que o musculo bom.</option>'; ?>
                                             </select>   
                                         </div>
@@ -3387,34 +3608,465 @@ if (isset($_POST['itens-pagina'])) {
                                                 name="ombro_extensaoD_ortopedia">
                                                 <?php
                                                 if (@$_GET['funcao'] == 'editar') {
-                                                    echo '<option value="' . $ombro_extensaoD_ortopedia . '">' . $ombro_extensaoD_ortopedia . '</option>';
+                                                    echo '<option value="' . $cotovelo_extensaoD_ortopedia . '">' . $cotovelo_extensaoD_ortopedia . '</option>';
                                                 }
                                                 ?>
-                                                <?php if ($ombro_extensaoD_ortopedia != '(0) Ausencia de Contração.')
+                                                <?php if ($cotovelo_extensaoD_ortopedia != '(0) Ausencia de Contração.')
                                                     echo '<option value="(0) Ausencia de Contração.">(0) Ausencia de Contração.</option>'; ?>
-                                                <?php if ($ombro_extensaoD_ortopedia != '(1) Há uma leve contração porém incapaz de produzir movimento.')
+                                                <?php if ($cotovelo_extensaoD_ortopedia != '(1) Há uma leve contração porém incapaz de produzir movimento.')
                                                     echo '<option value="(1) Há uma leve contração porém incapaz de produzir movimento.">(1) Há uma leve contração porém incapaz de produzir movimento.</option>'; ?>     
-                                                <?php if ($ombro_extensaoD_ortopedia != 'Estado de Nutricao')
+                                                <?php if ($cotovelo_extensaoD_ortopedia != 'Estado de Nutricao')
                                                     echo '<option value="(2) Há movimento somente na ausência de gravidade.
                                                     ">(2) Há movimento somente na ausência de gravidade.
                                                     </option>'; ?>
                                                 <?php if (
-                                                    $ombro_extensaoD_ortopedia != '(3) Consegue realizar movimento vencendo a gravidade.
+                                                    $cotovelo_extensaoD_ortopedia != '(3) Consegue realizar movimento vencendo a gravidade.
     '
                                                 )
                                                     echo '<option value="(3) Consegue realizar movimento vencendo a gravidade.
                                                     ">(3) Consegue realizar movimento vencendo a gravidade.
                                                     </option>'; ?>
-                                                <?php if ($ombro_extensaoD_ortopedia != '(4) Consegue realizar movimento vencendo a gravidade e também uma resistência externa.')
+                                                <?php if ($cotovelo_extensaoD_ortopedia != '(4) Consegue realizar movimento vencendo a gravidade e também uma resistência externa.')
                                                     echo '<option value="(4) Consegue realizar movimento vencendo a gravidade e também uma resistência externa.">(4) Consegue realizar movimento vencendo a gravidade e também uma resistência externa.</option>'; ?>
-                                                <?php if ($ombro_extensaoD_ortopedia != '(5) Consegue realizar movimento superando uma resistencia maior que o musculo bom.')
+                                                <?php if ($cotovelo_extensaoD_ortopedia != '(5) Consegue realizar movimento superando uma resistencia maior que o musculo bom.')
                                                     echo '<option value="(5) Consegue realizar movimento superando uma resistencia maior que o musculo bom.">(5) Consegue realizar movimento superando uma resistencia maior que o musculo bom.</option>'; ?>
 
                                             </select>   
                                         </div>
                                     </div>
                                 </div>
-                                                        
+                                <!-- FIM EXTENSAO -->
+
+                                <!-- PRONAÇÃO -->
+
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="exampleFormControlInput1">Pronação E</label>
+                                            <select class="form-control" id="cotovelo_pronocaoE_ortopedia "
+                                                name="cotovelo_pronocaoE_ortopedia">
+                                                <?php
+                                                if (@$_GET['funcao'] == 'editar') {
+                                                    echo '<option value="' . $cotovelo_pronocaoE_ortopedia . '">' . $cotovelo_pronocaoE_ortopedia . '</option>';
+                                                }
+                                                ?>
+                                                <?php if ($cotovelo_pronocaoE_ortopedia != '(0) Ausencia de Contração.')
+                                                    echo '<option value="(0) Ausencia de Contração.">(0) Ausencia de Contração.</option>'; ?>
+                                                <?php if ($cotovelo_pronocaoE_ortopedia != '(1) Há uma leve contração porém incapaz de produzir movimento.')
+                                                    echo '<option value="(1) Há uma leve contração porém incapaz de produzir movimento.">(1) Há uma leve contração porém incapaz de produzir movimento.</option>'; ?>     
+                                                <?php if ($cotovelo_pronocaoE_ortopedia != 'Estado de Nutricao')
+                                                    echo '<option value="(2) Há movimento somente na ausência de gravidade.
+                                                    ">(2) Há movimento somente na ausência de gravidade.
+                                                    </option>'; ?>
+                                                <?php if (
+                                                    $cotovelo_pronocaoE_ortopedia != '(3) Consegue realizar movimento vencendo a gravidade.
+    '
+                                                )
+                                                    echo '<option value="(3) Consegue realizar movimento vencendo a gravidade.
+                                                    ">(3) Consegue realizar movimento vencendo a gravidade.
+                                                    </option>'; ?>
+                                                <?php if ($cotovelo_pronocaoE_ortopedia != '(4) Consegue realizar movimento vencendo a gravidade e também uma resistência externa.')
+                                                    echo '<option value="(4) Consegue realizar movimento vencendo a gravidade e também uma resistência externa.">(4) Consegue realizar movimento vencendo a gravidade e também uma resistência externa.</option>'; ?>
+                                                <?php if ($cotovelo_pronocaoE_ortopedia != '(5) Consegue realizar movimento superando uma resistencia maior que o musculo bom.')
+                                                    echo '<option value="(5) Consegue realizar movimento superando uma resistencia maior que o musculo bom.">(5) Consegue realizar movimento superando uma resistencia maior que o musculo bom.</option>'; ?>
+                                            </select>   
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="exampleFormControlInput1">Pronação D</label>
+
+                                            <select class="form-control" id="cotovelo_pronocaoD_ortopedia "
+                                                name="cotovelo_pronocaoD_ortopedia">
+                                                <?php
+                                                if (@$_GET['funcao'] == 'editar') {
+                                                    echo '<option value="' . $cotovelo_pronocaoD_ortopedia . '">' . $cotovelo_pronocaoD_ortopedia . '</option>';
+                                                }
+                                                ?>
+                                                <?php if ($cotovelo_pronocaoD_ortopedia != '(0) Ausencia de Contração.')
+                                                    echo '<option value="(0) Ausencia de Contração.">(0) Ausencia de Contração.</option>'; ?>
+                                                <?php if ($cotovelo_pronocaoD_ortopedia != '(1) Há uma leve contração porém incapaz de produzir movimento.')
+                                                    echo '<option value="(1) Há uma leve contração porém incapaz de produzir movimento.">(1) Há uma leve contração porém incapaz de produzir movimento.</option>'; ?>     
+                                                <?php if ($cotovelo_pronocaoD_ortopedia != 'Estado de Nutricao')
+                                                    echo '<option value="(2) Há movimento somente na ausência de gravidade.
+                                                    ">(2) Há movimento somente na ausência de gravidade.
+                                                    </option>'; ?>
+                                                <?php if (
+                                                    $cotovelo_pronocaoD_ortopedia != '(3) Consegue realizar movimento vencendo a gravidade.
+    '
+                                                )
+                                                    echo '<option value="(3) Consegue realizar movimento vencendo a gravidade.
+                                                    ">(3) Consegue realizar movimento vencendo a gravidade.
+                                                    </option>'; ?>
+                                                <?php if ($cotovelo_pronocaoD_ortopedia != '(4) Consegue realizar movimento vencendo a gravidade e também uma resistência externa.')
+                                                    echo '<option value="(4) Consegue realizar movimento vencendo a gravidade e também uma resistência externa.">(4) Consegue realizar movimento vencendo a gravidade e também uma resistência externa.</option>'; ?>
+                                                <?php if ($cotovelo_pronocaoD_ortopedia != '(5) Consegue realizar movimento superando uma resistencia maior que o musculo bom.')
+                                                    echo '<option value="(5) Consegue realizar movimento superando uma resistencia maior que o musculo bom.">(5) Consegue realizar movimento superando uma resistencia maior que o musculo bom.</option>'; ?>
+
+                                            </select>   
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- FIM PRONAÇÃO -->
+
+                                <!-- FIM SUPINACAO -->
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="exampleFormControlInput1">Supinação E</label>
+                                            <select class="form-control" id="cotovelo_supinacaoE_ortopedia "
+                                                name="cotovelo_supinacaoE_ortopedia">
+                                                <?php
+                                                if (@$_GET['funcao'] == 'editar') {
+                                                    echo '<option value="' . $cotovelo_supinacaoE_ortopedia . '">' . $cotovelo_supinacaoE_ortopedia . '</option>';
+                                                }
+                                                ?>
+                                                <?php if ($cotovelo_supinacaoE_ortopedia != '(0) Ausencia de Contração.')
+                                                    echo '<option value="(0) Ausencia de Contração.">(0) Ausencia de Contração.</option>'; ?>
+                                                <?php if ($cotovelo_supinacaoE_ortopedia != '(1) Há uma leve contração porém incapaz de produzir movimento.')
+                                                    echo '<option value="(1) Há uma leve contração porém incapaz de produzir movimento.">(1) Há uma leve contração porém incapaz de produzir movimento.</option>'; ?>     
+                                                <?php if ($cotovelo_supinacaoE_ortopedia != 'Estado de Nutricao')
+                                                    echo '<option value="(2) Há movimento somente na ausência de gravidade.
+                                                    ">(2) Há movimento somente na ausência de gravidade.
+                                                    </option>'; ?>
+                                                <?php if (
+                                                    $cotovelo_supinacaoE_ortopedia != '(3) Consegue realizar movimento vencendo a gravidade.
+    '
+                                                )
+                                                    echo '<option value="(3) Consegue realizar movimento vencendo a gravidade.
+                                                    ">(3) Consegue realizar movimento vencendo a gravidade.
+                                                    </option>'; ?>
+                                                <?php if ($cotovelo_supinacaoE_ortopedia != '(4) Consegue realizar movimento vencendo a gravidade e também uma resistência externa.')
+                                                    echo '<option value="(4) Consegue realizar movimento vencendo a gravidade e também uma resistência externa.">(4) Consegue realizar movimento vencendo a gravidade e também uma resistência externa.</option>'; ?>
+                                                <?php if ($cotovelo_supinacaoE_ortopedia != '(5) Consegue realizar movimento superando uma resistencia maior que o musculo bom.')
+                                                    echo '<option value="(5) Consegue realizar movimento superando uma resistencia maior que o musculo bom.">(5) Consegue realizar movimento superando uma resistencia maior que o musculo bom.</option>'; ?>
+                                            </select>   
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="exampleFormControlInput1">Supinação D</label>
+
+                                            <select class="form-control" id="cotovelo_supinacaoD_ortopedia "
+                                                name="cotovelo_supinacaoD_ortopedia">
+                                                <?php
+                                                if (@$_GET['funcao'] == 'editar') {
+                                                    echo '<option value="' . $cotovelo_supinacaoD_ortopedia . '">' . $cotovelo_supinacaoD_ortopedia . '</option>';
+                                                }
+                                                ?>
+                                                <?php if ($cotovelo_supinacaoD_ortopedia != '(0) Ausencia de Contração.')
+                                                    echo '<option value="(0) Ausencia de Contração.">(0) Ausencia de Contração.</option>'; ?>
+                                                <?php if ($cotovelo_supinacaoD_ortopedia != '(1) Há uma leve contração porém incapaz de produzir movimento.')
+                                                    echo '<option value="(1) Há uma leve contração porém incapaz de produzir movimento.">(1) Há uma leve contração porém incapaz de produzir movimento.</option>'; ?>     
+                                                <?php if ($cotovelo_supinacaoD_ortopedia != 'Estado de Nutricao')
+                                                    echo '<option value="(2) Há movimento somente na ausência de gravidade.
+                                                    ">(2) Há movimento somente na ausência de gravidade.
+                                                    </option>'; ?>
+                                                <?php if (
+                                                    $cotovelo_supinacaoD_ortopedia != '(3) Consegue realizar movimento vencendo a gravidade.
+    '
+                                                )
+                                                    echo '<option value="(3) Consegue realizar movimento vencendo a gravidade.
+                                                    ">(3) Consegue realizar movimento vencendo a gravidade.
+                                                    </option>'; ?>
+                                                <?php if ($cotovelo_supinacaoD_ortopedia != '(4) Consegue realizar movimento vencendo a gravidade e também uma resistência externa.')
+                                                    echo '<option value="(4) Consegue realizar movimento vencendo a gravidade e também uma resistência externa.">(4) Consegue realizar movimento vencendo a gravidade e também uma resistência externa.</option>'; ?>
+                                                <?php if ($cotovelo_supinacaoD_ortopedia != '(5) Consegue realizar movimento superando uma resistencia maior que o musculo bom.')
+                                                    echo '<option value="(5) Consegue realizar movimento superando uma resistencia maior que o musculo bom.">(5) Consegue realizar movimento superando uma resistencia maior que o musculo bom.</option>'; ?>
+
+                                            </select>   
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- FIM SUPINAÇÃO -->
+
+                                <div class="modal-header">
+                                <h5>Punho</h5>
+                                <br>
+                            </div>
+                              <!-- FLEXAO -->
+                              <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="exampleFormControlInput1">Flexão E</label>
+                                            <select class="form-control" id="cotovelo_flexaoE_ortopedia "
+                                                name="cotovelo_flexaoE_ortopedia">
+                                                <?php
+                                                if (@$_GET['funcao'] == 'editar') {
+                                                    echo '<option value="' . $punho_flexaoE_ortopedia . '">' . $punho_flexaoE_ortopedia . '</option>';
+                                                }
+                                                ?>
+                                                <?php if ($punho_flexaoE_ortopedia != '(0) Ausencia de Contração.')
+                                                    echo '<option value="(0) Ausencia de Contração.">(0) Ausencia de Contração.</option>'; ?>
+                                                <?php if ($punho_flexaoE_ortopedia != '(1) Há uma leve contração porém incapaz de produzir movimento.')
+                                                    echo '<option value="(1) Há uma leve contração porém incapaz de produzir movimento.">(1) Há uma leve contração porém incapaz de produzir movimento.</option>'; ?>     
+                                                <?php if ($punho_flexaoE_ortopedia != 'Estado de Nutricao')
+                                                    echo '<option value="(2) Há movimento somente na ausência de gravidade.
+                                                    ">(2) Há movimento somente na ausência de gravidade.
+                                                    </option>'; ?>
+                                                <?php if (
+                                                    $punho_flexaoE_ortopedia != '(3) Consegue realizar movimento vencendo a gravidade.
+    '
+                                                )
+                                                    echo '<option value="(3) Consegue realizar movimento vencendo a gravidade.
+                                                    ">(3) Consegue realizar movimento vencendo a gravidade.
+                                                    </option>'; ?>
+                                                <?php if ($punho_flexaoE_ortopedia != '(4) Consegue realizar movimento vencendo a gravidade e também uma resistência externa.')
+                                                    echo '<option value="(4) Consegue realizar movimento vencendo a gravidade e também uma resistência externa.">(4) Consegue realizar movimento vencendo a gravidade e também uma resistência externa.</option>'; ?>
+                                                <?php if ($punho_flexaoE_ortopedia != '(5) Consegue realizar movimento superando uma resistencia maior que o musculo bom.')
+                                                    echo '<option value="(5) Consegue realizar movimento superando uma resistencia maior que o musculo bom.">(5) Consegue realizar movimento superando uma resistencia maior que o musculo bom.</option>'; ?>
+                                            </select>   
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="exampleFormControlInput1">Flexão D</label>
+
+                                            <select class="form-control" id="punho_flexaoD_ortopedia "
+                                                name="punho_flexaoD_ortopedia">
+                                                <?php
+                                                if (@$_GET['funcao'] == 'editar') {
+                                                    echo '<option value="' . $punho_flexaoD_ortopedia . '">' . $punho_flexaoD_ortopedia . '</option>';
+                                                }
+                                                ?>
+                                                <?php if ($punho_flexaoD_ortopedia != '(0) Ausencia de Contração.')
+                                                    echo '<option value="(0) Ausencia de Contração.">(0) Ausencia de Contração.</option>'; ?>
+                                                <?php if ($punho_flexaoD_ortopedia != '(1) Há uma leve contração porém incapaz de produzir movimento.')
+                                                    echo '<option value="(1) Há uma leve contração porém incapaz de produzir movimento.">(1) Há uma leve contração porém incapaz de produzir movimento.</option>'; ?>     
+                                                <?php if ($punho_flexaoD_ortopedia != 'Estado de Nutricao')
+                                                    echo '<option value="(2) Há movimento somente na ausência de gravidade.
+                                                    ">(2) Há movimento somente na ausência de gravidade.
+                                                    </option>'; ?>
+                                                <?php if (
+                                                    $punho_flexaoD_ortopedia != '(3) Consegue realizar movimento vencendo a gravidade.
+    '
+                                                )
+                                                    echo '<option value="(3) Consegue realizar movimento vencendo a gravidade.
+                                                    ">(3) Consegue realizar movimento vencendo a gravidade.
+                                                    </option>'; ?>
+                                                <?php if ($punho_flexaoD_ortopedia != '(4) Consegue realizar movimento vencendo a gravidade e também uma resistência externa.')
+                                                    echo '<option value="(4) Consegue realizar movimento vencendo a gravidade e também uma resistência externa.">(4) Consegue realizar movimento vencendo a gravidade e também uma resistência externa.</option>'; ?>
+                                                <?php if ($punho_flexaoD_ortopedia != '(5) Consegue realizar movimento superando uma resistencia maior que o musculo bom.')
+                                                    echo '<option value="(5) Consegue realizar movimento superando uma resistencia maior que o musculo bom.">(5) Consegue realizar movimento superando uma resistencia maior que o musculo bom.</option>'; ?>
+
+                                            </select>   
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- FIM FLEXAO -->
+                
+                                <!-- EXTENSAO -->
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="exampleFormControlInput1">Extensão E</label>
+                                            <select class="form-control" id="punho_extensaoE_ortopedia "
+                                                name="punho_extensaoE_ortopedia">
+                                                <?php
+                                                if (@$_GET['funcao'] == 'editar') {
+                                                    echo '<option value="' . $punho_extensaoE_ortopedia . '">' . $punho_extensaoE_ortopedia . '</option>';
+                                                }
+                                                ?>
+                                                <?php if ($punho_extensaoE_ortopedia != '(0) Ausencia de Contração.')
+                                                    echo '<option value="(0) Ausencia de Contração.">(0) Ausencia de Contração.</option>'; ?>
+                                                <?php if ($punho_extensaoE_ortopedia != '(1) Há uma leve contração porém incapaz de produzir movimento.')
+                                                    echo '<option value="(1) Há uma leve contração porém incapaz de produzir movimento.">(1) Há uma leve contração porém incapaz de produzir movimento.</option>'; ?>     
+                                                <?php if ($punho_extensaoE_ortopedia != 'Estado de Nutricao')
+                                                    echo '<option value="(2) Há movimento somente na ausência de gravidade.
+                                                    ">(2) Há movimento somente na ausência de gravidade.
+                                                    </option>'; ?>
+                                                <?php if (
+                                                    $punho_extensaoE_ortopedia != '(3) Consegue realizar movimento vencendo a gravidade.
+    '
+                                                )
+                                                    echo '<option value="(3) Consegue realizar movimento vencendo a gravidade.
+                                                    ">(3) Consegue realizar movimento vencendo a gravidade.
+                                                    </option>'; ?>
+                                                <?php if ($punho_extensaoE_ortopedia != '(4) Consegue realizar movimento vencendo a gravidade e também uma resistência externa.')
+                                                    echo '<option value="(4) Consegue realizar movimento vencendo a gravidade e também uma resistência externa.">(4) Consegue realizar movimento vencendo a gravidade e também uma resistência externa.</option>'; ?>
+                                                <?php if ($punho_extensaoE_ortopedia != '(5) Consegue realizar movimento superando uma resistencia maior que o musculo bom.')
+                                                    echo '<option value="(5) Consegue realizar movimento superando uma resistencia maior que o musculo bom.">(5) Consegue realizar movimento superando uma resistencia maior que o musculo bom.</option>'; ?>
+                                            </select>   
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="exampleFormControlInput1">Extensão D</label>
+
+                                            <select class="form-control" id="punho_extensaoD_ortopedia "
+                                                name="punho_extensaoD_ortopedia">
+                                                <?php
+                                                if (@$_GET['funcao'] == 'editar') {
+                                                    echo '<option value="' . $punho_extensaoD_ortopedia . '">' . $punho_extensaoD_ortopedia . '</option>';
+                                                }
+                                                ?>
+                                                <?php if ($punho_extensaoD_ortopedia != '(0) Ausencia de Contração.')
+                                                    echo '<option value="(0) Ausencia de Contração.">(0) Ausencia de Contração.</option>'; ?>
+                                                <?php if ($punho_extensaoD_ortopedia != '(1) Há uma leve contração porém incapaz de produzir movimento.')
+                                                    echo '<option value="(1) Há uma leve contração porém incapaz de produzir movimento.">(1) Há uma leve contração porém incapaz de produzir movimento.</option>'; ?>     
+                                                <?php if ($punho_extensaoD_ortopedia != 'Estado de Nutricao')
+                                                    echo '<option value="(2) Há movimento somente na ausência de gravidade.
+                                                    ">(2) Há movimento somente na ausência de gravidade.
+                                                    </option>'; ?>
+                                                <?php if (
+                                                    $punho_extensaoD_ortopedia != '(3) Consegue realizar movimento vencendo a gravidade.
+    '
+                                                )
+                                                    echo '<option value="(3) Consegue realizar movimento vencendo a gravidade.
+                                                    ">(3) Consegue realizar movimento vencendo a gravidade.
+                                                    </option>'; ?>
+                                                <?php if ($punho_extensaoD_ortopedia != '(4) Consegue realizar movimento vencendo a gravidade e também uma resistência externa.')
+                                                    echo '<option value="(4) Consegue realizar movimento vencendo a gravidade e também uma resistência externa.">(4) Consegue realizar movimento vencendo a gravidade e também uma resistência externa.</option>'; ?>
+                                                <?php if ($punho_extensaoD_ortopedia != '(5) Consegue realizar movimento superando uma resistencia maior que o musculo bom.')
+                                                    echo '<option value="(5) Consegue realizar movimento superando uma resistencia maior que o musculo bom.">(5) Consegue realizar movimento superando uma resistencia maior que o musculo bom.</option>'; ?>
+
+                                            </select>   
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- FIM EXTENSAO -->
+
+                                <!-- DESVIO ULNAR -->
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="exampleFormControlInput1">Desvio Ulnar E</label>
+                                            <select class="form-control" id="punho_desvioUlnarE_ortopedia "
+                                                name="punho_desvioUlnarE_ortopedia">
+                                                <?php
+                                                if (@$_GET['funcao'] == 'editar') {
+                                                    echo '<option value="' . $punho_desvioUlnarE_ortopedia . '">' . $punho_desvioUlnarE_ortopedia . '</option>';
+                                                }
+                                                ?>
+                                                <?php if ($punho_desvioUlnarE_ortopedia != '(0) Ausencia de Contração.')
+                                                    echo '<option value="(0) Ausencia de Contração.">(0) Ausencia de Contração.</option>'; ?>
+                                                <?php if ($punho_desvioUlnarE_ortopedia != '(1) Há uma leve contração porém incapaz de produzir movimento.')
+                                                    echo '<option value="(1) Há uma leve contração porém incapaz de produzir movimento.">(1) Há uma leve contração porém incapaz de produzir movimento.</option>'; ?>     
+                                                <?php if ($punho_desvioUlnarE_ortopedia != 'Estado de Nutricao')
+                                                    echo '<option value="(2) Há movimento somente na ausência de gravidade.
+                                                    ">(2) Há movimento somente na ausência de gravidade.
+                                                    </option>'; ?>
+                                                <?php if (
+                                                    $punho_desvioUlnarE_ortopedia != '(3) Consegue realizar movimento vencendo a gravidade.
+    '
+                                                )
+                                                    echo '<option value="(3) Consegue realizar movimento vencendo a gravidade.
+                                                    ">(3) Consegue realizar movimento vencendo a gravidade.
+                                                    </option>'; ?>
+                                                <?php if ($punho_desvioUlnarE_ortopedia != '(4) Consegue realizar movimento vencendo a gravidade e também uma resistência externa.')
+                                                    echo '<option value="(4) Consegue realizar movimento vencendo a gravidade e também uma resistência externa.">(4) Consegue realizar movimento vencendo a gravidade e também uma resistência externa.</option>'; ?>
+                                                <?php if ($punho_desvioUlnarE_ortopedia != '(5) Consegue realizar movimento superando uma resistencia maior que o musculo bom.')
+                                                    echo '<option value="(5) Consegue realizar movimento superando uma resistencia maior que o musculo bom.">(5) Consegue realizar movimento superando uma resistencia maior que o musculo bom.</option>'; ?>
+                                            </select>   
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="exampleFormControlInput1">Desvio Ulnar D</label>
+
+                                            <select class="form-control" id="punho_desvioUlnarD_ortopedia "
+                                                name="punho_desvioUlnarD_ortopedia">
+                                                <?php
+                                                if (@$_GET['funcao'] == 'editar') {
+                                                    echo '<option value="' . $punho_desvioUlnarD_ortopedia . '">' . $punho_desvioUlnarD_ortopedia . '</option>';
+                                                }
+                                                ?>
+                                                <?php if ($punho_desvioUlnarD_ortopedia != '(0) Ausencia de Contração.')
+                                                    echo '<option value="(0) Ausencia de Contração.">(0) Ausencia de Contração.</option>'; ?>
+                                                <?php if ($punho_desvioUlnarD_ortopedia != '(1) Há uma leve contração porém incapaz de produzir movimento.')
+                                                    echo '<option value="(1) Há uma leve contração porém incapaz de produzir movimento.">(1) Há uma leve contração porém incapaz de produzir movimento.</option>'; ?>     
+                                                <?php if ($punho_desvioUlnarD_ortopedia != 'Estado de Nutricao')
+                                                    echo '<option value="(2) Há movimento somente na ausência de gravidade.
+                                                    ">(2) Há movimento somente na ausência de gravidade.
+                                                    </option>'; ?>
+                                                <?php if (
+                                                    $punho_desvioUlnarD_ortopedia != '(3) Consegue realizar movimento vencendo a gravidade.
+    '
+                                                )
+                                                    echo '<option value="(3) Consegue realizar movimento vencendo a gravidade.
+                                                    ">(3) Consegue realizar movimento vencendo a gravidade.
+                                                    </option>'; ?>
+                                                <?php if ($punho_desvioUlnarD_ortopedia != '(4) Consegue realizar movimento vencendo a gravidade e também uma resistência externa.')
+                                                    echo '<option value="(4) Consegue realizar movimento vencendo a gravidade e também uma resistência externa.">(4) Consegue realizar movimento vencendo a gravidade e também uma resistência externa.</option>'; ?>
+                                                <?php if ($punho_desvioUlnarD_ortopedia != '(5) Consegue realizar movimento superando uma resistencia maior que o musculo bom.')
+                                                    echo '<option value="(5) Consegue realizar movimento superando uma resistencia maior que o musculo bom.">(5) Consegue realizar movimento superando uma resistencia maior que o musculo bom.</option>'; ?>
+
+                                            </select>   
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- FIM DESVIO ULNAR -->
+
+                                <!-- DESVIO RADIAL -->
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="exampleFormControlInput1">Desvio Radial E</label>
+                                            <select class="form-control" id="punho_desvioRadialE_ortopedia "
+                                                name="punho_desvioRadialE_ortopedia">
+                                                <?php
+                                                if (@$_GET['funcao'] == 'editar') {
+                                                    echo '<option value="' . $punho_desvioRadialE_ortopedia . '">' . $punho_desvioRadialE_ortopedia . '</option>';
+                                                }
+                                                ?>
+                                                <?php if ($punho_desvioRadialE_ortopedia != '(0) Ausencia de Contração.')
+                                                    echo '<option value="(0) Ausencia de Contração.">(0) Ausencia de Contração.</option>'; ?>
+                                                <?php if ($punho_desvioRadialE_ortopedia != '(1) Há uma leve contração porém incapaz de produzir movimento.')
+                                                    echo '<option value="(1) Há uma leve contração porém incapaz de produzir movimento.">(1) Há uma leve contração porém incapaz de produzir movimento.</option>'; ?>     
+                                                <?php if ($punho_desvioRadialE_ortopedia != 'Estado de Nutricao')
+                                                    echo '<option value="(2) Há movimento somente na ausência de gravidade.
+                                                    ">(2) Há movimento somente na ausência de gravidade.
+                                                    </option>'; ?>
+                                                <?php if (
+                                                    $punho_desvioRadialE_ortopedia != '(3) Consegue realizar movimento vencendo a gravidade.
+    '
+                                                )
+                                                    echo '<option value="(3) Consegue realizar movimento vencendo a gravidade.
+                                                    ">(3) Consegue realizar movimento vencendo a gravidade.
+                                                    </option>'; ?>
+                                                <?php if ($punho_desvioRadialE_ortopedia != '(4) Consegue realizar movimento vencendo a gravidade e também uma resistência externa.')
+                                                    echo '<option value="(4) Consegue realizar movimento vencendo a gravidade e também uma resistência externa.">(4) Consegue realizar movimento vencendo a gravidade e também uma resistência externa.</option>'; ?>
+                                                <?php if ($punho_desvioRadialE_ortopedia != '(5) Consegue realizar movimento superando uma resistencia maior que o musculo bom.')
+                                                    echo '<option value="(5) Consegue realizar movimento superando uma resistencia maior que o musculo bom.">(5) Consegue realizar movimento superando uma resistencia maior que o musculo bom.</option>'; ?>
+                                            </select>   
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="exampleFormControlInput1">Desvio Radial D</label>
+
+                                            <select class="form-control" id="punho_desvioRadialD_ortopedia "
+                                                name="punho_desvioRadialD_ortopedia">
+                                                <?php
+                                                if (@$_GET['funcao'] == 'editar') {
+                                                    echo '<option value="' . $punho_desvioRadialD_ortopedia . '">' . $punho_desvioRadialD_ortopedia . '</option>';
+                                                }
+                                                ?>
+                                                <?php if ($punho_desvioRadialD_ortopedia != '(0) Ausencia de Contração.')
+                                                    echo '<option value="(0) Ausencia de Contração.">(0) Ausencia de Contração.</option>'; ?>
+                                                <?php if ($punho_desvioRadialD_ortopedia != '(1) Há uma leve contração porém incapaz de produzir movimento.')
+                                                    echo '<option value="(1) Há uma leve contração porém incapaz de produzir movimento.">(1) Há uma leve contração porém incapaz de produzir movimento.</option>'; ?>     
+                                                <?php if ($punho_desvioRadialD_ortopedia != 'Estado de Nutricao')
+                                                    echo '<option value="(2) Há movimento somente na ausência de gravidade.
+                                                    ">(2) Há movimento somente na ausência de gravidade.
+                                                    </option>'; ?>
+                                                <?php if (
+                                                    $punho_desvioRadialD_ortopedia != '(3) Consegue realizar movimento vencendo a gravidade.
+    '
+                                                )
+                                                    echo '<option value="(3) Consegue realizar movimento vencendo a gravidade.
+                                                    ">(3) Consegue realizar movimento vencendo a gravidade.
+                                                    </option>'; ?>
+                                                <?php if ($punho_desvioRadialD_ortopedia != '(4) Consegue realizar movimento vencendo a gravidade e também uma resistência externa.')
+                                                    echo '<option value="(4) Consegue realizar movimento vencendo a gravidade e também uma resistência externa.">(4) Consegue realizar movimento vencendo a gravidade e também uma resistência externa.</option>'; ?>
+                                                <?php if ($punho_desvioRadialD_ortopedia != '(5) Consegue realizar movimento superando uma resistencia maior que o musculo bom.')
+                                                    echo '<option value="(5) Consegue realizar movimento superando uma resistencia maior que o musculo bom.">(5) Consegue realizar movimento superando uma resistencia maior que o musculo bom.</option>'; ?>
+
+                                            </select>   
+                                        </div>
+                                    </div>
+                            
+                                <!-- FIM SUPINAÇÃO -->
 
 
 
