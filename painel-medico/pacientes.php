@@ -2754,9 +2754,13 @@ if (isset($_POST['itens-pagina'])) {
                         </div>
 
                         <div class="modal-header">
-                            <h5>Força Muscular</h5>
+                            <h5>
+                                <a data-toggle="collapse" href="#forcaMuscular-ortopedia" aria-expanded="false" aria-controls="forcaMuscular-ortopedia">Força Muscular</a>
+                            </h5>
+
                             <br>
                         </div>
+                        <div class="collapse" id="forcaMuscular-ortopedia">
                         <div class="form-group">
                             Obs: A força muscular necessita da compreenssão do paciente a frente à solicitção do movimento. <br>
                         </div>
@@ -4691,13 +4695,18 @@ if (isset($_POST['itens-pagina'])) {
                             </div>
                             <!-- FIM EXTENSAO -->
                         </div>
+                    </div>
 
-                    
+                        <!-- FIM FORÇA MUSCULAR -->
+
                         <div class="modal-header">
-                            <h5>Reflexos</h5>
+                            <h5>
+                                <a data-toggle="collapse" href="#reflexos" aria-expanded="false" aria-controls="reflexos">Reflexos</a>
+                            </h5>
                             <br>
                         </div>
-                        <div class="form-group">
+                        <div class="collapse" id="reflexos">
+                            <div class="form-group">
                             Para testar os reflexos deve-se utilizar o martelo de percussão para determinar sua amplitude.<br>
                         </div>
                         <h5>Reflexos Profundos</h5>
@@ -4947,10 +4956,461 @@ if (isset($_POST['itens-pagina'])) {
                             
                             <h5>Reflexos Superficias </h5>
                             <br>  
-                             
+                               <!-- Babisnki -->
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="exampleFormControlInput1">Babisnki E</label>
+                                        <select class="form-control" id="babisnkiE_ortopedia " name="babisnkiE_ortopedia">
+                                            <?php
+                                            if (@$_GET['funcao'] == 'editar') {
+                                                echo '<option value="' . $babisnkiE_ortopedia . '">' . $babisnkiE_ortopedia . '</option>';
+                                            }
+                                            ?>
+                                           <?php if ($babisnkiE_ortopedia != '(A) Aumentado: hiperreflexia.')
+                                                echo '<option value="(A) Aumentado: hiperreflexia.">(A) Aumentado: hiperreflexia.</option>'; ?>
+                                            <?php if ($babisnkiE_ortopedia != '(D) Diminuido: hiporeflexia.')
+                                                echo '<option value="(D) Diminuido: hiporeflexia.">(D) Diminuido: hiporeflexia.</option>'; ?>
+                                            <?php if ($babisnkiE_ortopedia != '(SR) Sem reflexo, ausente: arreflexia.')
+                                                echo '<option value="(SR) Sem reflexo, ausente: arreflexia.
+                                                ">(SR) Sem reflexo, ausente: arreflexia. </option>'; ?>
+                                            <?php if ($babisnkiE_ortopedia != '(N) Normal - Normorreflexia.')
+                                                echo '<option value="(N) Normal - Normorreflexia.">(N) Normal - Normorreflexia..</option>'; ?>
+                                            </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="exampleFormControlInput1">Babisnki D</label>
+
+                                        <select class="form-control" id="babisnkiD_ortopedia " name="babisnkiD_ortopedia">
+                                            <?php
+                                            if (@$_GET['funcao'] == 'editar') {
+                                                echo '<option value="' . $babisnkiD_ortopedia . '">' . $babisnkiD_ortopedia . '</option>';
+                                            }
+                                            ?>
+                                             <?php if ($babisnkiD_ortopedia != '(A) Aumentado: hiperreflexia.')
+                                                echo '<option value="(A) Aumentado: hiperreflexia.">(A) Aumentado: hiperreflexia.</option>'; ?>
+                                            <?php if ($babisnkiD_ortopedia != '(D) Diminuido: hiporeflexia.')
+                                                echo '<option value="(D) Diminuido: hiporeflexia.">(D) Diminuido: hiporeflexia.</option>'; ?>
+                                            <?php if ($babisnkiD_ortopedia != '(SR) Sem reflexo, ausente: arreflexia.')
+                                                echo '<option value="(SR) Sem reflexo, ausente: arreflexia.
+                                                ">(SR) Sem reflexo, ausente: arreflexia. </option>'; ?>
+                                            <?php if ($babisnkiD_ortopedia != '(N) Normal - Normorreflexia.')
+                                                echo '<option value="(N) Normal - Normorreflexia.">(N) Normal - Normorreflexia..</option>'; ?>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- FIM Babisnki -->
+
+                            <!-- Cutâneo Abdominal -->
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="exampleFormControlInput1">Cutâneo Abdominal  E</label>
+                                        <select class="form-control" id="cutaneoAbdominalE_ortopedia " name="cutaneoAbdominalE_ortopedia">
+                                            <?php
+                                            if (@$_GET['funcao'] == 'editar') {
+                                                echo '<option value="' . $cutaneoAbdominalE_ortopedia . '">' . $cutaneoAbdominalE_ortopedia . '</option>';
+                                            }
+                                            ?>
+                                           <?php if ($cutaneoAbdominalE_ortopedia != '(A) Aumentado: hiperreflexia.')
+                                                echo '<option value="(A) Aumentado: hiperreflexia.">(A) Aumentado: hiperreflexia.</option>'; ?>
+                                            <?php if ($cutaneoAbdominalE_ortopedia != '(D) Diminuido: hiporeflexia.')
+                                                echo '<option value="(D) Diminuido: hiporeflexia.">(D) Diminuido: hiporeflexia.</option>'; ?>
+                                            <?php if ($cutaneoAbdominalE_ortopedia != '(SR) Sem reflexo, ausente: arreflexia.')
+                                                echo '<option value="(SR) Sem reflexo, ausente: arreflexia.
+                                                ">(SR) Sem reflexo, ausente: arreflexia. </option>'; ?>
+                                            <?php if ($cutaneoAbdominalE_ortopedia != '(N) Normal - Normorreflexia.')
+                                                echo '<option value="(N) Normal - Normorreflexia.">(N) Normal - Normorreflexia..</option>'; ?>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="exampleFormControlInput1">Cutâneo Abdominal  D</label>
+
+                                        <select class="form-control" id="cutaneoAbdominalD_ortopedia " name="cutaneoAbdominalD_ortopedia">
+                                            <?php
+                                            if (@$_GET['funcao'] == 'editar') {
+                                                echo '<option value="' . $cutaneoAbdominalD_ortopedia . '">' . $cutaneoAbdominalD_ortopedia . '</option>';
+                                            }
+                                            ?>
+                                             <?php if ($cutaneoAbdominalD_ortopedia != '(A) Aumentado: hiperreflexia.')
+                                                echo '<option value="(A) Aumentado: hiperreflexia.">(A) Aumentado: hiperreflexia.</option>'; ?>
+                                            <?php if ($cutaneoAbdominalD_ortopedia != '(D) Diminuido: hiporeflexia.')
+                                                echo '<option value="(D) Diminuido: hiporeflexia.">(D) Diminuido: hiporeflexia.</option>'; ?>
+                                            <?php if ($cutaneoAbdominalD_ortopedia != '(SR) Sem reflexo, ausente: arreflexia.')
+                                                echo '<option value="(SR) Sem reflexo, ausente: arreflexia.
+                                                ">(SR) Sem reflexo, ausente: arreflexia. </option>'; ?>
+                                            <?php if ($cutaneoAbdominalD_ortopedia != '(N) Normal - Normorreflexia.')
+                                                echo '<option value="(N) Normal - Normorreflexia.">(N) Normal - Normorreflexia..</option>'; ?>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- FIM Cutâneo Abdominal  -->
+
+                            <h5>Outros Reflexos e sinais </h5>
+                            <br>        
+
+                            <!-- Sinais de automatismo medular -->
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="exampleFormControlInput1">Sinais de Automatismo Medular E</label>
+                                        <select class="form-control" id="sinaisDeAutotismoMedularE_ortopedia " name="sinaisDeAutotismoMedularE_ortopedia">
+                                            <?php
+                                            if (@$_GET['funcao'] == 'editar') {
+                                                echo '<option value="' . $sinaisDeAutotismoMedularE_ortopedia . '">' . $sinaisDeAutotismoMedularE_ortopedia . '</option>';
+                                            }
+                                            ?>
+                                           <?php if ($sinaisDeAutotismoMedularE_ortopedia != '(A) Aumentado: hiperreflexia.')
+                                                echo '<option value="(A) Aumentado: hiperreflexia.">(A) Aumentado: hiperreflexia.</option>'; ?>
+                                            <?php if ($sinaisDeAutotismoMedularE_ortopedia != '(D) Diminuido: hiporeflexia.')
+                                                echo '<option value="(D) Diminuido: hiporeflexia.">(D) Diminuido: hiporeflexia.</option>'; ?>
+                                            <?php if ($sinaisDeAutotismoMedularE_ortopedia != '(SR) Sem reflexo, ausente: arreflexia.')
+                                                echo '<option value="(SR) Sem reflexo, ausente: arreflexia.
+                                                ">(SR) Sem reflexo, ausente: arreflexia. </option>'; ?>
+                                            <?php if ($sinaisDeAutotismoMedularE_ortopedia != '(N) Normal - Normorreflexia.')
+                                                echo '<option value="(N) Normal - Normorreflexia.">(N) Normal - Normorreflexia..</option>'; ?>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="exampleFormControlInput1">Sinais de Automatismo Medular D</label>
+
+                                        <select class="form-control" id="sinaisDeAutotismoMedularD_ortopedia " name="sinaisDeAutotismoMedularD_ortopedia">
+                                            <?php
+                                            if (@$_GET['funcao'] == 'editar') {
+                                                echo '<option value="' . $sinaisDeAutotismoMedularD_ortopedia . '">' . $sinaisDeAutotismoMedularD_ortopedia . '</option>';
+                                            }
+                                            ?>
+                                             <?php if ($sinaisDeAutotismoMedularD_ortopedia != '(A) Aumentado: hiperreflexia.')
+                                                echo '<option value="(A) Aumentado: hiperreflexia.">(A) Aumentado: hiperreflexia.</option>'; ?>
+                                            <?php if ($sinaisDeAutotismoMedularD_ortopedia != '(D) Diminuido: hiporeflexia.')
+                                                echo '<option value="(D) Diminuido: hiporeflexia.">(D) Diminuido: hiporeflexia.</option>'; ?>
+                                            <?php if ($sinaisDeAutotismoMedularD_ortopedia != '(SR) Sem reflexo, ausente: arreflexia.')
+                                                echo '<option value="(SR) Sem reflexo, ausente: arreflexia.
+                                                ">(SR) Sem reflexo, ausente: arreflexia. </option>'; ?>
+                                            <?php if ($sinaisDeAutotismoMedularD_ortopedia != '(N) Normal - Normorreflexia.')
+                                                echo '<option value="(N) Normal - Normorreflexia.">(N) Normal - Normorreflexia..</option>'; ?>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- FIM  Sinais de automatismo medular  -->
+
+                            <!-- Impulso extensor -->
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="exampleFormControlInput1">Impulso Extensor E</label>
+                                        <select class="form-control" id="impulsoExtensorE_ortopedia " name="impulsoExtensorE_ortopedia">
+                                            <?php
+                                            if (@$_GET['funcao'] == 'editar') {
+                                                echo '<option value="' . $impulsoExtensorE_ortopedia . '">' . $impulsoExtensorE_ortopedia . '</option>';
+                                            }
+                                            ?>
+                                           <?php if ($impulsoExtensorE_ortopedia != '(A) Aumentado: hiperreflexia.')
+                                                echo '<option value="(A) Aumentado: hiperreflexia.">(A) Aumentado: hiperreflexia.</option>'; ?>
+                                            <?php if ($impulsoExtensorE_ortopedia != '(D) Diminuido: hiporeflexia.')
+                                                echo '<option value="(D) Diminuido: hiporeflexia.">(D) Diminuido: hiporeflexia.</option>'; ?>
+                                            <?php if ($impulsoExtensorE_ortopedia != '(SR) Sem reflexo, ausente: arreflexia.')
+                                                echo '<option value="(SR) Sem reflexo, ausente: arreflexia.
+                                                ">(SR) Sem reflexo, ausente: arreflexia. </option>'; ?>
+                                            <?php if ($impulsoExtensorE_ortopedia != '(N) Normal - Normorreflexia.')
+                                                echo '<option value="(N) Normal - Normorreflexia.">(N) Normal - Normorreflexia..</option>'; ?>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="exampleFormControlInput1">Impulso Extensor D</label>
+
+                                        <select class="form-control" id="impulsoExtensorD_ortopedia " name="impulsoExtensorD_ortopedia">
+                                            <?php
+                                            if (@$_GET['funcao'] == 'editar') {
+                                                echo '<option value="' . $impulsoExtensorD_ortopedia . '">' . $impulsoExtensorD_ortopedia . '</option>';
+                                            }
+                                            ?>
+                                             <?php if ($impulsoExtensorD_ortopedia != '(A) Aumentado: hiperreflexia.')
+                                                echo '<option value="(A) Aumentado: hiperreflexia.">(A) Aumentado: hiperreflexia.</option>'; ?>
+                                            <?php if ($impulsoExtensorD_ortopedia != '(D) Diminuido: hiporeflexia.')
+                                                echo '<option value="(D) Diminuido: hiporeflexia.">(D) Diminuido: hiporeflexia.</option>'; ?>
+                                            <?php if ($impulsoExtensorD_ortopedia != '(SR) Sem reflexo, ausente: arreflexia.')
+                                                echo '<option value="(SR) Sem reflexo, ausente: arreflexia.
+                                                ">(SR) Sem reflexo, ausente: arreflexia. </option>'; ?>
+                                            <?php if ($impulsoExtensorD_ortopedia != '(N) Normal - Normorreflexia.')
+                                                echo '<option value="(N) Normal - Normorreflexia.">(N) Normal - Normorreflexia..</option>'; ?>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- FIM  Impulso extensor  -->
+
+                            <!-- Tríplice Flexão -->
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="exampleFormControlInput1">Tríplice Flexão E</label>
+                                        <select class="form-control" id="tripliceFlexaoE_ortopedia " name="tripliceFlexaoE_ortopedia">
+                                            <?php
+                                            if (@$_GET['funcao'] == 'editar') {
+                                                echo '<option value="' . $tripliceFlexaoE_ortopedia . '">' . $tripliceFlexaoE_ortopedia . '</option>';
+                                            }
+                                            ?>
+                                           <?php if ($tripliceFlexaoE_ortopedia != '(A) Aumentado: hiperreflexia.')
+                                                echo '<option value="(A) Aumentado: hiperreflexia.">(A) Aumentado: hiperreflexia.</option>'; ?>
+                                            <?php if ($tripliceFlexaoE_ortopedia != '(D) Diminuido: hiporeflexia.')
+                                                echo '<option value="(D) Diminuido: hiporeflexia.">(D) Diminuido: hiporeflexia.</option>'; ?>
+                                            <?php if ($tripliceFlexaoE_ortopedia != '(SR) Sem reflexo, ausente: arreflexia.')
+                                                echo '<option value="(SR) Sem reflexo, ausente: arreflexia.
+                                                ">(SR) Sem reflexo, ausente: arreflexia. </option>'; ?>
+                                            <?php if ($tripliceFlexaoE_ortopedia != '(N) Normal - Normorreflexia.')
+                                                echo '<option value="(N) Normal - Normorreflexia.">(N) Normal - Normorreflexia..</option>'; ?>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="exampleFormControlInput1">Tríplice Flexão D</label>
+
+                                        <select class="form-control" id="tripliceFlexaoD_ortopedia " name="tripliceFlexaoD_ortopedia">
+                                            <?php
+                                            if (@$_GET['funcao'] == 'editar') {
+                                                echo '<option value="' . $tripliceFlexaoD_ortopedia . '">' . $tripliceFlexaoD_ortopedia . '</option>';
+                                            }
+                                            ?>
+                                             <?php if ($tripliceFlexaoD_ortopedia != '(A) Aumentado: hiperreflexia.')
+                                                echo '<option value="(A) Aumentado: hiperreflexia.">(A) Aumentado: hiperreflexia.</option>'; ?>
+                                            <?php if ($tripliceFlexaoD_ortopedia != '(D) Diminuido: hiporeflexia.')
+                                                echo '<option value="(D) Diminuido: hiporeflexia.">(D) Diminuido: hiporeflexia.</option>'; ?>
+                                            <?php if ($tripliceFlexaoD_ortopedia != '(SR) Sem reflexo, ausente: arreflexia.')
+                                                echo '<option value="(SR) Sem reflexo, ausente: arreflexia.
+                                                ">(SR) Sem reflexo, ausente: arreflexia. </option>'; ?>
+                                            <?php if ($tripliceFlexaoD_ortopedia != '(N) Normal - Normorreflexia.')
+                                                echo '<option value="(N) Normal - Normorreflexia.">(N) Normal - Normorreflexia..</option>'; ?>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- FIM Tríplice Flexão -->
+
+                            <!-- Sincinesias -->
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="exampleFormControlInput1">Sincinesias E</label>
+                                        <select class="form-control" id="sincinesiasE_ortopedia " name="sincinesiasE_ortopedia">
+                                            <?php
+                                            if (@$_GET['funcao'] == 'editar') {
+                                                echo '<option value="' . $sincinesiasE_ortopedia . '">' . $sincinesiasE_ortopedia . '</option>';
+                                            }
+                                            ?>
+                                           <?php if ($sincinesiasE_ortopedia != '(A) Aumentado: hiperreflexia.')
+                                                echo '<option value="(A) Aumentado: hiperreflexia.">(A) Aumentado: hiperreflexia.</option>'; ?>
+                                            <?php if ($sincinesiasE_ortopedia != '(D) Diminuido: hiporeflexia.')
+                                                echo '<option value="(D) Diminuido: hiporeflexia.">(D) Diminuido: hiporeflexia.</option>'; ?>
+                                            <?php if ($sincinesiasE_ortopedia != '(SR) Sem reflexo, ausente: arreflexia.')
+                                                echo '<option value="(SR) Sem reflexo, ausente: arreflexia.
+                                                ">(SR) Sem reflexo, ausente: arreflexia. </option>'; ?>
+                                            <?php if ($sincinesiasE_ortopedia != '(N) Normal - Normorreflexia.')
+                                                echo '<option value="(N) Normal - Normorreflexia.">(N) Normal - Normorreflexia..</option>'; ?>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="exampleFormControlInput1">Sincinesias D</label>
+
+                                        <select class="form-control" id="sincinesiasD_ortopedia " name="sincinesiasD_ortopedia">
+                                            <?php
+                                            if (@$_GET['funcao'] == 'editar') {
+                                                echo '<option value="' . $sincinesiasD_ortopedia . '">' . $sincinesiasD_ortopedia . '</option>';
+                                            }
+                                            ?>
+                                             <?php if ($sincinesiasD_ortopedia != '(A) Aumentado: hiperreflexia.')
+                                                echo '<option value="(A) Aumentado: hiperreflexia.">(A) Aumentado: hiperreflexia.</option>'; ?>
+                                            <?php if ($sincinesiasD_ortopedia != '(D) Diminuido: hiporeflexia.')
+                                                echo '<option value="(D) Diminuido: hiporeflexia.">(D) Diminuido: hiporeflexia.</option>'; ?>
+                                            <?php if ($sincinesiasD_ortopedia != '(SR) Sem reflexo, ausente: arreflexia.')
+                                                echo '<option value="(SR) Sem reflexo, ausente: arreflexia.
+                                                ">(SR) Sem reflexo, ausente: arreflexia. </option>'; ?>
+                                            <?php if ($sincinesiasD_ortopedia != '(N) Normal - Normorreflexia.')
+                                                echo '<option value="(N) Normal - Normorreflexia.">(N) Normal - Normorreflexia..</option>'; ?>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- FIM Sincinesias -->
+                        </div>
+                            <!-- FIM REFLEXOS -->
 
 
+                            <h5>Mudança de Decúbito </h5>
+                            <br> 
+                                <div class="form-group">
+                                    A) Verificar se o paciente passa para uma posição sozinho.<br>
+                                    B) Permanece nessa posição sem necessitar de ajudar.<br>
+                                    B) *Tempo que consegue permanecer em pé ou sentado.<br>
+                                </div>
+                            
+                              
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label for="exampleFormControlInput1">Sentado em Pé*</label>
+                                        <select class="form-control" id="decubito1_ortopedia " name="decubito1_ortopedia">
+                                            <?php
+                                            if (@$_GET['funcao'] == 'editar') {
+                                                echo '<option value="' . $decubito1_ortopedia . '">' . $decubito1_ortopedia . '</option>';
+                                            }
+                                            ?>
+                                           <?php if ($decubito1_ortopedia != '(I) Independente.')
+                                                echo '<option value="(I) Independente.">(I) Independente.</option>'; ?>
+                                            <?php if ($decubito1_ortopedia != '(D) Dependente - com auxilio.')
+                                                echo '<option value="(D) Dependente - com auxilio.">(D) Dependente - com auxilio.</option>'; ?>
+                                            <?php if ($decubito1_ortopedia != '(NR) Não Realiza')
+                                                echo '<option value="(NR) Não Realiza
+                                                ">(NR) Não Realiza </option>'; ?>
+                                           
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label for="exampleFormControlInput1">Em pé para sentado*</label>
 
+                                        <select class="form-control" id="decubito2_ortopedia " name="decubito2_ortopedia">
+                                        <?php
+                                            if (@$_GET['funcao'] == 'editar') {
+                                                echo '<option value="' . $decubito1_ortopedia . '">' . $decubito1_ortopedia . '</option>';
+                                            }
+                                            ?>
+                                           <?php if ($decubito2_ortopedia != '(I) Independente.')
+                                                echo '<option value="(I) Independente.">(I) Independente.</option>'; ?>
+                                            <?php if ($decubito2_ortopedia != '(D) Dependente - com auxilio.')
+                                                echo '<option value="(D) Dependente - com auxilio.">(D) Dependente - com auxilio.</option>'; ?>
+                                            <?php if ($decubito2_ortopedia != '(NR) Não Realiza')
+                                                echo '<option value="(NR) Não Realiza
+                                                ">(NR) Não Realiza </option>'; ?>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label for="exampleFormControlInput1">Sentado para deitado</label>
+
+                                        <select class="form-control" id="decubito2_ortopedia " name="decubito3_ortopedia">
+                                        <?php
+                                            if (@$_GET['funcao'] == 'editar') {
+                                                echo '<option value="' . $decubito1_ortopedia . '">' . $decubito1_ortopedia . '</option>';
+                                            }
+                                            ?>
+                                           <?php if ($decubito3_ortopedia != '(I) Independente.')
+                                                echo '<option value="(I) Independente.">(I) Independente.</option>'; ?>
+                                            <?php if ($decubito3_ortopedia != '(D) Dependente - com auxilio.')
+                                                echo '<option value="(D) Dependente - com auxilio.">(D) Dependente - com auxilio.</option>'; ?>
+                                            <?php if ($decubito3_ortopedia != '(NR) Não Realiza')
+                                                echo '<option value="(NR) Não Realiza
+                                                ">(NR) Não Realiza </option>'; ?>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                           
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="exampleFormControlInput1">Decúbito dorsal para ventral</label>
+                                        <select class="form-control" id="decubito4_ortopedia " name="decubito4_ortopedia">
+                                            <?php
+                                            if (@$_GET['funcao'] == 'editar') {
+                                                echo '<option value="' . $decubito4_ortopedia . '">' . $decubito4_ortopedia . '</option>';
+                                            }
+                                            ?>
+                                           <?php if ($decubito4_ortopedia != '(I) Independente.')
+                                                echo '<option value="(I) Independente.">(I) Independente.</option>'; ?>
+                                            <?php if ($decubito4_ortopedia != '(D) Dependente - com auxilio.')
+                                                echo '<option value="(D) Dependente - com auxilio.">(D) Dependente - com auxilio.</option>'; ?>
+                                            <?php if ($decubito4_ortopedia != '(NR) Não Realiza')
+                                                echo '<option value="(NR) Não Realiza
+                                                ">(NR) Não Realiza </option>'; ?>
+                                           
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="exampleFormControlInput1">Decúbito ventral para dorsal ventral</label>
+
+                                        <select class="form-control" id="decubito5_ortopedia " name="decubito5_ortopedia">
+                                        <?php
+                                            if (@$_GET['funcao'] == 'editar') {
+                                                echo '<option value="' . $decubito5_ortopedia . '">' . $decubito5_ortopedia . '</option>';
+                                            }
+                                            ?>
+                                           <?php if ($decubito5_ortopedia != '(I) Independente.')
+                                                echo '<option value="(I) Independente.">(I) Independente.</option>'; ?>
+                                            <?php if ($decubito5_ortopedia != '(D) Dependente - com auxilio.')
+                                                echo '<option value="(D) Dependente - com auxilio.">(D) Dependente - com auxilio.</option>'; ?>
+                                            <?php if ($decubito5_ortopedia != '(NR) Não Realiza')
+                                                echo '<option value="(NR) Não Realiza
+                                                ">(NR) Não Realiza </option>'; ?>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+
+                            
+                            <h5>Funções Neurovegetativas </h5>
+                            <br> 
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="exampleFormControlInput1">Cardiopulmonar</label>
+                                        <input type="text" class="form-control" id="cardiopulmonar_ortopedia" name="cardiopulmonar_ortopedia" placeholder="Cardiopulmonar" value="<?php echo @$cardiopulmonar_ortopedia ?>" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="exampleFormControlInput1">Gênito Urinária</label>
+                                        <input type="text" class="form-control" id="genitoUrinaria_ortopedia" name="genitoUrinaria_ortopedia" placeholder="Gênito Urinária" value="<?php echo @$genitoUrinaria_ortopedia ?>" required>
+
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="form-group">
+                                <label for="exampleFormControlInput1">Outros</label>
+                                <input type="text" class="form-control" id="outros_ortopedia" name="outros_ortopedia" placeholder="Outros" value="<?php echo @$outros_ortopedia ?>" required>
+                            </div>
+                                    
+                            <div class="form-group">
+                                <label for="exampleFormControlInput1">Exames Complementares</label>
+                                <div class="form-group">
+                                <input type="text" class="form-control" id="examesComplementares_ortopedia" name="examesComplementares_ortopedia" placeholder="RX, Sangue, Urina, Eletromiografia e etc" value="<?php echo @$examesComplementares_ortopedia ?>" required>
+                            </div>
+                                       
+
+                            </div>
+
+                          
+                            <div class="form-group">
+                                <label for="exampleFormControlInput1">Objetivo</label>
+                                <textarea class="form-control" id="objetivo_ortopedia" name="objetivo_ortopedia" maxlength="300"><?php echo @$objetivo_ortopedia ?></textarea>
+                            </div>
+                                       
+                            <div class="form-group">
+                                <label for="exampleFormControlInput1">Conduta</label>
+                                <textarea class="form-control" id="conduta_ortopedia" name="conduta_ortopedia" maxlength="300"><?php echo @$conduta_ortopedia ?></textarea>
+                            </div>
+ 
 
                         </div>
                     </div>
