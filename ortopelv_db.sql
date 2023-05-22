@@ -371,6 +371,8 @@ CREATE TABLE `ficha_proctologia` (
   `outros_dados_proc` varchar(300) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci ROW_FORMAT=DYNAMIC;
 
+
+
 --
 -- Dumping data for table `ficha_proctologia`
 --
@@ -477,6 +479,115 @@ INSERT INTO `ficha_uroginecologia` (`fkcpf`, `nome`, `queixa_prin_urogine`, `ant
 ('891.234.902-18', 'Francemir F Silva', '', '', '', '', 'urgencia', 'hesitacao', '', '', '', 'Não se aplica', '', 'Não se aplica', NULL, '', '', '', 'Não se aplica', '', 'Não se aplica', '', 'Normal', 'Normal', 'Normal', 'Normal', '', '', '', '', 'presente', 'sim', '', '', '', '', '', '', '', '', '', '', '', '', '', 'sim', 'sim', 'laceração', '', NULL, '', '', '', '', '', 'sim', '', '', '', '', 'sim', 'sim', '');
 
 -- --------------------------------------------------------
+
+CREATE TABLE `ficha_ortopedia` (
+  `fkcpf` varchar(300) NOT NULL,
+  `nome` varchar(300) NOT NULL,
+  `historia_molestia_progressa_ortopedia` varchar(300) DEFAULT NULL,
+  `historia_molestia_atual_ortopedia` varchar(300) DEFAULT NULL,
+  `historia_molestia_sintomas_ortopedia` varchar(300) DEFAULT NULL,
+  `inspecao_ortopedia` varchar(300) DEFAULT NULL,
+  `obs_inspecao_ortopedia` varchar(300) DEFAULT NULL,
+  `ombro_flexaoD_ortopedia` varchar(300) DEFAULT NULL,
+  `ombro_flexaoE_ortopedia` varchar(300) DEFAULT NULL,
+  `ombro_extensaoE_ortopedia` varchar(300) DEFAULT NULL,
+  `ombro_extensaoD_ortopedia` varchar(300) DEFAULT NULL,
+  `ombro_abducaoE_ortopedia` varchar(300) DEFAULT NULL,
+  `ombro_abducaoD_ortopedia` varchar(300) DEFAULT NULL,
+  `ombro_aducaoE_ortopedia` varchar(300) DEFAULT NULL,
+  `ombro_aducaoD_ortopedia` varchar(300) DEFAULT NULL,
+  `ombro_rotacaoInternaE_ortopedia` varchar(300) DEFAULT NULL,
+  `ombro_rotacaoInternaD_ortopedia` varchar(300) DEFAULT NULL,
+  `ombro_rotacaoExternaE_ortopedia` varchar(300) DEFAULT NULL,
+  `ombro_rotacaoExternaD_ortopedia` varchar(300) DEFAULT NULL,
+  `cotovelo_flexaoE_ortopedia` varchar(300) DEFAULT NULL,
+  `cotovelo_flexaoD_ortopedia` varchar(300) DEFAULT NULL,
+  `cotovelo_extensaoE_ortopedia` varchar(300) DEFAULT NULL,
+  `cotovelo_extensaoD_ortopedia` varchar(300) DEFAULT NULL,
+  `cotovelo_pronocaoE_ortopedia` varchar(300) DEFAULT NULL,
+  `cotovelo_pronocaoD_ortopedia` varchar(300) DEFAULT NULL,
+  `cotovelo_supinacaoE_ortopedia` varchar(300) DEFAULT NULL,
+  `cotovelo_supinacaoD_ortopedia` varchar(300) DEFAULT NULL,
+  `punho_flexaoE_ortopedia` varchar(300) DEFAULT NULL,
+  `punho_flexaoD_ortopedia` varchar(300) DEFAULT NULL,
+  `punho_extensaoE_ortopedia` varchar(300) DEFAULT NULL,
+  `punho_extensaoD_ortopedia` varchar(300) DEFAULT NULL,
+  `punho_desvioUlnarE_ortopedia` varchar(300) DEFAULT NULL,
+  `punho_desvioUlnarD_ortopedia` varchar(300) DEFAULT NULL,
+  `punho_desvioRadialE_ortopedia` varchar(300) DEFAULT NULL,
+  `punho_desvioRadialD_ortopedia` varchar(300) DEFAULT NULL,
+  `tronco_flexaoE_ortopedia` varchar(300) DEFAULT NULL,
+  `tronco_flexaoD_ortopedia` varchar(300) DEFAULT NULL,
+  `tronco_rotacaoE_ortopedia` varchar(300) DEFAULT NULL,
+  `tronco_rotacaoD_ortopedia` varchar(300) DEFAULT NULL,
+  `tronco_extensaoE_ortopedia` varchar(300) DEFAULT NULL, 
+  `tronco_extensaoD_ortopedia` varchar(300) DEFAULT NULL, 
+  `quadril_flexaoE_ortopedia` varchar(300) DEFAULT NULL, 
+  `quadril_flexaoD_ortopedia` varchar(300) DEFAULT NULL, 
+  `quadril_extensaoE_ortopedia` varchar(300) DEFAULT NULL, 
+  `quadril_extensaoD_ortopedia` varchar(300) DEFAULT NULL, 
+  `quadril_abducaoE_ortopedia` varchar(300) DEFAULT NULL, 
+  `quadril_abducaoD_ortopedia` varchar(300) DEFAULT NULL, 
+  `quadril_aducaoE_ortopedia` varchar(300) DEFAULT NULL, 
+  `quadril_aducaoD_ortopedia` varchar(300) DEFAULT NULL, 
+  `quadril_rotacaoInternaE_ortopedia` varchar(300) DEFAULT NULL, 
+  `quadril_rotacaoInternaD_ortopedia` varchar(300) DEFAULT NULL, 
+  `quadril_rotacaoExternaE_ortopedia` varchar(300) DEFAULT NULL, 
+  `quadril_rotacaoExternaD_ortopedia` varchar(300) DEFAULT NULL, 
+  `joelho_flexaoE_ortopedia` varchar(300) DEFAULT NULL, 
+  `joelho_flexaoD_ortopedia` varchar(300) DEFAULT NULL, 
+  `joelho_extensaoE_ortopedia` varchar(300) DEFAULT NULL, 
+  `joelho_extensaoD_ortopedia` varchar(300) DEFAULT NULL, 
+  `tornozelo_dorsiflexaoE_ortopedia` varchar(300) DEFAULT NULL, 
+  `tornozelo_dorsiflexaoD_ortopedia` varchar(300) DEFAULT NULL, 
+  `tornozelo_plantiflexaoE_ortopedia` varchar(300) DEFAULT NULL, 
+  `tornozelo_plantiflexaoD_ortopedia` varchar(300) DEFAULT NULL, 
+  `estilrradialE_ortopedia` varchar(300) DEFAULT NULL, 
+  `estilrradialD_ortopedia` varchar(300) DEFAULT NULL, 
+  `bicipitalE_ortopedia` varchar(300) DEFAULT NULL, 
+  `bicipitalD_ortopedia` varchar(300) DEFAULT NULL, 
+  `tricipitalE_ortopedia` varchar(300) DEFAULT NULL, 
+  `tricipitalD_ortopedia` varchar(300) DEFAULT NULL, 
+  `patelarE_ortopedia` varchar(300) DEFAULT NULL, 
+  `patelarD_ortopedia` varchar(300) DEFAULT NULL, 
+  `aquileuE_ortopedia` varchar(300) DEFAULT NULL, 
+  `aquileuD_ortopedia` varchar(300) DEFAULT NULL, 
+  `babisnkiE_ortopedia` varchar(300) DEFAULT NULL, 
+  `babisnkiD_ortopedia` varchar(300) DEFAULT NULL, 
+  `cutaneoAbdominalE_ortopedia` varchar(300) DEFAULT NULL, 
+  `cutaneoAbdominalD_ortopedia` varchar(300) DEFAULT NULL, 
+  `sinaisDeAutotismoMedularE_ortopedia` varchar(300) DEFAULT NULL, 
+  `sinaisDeAutotismoMedularD_ortopedia` varchar(300) DEFAULT NULL, 
+  `impulsoExtensorE_ortopedia` varchar(300) DEFAULT NULL, 
+  `impulsoExtensorD_ortopedia` varchar(300) DEFAULT NULL, 
+  `tripliceFlexaoE_ortopedia` varchar(300) DEFAULT NULL, 
+  `tripliceFlexaoD_ortopedia` varchar(300) DEFAULT NULL, 
+  `sincinesiasE_ortopedia` varchar(300) DEFAULT NULL, 
+  `sincinesiasD_ortopedia` varchar(300) DEFAULT NULL, 
+  `decubito1_ortopedia` varchar(300) DEFAULT NULL, 
+  `decubito2_ortopedia` varchar(300) DEFAULT NULL, 
+  `decubito3_ortopedia` varchar(300) DEFAULT NULL, 
+  `decubito4_ortopedia` varchar(300) DEFAULT NULL, 
+  `decubito5_ortopedia` varchar(300) DEFAULT NULL, 
+  `cardiopulmonar_ortopedia` varchar(300) DEFAULT NULL, 
+  `genitoUrinaria_ortopedia` varchar(300) DEFAULT NULL, 
+  `outros_ortopedia` varchar(300) DEFAULT NULL, 
+  `examesComplementares_ortopedia` varchar(300) DEFAULT NULL, 
+  `objetivo_ortopedia` varchar(300) DEFAULT NULL, 
+  `conduta_ortopedia` varchar(300) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci ROW_FORMAT=DYNAMIC;
+
+
+
+
+
+
+
+
+
+
+
+
 
 --
 -- Table structure for table `fornecedores`

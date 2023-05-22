@@ -3,11 +3,12 @@
 require_once("../../conexao.php");
 
 $id = $_POST['id'];
-	$res = $pdo->query("select * from pacientes where id = '$id'");
-	$dados = $res->fetchAll(PDO::FETCH_ASSOC);
 
-	$nome = $dados[0]['nome'];
-	$cpf = $dados[0]['cpf'];
+$res = $pdo->query("select * from pacientes where id = '$id'");
+$dados = $res->fetchAll(PDO::FETCH_ASSOC);
+
+$nome = $dados[0]['nome'];
+$cpf = $dados[0]['cpf'];
 
 $rg = $_POST['rg'];
 $telefone = $_POST['telefone'];
@@ -222,9 +223,127 @@ $experiencia_a_virgindade_uroginecologia = $_POST['experiencia_a_virgindade_urog
 $abuso_sexual_uroginecologia = $_POST['abuso_sexual_uroginecologia'];
 $permissao_abuso_sexual_uroginecologia = $_POST['permissao_abuso_sexual_uroginecologia'];
 $relato_abuso_sexual_uroginecologia = $_POST['relato_abuso_sexual_uroginecologia'];
-
-
 //FIM Uroginecologia (Funcionando Pefeitamente)
+
+
+
+
+//ORTOPEDIA
+$historia_molestia_progressa_ortopedia = $_POST['historia_molestia_progressa_ortopedia'];
+$historia_molestia_atual_ortopedia = $_POST['historia_molestia_atual_ortopedia'];
+$historia_molestia_sintomas_ortopedia = $_POST['historia_molestia_sintomas_ortopedia'];
+$inspecao_ortopedia = $_POST['inspecao_ortopedia'];
+$obs_inspecao_ortopedia = $_POST['obs_inspecao_ortopedia'];
+
+//OMBRO
+$ombro_flexaoD_ortopedia = $_POST['ombro_flexaoD_ortopedia'];
+$ombro_flexaoE_ortopedia = $_POST['ombro_flexaoE_ortopedia'];
+$ombro_extensaoE_ortopedia = $_POST['ombro_extensaoE_ortopedia'];
+$ombro_extensaoD_ortopedia = $_POST['ombro_extensaoD_ortopedia'];
+$ombro_abducaoE_ortopedia  = $_POST['ombro_abducaoE_ortopedia'];
+$ombro_abducaoD_ortopedia  = $_POST['ombro_abducaoD_ortopedia'];
+$ombro_aducaoE_ortopedia  = $_POST['ombro_aducaoE_ortopedia'];
+$ombro_aducaoD_ortopedia  = $_POST['ombro_aducaoD_ortopedia'];
+$ombro_rotacaoInternaE_ortopedia = $_POST['ombro_rotacaoInternaE_ortopedia'];
+$ombro_rotacaoInternaD_ortopedia = $_POST['ombro_rotacaoInternaD_ortopedia'];
+$ombro_rotacaoExternaE_ortopedia = $_POST['ombro_rotacaoExternaE_ortopedia'];
+$ombro_rotacaoExternaD_ortopedia = $_POST['ombro_rotacaoExternaD_ortopedia'];
+
+//COTOVELO
+$cotovelo_flexaoE_ortopedia = $_POST['cotovelo_flexaoE_ortopedia'];
+$cotovelo_flexaoD_ortopedia = $_POST['cotovelo_flexaoD_ortopedia'];
+$cotovelo_extensaoE_ortopedia = $_POST['cotovelo_extensaoE_ortopedia'];
+$cotovelo_extensaoD_ortopedia = $_POST['cotovelo_extensaoD_ortopedia'];
+$cotovelo_pronocaoE_ortopedia = $_POST['cotovelo_pronocaoE_ortopedia'];
+$cotovelo_pronocaoD_ortopedia = $_POST['cotovelo_pronocaoD_ortopedia'];
+$cotovelo_supinacaoE_ortopedia = $_POST['cotovelo_supinacaoE_ortopedia'];
+$cotovelo_supinacaoD_ortopedia = $_POST['cotovelo_supinacaoD_ortopedia'];
+
+//PUNHO
+$punho_flexaoE_ortopedia = $_POST['punho_flexaoE_ortopedia'];
+$punho_flexaoD_ortopedia = $_POST['punho_flexaoD_ortopedia'];
+$punho_extensaoE_ortopedia = $_POST['punho_extensaoE_ortopedia'];
+$punho_extensaoD_ortopedia = $_POST['punho_extensaoD_ortopedia'];
+$punho_desvioUlnarE_ortopedia = $_POST['punho_desvioUlnarE_ortopedia'];
+$punho_desvioUlnarD_ortopedia = $_POST['punho_desvioUlnarD_ortopedia'];
+$punho_desvioRadialE_ortopedia = $_POST['punho_desvioRadialE_ortopedia'];
+$punho_desvioRadialD_ortopedia = $_POST['punho_desvioRadialD_ortopedia'];
+
+//TRONCO
+$tronco_flexaoE_ortopedia = $_POST['tronco_flexaoE_ortopedia'];
+$tronco_flexaoD_ortopedia = $_POST['tronco_flexaoD_ortopedia'];
+$tronco_rotacaoE_ortopedia = $_POST['tronco_rotacaoE_ortopedia'];
+$tronco_rotacaoD_ortopedia = $_POST['tronco_rotacaoD_ortopedia'];
+$tronco_extensaoE_ortopedia = $_POST['tronco_extensaoE_ortopedia'];
+$tronco_extensaoD_ortopedia = $_POST['tronco_extensaoD_ortopedia'];
+
+//QUADRIL
+$quadril_flexaoE_ortopedia = $_POST['quadril_flexaoE_ortopedia'];
+$quadril_flexaoD_ortopedia = $_POST['quadril_flexaoD_ortopedia'];
+$quadril_extensaoE_ortopedia = $_POST['quadril_extensaoE_ortopedia'];
+$quadril_extensaoD_ortopedia = $_POST['quadril_extensaoD_ortopedia'];
+$quadril_abducaoE_ortopedia = $_POST['quadril_abducaoE_ortopedia'];
+$quadril_abducaoD_ortopedia = $_POST['quadril_abducaoD_ortopedia'];
+$quadril_aducaoE_ortopedia = $_POST['quadril_aducaoE_ortopedia'];
+$quadril_aducaoD_ortopedia = $_POST['quadril_aducaoD_ortopedia'];
+$quadril_rotacaoInternaE_ortopedia = $_POST['quadril_rotacaoInternaE_ortopedia'];
+$quadril_rotacaoInternaD_ortopedia = $_POST['quadril_rotacaoInternaD_ortopedia'];
+$quadril_rotacaoExternaE_ortopedia = $_POST['quadril_rotacaoExternaE_ortopedia'];
+$quadril_rotacaoExternaD_ortopedia = $_POST['quadril_rotacaoExternaD_ortopedia'];
+
+//JOELHO
+$joelho_flexaoE_ortopedia = $_POST['joelho_flexaoE_ortopedia'];
+$joelho_flexaoD_ortopedia = $_POST['joelho_flexaoD_ortopedia'];
+$joelho_extensaoE_ortopedia = $_POST['joelho_extensaoE_ortopedia'];
+$joelho_extensaoD_ortopedia = $_POST['joelho_extensaoD_ortopedia'];
+
+//TORNOZELO
+$tornozelo_dorsiflexaoE_ortopedia = $_POST['tornozelo_dorsiflexaoE_ortopedia'];
+$tornozelo_dorsiflexaoD_ortopedia = $_POST['tornozelo_dorsiflexaoD_ortopedia'];
+$tornozelo_plantiflexaoE_ortopedia = $_POST['tornozelo_plantiflexaoE_ortopedia'];
+$tornozelo_plantiflexaoD_ortopedia = $_POST['tornozelo_plantiflexaoD_ortopedia'];
+
+
+//REFLEXOS
+$estilrradialE_ortopedia = $_POST['estilrradialE_ortopedia'];
+$estilrradialD_ortopedia = $_POST['estilrradialD_ortopedia'];
+$bicipitalE_ortopedia = $_POST['bicipitalE_ortopedia'];
+$bicipitalD_ortopedia = $_POST['bicipitalD_ortopedia'];
+$tricipitalE_ortopedia = $_POST['tricipitalE_ortopedia'];
+$tricipitalD_ortopedia = $_POST['tricipitalD_ortopedia'];
+$patelarE_ortopedia = $_POST['patelarE_ortopedia'];
+$patelarD_ortopedia = $_POST['patelarD_ortopedia'];
+$aquileuE_ortopedia = $_POST['aquileuE_ortopedia'];
+$aquileuD_ortopedia = $_POST['aquileuD_ortopedia'];
+$babisnkiE_ortopedia = $_POST['babisnkiE_ortopedia'];
+$babisnkiD_ortopedia = $_POST['babisnkiD_ortopedia'];
+$cutaneoAbdominalE_ortopedia = $_POST['cutaneoAbdominalE_ortopedia'];
+$cutaneoAbdominalD_ortopedia = $_POST['cutaneoAbdominalD_ortopedia'];
+$sinaisDeAutotismoMedularE_ortopedia = $_POST['sinaisDeAutotismoMedularE_ortopedia'];
+$sinaisDeAutotismoMedularD_ortopedia = $_POST['sinaisDeAutotismoMedularD_ortopedia'];
+$impulsoExtensorE_ortopedia = $_POST['impulsoExtensorE_ortopedia'];
+$impulsoExtensorD_ortopedia = $_POST['impulsoExtensorD_ortopedia'];
+$tripliceFlexaoE_ortopedia = $_POST['tripliceFlexaoE_ortopedia'];
+$tripliceFlexaoD_ortopedia = $_POST['tripliceFlexaoD_ortopedia'];
+$sincinesiasE_ortopedia = $_POST['sincinesiasE_ortopedia'];
+$sincinesiasD_ortopedia = $_POST['sincinesiasD_ortopedia'];
+
+//Mudança de Decúbito
+$decubito1_ortopedia = $_POST['decubito1_ortopedia'];
+$decubito2_ortopedia = $_POST['decubito2_ortopedia'];
+$decubito3_ortopedia = $_POST['decubito3_ortopedia'];
+$decubito4_ortopedia = $_POST['decubito4_ortopedia'];
+$decubito5_ortopedia = $_POST['decubito5_ortopedia'];
+
+//Neurovegetativas
+$cardiopulmonar_ortopedia = $_POST['cardiopulmonar_ortopedia'];
+$genitoUrinaria_ortopedia = $_POST['genitoUrinaria_ortopedia'];
+$outros_ortopedia = $_POST['outros_ortopedia'];                   
+$examesComplementares_ortopedia = $_POST['examesComplementares_ortopedia'];
+$objetivo_ortopedia = $_POST['objetivo_ortopedia'];
+$conduta_ortopedia = $_POST['conduta_ortopedia'];
+
+//FIM ORTOPEDIA 
 
 
 
@@ -491,8 +610,222 @@ $res->bindValue(":fkcpf", $cpf);
 
 $res->execute();
 
-echo "Editado com Sucesso!!";
 
+
+$res = $pdo->prepare("SELECT * from ficha_ortopedia where fkcpf = :cpf");
+$res->bindValue(":cpf", $cpf);
+$res->execute();
+
+$dados = $res->fetchAll(PDO::FETCH_ASSOC);
+$linhas = count($dados);
+
+if ($linhas > 0) {
+
+	$res = $pdo->prepare("UPDATE ficha_ortopedia set historia_molestia_progressa_ortopedia = :historia_molestia_progressa_ortopedia, historia_molestia_atual_ortopedia = :historia_molestia_atual_ortopedia, historia_molestia_sintomas_ortopedia = :historia_molestia_sintomas_ortopedia, inspecao_ortopedia = :inspecao_ortopedia, obs_inspecao_ortopedia = :obs_inspecao_ortopedia, ombro_flexaoD_ortopedia = :ombro_flexaoD_ortopedia, ombro_flexaoE_ortopedia = :ombro_flexaoE_ortopedia, ombro_extensaoE_ortopedia = :ombro_extensaoE_ortopedia, ombro_extensaoD_ortopedia = :ombro_extensaoD_ortopedia, ombro_abducaoE_ortopedia = :ombro_abducaoE_ortopedia, ombro_abducaoD_ortopedia = :ombro_abducaoD_ortopedia, ombro_aducaoE_ortopedia = :ombro_aducaoE_ortopedia, ombro_aducaoD_ortopedia = :ombro_aducaoD_ortopedia, ombro_rotacaoInternaE_ortopedia = :ombro_rotacaoInternaE_ortopedia, ombro_rotacaoInternaD_ortopedia = :ombro_rotacaoInternaD_ortopedia, ombro_rotacaoExternaE_ortopedia = :ombro_rotacaoExternaE_ortopedia, ombro_rotacaoExternaD_ortopedia = :ombro_rotacaoExternaD_ortopedia,  cotovelo_flexaoE_ortopedia = :cotovelo_flexaoE_ortopedia, cotovelo_flexaoD_ortopedia = :cotovelo_flexaoD_ortopedia, cotovelo_extensaoE_ortopedia = :cotovelo_extensaoE_ortopedia, cotovelo_extensaoD_ortopedia = :cotovelo_extensaoD_ortopedia, cotovelo_pronocaoE_ortopedia = :cotovelo_pronocaoE_ortopedia, cotovelo_pronocaoD_ortopedia = :cotovelo_pronocaoD_ortopedia, cotovelo_supinacaoE_ortopedia = :cotovelo_supinacaoE_ortopedia, cotovelo_supinacaoD_ortopedia = :cotovelo_supinacaoD_ortopedia, punho_flexaoE_ortopedia = :punho_flexaoE_ortopedia, punho_flexaoD_ortopedia = :punho_flexaoD_ortopedia, punho_extensaoE_ortopedia = :punho_extensaoE_ortopedia, punho_extensaoD_ortopedia = :punho_extensaoD_ortopedia, punho_desvioUlnarE_ortopedia = :punho_desvioUlnarE_ortopedia, punho_desvioUlnarD_ortopedia = :punho_desvioUlnarD_ortopedia, punho_desvioRadialE_ortopedia = :punho_desvioRadialE_ortopedia, punho_desvioRadialD_ortopedia = :punho_desvioRadialD_ortopedia, tronco_flexaoE_ortopedia = :tronco_flexaoE_ortopedia, tronco_flexaoD_ortopedia = :tronco_flexaoD_ortopedia, tronco_rotacaoE_ortopedia = :tronco_rotacaoE_ortopedia, tronco_rotacaoD_ortopedia = :tronco_rotacaoD_ortopedia,  tronco_extensaoE_ortopedia = :tronco_extensaoE_ortopedia, tronco_extensaoD_ortopedia = :tronco_extensaoD_ortopedia, quadril_flexaoE_ortopedia = :quadril_flexaoE_ortopedia, quadril_flexaoD_ortopedia = :quadril_flexaoD_ortopedia, quadril_extensaoE_ortopedia = :quadril_extensaoE_ortopedia, quadril_extensaoD_ortopedia = :quadril_extensaoD_ortopedia, quadril_abducaoE_ortopedia = :quadril_abducaoE_ortopedia, quadril_abducaoD_ortopedia = :quadril_abducaoD_ortopedia, quadril_aducaoE_ortopedia = :quadril_aducaoE_ortopedia, quadril_aducaoD_ortopedia = :quadril_aducaoD_ortopedia, quadril_rotacaoInternaE_ortopedia = :quadril_rotacaoInternaE_ortopedia, quadril_rotacaoInternaD_ortopedia = :quadril_rotacaoInternaD_ortopedia, quadril_rotacaoExternaE_ortopedia = :quadril_rotacaoExternaE_ortopedia, quadril_rotacaoExternaD_ortopedia = :quadril_rotacaoExternaD_ortopedia, joelho_flexaoE_ortopedia = :joelho_flexaoE_ortopedia, joelho_flexaoD_ortopedia = :joelho_flexaoD_ortopedia, joelho_extensaoE_ortopedia = :joelho_extensaoE_ortopedia, joelho_extensaoD_ortopedia = :joelho_extensaoD_ortopedia, tornozelo_dorsiflexaoE_ortopedia = :tornozelo_dorsiflexaoE_ortopedia, tornozelo_dorsiflexaoD_ortopedia = :tornozelo_dorsiflexaoD_ortopedia, tornozelo_plantiflexaoE_ortopedia = :tornozelo_plantiflexaoE_ortopedia, tornozelo_plantiflexaoD_ortopedia = :tornozelo_plantiflexaoD_ortopedia, estilrradialE_ortopedia = :estilrradialE_ortopedia, estilrradialD_ortopedia = :estilrradialD_ortopedia, bicipitalE_ortopedia = :bicipitalE_ortopedia, bicipitalD_ortopedia = :bicipitalD_ortopedia, tricipitalE_ortopedia = :tricipitalE_ortopedia, tricipitalD_ortopedia = :tricipitalD_ortopedia, patelarE_ortopedia = :patelarE_ortopedia, patelarD_ortopedia = :patelarD_ortopedia, aquileuE_ortopedia = :aquileuE_ortopedia, aquileuD_ortopedia = :aquileuD_ortopedia, babisnkiE_ortopedia = :babisnkiE_ortopedia, babisnkiD_ortopedia = :babisnkiD_ortopedia, cutaneoAbdominalE_ortopedia = :cutaneoAbdominalE_ortopedia, cutaneoAbdominalD_ortopedia = :cutaneoAbdominalD_ortopedia, sinaisDeAutotismoMedularE_ortopedia = :sinaisDeAutotismoMedularE_ortopedia, sinaisDeAutotismoMedularD_ortopedia = :sinaisDeAutotismoMedularD_ortopedia, impulsoExtensorE_ortopedia = :impulsoExtensorE_ortopedia, impulsoExtensorD_ortopedia = :impulsoExtensorD_ortopedia, tripliceFlexaoE_ortopedia = :tripliceFlexaoE_ortopedia, tripliceFlexaoD_ortopedia = :tripliceFlexaoD_ortopedia, sincinesiasE_ortopedia = :sincinesiasE_ortopedia, sincinesiasD_ortopedia = :sincinesiasD_ortopedia, decubito1_ortopedia = :decubito1_ortopedia, decubito2_ortopedia = :decubito2_ortopedia, decubito3_ortopedia = :decubito3_ortopedia, decubito4_ortopedia = :decubito4_ortopedia, decubito5_ortopedia = :decubito5_ortopedia, cardiopulmonar_ortopedia = :cardiopulmonar_ortopedia, genitoUrinaria_ortopedia = :genitoUrinaria_ortopedia, outros_ortopedia = :outros_ortopedia, examesComplementares_ortopedia = :examesComplementares_ortopedia, objetivo_ortopedia = :objetivo_ortopedia, conduta_ortopedia = :conduta_ortopedia where fkcpf = :fkcpf");
+
+	$res->bindValue(":historia_molestia_progressa_ortopedia", $historia_molestia_progressa_ortopedia);
+	$res->bindValue(":historia_molestia_atual_ortopedia", $historia_molestia_atual_ortopedia);
+	$res->bindValue(":historia_molestia_sintomas_ortopedia", $historia_molestia_sintomas_ortopedia);
+	$res->bindValue(":inspecao_ortopedia", $inspecao_ortopedia);
+	$res->bindValue(":obs_inspecao_ortopedia", $obs_inspecao_ortopedia);
+	$res->bindValue(":ombro_flexaoD_ortopedia", $ombro_flexaoD_ortopedia);
+	$res->bindValue(":ombro_flexaoE_ortopedia", $ombro_flexaoE_ortopedia);
+	$res->bindValue(":ombro_extensaoE_ortopedia", $ombro_extensaoE_ortopedia);
+	$res->bindValue(":ombro_extensaoD_ortopedia", $ombro_extensaoD_ortopedia);
+	$res->bindValue(":ombro_abducaoE_ortopedia", $ombro_abducaoE_ortopedia);
+	$res->bindValue(":ombro_abducaoD_ortopedia", $ombro_abducaoD_ortopedia);
+	$res->bindValue(":ombro_aducaoE_ortopedia", $ombro_aducaoE_ortopedia);
+	$res->bindValue(":ombro_aducaoD_ortopedia", $ombro_aducaoD_ortopedia);
+	$res->bindValue(":ombro_rotacaoInternaE_ortopedia", $ombro_rotacaoInternaE_ortopedia);
+	$res->bindValue(":ombro_rotacaoInternaD_ortopedia", $ombro_rotacaoInternaD_ortopedia);
+	$res->bindValue(":ombro_rotacaoExternaE_ortopedia", $ombro_rotacaoExternaE_ortopedia);
+	$res->bindValue(":ombro_rotacaoExternaD_ortopedia", $ombro_rotacaoExternaD_ortopedia);
+	$res->bindValue(":cotovelo_flexaoE_ortopedia", $cotovelo_flexaoE_ortopedia);
+	$res->bindValue(":cotovelo_flexaoD_ortopedia", $cotovelo_flexaoD_ortopedia);
+	$res->bindValue(":cotovelo_extensaoE_ortopedia", $cotovelo_extensaoE_ortopedia);
+	$res->bindValue(":cotovelo_extensaoD_ortopedia", $cotovelo_extensaoD_ortopedia);
+	$res->bindValue(":cotovelo_pronocaoE_ortopedia", $cotovelo_pronocaoE_ortopedia);
+	$res->bindValue(":cotovelo_pronocaoD_ortopedia", $cotovelo_pronocaoD_ortopedia);
+	$res->bindValue(":cotovelo_supinacaoE_ortopedia", $cotovelo_supinacaoE_ortopedia);
+	$res->bindValue(":cotovelo_supinacaoD_ortopedia", $cotovelo_supinacaoD_ortopedia);
+	$res->bindValue(":punho_flexaoE_ortopedia", $punho_flexaoE_ortopedia);
+	$res->bindValue(":punho_flexaoD_ortopedia", $punho_flexaoD_ortopedia);
+	$res->bindValue(":punho_extensaoE_ortopedia", $punho_extensaoE_ortopedia);
+	$res->bindValue(":punho_extensaoD_ortopedia", $punho_extensaoD_ortopedia);
+	$res->bindValue(":punho_desvioUlnarE_ortopedia", $punho_desvioUlnarE_ortopedia);
+	$res->bindValue(":punho_desvioUlnarD_ortopedia", $punho_desvioUlnarD_ortopedia);
+	$res->bindValue(":punho_desvioRadialE_ortopedia", $punho_desvioRadialE_ortopedia);
+	$res->bindValue(":punho_desvioRadialD_ortopedia", $punho_desvioRadialD_ortopedia);
+	$res->bindValue(":tronco_flexaoE_ortopedia", $tronco_flexaoE_ortopedia);
+	$res->bindValue(":tronco_flexaoD_ortopedia", $tronco_flexaoD_ortopedia);
+	$res->bindValue(":tronco_rotacaoE_ortopedia", $tronco_rotacaoE_ortopedia);
+	$res->bindValue(":tronco_rotacaoD_ortopedia", $tronco_rotacaoD_ortopedia);
+	$res->bindValue(":tronco_extensaoE_ortopedia", $tronco_extensaoE_ortopedia);
+	$res->bindValue(":tronco_extensaoD_ortopedia", $tronco_extensaoD_ortopedia);
+	$res->bindValue(":quadril_flexaoE_ortopedia", $quadril_flexaoE_ortopedia);
+	$res->bindValue(":quadril_flexaoD_ortopedia", $quadril_flexaoD_ortopedia);
+	$res->bindValue(":quadril_extensaoE_ortopedia", $quadril_extensaoE_ortopedia);
+	$res->bindValue(":quadril_extensaoD_ortopedia", $quadril_extensaoD_ortopedia);
+	$res->bindValue(":quadril_abducaoE_ortopedia", $quadril_abducaoE_ortopedia);
+	$res->bindValue(":quadril_abducaoD_ortopedia", $quadril_abducaoD_ortopedia);
+	$res->bindValue(":quadril_aducaoE_ortopedia", $quadril_aducaoE_ortopedia);
+	$res->bindValue(":quadril_aducaoD_ortopedia", $quadril_aducaoD_ortopedia);
+	$res->bindValue(":quadril_rotacaoInternaE_ortopedia", $quadril_rotacaoInternaE_ortopedia);
+	$res->bindValue(":quadril_rotacaoInternaD_ortopedia", $quadril_rotacaoInternaD_ortopedia);
+	$res->bindValue(":quadril_rotacaoExternaE_ortopedia", $quadril_rotacaoExternaE_ortopedia);
+	$res->bindValue(":quadril_rotacaoExternaD_ortopedia", $quadril_rotacaoExternaD_ortopedia);
+	$res->bindValue(":joelho_flexaoE_ortopedia", $joelho_flexaoE_ortopedia);
+	$res->bindValue(":joelho_flexaoD_ortopedia", $joelho_flexaoD_ortopedia);
+	$res->bindValue(":joelho_extensaoE_ortopedia", $joelho_extensaoE_ortopedia);
+	$res->bindValue(":joelho_extensaoD_ortopedia", $joelho_extensaoD_ortopedia);
+	$res->bindValue(":tornozelo_dorsiflexaoE_ortopedia", $tornozelo_dorsiflexaoE_ortopedia);
+	$res->bindValue(":tornozelo_dorsiflexaoD_ortopedia", $tornozelo_dorsiflexaoD_ortopedia);
+	$res->bindValue(":tornozelo_plantiflexaoE_ortopedia", $tornozelo_plantiflexaoE_ortopedia);
+	$res->bindValue(":tornozelo_plantiflexaoD_ortopedia", $tornozelo_plantiflexaoD_ortopedia);
+	$res->bindValue(":estilrradialE_ortopedia", $estilrradialE_ortopedia);
+	$res->bindValue(":estilrradialD_ortopedia", $estilrradialD_ortopedia);
+	$res->bindValue(":bicipitalE_ortopedia", $bicipitalE_ortopedia);
+	$res->bindValue(":bicipitalD_ortopedia", $bicipitalD_ortopedia);
+	$res->bindValue(":tricipitalE_ortopedia", $tricipitalE_ortopedia);
+	$res->bindValue(":tricipitalD_ortopedia", $tricipitalD_ortopedia);
+	$res->bindValue(":patelarE_ortopedia", $patelarE_ortopedia);
+	$res->bindValue(":patelarD_ortopedia", $patelarD_ortopedia);
+	$res->bindValue(":aquileuE_ortopedia", $aquileuE_ortopedia);
+	$res->bindValue(":aquileuD_ortopedia", $aquileuD_ortopedia);
+	$res->bindValue(":babisnkiE_ortopedia", $babisnkiE_ortopedia);
+	$res->bindValue(":babisnkiD_ortopedia", $babisnkiD_ortopedia);
+	$res->bindValue(":cutaneoAbdominalE_ortopedia", $cutaneoAbdominalE_ortopedia);
+	$res->bindValue(":cutaneoAbdominalD_ortopedia", $cutaneoAbdominalD_ortopedia);
+	$res->bindValue(":sinaisDeAutotismoMedularE_ortopedia", $sinaisDeAutotismoMedularE_ortopedia);
+	$res->bindValue(":sinaisDeAutotismoMedularD_ortopedia", $sinaisDeAutotismoMedularD_ortopedia);
+	$res->bindValue(":impulsoExtensorE_ortopedia", $impulsoExtensorE_ortopedia);
+	$res->bindValue(":impulsoExtensorD_ortopedia", $impulsoExtensorD_ortopedia);
+	$res->bindValue(":tripliceFlexaoE_ortopedia", $tripliceFlexaoE_ortopedia);
+	$res->bindValue(":tripliceFlexaoD_ortopedia", $tripliceFlexaoD_ortopedia);
+	$res->bindValue(":sincinesiasE_ortopedia", $sincinesiasE_ortopedia);
+	$res->bindValue(":sincinesiasD_ortopedia", $sincinesiasD_ortopedia);
+	$res->bindValue(":decubito1_ortopedia", $decubito1_ortopedia);
+	$res->bindValue(":decubito2_ortopedia", $decubito2_ortopedia);
+	$res->bindValue(":decubito3_ortopedia", $decubito3_ortopedia);
+	$res->bindValue(":decubito4_ortopedia", $decubito4_ortopedia);
+	$res->bindValue(":decubito5_ortopedia", $decubito5_ortopedia);
+	$res->bindValue(":cardiopulmonar_ortopedia", $cardiopulmonar_ortopedia);
+	$res->bindValue(":genitoUrinaria_ortopedia", $genitoUrinaria_ortopedia);
+	$res->bindValue(":outros_ortopedia", $outros_ortopedia);
+	$res->bindValue(":examesComplementares_ortopedia", $examesComplementares_ortopedia);
+	$res->bindValue(":objetivo_ortopedia", $objetivo_ortopedia);
+	$res->bindValue(":conduta_ortopedia", $conduta_ortopedia);
+
+	$res->bindValue(":fkcpf", $cpf);
+
+	$res->execute();
+}else{
+	$res = $pdo->prepare("INSERT into
+			ficha_ortopedia (nome, fkcpf, historia_molestia_progressa_ortopedia, historia_molestia_atual_ortopedia, historia_molestia_sintomas_ortopedia, inspecao_ortopedia, obs_inspecao_ortopedia, ombro_flexaoD_ortopedia, ombro_flexaoE_ortopedia, ombro_extensaoE_ortopedia, ombro_extensaoD_ortopedia, ombro_abducaoE_ortopedia, ombro_abducaoD_ortopedia, ombro_aducaoE_ortopedia, ombro_aducaoD_ortopedia, ombro_rotacaoInternaE_ortopedia, ombro_rotacaoInternaD_ortopedia, ombro_rotacaoExternaE_ortopedia, ombro_rotacaoExternaD_ortopedia, cotovelo_flexaoE_ortopedia, cotovelo_flexaoD_ortopedia,  cotovelo_extensaoE_ortopedia, cotovelo_extensaoD_ortopedia, cotovelo_pronocaoE_ortopedia,  cotovelo_pronocaoD_ortopedia, cotovelo_supinacaoE_ortopedia, cotovelo_supinacaoD_ortopedia, punho_flexaoE_ortopedia, punho_flexaoD_ortopedia, punho_extensaoE_ortopedia,  punho_extensaoD_ortopedia, punho_desvioUlnarE_ortopedia,punho_desvioUlnarD_ortopedia, punho_desvioRadialE_ortopedia, punho_desvioRadialD_ortopedia, tronco_flexaoE_ortopedia, tronco_flexaoD_ortopedia, tronco_rotacaoE_ortopedia, tronco_rotacaoD_ortopedia, tronco_extensaoE_ortopedia, tronco_extensaoD_ortopedia,  quadril_flexaoE_ortopedia, quadril_flexaoD_ortopedia, quadril_extensaoE_ortopedia, quadril_extensaoD_ortopedia, quadril_abducaoE_ortopedia,  quadril_abducaoD_ortopedia, quadril_aducaoE_ortopedia, quadril_aducaoD_ortopedia, quadril_rotacaoInternaE_ortopedia,  quadril_rotacaoInternaD_ortopedia, quadril_rotacaoExternaE_ortopedia, quadril_rotacaoExternaD_ortopedia, joelho_flexaoE_ortopedia, joelho_flexaoD_ortopedia,  joelho_extensaoE_ortopedia, joelho_extensaoD_ortopedia, tornozelo_dorsiflexaoE_ortopedia,  tornozelo_dorsiflexaoD_ortopedia, tornozelo_plantiflexaoE_ortopedia, tornozelo_plantiflexaoD_ortopedia, estilrradialE_ortopedia,  estilrradialD_ortopedia,bicipitalE_ortopedia,  bicipitalD_ortopedia, tricipitalE_ortopedia, tricipitalD_ortopedia, patelarE_ortopedia, patelarD_ortopedia,  aquileuE_ortopedia, aquileuD_ortopedia, babisnkiE_ortopedia, babisnkiD_ortopedia, cutaneoAbdominalE_ortopedia,cutaneoAbdominalD_ortopedia, sinaisDeAutotismoMedularE_ortopedia, sinaisDeAutotismoMedularD_ortopedia, impulsoExtensorE_ortopedia, impulsoExtensorD_ortopedia, tripliceFlexaoE_ortopedia,tripliceFlexaoD_ortopedia, sincinesiasE_ortopedia, sincinesiasD_ortopedia, decubito1_ortopedia, decubito2_ortopedia, decubito3_ortopedia, decubito4_ortopedia, decubito5_ortopedia, cardiopulmonar_ortopedia,  genitoUrinaria_ortopedia, outros_ortopedia, examesComplementares_ortopedia, objetivo_ortopedia, conduta_ortopedia)
+
+
+			values (:nome, :cpf, :historia_molestia_progressa_ortopedia, :historia_molestia_atual_ortopedia, :historia_molestia_sintomas_ortopedia,  :inspecao_ortopedia, :obs_inspecao_ortopedia, :ombro_flexaoD_ortopedia, :ombro_flexaoE_ortopedia, :ombro_extensaoE_ortopedia,  :ombro_extensaoD_ortopedia, :ombro_abducaoE_ortopedia, :ombro_abducaoD_ortopedia, :ombro_aducaoE_ortopedia, :ombro_aducaoD_ortopedia, :ombro_rotacaoInternaE_ortopedia, :ombro_rotacaoInternaD_ortopedia, :ombro_rotacaoExternaE_ortopedia, :ombro_rotacaoExternaD_ortopedia,  :cotovelo_flexaoE_ortopedia, :cotovelo_flexaoD_ortopedia, :cotovelo_extensaoE_ortopedia, :cotovelo_supinacaoE_ortopedia, :cotovelo_extensaoD_ortopedia, :cotovelo_pronocaoE_ortopedia,  :cotovelo_pronocaoD_ortopedia, :cotovelo_supinacaoD_ortopedia, :punho_flexaoE_ortopedia, :punho_flexaoD_ortopedia, :punho_extensaoE_ortopedia, :punho_extensaoD_ortopedia, :punho_desvioUlnarE_ortopedia, :punho_desvioUlnarD_ortopedia, :punho_desvioRadialE_ortopedia, :punho_desvioRadialD_ortopedia,  :tronco_flexaoE_ortopedia,  :tronco_flexaoD_ortopedia, :tronco_rotacaoE_ortopedia, :tronco_rotacaoD_ortopedia, :tronco_extensaoE_ortopedia, :tronco_extensaoD_ortopedia, :quadril_flexaoE_ortopedia, :quadril_flexaoD_ortopedia,  :quadril_extensaoE_ortopedia, :quadril_extensaoD_ortopedia, :quadril_abducaoE_ortopedia, :quadril_abducaoD_ortopedia, :quadril_aducaoE_ortopedia, :quadril_aducaoD_ortopedia,  :quadril_rotacaoInternaE_ortopedia, :quadril_rotacaoInternaD_ortopedia, :quadril_rotacaoExternaE_ortopedia, :quadril_rotacaoExternaD_ortopedia, :joelho_flexaoE_ortopedia,  :joelho_flexaoD_ortopedia, :joelho_extensaoE_ortopedia, :joelho_extensaoD_ortopedia, :tornozelo_dorsiflexaoE_ortopedia, :tornozelo_dorsiflexaoD_ortopedia,  :tornozelo_plantiflexaoE_ortopedia, :tornozelo_plantiflexaoD_ortopedia, :estilrradialE_ortopedia, :estilrradialD_ortopedia, :bicipitalE_ortopedia, :bicipitalD_ortopedia,  :tricipitalE_ortopedia, :tricipitalD_ortopedia, :patelarE_ortopedia, :patelarD_ortopedia, :aquileuE_ortopedia, :aquileuD_ortopedia, :babisnkiE_ortopedia, :babisnkiD_ortopedia, :cutaneoAbdominalE_ortopedia, :cutaneoAbdominalD_ortopedia, :sinaisDeAutotismoMedularE_ortopedia, :sinaisDeAutotismoMedularD_ortopedia, :impulsoExtensorE_ortopedia,  :impulsoExtensorD_ortopedia, :tripliceFlexaoE_ortopedia, :tripliceFlexaoD_ortopedia, :sincinesiasE_ortopedia, :sincinesiasD_ortopedia,  :decubito1_ortopedia,  :decubito2_ortopedia,  :decubito3_ortopedia, :decubito4_ortopedia, :decubito5_ortopedia,  :cardiopulmonar_ortopedia, :genitoUrinaria_ortopedia, :outros_ortopedia,  :examesComplementares_ortopedia,  :objetivo_ortopedia, :conduta_ortopedia) ");
+
+			$res->bindValue(":nome", $nome);
+			$res->bindValue(":cpf", $cpf);
+			$res->bindValue(":historia_molestia_progressa_ortopedia", $historia_molestia_progressa_ortopedia);
+			$res->bindValue(":historia_molestia_atual_ortopedia", $historia_molestia_atual_ortopedia);
+			$res->bindValue(":historia_molestia_sintomas_ortopedia", $historia_molestia_sintomas_ortopedia);
+			$res->bindValue(":inspecao_ortopedia", $inspecao_ortopedia);
+			$res->bindValue(":obs_inspecao_ortopedia", $obs_inspecao_ortopedia);
+			$res->bindValue(":ombro_flexaoD_ortopedia", $ombro_flexaoD_ortopedia);
+			$res->bindValue(":ombro_flexaoE_ortopedia", $ombro_flexaoE_ortopedia);
+			$res->bindValue(":ombro_extensaoE_ortopedia", $ombro_extensaoE_ortopedia);
+			$res->bindValue(":ombro_extensaoD_ortopedia", $ombro_extensaoD_ortopedia);
+			$res->bindValue(":ombro_abducaoE_ortopedia", $ombro_abducaoE_ortopedia);
+			$res->bindValue(":ombro_abducaoD_ortopedia", $ombro_abducaoD_ortopedia);
+			$res->bindValue(":ombro_aducaoE_ortopedia", $ombro_aducaoE_ortopedia);
+			$res->bindValue(":ombro_aducaoD_ortopedia", $ombro_aducaoD_ortopedia);
+			$res->bindValue(":ombro_rotacaoInternaE_ortopedia", $ombro_rotacaoInternaE_ortopedia);
+			$res->bindValue(":ombro_rotacaoInternaD_ortopedia", $ombro_rotacaoInternaD_ortopedia);
+			$res->bindValue(":ombro_rotacaoExternaE_ortopedia", $ombro_rotacaoExternaE_ortopedia);
+			$res->bindValue(":ombro_rotacaoExternaD_ortopedia", $ombro_rotacaoExternaD_ortopedia);
+			$res->bindValue(":cotovelo_flexaoE_ortopedia", $cotovelo_flexaoE_ortopedia);
+			$res->bindValue(":cotovelo_flexaoD_ortopedia", $cotovelo_flexaoD_ortopedia);
+			$res->bindValue(":cotovelo_extensaoE_ortopedia", $cotovelo_extensaoE_ortopedia);
+			$res->bindValue(":cotovelo_extensaoD_ortopedia", $cotovelo_extensaoD_ortopedia);
+			$res->bindValue(":cotovelo_pronocaoE_ortopedia", $cotovelo_pronocaoE_ortopedia);
+			$res->bindValue(":cotovelo_pronocaoD_ortopedia", $cotovelo_pronocaoD_ortopedia);
+			$res->bindValue(":cotovelo_supinacaoE_ortopedia", $cotovelo_supinacaoE_ortopedia);
+			$res->bindValue(":cotovelo_supinacaoD_ortopedia", $cotovelo_supinacaoD_ortopedia);
+			$res->bindValue(":punho_flexaoE_ortopedia", $punho_flexaoE_ortopedia);
+			$res->bindValue(":punho_flexaoD_ortopedia", $punho_flexaoD_ortopedia);
+			$res->bindValue(":punho_extensaoE_ortopedia", $punho_extensaoE_ortopedia);
+			$res->bindValue(":punho_extensaoD_ortopedia", $punho_extensaoD_ortopedia);
+			$res->bindValue(":punho_desvioUlnarE_ortopedia", $punho_desvioUlnarE_ortopedia);
+			$res->bindValue(":punho_desvioUlnarD_ortopedia", $punho_desvioUlnarD_ortopedia);
+			$res->bindValue(":punho_desvioRadialE_ortopedia", $punho_desvioRadialE_ortopedia);
+			$res->bindValue(":punho_desvioRadialD_ortopedia", $punho_desvioRadialD_ortopedia);
+			$res->bindValue(":tronco_flexaoE_ortopedia", $tronco_flexaoE_ortopedia);
+			$res->bindValue(":tronco_flexaoD_ortopedia", $tronco_flexaoD_ortopedia);
+			$res->bindValue(":tronco_rotacaoE_ortopedia", $tronco_rotacaoE_ortopedia);
+			$res->bindValue(":tronco_rotacaoD_ortopedia", $tronco_rotacaoD_ortopedia);
+			$res->bindValue(":tronco_extensaoE_ortopedia", $tronco_extensaoE_ortopedia);
+			$res->bindValue(":tronco_extensaoD_ortopedia", $tronco_extensaoD_ortopedia);
+			$res->bindValue(":quadril_flexaoE_ortopedia", $quadril_flexaoE_ortopedia);
+			$res->bindValue(":quadril_flexaoD_ortopedia", $quadril_flexaoD_ortopedia);
+			$res->bindValue(":quadril_extensaoE_ortopedia", $quadril_extensaoE_ortopedia);
+			$res->bindValue(":quadril_extensaoD_ortopedia", $quadril_extensaoD_ortopedia);
+			$res->bindValue(":quadril_abducaoE_ortopedia", $quadril_abducaoE_ortopedia);
+			$res->bindValue(":quadril_abducaoD_ortopedia", $quadril_abducaoD_ortopedia);
+			$res->bindValue(":quadril_aducaoE_ortopedia", $quadril_aducaoE_ortopedia);
+			$res->bindValue(":quadril_aducaoD_ortopedia", $quadril_aducaoD_ortopedia);
+			$res->bindValue(":quadril_rotacaoInternaE_ortopedia", $quadril_rotacaoInternaE_ortopedia);
+			$res->bindValue(":quadril_rotacaoInternaD_ortopedia", $quadril_rotacaoInternaD_ortopedia);
+			$res->bindValue(":quadril_rotacaoExternaE_ortopedia", $quadril_rotacaoExternaE_ortopedia);
+			$res->bindValue(":quadril_rotacaoExternaD_ortopedia", $quadril_rotacaoExternaD_ortopedia);
+			$res->bindValue(":joelho_flexaoE_ortopedia", $joelho_flexaoE_ortopedia);
+			$res->bindValue(":joelho_flexaoD_ortopedia", $joelho_flexaoD_ortopedia);
+			$res->bindValue(":joelho_extensaoE_ortopedia", $joelho_extensaoE_ortopedia);
+			$res->bindValue(":joelho_extensaoD_ortopedia", $joelho_extensaoD_ortopedia);
+			$res->bindValue(":tornozelo_dorsiflexaoE_ortopedia", $tornozelo_dorsiflexaoE_ortopedia);
+			$res->bindValue(":tornozelo_dorsiflexaoD_ortopedia", $tornozelo_dorsiflexaoD_ortopedia);
+			$res->bindValue(":tornozelo_plantiflexaoE_ortopedia", $tornozelo_plantiflexaoE_ortopedia);
+			$res->bindValue(":tornozelo_plantiflexaoD_ortopedia", $tornozelo_plantiflexaoD_ortopedia);
+			$res->bindValue(":estilrradialE_ortopedia", $estilrradialE_ortopedia);
+			$res->bindValue(":estilrradialD_ortopedia", $estilrradialD_ortopedia);
+			$res->bindValue(":bicipitalE_ortopedia", $bicipitalE_ortopedia);
+			$res->bindValue(":bicipitalD_ortopedia", $bicipitalD_ortopedia);
+			$res->bindValue(":tricipitalE_ortopedia", $tricipitalE_ortopedia);
+			$res->bindValue(":tricipitalD_ortopedia", $tricipitalD_ortopedia);
+			$res->bindValue(":patelarE_ortopedia", $patelarE_ortopedia);
+			$res->bindValue(":patelarD_ortopedia", $patelarD_ortopedia);
+			$res->bindValue(":aquileuE_ortopedia", $aquileuE_ortopedia);
+			$res->bindValue(":aquileuD_ortopedia", $aquileuD_ortopedia);
+			$res->bindValue(":babisnkiE_ortopedia", $babisnkiE_ortopedia);
+			$res->bindValue(":babisnkiD_ortopedia", $babisnkiD_ortopedia);
+			$res->bindValue(":cutaneoAbdominalE_ortopedia", $cutaneoAbdominalE_ortopedia);
+			$res->bindValue(":cutaneoAbdominalD_ortopedia", $cutaneoAbdominalD_ortopedia);
+			$res->bindValue(":sinaisDeAutotismoMedularE_ortopedia", $sinaisDeAutotismoMedularE_ortopedia);
+			$res->bindValue(":sinaisDeAutotismoMedularD_ortopedia", $sinaisDeAutotismoMedularD_ortopedia);
+			$res->bindValue(":impulsoExtensorE_ortopedia", $impulsoExtensorE_ortopedia);
+			$res->bindValue(":impulsoExtensorD_ortopedia", $impulsoExtensorD_ortopedia);
+			$res->bindValue(":tripliceFlexaoE_ortopedia", $tripliceFlexaoE_ortopedia);
+			$res->bindValue(":tripliceFlexaoD_ortopedia", $tripliceFlexaoD_ortopedia);
+			$res->bindValue(":sincinesiasE_ortopedia", $sincinesiasE_ortopedia);
+			$res->bindValue(":sincinesiasD_ortopedia", $sincinesiasD_ortopedia);
+			$res->bindValue(":decubito1_ortopedia", $decubito1_ortopedia);
+			$res->bindValue(":decubito2_ortopedia", $decubito2_ortopedia);
+			$res->bindValue(":decubito3_ortopedia", $decubito3_ortopedia);
+			$res->bindValue(":decubito4_ortopedia", $decubito4_ortopedia);
+			$res->bindValue(":decubito5_ortopedia", $decubito5_ortopedia);
+			$res->bindValue(":cardiopulmonar_ortopedia", $cardiopulmonar_ortopedia);
+			$res->bindValue(":genitoUrinaria_ortopedia", $genitoUrinaria_ortopedia);
+			$res->bindValue(":outros_ortopedia", $outros_ortopedia);
+			$res->bindValue(":examesComplementares_ortopedia", $examesComplementares_ortopedia);
+			$res->bindValue(":objetivo_ortopedia", $objetivo_ortopedia);
+			$res->bindValue(":conduta_ortopedia", $conduta_ortopedia);
+
+			$res->execute();
+
+}
+
+echo "Editado com Sucesso!!";
 
 
 

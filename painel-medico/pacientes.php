@@ -83,7 +83,8 @@ if (isset($_POST['itens-pagina'])) {
 
                         $nome_botao = 'Editar';
 
-                        $id_reg = openssl_decrypt($_GET['id'], "BF-CBC", $senhaEncrypt);
+                       // $id_reg = openssl_decrypt($_GET['id'], "BF-CBC", $senhaEncrypt);
+                        $id_reg = $_GET['id'];
                         $res = $pdo->query("select * from pacientes where id = '$id_reg'");
 
                         $dados = $res->fetchAll(PDO::FETCH_ASSOC);
@@ -2689,18 +2690,118 @@ if (isset($_POST['itens-pagina'])) {
                                     $historia_molestia_atual_ortopedia = $dados[0]['historia_molestia_atual_ortopedia'];
                                     $historia_molestia_sintomas_ortopedia = $dados[0]['historia_molestia_sintomas_ortopedia'];
                                     $inspecao_ortopedia = $dados[0]['inspecao_ortopedia'];
+                                    $obs_inspecao_ortopedia = $dados[0]['obs_inspecao_ortopedia'];
 
                                     //OMBRO
                                     $ombro_flexaoD_ortopedia = $dados[0]['ombro_flexaoD_ortopedia'];
                                     $ombro_flexaoE_ortopedia = $dados[0]['ombro_flexaoE_ortopedia'];
-                                    $obs_inspecao_ortopedia = $dados[0]['obs_inspecao_ortopedia'];
                                     $ombro_extensaoE_ortopedia = $dados[0]['ombro_extensaoE_ortopedia'];
                                     $ombro_extensaoD_ortopedia = $dados[0]['ombro_extensaoD_ortopedia'];
                                     $ombro_abducaoE_ortopedia  = $dados[0]['ombro_abducaoE_ortopedia'];
-                                    $ombro_abducaoD_ortopedia  = $dados[0]['ombro_abducaoE_ortopedia'];
-
+                                    $ombro_abducaoD_ortopedia  = $dados[0]['ombro_abducaoD_ortopedia'];
+                                    $ombro_aducaoE_ortopedia  = $dados[0]['ombro_aducaoE_ortopedia'];
+                                    $ombro_aducaoD_ortopedia  = $dados[0]['ombro_aducaoD_ortopedia'];
+                                    $ombro_rotacaoInternaE_ortopedia = $dados[0]['ombro_rotacaoInternaE_ortopedia'];
+                                    $ombro_rotacaoInternaD_ortopedia = $dados[0]['ombro_rotacaoInternaD_ortopedia'];
+                                    $ombro_rotacaoExternaE_ortopedia = $dados[0]['ombro_rotacaoExternaE_ortopedia'];
+                                    $ombro_rotacaoExternaD_ortopedia = $dados[0]['ombro_rotacaoExternaD_ortopedia'];
+                                    
                                     //COTOVELO
+
+                                    $cotovelo_flexaoE_ortopedia = $dados[0]['cotovelo_flexaoE_ortopedia'];
+                                    $cotovelo_flexaoD_ortopedia = $dados[0]['cotovelo_flexaoD_ortopedia'];
+                                    $cotovelo_extensaoE_ortopedia = $dados[0]['cotovelo_extensaoE_ortopedia'];
+                                    $cotovelo_extensaoD_ortopedia = $dados[0]['cotovelo_extensaoD_ortopedia'];
+                                    $cotovelo_pronocaoE_ortopedia = $dados[0]['cotovelo_pronocaoE_ortopedia'];
+                                    $cotovelo_pronocaoD_ortopedia = $dados[0]['cotovelo_pronocaoD_ortopedia'];
                                     $cotovelo_supinacaoE_ortopedia = $dados[0]['cotovelo_supinacaoE_ortopedia'];
+                                    $cotovelo_supinacaoD_ortopedia = $dados[0]['cotovelo_supinacaoD_ortopedia'];
+
+                                    //PUNHO
+                                    $punho_flexaoE_ortopedia = $dados[0]['punho_flexaoE_ortopedia'];
+                                    $punho_flexaoD_ortopedia = $dados[0]['punho_flexaoD_ortopedia'];
+                                    $punho_extensaoE_ortopedia = $dados[0]['punho_extensaoE_ortopedia'];
+                                    $punho_extensaoD_ortopedia = $dados[0]['punho_extensaoD_ortopedia'];
+                                    $punho_desvioUlnarE_ortopedia = $dados[0]['punho_desvioUlnarE_ortopedia'];
+                                    $punho_desvioUlnarD_ortopedia = $dados[0]['punho_desvioUlnarD_ortopedia'];
+                                    $punho_desvioRadialE_ortopedia = $dados[0]['punho_desvioRadialE_ortopedia'];
+                                    $punho_desvioRadialD_ortopedia = $dados[0]['punho_desvioRadialD_ortopedia'];
+
+                                    //TRONCO
+                                    $tronco_flexaoE_ortopedia = $dados[0]['tronco_flexaoE_ortopedia'];
+                                    $tronco_flexaoD_ortopedia = $dados[0]['tronco_flexaoD_ortopedia'];
+                                    $tronco_rotacaoE_ortopedia = $dados[0]['tronco_rotacaoE_ortopedia'];
+                                    $tronco_rotacaoD_ortopedia = $dados[0]['tronco_rotacaoD_ortopedia'];
+                                    $tronco_extensaoE_ortopedia = $dados[0]['tronco_extensaoE_ortopedia'];
+                                    $tronco_extensaoD_ortopedia = $dados[0]['tronco_extensaoD_ortopedia'];
+
+                                    //QUADRIL
+                                    $quadril_flexaoE_ortopedia = $dados[0]['quadril_flexaoE_ortopedia'];
+                                    $quadril_flexaoD_ortopedia = $dados[0]['quadril_flexaoD_ortopedia'];
+                                    $quadril_extensaoE_ortopedia = $dados[0]['quadril_extensaoE_ortopedia'];
+                                    $quadril_extensaoD_ortopedia = $dados[0]['quadril_extensaoD_ortopedia'];
+                                    $quadril_abducaoE_ortopedia = $dados[0]['quadril_abducaoE_ortopedia'];
+                                    $quadril_abducaoD_ortopedia = $dados[0]['quadril_abducaoD_ortopedia'];
+                                    $quadril_aducaoE_ortopedia = $dados[0]['quadril_aducaoE_ortopedia'];
+                                    $quadril_aducaoD_ortopedia = $dados[0]['quadril_aducaoD_ortopedia'];
+                                    $quadril_rotacaoInternaE_ortopedia = $dados[0]['quadril_rotacaoInternaE_ortopedia'];
+                                    $quadril_rotacaoInternaD_ortopedia = $dados[0]['quadril_rotacaoInternaD_ortopedia'];
+                                    $quadril_rotacaoExternaE_ortopedia = $dados[0]['quadril_rotacaoExternaE_ortopedia'];
+                                    $quadril_rotacaoExternaD_ortopedia = $dados[0]['quadril_rotacaoExternaD_ortopedia'];
+
+                                    //JOELHO
+                                    $joelho_flexaoE_ortopedia = $dados[0]['joelho_flexaoE_ortopedia'];
+                                    $joelho_flexaoD_ortopedia = $dados[0]['joelho_flexaoD_ortopedia'];
+                                    $joelho_extensaoE_ortopedia = $dados[0]['joelho_extensaoE_ortopedia'];
+                                    $joelho_extensaoD_ortopedia = $dados[0]['joelho_extensaoD_ortopedia'];
+
+                                    //TORNOZELO
+                                    $tornozelo_dorsiflexaoE_ortopedia = $dados[0]['tornozelo_dorsiflexaoE_ortopedia'];
+                                    $tornozelo_dorsiflexaoD_ortopedia = $dados[0]['tornozelo_dorsiflexaoD_ortopedia'];
+                                    $tornozelo_plantiflexaoE_ortopedia = $dados[0]['tornozelo_plantiflexaoE_ortopedia'];
+                                    $tornozelo_plantiflexaoD_ortopedia = $dados[0]['tornozelo_plantiflexaoD_ortopedia'];
+
+
+                                    //REFLEXOS
+                                    $estilrradialE_ortopedia = $dados[0]['estilrradialE_ortopedia'];
+                                    $estilrradialD_ortopedia = $dados[0]['estilrradialD_ortopedia'];
+                                    $bicipitalE_ortopedia = $dados[0]['bicipitalE_ortopedia'];
+                                    $bicipitalD_ortopedia = $dados[0]['bicipitalD_ortopedia'];
+                                    $tricipitalE_ortopedia = $dados[0]['tricipitalE_ortopedia'];
+                                    $tricipitalD_ortopedia = $dados[0]['tricipitalD_ortopedia'];
+                                    $patelarE_ortopedia = $dados[0]['patelarE_ortopedia'];
+                                    $patelarD_ortopedia = $dados[0]['patelarD_ortopedia'];
+                                    $aquileuE_ortopedia = $dados[0]['aquileuE_ortopedia'];
+                                    $aquileuD_ortopedia = $dados[0]['aquileuD_ortopedia'];
+                                    $babisnkiE_ortopedia = $dados[0]['babisnkiE_ortopedia'];
+                                    $babisnkiD_ortopedia = $dados[0]['babisnkiD_ortopedia'];
+                                    $cutaneoAbdominalE_ortopedia = $dados[0]['cutaneoAbdominalE_ortopedia'];
+                                    $cutaneoAbdominalD_ortopedia = $dados[0]['cutaneoAbdominalD_ortopedia'];
+                                    $sinaisDeAutotismoMedularE_ortopedia = $dados[0]['sinaisDeAutotismoMedularE_ortopedia'];
+                                    $sinaisDeAutotismoMedularD_ortopedia = $dados[0]['sinaisDeAutotismoMedularD_ortopedia'];
+                                    $impulsoExtensorE_ortopedia = $dados[0]['impulsoExtensorE_ortopedia'];
+                                    $impulsoExtensorD_ortopedia = $dados[0]['impulsoExtensorD_ortopedia'];
+                                    $tripliceFlexaoE_ortopedia = $dados[0]['tripliceFlexaoE_ortopedia'];
+                                    $tripliceFlexaoD_ortopedia = $dados[0]['tripliceFlexaoD_ortopedia'];
+                                    $sincinesiasE_ortopedia = $dados[0]['sincinesiasE_ortopedia'];
+                                    $sincinesiasD_ortopedia = $dados[0]['sincinesiasD_ortopedia'];
+
+                                    //Mudança de Decúbito
+                                    $decubito1_ortopedia = $dados[0]['decubito1_ortopedia'];
+                                    $decubito2_ortopedia = $dados[0]['decubito2_ortopedia'];
+                                    $decubito3_ortopedia = $dados[0]['decubito3_ortopedia'];
+                                    $decubito4_ortopedia = $dados[0]['decubito4_ortopedia'];
+                                    $decubito5_ortopedia = $dados[0]['decubito5_ortopedia'];
+
+                                    //Neurovegetativas
+                                    $cardiopulmonar_ortopedia = $dados[0]['cardiopulmonar_ortopedia'];
+                                    $genitoUrinaria_ortopedia = $dados[0]['genitoUrinaria_ortopedia'];
+                                    $outros_ortopedia = $dados[0]['outros_ortopedia'];                   
+                                    $examesComplementares_ortopedia = $dados[0]['examesComplementares_ortopedia'];
+                                    $objetivo_ortopedia = $dados[0]['objetivo_ortopedia'];
+                                    $conduta_ortopedia = $dados[0]['conduta_ortopedia'];
+
+                              
                                 } ?>
                                 <h3>História da Moléstia</h3>
                             </div>
@@ -3485,7 +3586,7 @@ if (isset($_POST['itens-pagina'])) {
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label for="exampleFormControlInput1">Flexão E</label>
-                                        <select class="form-control" id="cotovelo_flexaoE_ortopedia " name="cotovelo_flexaoE_ortopedia">
+                                        <select class="form-control" id="punho_flexaoE_ortopedia " name="punho_flexaoE_ortopedia">
                                             <?php
                                             if (@$_GET['funcao'] == 'editar') {
                                                 echo '<option value="' . $punho_flexaoE_ortopedia . '">' . $punho_flexaoE_ortopedia . '</option>';
@@ -4265,7 +4366,7 @@ if (isset($_POST['itens-pagina'])) {
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label for="exampleFormControlInput1">Rotação Interna E</label>
-                                        <select class="form-control" id="ombro_rotacaoInternaE_ortopedia " name="ombro_rotacaoInternaE_ortopedia">
+                                        <select class="form-control" id="quadril_rotacaoInternaE_ortopedia " name="quadril_rotacaoInternaE_ortopedia">
                                             <?php
                                             if (@$_GET['funcao'] == 'editar') {
                                                 echo '<option value="' . $quadril_rotacaoInternaE_ortopedia . '">' . $quadril_rotacaoInternaE_ortopedia . '</option>';
@@ -5305,7 +5406,7 @@ if (isset($_POST['itens-pagina'])) {
                                     <div class="form-group">
                                         <label for="exampleFormControlInput1">Sentado para deitado</label>
 
-                                        <select class="form-control" id="decubito2_ortopedia " name="decubito3_ortopedia">
+                                        <select class="form-control" id="decubito3_ortopedia " name="decubito3_ortopedia">
                                         <?php
                                             if (@$_GET['funcao'] == 'editar') {
                                                 echo '<option value="' . $decubito1_ortopedia . '">' . $decubito1_ortopedia . '</option>';
@@ -5463,7 +5564,8 @@ if (isset($_POST['itens-pagina'])) {
     <!--CHAMADA DA MODAL DELETAR -->
     <?php
     if (@$_GET['funcao'] == 'excluir' && @$item_paginado == '') {
-        $id = openssl_decrypt($_GET['id'], "BF-CBC", $senhaEncrypt);
+        $id = $_GET['id']
+        //$id = openssl_decrypt($_GET['id'], "BF-CBC", $senhaEncrypt);
 
     ?>
 
@@ -5513,7 +5615,8 @@ if (isset($_POST['itens-pagina'])) {
                     <div class="modal-header">
                         <h5 class="modal-title" id="exampleModalLabel"><?php
 
-                                                                        $id_reg = openssl_decrypt($_GET['id'], "BF-CBC", $senhaEncrypt);
+                                                                        //$id_reg = openssl_decrypt($_GET['id'], "BF-CBC", $senhaEncrypt);
+                                                                        $id_reg = $_GET['id'];
 
 
                                                                         $res = $pdo->query("select * from pacientes where id = '$id_reg'");
@@ -5610,7 +5713,8 @@ if (isset($_POST['itens-pagina'])) {
                     <div class="modal-header">
                         <h5 class="modal-title" id="exampleModalLabel"><?php
 
-                                                                        $id_reg = openssl_decrypt($_GET['id'], "BF-CBC", $senhaEncrypt);
+                                                                        $id_reg = $_GET['id'];
+                                                                        //$id_reg = openssl_decrypt($_GET['id'], "BF-CBC", $senhaEncrypt);
 
 
                                                                         $res = $pdo->query("select * from pacientes where id = '$id_reg'");

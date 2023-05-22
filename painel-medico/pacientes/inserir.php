@@ -6,7 +6,6 @@ $nome = $_POST['nome'];
 $cpf = $_POST['cpf'];
 
 
-
 $telefone = $_POST['telefone'];
 $rg = $_POST['rg'];
 $email = $_POST['email'];
@@ -147,8 +146,8 @@ $outros_dados_proc = $_POST['outros_dados_proc'];
 
 //FIM PROCTOLOGIA (Funcionando Pefeitamente)
 
-//Uroginecologia
 
+//UROGINECOLOGIA
 $queixa_prin_urogine = $_POST['queixa_prin_urogine'];
 $antecedentes_pessoais_urogine = $_POST['antecedentes_pessoais_urogine'];
 $antecedentes_cirurgicos_urogine = $_POST['antecedentes_cirurgicos_urogine'];
@@ -192,19 +191,15 @@ $pontos_dolorosos_uroginecologia = $_POST['pontos_dolorosos_uroginecologia'];
 $gestacoes_uroginecologia = $_POST['gestacoes_uroginecologia'];
 $partos_uroginecologia = $_POST['partos_uroginecologia'];
 $abortos_uroginecologia = $_POST['abortos_uroginecologia'];
-
 $parto1_uroginecologia = $_POST['parto1_uroginecologia'];
 $idade_materna1_uroginecologia = $_POST['idade_materna1_uroginecologia'];
 $peso_da_crianca1_uroginecologia = $_POST['peso_da_crianca1_uroginecologia'];
-
 $parto2_uroginecologia = $_POST['parto2_uroginecologia'];
 $idade_materna2_uroginecologia = $_POST['idade_materna2_uroginecologia'];
 $peso_da_crianca2_uroginecologia = $_POST['peso_da_crianca2_uroginecologia'];
-
 $parto3_uroginecologia = $_POST['parto3_uroginecologia'];
 $idade_materna3_uroginecologia = $_POST['idade_materna3_uroginecologia'];
 $peso_da_crianca3_uroginecologia = $_POST['peso_da_crianca3_uroginecologia'];
-
 $realizou_episiotomia_uroginecologia = $_POST['realizou_episiotomia_uroginecologia'];
 $forceps_uroginecologia = $_POST['forceps_uroginecologia'];
 $complicacoes_obstetricas_uroginecologia = $_POST['complicacoes_obstetricas_uroginecologia'];
@@ -227,6 +222,125 @@ $abuso_sexual_uroginecologia = $_POST['abuso_sexual_uroginecologia'];
 $permissao_abuso_sexual_uroginecologia = $_POST['permissao_abuso_sexual_uroginecologia'];
 $relato_abuso_sexual_uroginecologia = $_POST['relato_abuso_sexual_uroginecologia'];
 
+//FIM UROGINECOLOGIA 
+
+
+//ORTOPEDIA
+$historia_molestia_progressa_ortopedia = $_POST['historia_molestia_progressa_ortopedia'];
+$historia_molestia_atual_ortopedia = $_POST['historia_molestia_atual_ortopedia'];
+$historia_molestia_sintomas_ortopedia = $_POST['historia_molestia_sintomas_ortopedia'];
+$inspecao_ortopedia = $_POST['inspecao_ortopedia'];
+$obs_inspecao_ortopedia = $_POST['obs_inspecao_ortopedia'];
+
+//OMBRO
+$ombro_flexaoD_ortopedia = $_POST['ombro_flexaoD_ortopedia'];
+$ombro_flexaoE_ortopedia = $_POST['ombro_flexaoE_ortopedia'];
+$ombro_extensaoE_ortopedia = $_POST['ombro_extensaoE_ortopedia'];
+$ombro_extensaoD_ortopedia = $_POST['ombro_extensaoD_ortopedia'];
+$ombro_abducaoE_ortopedia  = $_POST['ombro_abducaoE_ortopedia'];
+$ombro_abducaoD_ortopedia  = $_POST['ombro_abducaoD_ortopedia'];
+$ombro_aducaoE_ortopedia  = $_POST['ombro_aducaoE_ortopedia'];
+$ombro_aducaoD_ortopedia  = $_POST['ombro_aducaoD_ortopedia'];
+$ombro_rotacaoInternaE_ortopedia = $_POST['ombro_rotacaoInternaE_ortopedia'];
+$ombro_rotacaoInternaD_ortopedia = $_POST['ombro_rotacaoInternaD_ortopedia'];
+$ombro_rotacaoExternaE_ortopedia = $_POST['ombro_rotacaoExternaE_ortopedia'];
+$ombro_rotacaoExternaD_ortopedia = $_POST['ombro_rotacaoExternaD_ortopedia'];
+
+//COTOVELO
+$cotovelo_flexaoE_ortopedia = $_POST['cotovelo_flexaoE_ortopedia'];
+$cotovelo_flexaoD_ortopedia = $_POST['cotovelo_flexaoD_ortopedia'];
+$cotovelo_extensaoE_ortopedia = $_POST['cotovelo_extensaoE_ortopedia'];
+$cotovelo_extensaoD_ortopedia = $_POST['cotovelo_extensaoD_ortopedia'];
+$cotovelo_pronocaoE_ortopedia = $_POST['cotovelo_pronocaoE_ortopedia'];
+$cotovelo_pronocaoD_ortopedia = $_POST['cotovelo_pronocaoD_ortopedia'];
+$cotovelo_supinacaoE_ortopedia = $_POST['cotovelo_supinacaoE_ortopedia'];
+$cotovelo_supinacaoD_ortopedia = $_POST['cotovelo_supinacaoD_ortopedia'];
+
+//PUNHO
+$punho_flexaoE_ortopedia = $_POST['punho_flexaoE_ortopedia'];
+$punho_flexaoD_ortopedia = $_POST['punho_flexaoD_ortopedia'];
+$punho_extensaoE_ortopedia = $_POST['punho_extensaoE_ortopedia'];
+$punho_extensaoD_ortopedia = $_POST['punho_extensaoD_ortopedia'];
+$punho_desvioUlnarE_ortopedia = $_POST['punho_desvioUlnarE_ortopedia'];
+$punho_desvioUlnarD_ortopedia = $_POST['punho_desvioUlnarD_ortopedia'];
+$punho_desvioRadialE_ortopedia = $_POST['punho_desvioRadialE_ortopedia'];
+$punho_desvioRadialD_ortopedia = $_POST['punho_desvioRadialD_ortopedia'];
+
+//TRONCO
+$tronco_flexaoE_ortopedia = $_POST['tronco_flexaoE_ortopedia'];
+$tronco_flexaoD_ortopedia = $_POST['tronco_flexaoD_ortopedia'];
+$tronco_rotacaoE_ortopedia = $_POST['tronco_rotacaoE_ortopedia'];
+$tronco_rotacaoD_ortopedia = $_POST['tronco_rotacaoD_ortopedia'];
+$tronco_extensaoE_ortopedia = $_POST['tronco_extensaoE_ortopedia'];
+$tronco_extensaoD_ortopedia = $_POST['tronco_extensaoD_ortopedia'];
+
+//QUADRIL
+$quadril_flexaoE_ortopedia = $_POST['quadril_flexaoE_ortopedia'];
+$quadril_flexaoD_ortopedia = $_POST['quadril_flexaoD_ortopedia'];
+$quadril_extensaoE_ortopedia = $_POST['quadril_extensaoE_ortopedia'];
+$quadril_extensaoD_ortopedia = $_POST['quadril_extensaoD_ortopedia'];
+$quadril_abducaoE_ortopedia = $_POST['quadril_abducaoE_ortopedia'];
+$quadril_abducaoD_ortopedia = $_POST['quadril_abducaoD_ortopedia'];
+$quadril_aducaoE_ortopedia = $_POST['quadril_aducaoE_ortopedia'];
+$quadril_aducaoD_ortopedia = $_POST['quadril_aducaoD_ortopedia'];
+$quadril_rotacaoInternaE_ortopedia = $_POST['quadril_rotacaoInternaE_ortopedia'];
+$quadril_rotacaoInternaD_ortopedia = $_POST['quadril_rotacaoInternaD_ortopedia'];
+$quadril_rotacaoExternaE_ortopedia = $_POST['quadril_rotacaoExternaE_ortopedia'];
+$quadril_rotacaoExternaD_ortopedia = $_POST['quadril_rotacaoExternaD_ortopedia'];
+
+//JOELHO
+$joelho_flexaoE_ortopedia = $_POST['joelho_flexaoE_ortopedia'];
+$joelho_flexaoD_ortopedia = $_POST['joelho_flexaoD_ortopedia'];
+$joelho_extensaoE_ortopedia = $_POST['joelho_extensaoE_ortopedia'];
+$joelho_extensaoD_ortopedia = $_POST['joelho_extensaoD_ortopedia'];
+
+//TORNOZELO
+$tornozelo_dorsiflexaoE_ortopedia = $_POST['tornozelo_dorsiflexaoE_ortopedia'];
+$tornozelo_dorsiflexaoD_ortopedia = $_POST['tornozelo_dorsiflexaoD_ortopedia'];
+$tornozelo_plantiflexaoE_ortopedia = $_POST['tornozelo_plantiflexaoE_ortopedia'];
+$tornozelo_plantiflexaoD_ortopedia = $_POST['tornozelo_plantiflexaoD_ortopedia'];
+
+
+//REFLEXOS
+$estilrradialE_ortopedia = $_POST['estilrradialE_ortopedia'];
+$estilrradialD_ortopedia = $_POST['estilrradialD_ortopedia'];
+$bicipitalE_ortopedia = $_POST['bicipitalE_ortopedia'];
+$bicipitalD_ortopedia = $_POST['bicipitalD_ortopedia'];
+$tricipitalE_ortopedia = $_POST['tricipitalE_ortopedia'];
+$tricipitalD_ortopedia = $_POST['tricipitalD_ortopedia'];
+$patelarE_ortopedia = $_POST['patelarE_ortopedia'];
+$patelarD_ortopedia = $_POST['patelarD_ortopedia'];
+$aquileuE_ortopedia = $_POST['aquileuE_ortopedia'];
+$aquileuD_ortopedia = $_POST['aquileuD_ortopedia'];
+$babisnkiE_ortopedia = $_POST['babisnkiE_ortopedia'];
+$babisnkiD_ortopedia = $_POST['babisnkiD_ortopedia'];
+$cutaneoAbdominalE_ortopedia = $_POST['cutaneoAbdominalE_ortopedia'];
+$cutaneoAbdominalD_ortopedia = $_POST['cutaneoAbdominalD_ortopedia'];
+$sinaisDeAutotismoMedularE_ortopedia = $_POST['sinaisDeAutotismoMedularE_ortopedia'];
+$sinaisDeAutotismoMedularD_ortopedia = $_POST['sinaisDeAutotismoMedularD_ortopedia'];
+$impulsoExtensorE_ortopedia = $_POST['impulsoExtensorE_ortopedia'];
+$impulsoExtensorD_ortopedia = $_POST['impulsoExtensorD_ortopedia'];
+$tripliceFlexaoE_ortopedia = $_POST['tripliceFlexaoE_ortopedia'];
+$tripliceFlexaoD_ortopedia = $_POST['tripliceFlexaoD_ortopedia'];
+$sincinesiasE_ortopedia = $_POST['sincinesiasE_ortopedia'];
+$sincinesiasD_ortopedia = $_POST['sincinesiasD_ortopedia'];
+
+//Mudança de Decúbito
+$decubito1_ortopedia = $_POST['decubito1_ortopedia'];
+$decubito2_ortopedia = $_POST['decubito2_ortopedia'];
+$decubito3_ortopedia = $_POST['decubito3_ortopedia'];
+$decubito4_ortopedia = $_POST['decubito4_ortopedia'];
+$decubito5_ortopedia = $_POST['decubito5_ortopedia'];
+
+//Neurovegetativas
+$cardiopulmonar_ortopedia = $_POST['cardiopulmonar_ortopedia'];
+$genitoUrinaria_ortopedia = $_POST['genitoUrinaria_ortopedia'];
+$outros_ortopedia = $_POST['outros_ortopedia'];                   
+$examesComplementares_ortopedia = $_POST['examesComplementares_ortopedia'];
+$objetivo_ortopedia = $_POST['objetivo_ortopedia'];
+$conduta_ortopedia = $_POST['conduta_ortopedia'];
+
+//FIM ORTOPEDIA 
 
 //CALCULAR A IDADE COM BASE NA DATA SELECIONADA
 if($data_nascimento != ''){
@@ -354,7 +468,6 @@ if($linhas == 0){
 
 
 	//SALVAR FICHA PROCTOLOGIA
-
 	$res = $pdo->prepare("INSERT into
 			ficha_proctologia (nome, fkcpf, queixa_prin_proc, antecedentes_pessoais_proc, antecedentes_cirurgicos_proc, antecedentes_familiares_proc, historia_proctologica, tempo_sintomas, tempo_ajuda, sintomas_estado, perdas_proc, frequencia_dos_acidentes, quantidade_da_perda,protecoes_proc, frequencia_evacuatoria, manobra_evacuar, medicacoes_em_uso_proc, partos_proc, complicacoes_puerperais_proc, cirurgias_ginecologicas_proc, antecedentes_urologicos_proc, habitos_vida_proc, uso_frequente_proc, restricao_do_consumo_de_liquidos_proc, renda_familiar, cicatrizes_proc,trofismo_perianal,trofismo_mmii_proc, contracao_voluntaria_proc, abertura_vulvo_vaginal_proc, abertura_anal_proc, apneia_proc, contracao_do_eae, corpo_perineal_proc, tonus_do_eae_proc, puborretal_proc, mmii_proc, fibrose_proc, perfect_proc, afa_proc, elasticidade_proc, coordenacao_proc, pontos_dolorosos_proc, teste_de_esforco_proc, reflexo_clitoriano_bulbocavernoso_proc, reflexo_ceigel_cremasterico, marcha_proc, outros_dados_proc)
 			values (:nome, :cpf, :queixa_prin_proc, :antecedentes_pessoais_proc, :antecedentes_cirurgicos_proc, :antecedentes_familiares_proc, :historia_proctologica, :tempo_sintomas, :tempo_ajuda, :sintomas_estado, :perdas_proc, :frequencia_dos_acidentes, :quantidade_da_perda, :protecoes_proc, :frequencia_evacuatoria, :manobra_evacuar, :medicacoes_em_uso_proc, :partos_proc, :complicacoes_puerperais_proc, :cirurgias_ginecologicas_proc, :antecedentes_urologicos_proc, :habitos_vida_proc, :uso_frequente_proc, :restricao_do_consumo_de_liquidos_proc, :renda_familiar, :cicatrizes_proc, :trofismo_perianal, :trofismo_mmii_proc, :contracao_voluntaria_proc, :abertura_vulvo_vaginal_proc, :abertura_anal_proc, :apneia_proc, :contracao_do_eae, :corpo_perineal_proc, :tonus_do_eae_proc, :puborretal_proc, :mmii_proc, :fibrose_proc, :perfect_proc, :afa_proc, :elasticidade_proc, :coordenacao_proc, :pontos_dolorosos_proc, :teste_de_esforco_proc, :reflexo_clitoriano_bulbocavernoso_proc, :reflexo_ceigel_cremasterico, :marcha_proc, :outros_dados_proc)");
@@ -415,14 +528,9 @@ if($linhas == 0){
 
 			$res->execute();
 
-
-
-
 //SALVAR FICHA UROGINECOLOGIA
 $res = $pdo->prepare("INSERT into
-ficha_uroginecologia (nome, fkcpf, queixa_prin_urogine, antecedentes_pessoais_urogine, antecedentes_cirurgicos_urogine, antecedentes_familiares_urogine, fase_de_enchimento_urogine, fase_de_esvaziamento_urogine, outros_fase_de_esvaziamento_urogine, sensibilidade_fase_de_esvaziamento_urogine, itu_fase_de_esvaziamento_urogine, perdas_urogine, outras_circunstancias_perdas_urogine, perdas_durante_o_esforco_urogine, qualidade_da_perda_urinariao_urogine, quanto_tempo_iniciou_os_sintomas_urogine, quanto_tempo_demorou_para_procurar_ajuda_medica_urogine, desde_que_comecaram_os_sintomas_o_seu_estado_urogine, frequencia_urinaria_urogine, protecoes_urogine, numero_de_trocas_urogine, corpo_perineal_uroginecologia, tonus_do_eae_uroginecologia, puborretal_uroginecologia, mmii_uroginecologia, fibrose_uroginecologia, afa_uroginecologia, perfect_uroginecologia, elasticidade_uroginecologia, coordenacao_uroginecologia,  relaxamento_do_pr_a_manobra_de_evacuacao_uroginecologia, pontos_dolorosos_uroginecologia, gestacoes_uroginecologia, partos_uroginecologia, abortos_uroginecologia, parto1_uroginecologia, idade_materna1_uroginecologia, peso_da_crianca1_uroginecologia , parto2_uroginecologia, idade_materna2_uroginecologia, peso_da_crianca2_uroginecologia, parto3_uroginecologia, idade_materna3_uroginecologia, peso_da_crianca3_uroginecologia, realizou_episiotomia_uroginecologia,  forceps_uroginecologia, complicacoes_obstetricas_uroginecologia, data_da_ultima_menstruacao_uroginecologia, menopausa_uroginecologia, metodo_anticoncepcional_uroginecologia, terapia_de_reposicao_hormonal_uroginecologia, complicacoes_ginecologicas_uroginecologia, realizou_cirurgia_ginecologica_uroginecologia, auto_conhecimento_vaginal_uroginecologia, vida_sexual_uroginecologia, perdeu_a_virgindade_uroginecologia, com_quem_perdeu_a_virgindade_uroginecologia, experiencia_a_virgindade_uroginecologia, abuso_sexual_uroginecologia, permissao_abuso_sexual_uroginecologia,relato_abuso_sexual_uroginecologia )
-
-values (:nome, :cpf, :queixa_prin_urogine, :antecedentes_pessoais_urogine, :antecedentes_cirurgicos_urogine, :antecedentes_familiares_urogine, :fase_de_enchimento_urogine, :fase_de_esvaziamento_urogine, :outros_fase_de_esvaziamento_urogine, :sensibilidade_fase_de_esvaziamento_urogine, :itu_fase_de_esvaziamento_urogine, :perdas_urogine,:outras_circunstancias_perdas_urogine, :perdas_durante_o_esforco_urogine, :qualidade_da_perda_urinariao_urogine, :quanto_tempo_iniciou_os_sintomas_urogine, :quanto_tempo_demorou_para_procurar_ajuda_medica_urogine, :desde_que_comecaram_os_sintomas_o_seu_estado_urogine, :frequencia_urinaria_urogine, :protecoes_urogine, :numero_de_trocas_urogine, :corpo_perineal_uroginecologia, :tonus_do_eae_uroginecologia, :puborretal_uroginecologia, :mmii_uroginecologia, :fibrose_uroginecologia, :afa_uroginecologia, :perfect_uroginecologia, :elasticidade_uroginecologia, :coordenacao_uroginecologia, :relaxamento_do_pr_a_manobra_de_evacuacao_uroginecologia, :pontos_dolorosos_uroginecologia, :gestacoes_uroginecologia, :partos_uroginecologia, :abortos_uroginecologia, :parto1_uroginecologia, :idade_materna1_uroginecologia, :peso_da_crianca1_uroginecologia , :parto2_uroginecologia, :idade_materna2_uroginecologia, :peso_da_crianca2_uroginecologia, :parto3_uroginecologia, :idade_materna3_uroginecologia, :peso_da_crianca3_uroginecologia, :realizou_episiotomia_uroginecologia,  :forceps_uroginecologia, :complicacoes_obstetricas_uroginecologia, :data_da_ultima_menstruacao_uroginecologia, :menopausa_uroginecologia, :metodo_anticoncepcional_uroginecologia, :terapia_de_reposicao_hormonal_uroginecologia, :complicacoes_ginecologicas_uroginecologia, :realizou_cirurgia_ginecologica_uroginecologia, :auto_conhecimento_vaginal_uroginecologia, :vida_sexual_uroginecologia, :perdeu_a_virgindade_uroginecologia, :com_quem_perdeu_a_virgindade_uroginecologia, :experiencia_a_virgindade_uroginecologia, :abuso_sexual_uroginecologia, :permissao_abuso_sexual_uroginecologia, :relato_abuso_sexual_uroginecologia)");
+		ficha_uroginecologia (nome, fkcpf, queixa_prin_urogine, antecedentes_pessoais_urogine, antecedentes_cirurgicos_urogine, antecedentes_familiares_urogine, fase_de_enchimento_urogine, fase_de_esvaziamento_urogine, outros_fase_de_esvaziamento_urogine, sensibilidade_fase_de_esvaziamento_urogine, itu_fase_de_esvaziamento_urogine, perdas_urogine, outras_circunstancias_perdas_urogine, perdas_durante_o_esforco_urogine, qualidade_da_perda_urinariao_urogine, quanto_tempo_iniciou_os_sintomas_urogine, quanto_tempo_demorou_para_procurar_ajuda_medica_urogine, desde_que_comecaram_os_sintomas_o_seu_estado_urogine, frequencia_urinaria_urogine, protecoes_urogine, numero_de_trocas_urogine, corpo_perineal_uroginecologia, tonus_do_eae_uroginecologia, puborretal_uroginecologia, mmii_uroginecologia, fibrose_uroginecologia, afa_uroginecologia, perfect_uroginecologia, elasticidade_uroginecologia, coordenacao_uroginecologia,  relaxamento_do_pr_a_manobra_de_evacuacao_uroginecologia, pontos_dolorosos_uroginecologia, gestacoes_uroginecologia, partos_uroginecologia, abortos_uroginecologia, parto1_uroginecologia, idade_materna1_uroginecologia, peso_da_crianca1_uroginecologia , parto2_uroginecologia, idade_materna2_uroginecologia, peso_da_crianca2_uroginecologia, parto3_uroginecologia, idade_materna3_uroginecologia, peso_da_crianca3_uroginecologia, realizou_episiotomia_uroginecologia,  forceps_uroginecologia, complicacoes_obstetricas_uroginecologia, data_da_ultima_menstruacao_uroginecologia, menopausa_uroginecologia, metodo_anticoncepcional_uroginecologia, terapia_de_reposicao_hormonal_uroginecologia, complicacoes_ginecologicas_uroginecologia, realizou_cirurgia_ginecologica_uroginecologia, auto_conhecimento_vaginal_uroginecologia, vida_sexual_uroginecologia, perdeu_a_virgindade_uroginecologia, com_quem_perdeu_a_virgindade_uroginecologia, experiencia_a_virgindade_uroginecologia, abuso_sexual_uroginecologia, permissao_abuso_sexual_uroginecologia,relato_abuso_sexual_uroginecologia ) values (:nome, :cpf, :queixa_prin_urogine, :antecedentes_pessoais_urogine, :antecedentes_cirurgicos_urogine, :antecedentes_familiares_urogine, :fase_de_enchimento_urogine, :fase_de_esvaziamento_urogine, :outros_fase_de_esvaziamento_urogine, :sensibilidade_fase_de_esvaziamento_urogine, :itu_fase_de_esvaziamento_urogine, :perdas_urogine,:outras_circunstancias_perdas_urogine, :perdas_durante_o_esforco_urogine, :qualidade_da_perda_urinariao_urogine, :quanto_tempo_iniciou_os_sintomas_urogine, :quanto_tempo_demorou_para_procurar_ajuda_medica_urogine, :desde_que_comecaram_os_sintomas_o_seu_estado_urogine, :frequencia_urinaria_urogine, :protecoes_urogine, :numero_de_trocas_urogine, :corpo_perineal_uroginecologia, :tonus_do_eae_uroginecologia, :puborretal_uroginecologia, :mmii_uroginecologia, :fibrose_uroginecologia, :afa_uroginecologia, :perfect_uroginecologia, :elasticidade_uroginecologia, :coordenacao_uroginecologia, :relaxamento_do_pr_a_manobra_de_evacuacao_uroginecologia, :pontos_dolorosos_uroginecologia, :gestacoes_uroginecologia, :partos_uroginecologia, :abortos_uroginecologia, :parto1_uroginecologia, :idade_materna1_uroginecologia, :peso_da_crianca1_uroginecologia , :parto2_uroginecologia, :idade_materna2_uroginecologia, :peso_da_crianca2_uroginecologia, :parto3_uroginecologia, :idade_materna3_uroginecologia, :peso_da_crianca3_uroginecologia, :realizou_episiotomia_uroginecologia,  :forceps_uroginecologia, :complicacoes_obstetricas_uroginecologia, :data_da_ultima_menstruacao_uroginecologia, :menopausa_uroginecologia, :metodo_anticoncepcional_uroginecologia, :terapia_de_reposicao_hormonal_uroginecologia, :complicacoes_ginecologicas_uroginecologia, :realizou_cirurgia_ginecologica_uroginecologia, :auto_conhecimento_vaginal_uroginecologia, :vida_sexual_uroginecologia, :perdeu_a_virgindade_uroginecologia, :com_quem_perdeu_a_virgindade_uroginecologia, :experiencia_a_virgindade_uroginecologia, :abuso_sexual_uroginecologia, :permissao_abuso_sexual_uroginecologia, :relato_abuso_sexual_uroginecologia)");
 
 		$res->bindValue(":nome", $nome);
 		$res->bindValue(":cpf", $cpf);
@@ -501,6 +609,112 @@ values (:nome, :cpf, :queixa_prin_urogine, :antecedentes_pessoais_urogine, :ante
 		//^^^^^^^^^^^^^^^^^^^^^^^^^ FUNCIONANDO ^^^^^^^^^^^^^^^^^^^^^^^^^
 
 		$res->execute();
+
+		$res = $pdo->prepare("INSERT into
+			ficha_ortopedia (nome, fkcpf, historia_molestia_progressa_ortopedia, historia_molestia_atual_ortopedia, historia_molestia_sintomas_ortopedia, inspecao_ortopedia, obs_inspecao_ortopedia, ombro_flexaoD_ortopedia, ombro_flexaoE_ortopedia, ombro_extensaoE_ortopedia, ombro_extensaoD_ortopedia, ombro_abducaoE_ortopedia, ombro_abducaoD_ortopedia, ombro_aducaoE_ortopedia, ombro_aducaoD_ortopedia, ombro_rotacaoInternaE_ortopedia, ombro_rotacaoInternaD_ortopedia, ombro_rotacaoExternaE_ortopedia, ombro_rotacaoExternaD_ortopedia, cotovelo_flexaoE_ortopedia, cotovelo_flexaoD_ortopedia,  cotovelo_extensaoE_ortopedia, cotovelo_extensaoD_ortopedia, cotovelo_pronocaoE_ortopedia,  cotovelo_pronocaoD_ortopedia, cotovelo_supinacaoE_ortopedia, cotovelo_supinacaoD_ortopedia, punho_flexaoE_ortopedia, punho_flexaoD_ortopedia, punho_extensaoE_ortopedia,  punho_extensaoD_ortopedia, punho_desvioUlnarE_ortopedia,punho_desvioUlnarD_ortopedia, punho_desvioRadialE_ortopedia, punho_desvioRadialD_ortopedia, tronco_flexaoE_ortopedia, tronco_flexaoD_ortopedia, tronco_rotacaoE_ortopedia, tronco_rotacaoD_ortopedia, tronco_extensaoE_ortopedia, tronco_extensaoD_ortopedia,  quadril_flexaoE_ortopedia, quadril_flexaoD_ortopedia, quadril_extensaoE_ortopedia, quadril_extensaoD_ortopedia, quadril_abducaoE_ortopedia,  quadril_abducaoD_ortopedia, quadril_aducaoE_ortopedia, quadril_aducaoD_ortopedia, quadril_rotacaoInternaE_ortopedia,  quadril_rotacaoInternaD_ortopedia, quadril_rotacaoExternaE_ortopedia, quadril_rotacaoExternaD_ortopedia, joelho_flexaoE_ortopedia, joelho_flexaoD_ortopedia,  joelho_extensaoE_ortopedia, joelho_extensaoD_ortopedia, tornozelo_dorsiflexaoE_ortopedia,  tornozelo_dorsiflexaoD_ortopedia, tornozelo_plantiflexaoE_ortopedia, tornozelo_plantiflexaoD_ortopedia, estilrradialE_ortopedia,  estilrradialD_ortopedia,bicipitalE_ortopedia,  bicipitalD_ortopedia, tricipitalE_ortopedia, tricipitalD_ortopedia, patelarE_ortopedia, patelarD_ortopedia,  aquileuE_ortopedia, aquileuD_ortopedia, babisnkiE_ortopedia, babisnkiD_ortopedia, cutaneoAbdominalE_ortopedia,cutaneoAbdominalD_ortopedia, sinaisDeAutotismoMedularE_ortopedia, sinaisDeAutotismoMedularD_ortopedia, impulsoExtensorE_ortopedia, impulsoExtensorD_ortopedia, tripliceFlexaoE_ortopedia,tripliceFlexaoD_ortopedia, sincinesiasE_ortopedia, sincinesiasD_ortopedia, decubito1_ortopedia, decubito2_ortopedia, decubito3_ortopedia, decubito4_ortopedia, decubito5_ortopedia, cardiopulmonar_ortopedia,  genitoUrinaria_ortopedia, outros_ortopedia, examesComplementares_ortopedia, objetivo_ortopedia, conduta_ortopedia)
+
+
+			values (:nome, :cpf, :historia_molestia_progressa_ortopedia, :historia_molestia_atual_ortopedia, :historia_molestia_sintomas_ortopedia,  :inspecao_ortopedia, :obs_inspecao_ortopedia, :ombro_flexaoD_ortopedia, :ombro_flexaoE_ortopedia, :ombro_extensaoE_ortopedia,  :ombro_extensaoD_ortopedia, :ombro_abducaoE_ortopedia, :ombro_abducaoD_ortopedia, :ombro_aducaoE_ortopedia, :ombro_aducaoD_ortopedia, :ombro_rotacaoInternaE_ortopedia, :ombro_rotacaoInternaD_ortopedia, :ombro_rotacaoExternaE_ortopedia, :ombro_rotacaoExternaD_ortopedia,  :cotovelo_flexaoE_ortopedia, :cotovelo_flexaoD_ortopedia, :cotovelo_extensaoE_ortopedia, :cotovelo_supinacaoE_ortopedia, :cotovelo_extensaoD_ortopedia, :cotovelo_pronocaoE_ortopedia,  :cotovelo_pronocaoD_ortopedia, :cotovelo_supinacaoD_ortopedia, :punho_flexaoE_ortopedia, :punho_flexaoD_ortopedia, :punho_extensaoE_ortopedia, :punho_extensaoD_ortopedia, :punho_desvioUlnarE_ortopedia, :punho_desvioUlnarD_ortopedia, :punho_desvioRadialE_ortopedia, :punho_desvioRadialD_ortopedia,  :tronco_flexaoE_ortopedia,  :tronco_flexaoD_ortopedia, :tronco_rotacaoE_ortopedia, :tronco_rotacaoD_ortopedia, :tronco_extensaoE_ortopedia, :tronco_extensaoD_ortopedia, :quadril_flexaoE_ortopedia, :quadril_flexaoD_ortopedia,  :quadril_extensaoE_ortopedia, :quadril_extensaoD_ortopedia, :quadril_abducaoE_ortopedia, :quadril_abducaoD_ortopedia, :quadril_aducaoE_ortopedia, :quadril_aducaoD_ortopedia,  :quadril_rotacaoInternaE_ortopedia, :quadril_rotacaoInternaD_ortopedia, :quadril_rotacaoExternaE_ortopedia, :quadril_rotacaoExternaD_ortopedia, :joelho_flexaoE_ortopedia,  :joelho_flexaoD_ortopedia, :joelho_extensaoE_ortopedia, :joelho_extensaoD_ortopedia, :tornozelo_dorsiflexaoE_ortopedia, :tornozelo_dorsiflexaoD_ortopedia,  :tornozelo_plantiflexaoE_ortopedia, :tornozelo_plantiflexaoD_ortopedia, :estilrradialE_ortopedia, :estilrradialD_ortopedia, :bicipitalE_ortopedia, :bicipitalD_ortopedia,  :tricipitalE_ortopedia, :tricipitalD_ortopedia, :patelarE_ortopedia, :patelarD_ortopedia, :aquileuE_ortopedia, :aquileuD_ortopedia, :babisnkiE_ortopedia, :babisnkiD_ortopedia, :cutaneoAbdominalE_ortopedia, :cutaneoAbdominalD_ortopedia, :sinaisDeAutotismoMedularE_ortopedia, :sinaisDeAutotismoMedularD_ortopedia, :impulsoExtensorE_ortopedia,  :impulsoExtensorD_ortopedia, :tripliceFlexaoE_ortopedia, :tripliceFlexaoD_ortopedia, :sincinesiasE_ortopedia, :sincinesiasD_ortopedia,  :decubito1_ortopedia,  :decubito2_ortopedia,  :decubito3_ortopedia, :decubito4_ortopedia, :decubito5_ortopedia,  :cardiopulmonar_ortopedia, :genitoUrinaria_ortopedia, :outros_ortopedia,  :examesComplementares_ortopedia,  :objetivo_ortopedia, :conduta_ortopedia) ");
+
+			$res->bindValue(":nome", $nome);
+			$res->bindValue(":cpf", $cpf);
+			$res->bindValue(":historia_molestia_progressa_ortopedia", $historia_molestia_progressa_ortopedia);
+			$res->bindValue(":historia_molestia_atual_ortopedia", $historia_molestia_atual_ortopedia);
+			$res->bindValue(":historia_molestia_sintomas_ortopedia", $historia_molestia_sintomas_ortopedia);
+			$res->bindValue(":inspecao_ortopedia", $inspecao_ortopedia);
+			$res->bindValue(":obs_inspecao_ortopedia", $obs_inspecao_ortopedia);
+			$res->bindValue(":ombro_flexaoD_ortopedia", $ombro_flexaoD_ortopedia);
+			$res->bindValue(":ombro_flexaoE_ortopedia", $ombro_flexaoE_ortopedia);
+			$res->bindValue(":ombro_extensaoE_ortopedia", $ombro_extensaoE_ortopedia);
+			$res->bindValue(":ombro_extensaoD_ortopedia", $ombro_extensaoD_ortopedia);
+			$res->bindValue(":ombro_abducaoE_ortopedia", $ombro_abducaoE_ortopedia);
+			$res->bindValue(":ombro_abducaoD_ortopedia", $ombro_abducaoD_ortopedia);
+			$res->bindValue(":ombro_aducaoE_ortopedia", $ombro_aducaoE_ortopedia);
+			$res->bindValue(":ombro_aducaoD_ortopedia", $ombro_aducaoD_ortopedia);
+			$res->bindValue(":ombro_rotacaoInternaE_ortopedia", $ombro_rotacaoInternaE_ortopedia);
+			$res->bindValue(":ombro_rotacaoInternaD_ortopedia", $ombro_rotacaoInternaD_ortopedia);
+			$res->bindValue(":ombro_rotacaoExternaE_ortopedia", $ombro_rotacaoExternaE_ortopedia);
+			$res->bindValue(":ombro_rotacaoExternaD_ortopedia", $ombro_rotacaoExternaD_ortopedia);
+			$res->bindValue(":cotovelo_flexaoE_ortopedia", $cotovelo_flexaoE_ortopedia);
+			$res->bindValue(":cotovelo_flexaoD_ortopedia", $cotovelo_flexaoD_ortopedia);
+			$res->bindValue(":cotovelo_extensaoE_ortopedia", $cotovelo_extensaoE_ortopedia);
+			$res->bindValue(":cotovelo_extensaoD_ortopedia", $cotovelo_extensaoD_ortopedia);
+			$res->bindValue(":cotovelo_pronocaoE_ortopedia", $cotovelo_pronocaoE_ortopedia);
+			$res->bindValue(":cotovelo_pronocaoD_ortopedia", $cotovelo_pronocaoD_ortopedia);
+			$res->bindValue(":cotovelo_supinacaoE_ortopedia", $cotovelo_supinacaoE_ortopedia);
+			$res->bindValue(":cotovelo_supinacaoD_ortopedia", $cotovelo_supinacaoD_ortopedia);
+			$res->bindValue(":punho_flexaoE_ortopedia", $punho_flexaoE_ortopedia);
+			$res->bindValue(":punho_flexaoD_ortopedia", $punho_flexaoD_ortopedia);
+			$res->bindValue(":punho_extensaoE_ortopedia", $punho_extensaoE_ortopedia);
+			$res->bindValue(":punho_extensaoD_ortopedia", $punho_extensaoD_ortopedia);
+			$res->bindValue(":punho_desvioUlnarE_ortopedia", $punho_desvioUlnarE_ortopedia);
+			$res->bindValue(":punho_desvioUlnarD_ortopedia", $punho_desvioUlnarD_ortopedia);
+			$res->bindValue(":punho_desvioRadialE_ortopedia", $punho_desvioRadialE_ortopedia);
+			$res->bindValue(":punho_desvioRadialD_ortopedia", $punho_desvioRadialD_ortopedia);
+			$res->bindValue(":tronco_flexaoE_ortopedia", $tronco_flexaoE_ortopedia);
+			$res->bindValue(":tronco_flexaoD_ortopedia", $tronco_flexaoD_ortopedia);
+			$res->bindValue(":tronco_rotacaoE_ortopedia", $tronco_rotacaoE_ortopedia);
+			$res->bindValue(":tronco_rotacaoD_ortopedia", $tronco_rotacaoD_ortopedia);
+			$res->bindValue(":tronco_extensaoE_ortopedia", $tronco_extensaoE_ortopedia);
+			$res->bindValue(":tronco_extensaoD_ortopedia", $tronco_extensaoD_ortopedia);
+			$res->bindValue(":quadril_flexaoE_ortopedia", $quadril_flexaoE_ortopedia);
+			$res->bindValue(":quadril_flexaoD_ortopedia", $quadril_flexaoD_ortopedia);
+			$res->bindValue(":quadril_extensaoE_ortopedia", $quadril_extensaoE_ortopedia);
+			$res->bindValue(":quadril_extensaoD_ortopedia", $quadril_extensaoD_ortopedia);
+			$res->bindValue(":quadril_abducaoE_ortopedia", $quadril_abducaoE_ortopedia);
+			$res->bindValue(":quadril_abducaoD_ortopedia", $quadril_abducaoD_ortopedia);
+			$res->bindValue(":quadril_aducaoE_ortopedia", $quadril_aducaoE_ortopedia);
+			$res->bindValue(":quadril_aducaoD_ortopedia", $quadril_aducaoD_ortopedia);
+			$res->bindValue(":quadril_rotacaoInternaE_ortopedia", $quadril_rotacaoInternaE_ortopedia);
+			$res->bindValue(":quadril_rotacaoInternaD_ortopedia", $quadril_rotacaoInternaD_ortopedia);
+			$res->bindValue(":quadril_rotacaoExternaE_ortopedia", $quadril_rotacaoExternaE_ortopedia);
+			$res->bindValue(":quadril_rotacaoExternaD_ortopedia", $quadril_rotacaoExternaD_ortopedia);
+			$res->bindValue(":joelho_flexaoE_ortopedia", $joelho_flexaoE_ortopedia);
+			$res->bindValue(":joelho_flexaoD_ortopedia", $joelho_flexaoD_ortopedia);
+			$res->bindValue(":joelho_extensaoE_ortopedia", $joelho_extensaoE_ortopedia);
+			$res->bindValue(":joelho_extensaoD_ortopedia", $joelho_extensaoD_ortopedia);
+			$res->bindValue(":tornozelo_dorsiflexaoE_ortopedia", $tornozelo_dorsiflexaoE_ortopedia);
+			$res->bindValue(":tornozelo_dorsiflexaoD_ortopedia", $tornozelo_dorsiflexaoD_ortopedia);
+			$res->bindValue(":tornozelo_plantiflexaoE_ortopedia", $tornozelo_plantiflexaoE_ortopedia);
+			$res->bindValue(":tornozelo_plantiflexaoD_ortopedia", $tornozelo_plantiflexaoD_ortopedia);
+			$res->bindValue(":estilrradialE_ortopedia", $estilrradialE_ortopedia);
+			$res->bindValue(":estilrradialD_ortopedia", $estilrradialD_ortopedia);
+			$res->bindValue(":bicipitalE_ortopedia", $bicipitalE_ortopedia);
+			$res->bindValue(":bicipitalD_ortopedia", $bicipitalD_ortopedia);
+			$res->bindValue(":tricipitalE_ortopedia", $tricipitalE_ortopedia);
+			$res->bindValue(":tricipitalD_ortopedia", $tricipitalD_ortopedia);
+			$res->bindValue(":patelarE_ortopedia", $patelarE_ortopedia);
+			$res->bindValue(":patelarD_ortopedia", $patelarD_ortopedia);
+			$res->bindValue(":aquileuE_ortopedia", $aquileuE_ortopedia);
+			$res->bindValue(":aquileuD_ortopedia", $aquileuD_ortopedia);
+			$res->bindValue(":babisnkiE_ortopedia", $babisnkiE_ortopedia);
+			$res->bindValue(":babisnkiD_ortopedia", $babisnkiD_ortopedia);
+			$res->bindValue(":cutaneoAbdominalE_ortopedia", $cutaneoAbdominalE_ortopedia);
+			$res->bindValue(":cutaneoAbdominalD_ortopedia", $cutaneoAbdominalD_ortopedia);
+			$res->bindValue(":sinaisDeAutotismoMedularE_ortopedia", $sinaisDeAutotismoMedularE_ortopedia);
+			$res->bindValue(":sinaisDeAutotismoMedularD_ortopedia", $sinaisDeAutotismoMedularD_ortopedia);
+			$res->bindValue(":impulsoExtensorE_ortopedia", $impulsoExtensorE_ortopedia);
+			$res->bindValue(":impulsoExtensorD_ortopedia", $impulsoExtensorD_ortopedia);
+			$res->bindValue(":tripliceFlexaoE_ortopedia", $tripliceFlexaoE_ortopedia);
+			$res->bindValue(":tripliceFlexaoD_ortopedia", $tripliceFlexaoD_ortopedia);
+			$res->bindValue(":sincinesiasE_ortopedia", $sincinesiasE_ortopedia);
+			$res->bindValue(":sincinesiasD_ortopedia", $sincinesiasD_ortopedia);
+			$res->bindValue(":decubito1_ortopedia", $decubito1_ortopedia);
+			$res->bindValue(":decubito2_ortopedia", $decubito2_ortopedia);
+			$res->bindValue(":decubito3_ortopedia", $decubito3_ortopedia);
+			$res->bindValue(":decubito4_ortopedia", $decubito4_ortopedia);
+			$res->bindValue(":decubito5_ortopedia", $decubito5_ortopedia);
+			$res->bindValue(":cardiopulmonar_ortopedia", $cardiopulmonar_ortopedia);
+			$res->bindValue(":genitoUrinaria_ortopedia", $genitoUrinaria_ortopedia);
+			$res->bindValue(":outros_ortopedia", $outros_ortopedia);
+			$res->bindValue(":examesComplementares_ortopedia", $examesComplementares_ortopedia);
+			$res->bindValue(":objetivo_ortopedia", $objetivo_ortopedia);
+			$res->bindValue(":conduta_ortopedia", $conduta_ortopedia);
+
+			$res->execute();
+
+
+
 
 	echo "Cadastrado com Sucesso!";
 
