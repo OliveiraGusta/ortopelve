@@ -202,24 +202,15 @@ for ($i=0; $i < count($dados); $i++) {
 
 
 
-
-
-
                     <div class="form-group">
                         <label for="exampleFormControlInput1">Bandeira / Cônvenio</label>
                         <input type="text" class="form-control" id="tipo" placeholder="Descreva o Tipo de Pagamento "
                             name="tipo" required>
                     </div>
 
-
-
-
-
-
-
-
-
-
+                    <label for="exampleFormControlInput1">Data da Consulta</label>
+                    <input class="form-control form-control-sm mr-sm-2" type="date" name="data-pagamento" id="data"
+                    value="<?php echo $agora ?>">
 
 
 

@@ -5,6 +5,7 @@ require_once("../../conexao.php");
 
 $tipo = $_POST['tipo'];
 $forma = $_POST['forma'];
+$data_pgto = $_POST['data-pagamento'];
 
 
 $id = $_POST['id'];
@@ -20,9 +21,10 @@ $dados_medico = $res_medico->fetchAll(PDO::FETCH_ASSOC);
 $cpf_medico = $dados_medico[0]['cpf'];
 
 
-$res = $pdo->prepare("UPDATE contas_receber set data_baixa = curDate(), forma_pgto = :forma, tipo_pgto = :tipo where id = :id ");
+$res = $pdo->prepare("UPDATE contas_receber set data_baixa = :data_pgto, forma_pgto = :forma, tipo_pgto = :tipo where id = :id ");
 
 $res->bindValue(":forma", $forma);
+$res->bindValue(":data_pgto", $data_pgto);
 $res->bindValue(":tipo", $tipo);
 $res->bindValue(":id", $id);
 $res->execute();
@@ -42,11 +44,13 @@ $cpf_paciente = $dados_valor[0]['paciente'];
 
 
 if($forma == "Depois"){
-    $res = $pdo->prepare("INSERT into movimentacoes (tipo, movimento, aguardando_pagamento, valor, data, tesoureiro, cpf_paciente, id_movimento) values (:tipo, :movimento, :aguardando_pagamento, :valor,  curDate(), :tesoureiro, :cpf_paciente, :id_movimento)");
+    $res = $pdo->prepare("INSERT into movimentacoes (tipo, movimento, aguardando_pagamento, valor, data, tesoureiro, cpf_paciente, id_movimento) values (:tipo, :movimento, :aguardando_pagamento, :valor,  :data_pgto, :tesoureiro, :cpf_paciente, :id_movimento)");
 
     $res->bindValue(":tipo", 'Entrada');
     $res->bindValue(":movimento", 'Consulta');
     $res->bindValue(":aguardando_pagamento", 'Sim');
+    $res->bindValue(":data_pgto", $data_pgto);
+
     $res->bindValue(":valor", $valor);
     $res->bindValue(":tesoureiro", $cpf_medico);
     $res->bindValue(":cpf_paciente", $cpf_paciente);
@@ -54,11 +58,13 @@ if($forma == "Depois"){
     
     $res->execute();
 }else{
-    $res = $pdo->prepare("INSERT into movimentacoes (tipo, movimento, aguardando_pagamento, valor, data, tesoureiro, cpf_paciente, id_movimento) values (:tipo, :movimento, :aguardando_pagamento, :valor,  curDate(), :tesoureiro, :cpf_paciente, :id_movimento)");
+    $res = $pdo->prepare("INSERT into movimentacoes (tipo, movimento, aguardando_pagamento, valor, data, tesoureiro, cpf_paciente, id_movimento) values (:tipo, :movimento, :aguardando_pagamento, :valor, :data_pgto, :tesoureiro, :cpf_paciente, :id_movimento)");
     
     $res->bindValue(":tipo", 'Entrada');
     $res->bindValue(":movimento", 'Consulta');
     $res->bindValue(":aguardando_pagamento", 'Nao');
+    $res->bindValue(":data_pgto", $data_pgto);
+
     $res->bindValue(":valor", $valor);
     $res->bindValue(":tesoureiro", $cpf_medico);
     $res->bindValue(":cpf_paciente", $cpf_paciente);

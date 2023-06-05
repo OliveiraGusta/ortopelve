@@ -83,8 +83,8 @@ if (isset($_POST['itens-pagina'])) {
 
                         $nome_botao = 'Editar';
 
-                       // $id_reg = openssl_decrypt($_GET['id'], "BF-CBC", $senhaEncrypt);
-                        $id_reg = $_GET['id'];
+                        $id_reg = openssl_decrypt($_GET['id'], "BF-CBC", $senhaEncrypt);
+                        //$id_reg = $_GET['id'];
                         $res = $pdo->query("select * from pacientes where id = '$id_reg'");
 
                         $dados = $res->fetchAll(PDO::FETCH_ASSOC);
@@ -5564,8 +5564,8 @@ if (isset($_POST['itens-pagina'])) {
     <!--CHAMADA DA MODAL DELETAR -->
     <?php
     if (@$_GET['funcao'] == 'excluir' && @$item_paginado == '') {
-        $id = $_GET['id']
-        //$id = openssl_decrypt($_GET['id'], "BF-CBC", $senhaEncrypt);
+        //$id = $_GET['id']
+        $id = openssl_decrypt($_GET['id'], "BF-CBC", $senhaEncrypt);
 
     ?>
 
@@ -5615,8 +5615,8 @@ if (isset($_POST['itens-pagina'])) {
                     <div class="modal-header">
                         <h5 class="modal-title" id="exampleModalLabel"><?php
 
-                                                                        //$id_reg = openssl_decrypt($_GET['id'], "BF-CBC", $senhaEncrypt);
-                                                                        $id_reg = $_GET['id'];
+                                                                        $id_reg = openssl_decrypt($_GET['id'], "BF-CBC", $senhaEncrypt);
+                                                                        //$id_reg = $_GET['id'];
 
 
                                                                         $res = $pdo->query("select * from pacientes where id = '$id_reg'");
@@ -5713,8 +5713,8 @@ if (isset($_POST['itens-pagina'])) {
                     <div class="modal-header">
                         <h5 class="modal-title" id="exampleModalLabel"><?php
 
-                                                                        $id_reg = $_GET['id'];
-                                                                        //$id_reg = openssl_decrypt($_GET['id'], "BF-CBC", $senhaEncrypt);
+                                                                        //$id_reg = $_GET['id'];
+                                                                        $id_reg = openssl_decrypt($_GET['id'], "BF-CBC", $senhaEncrypt);
 
 
                                                                         $res = $pdo->query("select * from pacientes where id = '$id_reg'");

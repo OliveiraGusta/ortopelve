@@ -4201,25 +4201,7 @@ $nome_medico = $_SESSION['medico_resp'];
                                                 echo '<option value="' . $tornozelo_dorsiflexaoE_ortopedia . '">' . $tornozelo_dorsiflexaoE_ortopedia . '</option>';
                                             }
                                             ?>
-                                            <?php if ($tornozelo_dorsiflexaoE_ortopedia != '(0) Ausencia de Contração.')
-                                                echo '<option value="(0) Ausencia de Contração.">(0) Ausencia de Contração.</option>'; ?>
-                                            <?php if ($tornozelo_dorsiflexaoE_ortopedia != '(1) Há uma leve contração porém incapaz de produzir movimento.')
-                                                echo '<option value="(1) Há uma leve contração porém incapaz de produzir movimento.">(1) Há uma leve contração porém incapaz de produzir movimento.</option>'; ?>
-                                            <?php if ($tornozelo_dorsiflexaoE_ortopedia != '(2) Há movimento somente na ausência de gravidade.')
-                                                echo '<option value="(2) Há movimento somente na ausência de gravidade.
-                                                ">(2) Há movimento somente na ausência de gravidade.
-                                                </option>'; ?>
-                                            <?php if (
-                                                $tornozelo_dorsiflexaoE_ortopedia != '(3) Consegue realizar movimento vencendo a gravidade.
-'
-                                            )
-                                                echo '<option value="(3) Consegue realizar movimento vencendo a gravidade.
-                                                ">(3) Consegue realizar movimento vencendo a gravidade.
-                                                </option>'; ?>
-                                            <?php if ($tornozelo_dorsiflexaoE_ortopedia != '(4) Consegue realizar movimento vencendo a gravidade e também uma resistência externa.')
-                                                echo '<option value="(4) Consegue realizar movimento vencendo a gravidade e também uma resistência externa.">(4) Consegue realizar movimento vencendo a gravidade e também uma resistência externa.</option>'; ?>
-                                            <?php if ($tornozelo_dorsiflexaoE_ortopedia != '(5) Consegue realizar movimento superando uma resistencia maior que o musculo bom.')
-                                                echo '<option value="(5) Consegue realizar movimento superando uma resistencia maior que o musculo bom.">(5) Consegue realizar movimento superando uma resistencia maior que o musculo bom.</option>'; ?>
+                                      
                                         </select>
                                     </div>
                                 </div>
@@ -4233,25 +4215,7 @@ $nome_medico = $_SESSION['medico_resp'];
                                                 echo '<option value="' . $tornozelo_dorsiflexaoD_ortopedia . '">' . $tornozelo_dorsiflexaoD_ortopedia . '</option>';
                                             }
                                             ?>
-                                            <?php if ($tornozelo_dorsiflexaoD_ortopedia != '(0) Ausencia de Contração.')
-                                                echo '<option value="(0) Ausencia de Contração.">(0) Ausencia de Contração.</option>'; ?>
-                                            <?php if ($tornozelo_dorsiflexaoD_ortopedia != '(1) Há uma leve contração porém incapaz de produzir movimento.')
-                                                echo '<option value="(1) Há uma leve contração porém incapaz de produzir movimento.">(1) Há uma leve contração porém incapaz de produzir movimento.</option>'; ?>
-                                            <?php if ($tornozelo_dorsiflexaoD_ortopedia != '(2) Há movimento somente na ausência de gravidade.')
-                                                echo '<option value="(2) Há movimento somente na ausência de gravidade.
-                                                ">(2) Há movimento somente na ausência de gravidade.
-                                                </option>'; ?>
-                                            <?php if (
-                                                $tornozelo_dorsiflexaoD_ortopedia != '(3) Consegue realizar movimento vencendo a gravidade.
-'
-                                            )
-                                                echo '<option value="(3) Consegue realizar movimento vencendo a gravidade.
-                                                ">(3) Consegue realizar movimento vencendo a gravidade.
-                                                </option>'; ?>
-                                            <?php if ($tornozelo_dorsiflexaoD_ortopedia != '(4) Consegue realizar movimento vencendo a gravidade e também uma resistência externa.')
-                                                echo '<option value="(4) Consegue realizar movimento vencendo a gravidade e também uma resistência externa.">(4) Consegue realizar movimento vencendo a gravidade e também uma resistência externa.</option>'; ?>
-                                            <?php if ($tornozelo_dorsiflexaoD_ortopedia != '(5) Consegue realizar movimento superando uma resistencia maior que o musculo bom.')
-                                                echo '<option value="(5) Consegue realizar movimento superando uma resistencia maior que o musculo bom.">(5) Consegue realizar movimento superando uma resistencia maior que o musculo bom.</option>'; ?>
+                                           
 
                                         </select>
                                     </div>
@@ -4270,25 +4234,7 @@ $nome_medico = $_SESSION['medico_resp'];
                                                 echo '<option value="' . $tornozelo_plantiflexaoE_ortopedia . '">' . $tornozelo_plantiflexaoE_ortopedia . '</option>';
                                             }
                                             ?>
-                                            <?php if ($tornozelo_plantiflexaoE_ortopedia != '(0) Ausencia de Contração.')
-                                                echo '<option value="(0) Ausencia de Contração.">(0) Ausencia de Contração.</option>'; ?>
-                                            <?php if ($tornozelo_plantiflexaoE_ortopedia != '(1) Há uma leve contração porém incapaz de produzir movimento.')
-                                                echo '<option value="(1) Há uma leve contração porém incapaz de produzir movimento.">(1) Há uma leve contração porém incapaz de produzir movimento.</option>'; ?>
-                                            <?php if ($tornozelo_plantiflexaoE_ortopedia != '(2) Há movimento somente na ausência de gravidade.')
-                                                echo '<option value="(2) Há movimento somente na ausência de gravidade.
-                                                ">(2) Há movimento somente na ausência de gravidade.
-                                                </option>'; ?>
-                                            <?php if (
-                                                $tornozelo_plantiflexaoE_ortopedia != '(3) Consegue realizar movimento vencendo a gravidade.
-'
-                                            )
-                                                echo '<option value="(3) Consegue realizar movimento vencendo a gravidade.
-                                                ">(3) Consegue realizar movimento vencendo a gravidade.
-                                                </option>'; ?>
-                                            <?php if ($tornozelo_plantiflexaoE_ortopedia != '(4) Consegue realizar movimento vencendo a gravidade e também uma resistência externa.')
-                                                echo '<option value="(4) Consegue realizar movimento vencendo a gravidade e também uma resistência externa.">(4) Consegue realizar movimento vencendo a gravidade e também uma resistência externa.</option>'; ?>
-                                            <?php if ($tornozelo_plantiflexaoE_ortopedia != '(5) Consegue realizar movimento superando uma resistencia maior que o musculo bom.')
-                                                echo '<option value="(5) Consegue realizar movimento superando uma resistencia maior que o musculo bom.">(5) Consegue realizar movimento superando uma resistencia maior que o musculo bom.</option>'; ?>
+                                            
                                         </select>
                                     </div>
                                 </div>
@@ -4302,25 +4248,7 @@ $nome_medico = $_SESSION['medico_resp'];
                                                 echo '<option value="' . $tornozelo_plantiflexaoD_ortopedia . '">' . $tornozelo_plantiflexaoD_ortopedia . '</option>';
                                             }
                                             ?>
-                                            <?php if ($tornozelo_plantiflexaoD_ortopedia != '(0) Ausencia de Contração.')
-                                                echo '<option value="(0) Ausencia de Contração.">(0) Ausencia de Contração.</option>'; ?>
-                                            <?php if ($tornozelo_plantiflexaoD_ortopedia != '(1) Há uma leve contração porém incapaz de produzir movimento.')
-                                                echo '<option value="(1) Há uma leve contração porém incapaz de produzir movimento.">(1) Há uma leve contração porém incapaz de produzir movimento.</option>'; ?>
-                                            <?php if ($tornozelo_plantiflexaoD_ortopedia != '(2) Há movimento somente na ausência de gravidade.')
-                                                echo '<option value="(2) Há movimento somente na ausência de gravidade.
-                                                ">(2) Há movimento somente na ausência de gravidade.
-                                                </option>'; ?>
-                                            <?php if (
-                                                $tornozelo_plantiflexaoD_ortopedia != '(3) Consegue realizar movimento vencendo a gravidade.
-'
-                                            )
-                                                echo '<option value="(3) Consegue realizar movimento vencendo a gravidade.
-                                                ">(3) Consegue realizar movimento vencendo a gravidade.
-                                                </option>'; ?>
-                                            <?php if ($tornozelo_plantiflexaoD_ortopedia != '(4) Consegue realizar movimento vencendo a gravidade e também uma resistência externa.')
-                                                echo '<option value="(4) Consegue realizar movimento vencendo a gravidade e também uma resistência externa.">(4) Consegue realizar movimento vencendo a gravidade e também uma resistência externa.</option>'; ?>
-                                            <?php if ($tornozelo_plantiflexaoD_ortopedia != '(5) Consegue realizar movimento superando uma resistencia maior que o musculo bom.')
-                                                echo '<option value="(5) Consegue realizar movimento superando uma resistencia maior que o musculo bom.">(5) Consegue realizar movimento superando uma resistencia maior que o musculo bom.</option>'; ?>
+                                           
 
                                         </select>
                                     </div>
@@ -4358,15 +4286,7 @@ $nome_medico = $_SESSION['medico_resp'];
                                             }
                                             ?>
                                            
-                                            <?php if ($estilrradialE_ortopedia != '(A) Aumentado: hiperreflexia.')
-                                                echo '<option value="(A) Aumentado: hiperreflexia.">(A) Aumentado: hiperreflexia.</option>'; ?>
-                                            <?php if ($estilrradialE_ortopedia != '(D) Diminuido: hiporeflexia.')
-                                                echo '<option value="(D) Diminuido: hiporeflexia.">(D) Diminuido: hiporeflexia.</option>'; ?>
-                                            <?php if ($estilrradialE_ortopedia != '(SR) Sem reflexo, ausente: arreflexia.')
-                                                echo '<option value="(SR) Sem reflexo, ausente: arreflexia.
-                                                ">(SR) Sem reflexo, ausente: arreflexia. </option>'; ?>
-                                            <?php if ($estilrradialE_ortopedia != '(N) Normal - Normorreflexia.')
-                                                echo '<option value="(N) Normal - Normorreflexia.">(N) Normal - Normorreflexia..</option>'; ?>
+                               
                                             </select>
                                     </div>
                                 </div>
@@ -4380,15 +4300,7 @@ $nome_medico = $_SESSION['medico_resp'];
                                                 echo '<option value="' . $estilrradialD_ortopedia . '">' . $estilrradialD_ortopedia . '</option>';
                                             }
                                             ?>
-                                             <?php if ($estilrradialD_ortopedia != '(A) Aumentado: hiperreflexia.')
-                                                echo '<option value="(A) Aumentado: hiperreflexia.">(A) Aumentado: hiperreflexia.</option>'; ?>
-                                            <?php if ($estilrradialD_ortopedia != '(D) Diminuido: hiporeflexia.')
-                                                echo '<option value="(D) Diminuido: hiporeflexia.">(D) Diminuido: hiporeflexia.</option>'; ?>
-                                            <?php if ($estilrradialD_ortopedia != '(SR) Sem reflexo, ausente: arreflexia.')
-                                                echo '<option value="(SR) Sem reflexo, ausente: arreflexia.
-                                                ">(SR) Sem reflexo, ausente: arreflexia. </option>'; ?>
-                                            <?php if ($estilrradialD_ortopedia != '(N) Normal - Normorreflexia.')
-                                                echo '<option value="(N) Normal - Normorreflexia.">(N) Normal - Normorreflexia..</option>'; ?>
+                                           
 
                                         </select>
                                     </div>
@@ -4407,15 +4319,7 @@ $nome_medico = $_SESSION['medico_resp'];
                                                 echo '<option value="' . $bicipitalE_ortopedia . '">' . $bicipitalE_ortopedia . '</option>';
                                             }
                                             ?>
-                                           <?php if ($bicipitalE_ortopedia != '(A) Aumentado: hiperreflexia.')
-                                                echo '<option value="(A) Aumentado: hiperreflexia.">(A) Aumentado: hiperreflexia.</option>'; ?>
-                                            <?php if ($bicipitalE_ortopedia != '(D) Diminuido: hiporeflexia.')
-                                                echo '<option value="(D) Diminuido: hiporeflexia.">(D) Diminuido: hiporeflexia.</option>'; ?>
-                                            <?php if ($bicipitalE_ortopedia != '(SR) Sem reflexo, ausente: arreflexia.')
-                                                echo '<option value="(SR) Sem reflexo, ausente: arreflexia.
-                                                ">(SR) Sem reflexo, ausente: arreflexia. </option>'; ?>
-                                            <?php if ($bicipitalE_ortopedia != '(N) Normal - Normorreflexia.')
-                                                echo '<option value="(N) Normal - Normorreflexia.">(N) Normal - Normorreflexia..</option>'; ?>
+                                          
                             </select>
                                     </div>
                                 </div>
@@ -4429,15 +4333,7 @@ $nome_medico = $_SESSION['medico_resp'];
                                                 echo '<option value="' . $bicipitalD_ortopedia . '">' . $bicipitalD_ortopedia . '</option>';
                                             }
                                             ?>
-                                             <?php if ($bicipitalD_ortopedia != '(A) Aumentado: hiperreflexia.')
-                                                echo '<option value="(A) Aumentado: hiperreflexia.">(A) Aumentado: hiperreflexia.</option>'; ?>
-                                            <?php if ($bicipitalD_ortopedia != '(D) Diminuido: hiporeflexia.')
-                                                echo '<option value="(D) Diminuido: hiporeflexia.">(D) Diminuido: hiporeflexia.</option>'; ?>
-                                            <?php if ($bicipitalD_ortopedia != '(SR) Sem reflexo, ausente: arreflexia.')
-                                                echo '<option value="(SR) Sem reflexo, ausente: arreflexia.
-                                                ">(SR) Sem reflexo, ausente: arreflexia. </option>'; ?>
-                                            <?php if ($bicipitalD_ortopedia != '(N) Normal - Normorreflexia.')
-                                                echo '<option value="(N) Normal - Normorreflexia.">(N) Normal - Normorreflexia..</option>'; ?>
+                                            
                                         </select>
                                     </div>
                                 </div>
@@ -4456,15 +4352,7 @@ $nome_medico = $_SESSION['medico_resp'];
                                                 echo '<option value="' . $tricipitalE_ortopedia . '">' . $tricipitalE_ortopedia . '</option>';
                                             }
                                             ?>
-                                           <?php if ($tricipitalE_ortopedia != '(A) Aumentado: hiperreflexia.')
-                                                echo '<option value="(A) Aumentado: hiperreflexia.">(A) Aumentado: hiperreflexia.</option>'; ?>
-                                            <?php if ($tricipitalE_ortopedia != '(D) Diminuido: hiporeflexia.')
-                                                echo '<option value="(D) Diminuido: hiporeflexia.">(D) Diminuido: hiporeflexia.</option>'; ?>
-                                            <?php if ($tricipitalE_ortopedia != '(SR) Sem reflexo, ausente: arreflexia.')
-                                                echo '<option value="(SR) Sem reflexo, ausente: arreflexia.
-                                                ">(SR) Sem reflexo, ausente: arreflexia. </option>'; ?>
-                                            <?php if ($tricipitalE_ortopedia != '(N) Normal - Normorreflexia.')
-                                                echo '<option value="(N) Normal - Normorreflexia.">(N) Normal - Normorreflexia..</option>'; ?>
+                                         
                             </select>
                                     </div>
                                 </div>
@@ -4478,15 +4366,7 @@ $nome_medico = $_SESSION['medico_resp'];
                                                 echo '<option value="' . $tricipitalD_ortopedia . '">' . $tricipitalD_ortopedia . '</option>';
                                             }
                                             ?>
-                                             <?php if ($tricipitalD_ortopedia != '(A) Aumentado: hiperreflexia.')
-                                                echo '<option value="(A) Aumentado: hiperreflexia.">(A) Aumentado: hiperreflexia.</option>'; ?>
-                                            <?php if ($tricipitalD_ortopedia != '(D) Diminuido: hiporeflexia.')
-                                                echo '<option value="(D) Diminuido: hiporeflexia.">(D) Diminuido: hiporeflexia.</option>'; ?>
-                                            <?php if ($tricipitalD_ortopedia != '(SR) Sem reflexo, ausente: arreflexia.')
-                                                echo '<option value="(SR) Sem reflexo, ausente: arreflexia.
-                                                ">(SR) Sem reflexo, ausente: arreflexia. </option>'; ?>
-                                            <?php if ($tricipitalD_ortopedia != '(N) Normal - Normorreflexia.')
-                                                echo '<option value="(N) Normal - Normorreflexia.">(N) Normal - Normorreflexia..</option>'; ?>
+                                             
                                         </select>
                                     </div>
                                 </div>
@@ -4504,15 +4384,7 @@ $nome_medico = $_SESSION['medico_resp'];
                                                 echo '<option value="' . $patelarE_ortopedia . '">' . $patelarE_ortopedia . '</option>';
                                             }
                                             ?>
-                                           <?php if ($patelarE_ortopedia != '(A) Aumentado: hiperreflexia.')
-                                                echo '<option value="(A) Aumentado: hiperreflexia.">(A) Aumentado: hiperreflexia.</option>'; ?>
-                                            <?php if ($patelarE_ortopedia != '(D) Diminuido: hiporeflexia.')
-                                                echo '<option value="(D) Diminuido: hiporeflexia.">(D) Diminuido: hiporeflexia.</option>'; ?>
-                                            <?php if ($patelarE_ortopedia != '(SR) Sem reflexo, ausente: arreflexia.')
-                                                echo '<option value="(SR) Sem reflexo, ausente: arreflexia.
-                                                ">(SR) Sem reflexo, ausente: arreflexia. </option>'; ?>
-                                            <?php if ($patelarE_ortopedia != '(N) Normal - Normorreflexia.')
-                                                echo '<option value="(N) Normal - Normorreflexia.">(N) Normal - Normorreflexia..</option>'; ?>
+                                          
                             </select>
                                     </div>
                                 </div>
@@ -4526,16 +4398,7 @@ $nome_medico = $_SESSION['medico_resp'];
                                                 echo '<option value="' . $patelarD_ortopedia . '">' . $patelarD_ortopedia . '</option>';
                                             }
                                             ?>
-                                             <?php if ($patelarD_ortopedia != '(A) Aumentado: hiperreflexia.')
-                                                echo '<option value="(A) Aumentado: hiperreflexia.">(A) Aumentado: hiperreflexia.</option>'; ?>
-                                            <?php if ($patelarD_ortopedia != '(D) Diminuido: hiporeflexia.')
-                                                echo '<option value="(D) Diminuido: hiporeflexia.">(D) Diminuido: hiporeflexia.</option>'; ?>
-                                            <?php if ($patelarD_ortopedia != '(SR) Sem reflexo, ausente: arreflexia.')
-                                                echo '<option value="(SR) Sem reflexo, ausente: arreflexia.
-                                                ">(SR) Sem reflexo, ausente: arreflexia. </option>'; ?>
-                                            <?php if ($patelarD_ortopedia != '(N) Normal - Normorreflexia.')
-                                                echo '<option value="(N) Normal - Normorreflexia.">(N) Normal - Normorreflexia..</option>'; ?>
-                                        </select>
+                                           
                                     </div>
                                 </div>
                             </div>
@@ -4552,15 +4415,8 @@ $nome_medico = $_SESSION['medico_resp'];
                                                 echo '<option value="' . $aquileuE_ortopedia . '">' . $aquileuE_ortopedia . '</option>';
                                             }
                                             ?>
-                                           <?php if ($aquileuE_ortopedia != '(A) Aumentado: hiperreflexia.')
-                                                echo '<option value="(A) Aumentado: hiperreflexia.">(A) Aumentado: hiperreflexia.</option>'; ?>
-                                            <?php if ($aquileuE_ortopedia != '(D) Diminuido: hiporeflexia.')
-                                                echo '<option value="(D) Diminuido: hiporeflexia.">(D) Diminuido: hiporeflexia.</option>'; ?>
-                                            <?php if ($aquileuE_ortopedia != '(SR) Sem reflexo, ausente: arreflexia.')
-                                                echo '<option value="(SR) Sem reflexo, ausente: arreflexia.
-                                                ">(SR) Sem reflexo, ausente: arreflexia. </option>'; ?>
-                                            <?php if ($aquileuE_ortopedia != '(N) Normal - Normorreflexia.')
-                                                echo '<option value="(N) Normal - Normorreflexia.">(N) Normal - Normorreflexia..</option>'; ?>
+                                           
+                                            
                             </select>
                                     </div>
                                 </div>
@@ -4574,15 +4430,7 @@ $nome_medico = $_SESSION['medico_resp'];
                                                 echo '<option value="' . $aquileuD_ortopedia . '">' . $aquileuD_ortopedia . '</option>';
                                             }
                                             ?>
-                                             <?php if ($aquileuD_ortopedia != '(A) Aumentado: hiperreflexia.')
-                                                echo '<option value="(A) Aumentado: hiperreflexia.">(A) Aumentado: hiperreflexia.</option>'; ?>
-                                            <?php if ($aquileuD_ortopedia != '(D) Diminuido: hiporeflexia.')
-                                                echo '<option value="(D) Diminuido: hiporeflexia.">(D) Diminuido: hiporeflexia.</option>'; ?>
-                                            <?php if ($aquileuD_ortopedia != '(SR) Sem reflexo, ausente: arreflexia.')
-                                                echo '<option value="(SR) Sem reflexo, ausente: arreflexia.
-                                                ">(SR) Sem reflexo, ausente: arreflexia. </option>'; ?>
-                                            <?php if ($aquileuD_ortopedia != '(N) Normal - Normorreflexia.')
-                                                echo '<option value="(N) Normal - Normorreflexia.">(N) Normal - Normorreflexia..</option>'; ?>
+                                            
                                         </select>
                                     </div>
                                 </div>
@@ -4602,15 +4450,7 @@ $nome_medico = $_SESSION['medico_resp'];
                                                 echo '<option value="' . $babisnkiE_ortopedia . '">' . $babisnkiE_ortopedia . '</option>';
                                             }
                                             ?>
-                                           <?php if ($babisnkiE_ortopedia != '(A) Aumentado: hiperreflexia.')
-                                                echo '<option value="(A) Aumentado: hiperreflexia.">(A) Aumentado: hiperreflexia.</option>'; ?>
-                                            <?php if ($babisnkiE_ortopedia != '(D) Diminuido: hiporeflexia.')
-                                                echo '<option value="(D) Diminuido: hiporeflexia.">(D) Diminuido: hiporeflexia.</option>'; ?>
-                                            <?php if ($babisnkiE_ortopedia != '(SR) Sem reflexo, ausente: arreflexia.')
-                                                echo '<option value="(SR) Sem reflexo, ausente: arreflexia.
-                                                ">(SR) Sem reflexo, ausente: arreflexia. </option>'; ?>
-                                            <?php if ($babisnkiE_ortopedia != '(N) Normal - Normorreflexia.')
-                                                echo '<option value="(N) Normal - Normorreflexia.">(N) Normal - Normorreflexia..</option>'; ?>
+                                           
                                             </select>
                                     </div>
                                 </div>
@@ -4624,15 +4464,7 @@ $nome_medico = $_SESSION['medico_resp'];
                                                 echo '<option value="' . $babisnkiD_ortopedia . '">' . $babisnkiD_ortopedia . '</option>';
                                             }
                                             ?>
-                                             <?php if ($babisnkiD_ortopedia != '(A) Aumentado: hiperreflexia.')
-                                                echo '<option value="(A) Aumentado: hiperreflexia.">(A) Aumentado: hiperreflexia.</option>'; ?>
-                                            <?php if ($babisnkiD_ortopedia != '(D) Diminuido: hiporeflexia.')
-                                                echo '<option value="(D) Diminuido: hiporeflexia.">(D) Diminuido: hiporeflexia.</option>'; ?>
-                                            <?php if ($babisnkiD_ortopedia != '(SR) Sem reflexo, ausente: arreflexia.')
-                                                echo '<option value="(SR) Sem reflexo, ausente: arreflexia.
-                                                ">(SR) Sem reflexo, ausente: arreflexia. </option>'; ?>
-                                            <?php if ($babisnkiD_ortopedia != '(N) Normal - Normorreflexia.')
-                                                echo '<option value="(N) Normal - Normorreflexia.">(N) Normal - Normorreflexia..</option>'; ?>
+                                     
                                         </select>
                                     </div>
                                 </div>
@@ -4650,15 +4482,7 @@ $nome_medico = $_SESSION['medico_resp'];
                                                 echo '<option value="' . $cutaneoAbdominalE_ortopedia . '">' . $cutaneoAbdominalE_ortopedia . '</option>';
                                             }
                                             ?>
-                                           <?php if ($cutaneoAbdominalE_ortopedia != '(A) Aumentado: hiperreflexia.')
-                                                echo '<option value="(A) Aumentado: hiperreflexia.">(A) Aumentado: hiperreflexia.</option>'; ?>
-                                            <?php if ($cutaneoAbdominalE_ortopedia != '(D) Diminuido: hiporeflexia.')
-                                                echo '<option value="(D) Diminuido: hiporeflexia.">(D) Diminuido: hiporeflexia.</option>'; ?>
-                                            <?php if ($cutaneoAbdominalE_ortopedia != '(SR) Sem reflexo, ausente: arreflexia.')
-                                                echo '<option value="(SR) Sem reflexo, ausente: arreflexia.
-                                                ">(SR) Sem reflexo, ausente: arreflexia. </option>'; ?>
-                                            <?php if ($cutaneoAbdominalE_ortopedia != '(N) Normal - Normorreflexia.')
-                                                echo '<option value="(N) Normal - Normorreflexia.">(N) Normal - Normorreflexia..</option>'; ?>
+                                          
                                         </select>
                                     </div>
                                 </div>
@@ -4672,15 +4496,7 @@ $nome_medico = $_SESSION['medico_resp'];
                                                 echo '<option value="' . $cutaneoAbdominalD_ortopedia . '">' . $cutaneoAbdominalD_ortopedia . '</option>';
                                             }
                                             ?>
-                                             <?php if ($cutaneoAbdominalD_ortopedia != '(A) Aumentado: hiperreflexia.')
-                                                echo '<option value="(A) Aumentado: hiperreflexia.">(A) Aumentado: hiperreflexia.</option>'; ?>
-                                            <?php if ($cutaneoAbdominalD_ortopedia != '(D) Diminuido: hiporeflexia.')
-                                                echo '<option value="(D) Diminuido: hiporeflexia.">(D) Diminuido: hiporeflexia.</option>'; ?>
-                                            <?php if ($cutaneoAbdominalD_ortopedia != '(SR) Sem reflexo, ausente: arreflexia.')
-                                                echo '<option value="(SR) Sem reflexo, ausente: arreflexia.
-                                                ">(SR) Sem reflexo, ausente: arreflexia. </option>'; ?>
-                                            <?php if ($cutaneoAbdominalD_ortopedia != '(N) Normal - Normorreflexia.')
-                                                echo '<option value="(N) Normal - Normorreflexia.">(N) Normal - Normorreflexia..</option>'; ?>
+                                          
                                         </select>
                                     </div>
                                 </div>
@@ -4701,15 +4517,7 @@ $nome_medico = $_SESSION['medico_resp'];
                                                 echo '<option value="' . $sinaisDeAutotismoMedularE_ortopedia . '">' . $sinaisDeAutotismoMedularE_ortopedia . '</option>';
                                             }
                                             ?>
-                                           <?php if ($sinaisDeAutotismoMedularE_ortopedia != '(A) Aumentado: hiperreflexia.')
-                                                echo '<option value="(A) Aumentado: hiperreflexia.">(A) Aumentado: hiperreflexia.</option>'; ?>
-                                            <?php if ($sinaisDeAutotismoMedularE_ortopedia != '(D) Diminuido: hiporeflexia.')
-                                                echo '<option value="(D) Diminuido: hiporeflexia.">(D) Diminuido: hiporeflexia.</option>'; ?>
-                                            <?php if ($sinaisDeAutotismoMedularE_ortopedia != '(SR) Sem reflexo, ausente: arreflexia.')
-                                                echo '<option value="(SR) Sem reflexo, ausente: arreflexia.
-                                                ">(SR) Sem reflexo, ausente: arreflexia. </option>'; ?>
-                                            <?php if ($sinaisDeAutotismoMedularE_ortopedia != '(N) Normal - Normorreflexia.')
-                                                echo '<option value="(N) Normal - Normorreflexia.">(N) Normal - Normorreflexia..</option>'; ?>
+                                         
                                         </select>
                                     </div>
                                 </div>
@@ -4723,15 +4531,7 @@ $nome_medico = $_SESSION['medico_resp'];
                                                 echo '<option value="' . $sinaisDeAutotismoMedularD_ortopedia . '">' . $sinaisDeAutotismoMedularD_ortopedia . '</option>';
                                             }
                                             ?>
-                                             <?php if ($sinaisDeAutotismoMedularD_ortopedia != '(A) Aumentado: hiperreflexia.')
-                                                echo '<option value="(A) Aumentado: hiperreflexia.">(A) Aumentado: hiperreflexia.</option>'; ?>
-                                            <?php if ($sinaisDeAutotismoMedularD_ortopedia != '(D) Diminuido: hiporeflexia.')
-                                                echo '<option value="(D) Diminuido: hiporeflexia.">(D) Diminuido: hiporeflexia.</option>'; ?>
-                                            <?php if ($sinaisDeAutotismoMedularD_ortopedia != '(SR) Sem reflexo, ausente: arreflexia.')
-                                                echo '<option value="(SR) Sem reflexo, ausente: arreflexia.
-                                                ">(SR) Sem reflexo, ausente: arreflexia. </option>'; ?>
-                                            <?php if ($sinaisDeAutotismoMedularD_ortopedia != '(N) Normal - Normorreflexia.')
-                                                echo '<option value="(N) Normal - Normorreflexia.">(N) Normal - Normorreflexia..</option>'; ?>
+                                         
                                         </select>
                                     </div>
                                 </div>
@@ -4749,15 +4549,7 @@ $nome_medico = $_SESSION['medico_resp'];
                                                 echo '<option value="' . $impulsoExtensorE_ortopedia . '">' . $impulsoExtensorE_ortopedia . '</option>';
                                             }
                                             ?>
-                                           <?php if ($impulsoExtensorE_ortopedia != '(A) Aumentado: hiperreflexia.')
-                                                echo '<option value="(A) Aumentado: hiperreflexia.">(A) Aumentado: hiperreflexia.</option>'; ?>
-                                            <?php if ($impulsoExtensorE_ortopedia != '(D) Diminuido: hiporeflexia.')
-                                                echo '<option value="(D) Diminuido: hiporeflexia.">(D) Diminuido: hiporeflexia.</option>'; ?>
-                                            <?php if ($impulsoExtensorE_ortopedia != '(SR) Sem reflexo, ausente: arreflexia.')
-                                                echo '<option value="(SR) Sem reflexo, ausente: arreflexia.
-                                                ">(SR) Sem reflexo, ausente: arreflexia. </option>'; ?>
-                                            <?php if ($impulsoExtensorE_ortopedia != '(N) Normal - Normorreflexia.')
-                                                echo '<option value="(N) Normal - Normorreflexia.">(N) Normal - Normorreflexia..</option>'; ?>
+                                 
                                         </select>
                                     </div>
                                 </div>
@@ -4771,15 +4563,7 @@ $nome_medico = $_SESSION['medico_resp'];
                                                 echo '<option value="' . $impulsoExtensorD_ortopedia . '">' . $impulsoExtensorD_ortopedia . '</option>';
                                             }
                                             ?>
-                                             <?php if ($impulsoExtensorD_ortopedia != '(A) Aumentado: hiperreflexia.')
-                                                echo '<option value="(A) Aumentado: hiperreflexia.">(A) Aumentado: hiperreflexia.</option>'; ?>
-                                            <?php if ($impulsoExtensorD_ortopedia != '(D) Diminuido: hiporeflexia.')
-                                                echo '<option value="(D) Diminuido: hiporeflexia.">(D) Diminuido: hiporeflexia.</option>'; ?>
-                                            <?php if ($impulsoExtensorD_ortopedia != '(SR) Sem reflexo, ausente: arreflexia.')
-                                                echo '<option value="(SR) Sem reflexo, ausente: arreflexia.
-                                                ">(SR) Sem reflexo, ausente: arreflexia. </option>'; ?>
-                                            <?php if ($impulsoExtensorD_ortopedia != '(N) Normal - Normorreflexia.')
-                                                echo '<option value="(N) Normal - Normorreflexia.">(N) Normal - Normorreflexia..</option>'; ?>
+                                          
                                         </select>
                                     </div>
                                 </div>
@@ -4797,15 +4581,7 @@ $nome_medico = $_SESSION['medico_resp'];
                                                 echo '<option value="' . $tripliceFlexaoE_ortopedia . '">' . $tripliceFlexaoE_ortopedia . '</option>';
                                             }
                                             ?>
-                                           <?php if ($tripliceFlexaoE_ortopedia != '(A) Aumentado: hiperreflexia.')
-                                                echo '<option value="(A) Aumentado: hiperreflexia.">(A) Aumentado: hiperreflexia.</option>'; ?>
-                                            <?php if ($tripliceFlexaoE_ortopedia != '(D) Diminuido: hiporeflexia.')
-                                                echo '<option value="(D) Diminuido: hiporeflexia.">(D) Diminuido: hiporeflexia.</option>'; ?>
-                                            <?php if ($tripliceFlexaoE_ortopedia != '(SR) Sem reflexo, ausente: arreflexia.')
-                                                echo '<option value="(SR) Sem reflexo, ausente: arreflexia.
-                                                ">(SR) Sem reflexo, ausente: arreflexia. </option>'; ?>
-                                            <?php if ($tripliceFlexaoE_ortopedia != '(N) Normal - Normorreflexia.')
-                                                echo '<option value="(N) Normal - Normorreflexia.">(N) Normal - Normorreflexia..</option>'; ?>
+                                       
                                         </select>
                                     </div>
                                 </div>
@@ -4819,15 +4595,7 @@ $nome_medico = $_SESSION['medico_resp'];
                                                 echo '<option value="' . $tripliceFlexaoD_ortopedia . '">' . $tripliceFlexaoD_ortopedia . '</option>';
                                             }
                                             ?>
-                                             <?php if ($tripliceFlexaoD_ortopedia != '(A) Aumentado: hiperreflexia.')
-                                                echo '<option value="(A) Aumentado: hiperreflexia.">(A) Aumentado: hiperreflexia.</option>'; ?>
-                                            <?php if ($tripliceFlexaoD_ortopedia != '(D) Diminuido: hiporeflexia.')
-                                                echo '<option value="(D) Diminuido: hiporeflexia.">(D) Diminuido: hiporeflexia.</option>'; ?>
-                                            <?php if ($tripliceFlexaoD_ortopedia != '(SR) Sem reflexo, ausente: arreflexia.')
-                                                echo '<option value="(SR) Sem reflexo, ausente: arreflexia.
-                                                ">(SR) Sem reflexo, ausente: arreflexia. </option>'; ?>
-                                            <?php if ($tripliceFlexaoD_ortopedia != '(N) Normal - Normorreflexia.')
-                                                echo '<option value="(N) Normal - Normorreflexia.">(N) Normal - Normorreflexia..</option>'; ?>
+                                          
                                         </select>
                                     </div>
                                 </div>
@@ -4845,15 +4613,7 @@ $nome_medico = $_SESSION['medico_resp'];
                                                 echo '<option value="' . $sincinesiasE_ortopedia . '">' . $sincinesiasE_ortopedia . '</option>';
                                             }
                                             ?>
-                                           <?php if ($sincinesiasE_ortopedia != '(A) Aumentado: hiperreflexia.')
-                                                echo '<option value="(A) Aumentado: hiperreflexia.">(A) Aumentado: hiperreflexia.</option>'; ?>
-                                            <?php if ($sincinesiasE_ortopedia != '(D) Diminuido: hiporeflexia.')
-                                                echo '<option value="(D) Diminuido: hiporeflexia.">(D) Diminuido: hiporeflexia.</option>'; ?>
-                                            <?php if ($sincinesiasE_ortopedia != '(SR) Sem reflexo, ausente: arreflexia.')
-                                                echo '<option value="(SR) Sem reflexo, ausente: arreflexia.
-                                                ">(SR) Sem reflexo, ausente: arreflexia. </option>'; ?>
-                                            <?php if ($sincinesiasE_ortopedia != '(N) Normal - Normorreflexia.')
-                                                echo '<option value="(N) Normal - Normorreflexia.">(N) Normal - Normorreflexia..</option>'; ?>
+                                          
                                         </select>
                                     </div>
                                 </div>
@@ -4867,15 +4627,7 @@ $nome_medico = $_SESSION['medico_resp'];
                                                 echo '<option value="' . $sincinesiasD_ortopedia . '">' . $sincinesiasD_ortopedia . '</option>';
                                             }
                                             ?>
-                                             <?php if ($sincinesiasD_ortopedia != '(A) Aumentado: hiperreflexia.')
-                                                echo '<option value="(A) Aumentado: hiperreflexia.">(A) Aumentado: hiperreflexia.</option>'; ?>
-                                            <?php if ($sincinesiasD_ortopedia != '(D) Diminuido: hiporeflexia.')
-                                                echo '<option value="(D) Diminuido: hiporeflexia.">(D) Diminuido: hiporeflexia.</option>'; ?>
-                                            <?php if ($sincinesiasD_ortopedia != '(SR) Sem reflexo, ausente: arreflexia.')
-                                                echo '<option value="(SR) Sem reflexo, ausente: arreflexia.
-                                                ">(SR) Sem reflexo, ausente: arreflexia. </option>'; ?>
-                                            <?php if ($sincinesiasD_ortopedia != '(N) Normal - Normorreflexia.')
-                                                echo '<option value="(N) Normal - Normorreflexia.">(N) Normal - Normorreflexia..</option>'; ?>
+                                          
                                         </select>
                                     </div>
                                 </div>
@@ -4904,13 +4656,7 @@ $nome_medico = $_SESSION['medico_resp'];
                                                 echo '<option value="' . $decubito1_ortopedia . '">' . $decubito1_ortopedia . '</option>';
                                             }
                                             ?>
-                                           <?php if ($decubito1_ortopedia != '(I) Independente.')
-                                                echo '<option value="(I) Independente.">(I) Independente.</option>'; ?>
-                                            <?php if ($decubito1_ortopedia != '(D) Dependente - com auxilio.')
-                                                echo '<option value="(D) Dependente - com auxilio.">(D) Dependente - com auxilio.</option>'; ?>
-                                            <?php if ($decubito1_ortopedia != '(NR) Não Realiza')
-                                                echo '<option value="(NR) Não Realiza
-                                                ">(NR) Não Realiza </option>'; ?>
+                                        
                                            
                                         </select>
                                     </div>
@@ -4968,13 +4714,7 @@ $nome_medico = $_SESSION['medico_resp'];
                                                 echo '<option value="' . $decubito4_ortopedia . '">' . $decubito4_ortopedia . '</option>';
                                             }
                                             ?>
-                                           <?php if ($decubito4_ortopedia != '(I) Independente.')
-                                                echo '<option value="(I) Independente.">(I) Independente.</option>'; ?>
-                                            <?php if ($decubito4_ortopedia != '(D) Dependente - com auxilio.')
-                                                echo '<option value="(D) Dependente - com auxilio.">(D) Dependente - com auxilio.</option>'; ?>
-                                            <?php if ($decubito4_ortopedia != '(NR) Não Realiza')
-                                                echo '<option value="(NR) Não Realiza
-                                                ">(NR) Não Realiza </option>'; ?>
+                                          
                                            
                                         </select>
                                     </div>

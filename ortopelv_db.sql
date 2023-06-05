@@ -3,8 +3,8 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Apr 24, 2023 at 07:48 PM
--- Server version: 10.4.28-MariaDB
+-- Generation Time: Jun 05, 2023 at 10:33 PM
+-- Server version: 10.4.29-MariaDB
 -- PHP Version: 7.2.30
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
@@ -56,7 +56,13 @@ INSERT INTO `atendimentos` (`id`, `descricao`, `valor`, `email_med`) VALUES
 (67, 'Palestra igreja', '800.00', 'bia.n2012@hotmail.com'),
 (68, 'Palestra escola', '400.00', 'bia.n2012@hotmail.com'),
 (69, 'Ebook', '50.00', 'bia.n2012@hotmail.com'),
-(70, 'Caminhada assitida', '100.00', 'wanderson.feitosa211@gmail.com');
+(70, 'Caminhada assitida', '100.00', 'wanderson.feitosa211@gmail.com'),
+(71, 'Sessão promo', '100.00', 'erikapedros@hotmail.com'),
+(72, 'Fisioterapia Pélvica ', '200.00', 'drjoaovitormagalhaes@gmail.com'),
+(73, 'Avaliação Fisioterapia Pélvica ', '200.00', 'drjoaovitormagalhaes@gmail.com'),
+(74, 'ATENDIMENTO', '140.00', 'dramarcia.fisiopelvica@gmail.com'),
+(75, 'PLANO DE 5 ATENDIMENTOS', '550.00', 'dramarcia.fisiopelvica@gmail.com'),
+(76, 'PLANO DE 10 ATENDIMENTOS', '1100.00', 'dramarcia.fisiopelvica@gmail.com');
 
 -- --------------------------------------------------------
 
@@ -145,7 +151,57 @@ INSERT INTO `consultas` (`id`, `data`, `hora`, `paciente`, `tipo_atendimento`, `
 (219, '2023-04-04', '09:00:00', 164, 53, 41, '200.00', 'Sim', 'Finalizada', NULL, 'Sim', NULL),
 (220, '2023-04-06', '10:00:00', 161, 53, 41, '200.00', 'Sim', 'Finalizada', NULL, 'Sim', NULL),
 (222, '2023-04-20', '10:00:00', 157, 53, 41, '200.00', 'Não', NULL, NULL, NULL, NULL),
-(223, '2023-04-21', '00:00:00', 176, 70, 79, '100.00', 'Sim', 'Consultando', 50, NULL, 'Sim');
+(223, '2023-04-21', '00:00:00', 176, 70, 79, '100.00', 'Sim', 'Consultando', 50, NULL, 'Sim'),
+(224, '2023-04-11', '07:00:00', 155, 56, 41, '180.00', 'Sim', 'Finalizada', NULL, 'Sim', NULL),
+(225, '2023-04-18', '07:00:00', 155, 56, 41, '180.00', 'Sim', 'Finalizada', NULL, NULL, NULL),
+(226, '2023-04-25', '07:30:00', 155, 56, 41, '180.00', 'Sim', 'Finalizada', NULL, NULL, NULL),
+(227, '2023-04-18', '09:00:00', 157, 53, 41, '200.00', 'Sim', 'Finalizada', NULL, NULL, NULL),
+(228, '2023-04-11', '10:00:00', 161, 53, 41, '200.00', 'Sim', 'Finalizada', NULL, NULL, NULL),
+(229, '2023-04-13', '10:00:00', 161, 53, 41, '200.00', 'Sim', 'Finalizada', NULL, NULL, NULL),
+(230, '2023-04-06', '11:00:00', 165, 53, 41, '200.00', 'Sim', 'Finalizada', NULL, NULL, NULL),
+(231, '2023-04-10', '11:00:00', 165, 53, 41, '200.00', 'Sim', 'Finalizada', NULL, NULL, NULL),
+(232, '2023-04-11', '09:00:00', 165, 53, 41, '200.00', 'Sim', 'Finalizada', NULL, NULL, NULL),
+(233, '2023-04-13', '11:00:00', 165, 53, 41, '200.00', 'Sim', 'Finalizada', NULL, NULL, NULL),
+(234, '2023-04-15', '11:00:00', 164, 53, 41, '200.00', 'Sim', 'Finalizada', NULL, NULL, NULL),
+(235, '2023-04-20', '09:00:00', 164, 53, 41, '200.00', 'Sim', 'Finalizada', NULL, NULL, NULL),
+(236, '2023-04-06', '14:30:00', 163, 71, 41, '100.00', 'Sim', 'Finalizada', NULL, NULL, NULL),
+(237, '2023-04-11', '14:30:00', 163, 71, 41, '100.00', 'Sim', 'Finalizada', NULL, NULL, NULL),
+(238, '2023-04-18', '14:30:00', 163, 71, 41, '100.00', 'Sim', 'Finalizada', NULL, NULL, NULL),
+(239, '2023-04-20', '14:30:00', 163, 71, 41, '100.00', 'Sim', 'Finalizada', NULL, NULL, NULL),
+(240, '2023-04-04', '18:30:00', 177, 71, 41, '100.00', 'Sim', 'Aguardando', NULL, NULL, NULL),
+(241, '2023-04-11', '18:30:00', 177, 71, 41, '100.00', 'Sim', 'Aguardando', NULL, NULL, NULL),
+(242, '2023-04-13', '18:30:00', 177, 71, 41, '100.00', 'Sim', 'Aguardando', NULL, NULL, NULL),
+(243, '2023-04-17', '18:30:00', 177, 71, 41, '100.00', 'Sim', 'Aguardando', NULL, NULL, NULL),
+(244, '2023-04-18', '18:30:00', 177, 71, 41, '100.00', 'Sim', 'Aguardando', NULL, NULL, NULL),
+(245, '2023-04-25', '09:00:00', 157, 53, 41, '200.00', 'Sim', 'Aguardando', NULL, NULL, NULL),
+(246, '2023-04-20', '17:00:00', 179, 73, 81, '200.00', 'Não', NULL, NULL, NULL, NULL),
+(247, '2023-04-25', '17:00:00', 179, 73, 81, '200.00', 'Não', NULL, NULL, NULL, NULL),
+(248, '2023-04-25', '17:00:00', 179, 72, 81, '200.00', 'Não', NULL, NULL, NULL, NULL),
+(249, '2023-01-10', '07:00:00', 155, 54, 41, '150.00', 'Não', NULL, NULL, NULL, NULL),
+(250, '2023-01-10', '08:00:00', 157, 56, 41, '180.00', 'Não', NULL, NULL, NULL, NULL),
+(251, '2023-05-04', '08:00:00', 161, 53, 41, '200.00', 'Não', NULL, NULL, NULL, NULL),
+(252, '2023-05-04', '09:00:00', 165, 53, 41, '200.00', 'Não', NULL, NULL, NULL, NULL),
+(253, '2023-05-09', '10:00:00', 165, 53, 41, '200.00', 'Sim', 'Aguardando', NULL, NULL, NULL),
+(254, '2023-05-09', '09:00:00', 161, 53, 41, '200.00', 'Sim', 'Aguardando', NULL, NULL, NULL),
+(255, '2023-05-09', '08:00:00', 164, 53, 41, '200.00', 'Sim', 'Aguardando', NULL, NULL, NULL),
+(256, '2023-05-11', '10:00:00', 165, 53, 41, '200.00', 'Sim', 'Aguardando', NULL, NULL, NULL),
+(257, '2023-05-11', '09:00:00', 161, 53, 41, '200.00', 'Sim', 'Aguardando', NULL, NULL, NULL),
+(258, '2023-05-16', '07:00:00', 155, 53, 41, '200.00', 'Sim', 'Aguardando', NULL, NULL, NULL),
+(259, '2023-05-16', '08:00:00', 161, 53, 41, '200.00', 'Sim', 'Aguardando', NULL, NULL, NULL),
+(260, '2023-05-16', '09:00:00', 165, 53, 41, '200.00', 'Sim', 'Aguardando', NULL, NULL, NULL),
+(261, '2023-05-18', '10:00:00', 165, 53, 41, '200.00', 'Sim', 'Aguardando', NULL, NULL, NULL),
+(262, '2023-05-18', '08:00:00', 161, 53, 41, '200.00', 'Sim', 'Aguardando', NULL, NULL, NULL),
+(263, '2023-05-23', '09:00:00', 157, 53, 41, '200.00', 'Sim', 'Aguardando', NULL, NULL, NULL),
+(264, '2023-05-23', '07:00:00', 155, 53, 41, '200.00', 'Sim', 'Aguardando', NULL, NULL, NULL),
+(265, '2023-05-23', '08:00:00', 161, 53, 41, '200.00', 'Sim', 'Aguardando', NULL, NULL, NULL),
+(266, '2023-05-23', '10:00:00', 164, 53, 41, '200.00', 'Sim', 'Aguardando', NULL, NULL, NULL),
+(267, '2023-05-23', '11:00:00', 165, 53, 41, '200.00', 'Sim', 'Aguardando', NULL, NULL, NULL),
+(268, '2023-05-25', '10:00:00', 165, 53, 41, '200.00', 'Sim', 'Aguardando', NULL, NULL, NULL),
+(269, '2023-05-25', '09:00:00', 157, 53, 41, '200.00', 'Sim', 'Aguardando', NULL, NULL, NULL),
+(270, '2023-05-30', '09:00:00', 157, 53, 41, '200.00', 'Sim', 'Aguardando', NULL, NULL, NULL),
+(271, '2023-05-30', '08:00:00', 164, 53, 41, '200.00', 'Sim', 'Aguardando', NULL, NULL, NULL),
+(272, '2023-05-30', '10:00:00', 165, 53, 41, '200.00', 'Sim', 'Aguardando', NULL, NULL, NULL),
+(273, '2023-05-30', '07:00:00', 155, 53, 41, '200.00', 'Sim', 'Aguardando', NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -217,7 +273,56 @@ INSERT INTO `contas_receber` (`id`, `descricao`, `valor`, `vencimento`, `data_ba
 (212, '53', '200.00', '2023-04-04', '2023-04-06', 'PIX', '', '558.166.128-67', '457.246.228-31', 219),
 (213, '53', '200.00', '2023-04-06', '2023-04-06', 'PIX', '', '006.188.908-31', '457.246.228-31', 220),
 (214, '53', '200.00', '2023-04-20', '2023-04-20', 'Dinheiro', '', '049.591.168-20', '457.246.228-31', 221),
-(218, '70', '100.00', '2023-04-21', '2023-04-21', 'PIX', 'Do brasil', '891.234.902-18', '123.890.389-92', 223);
+(218, '70', '100.00', '2023-04-21', '2023-04-21', 'PIX', 'Do brasil', '891.234.902-18', '123.890.389-92', 223),
+(219, '56', '180.00', '2023-04-11', '2023-04-25', 'PIX', '', '124.457.858-47', '457.246.228-31', 224),
+(220, '56', '180.00', '2023-04-18', '2023-04-25', 'PIX', '', '124.457.858-47', '457.246.228-31', 225),
+(221, '56', '180.00', '2023-04-25', '2023-04-25', 'PIX', '', '124.457.858-47', '457.246.228-31', 226),
+(222, '53', '200.00', '2023-04-18', '2023-04-25', 'Dinheiro', '', '049.591.168-20', '457.246.228-31', 227),
+(223, '53', '200.00', '2023-04-11', '2023-04-25', 'Dinheiro', '', '006.188.908-31', '457.246.228-31', 228),
+(224, '53', '200.00', '2023-04-13', '2023-04-25', 'PIX', '', '006.188.908-31', '457.246.228-31', 229),
+(225, '53', '200.00', '2023-04-06', '2023-04-25', 'Cartão', '', '112.946.818-69', '457.246.228-31', 230),
+(226, '53', '200.00', '2023-04-10', '2023-04-25', 'Cartão', '', '112.946.818-69', '457.246.228-31', 231),
+(227, '53', '200.00', '2023-04-11', '2023-04-25', 'Cartão', '', '112.946.818-69', '457.246.228-31', 232),
+(228, '53', '200.00', '2023-04-13', '2023-04-25', 'Cartão', '', '112.946.818-69', '457.246.228-31', 233),
+(229, '53', '200.00', '2023-04-15', '2023-04-25', 'PIX', '', '558.166.128-67', '457.246.228-31', 234),
+(230, '53', '200.00', '2023-04-20', '2023-04-25', 'PIX', '', '558.166.128-67', '457.246.228-31', 235),
+(231, '71', '100.00', '2023-04-06', '2023-04-25', 'PIX', '', '408.866.078-17', '457.246.228-31', 236),
+(232, '71', '100.00', '2023-04-11', '2023-04-25', 'PIX', '', '408.866.078-17', '457.246.228-31', 237),
+(233, '71', '100.00', '2023-04-18', '2023-04-25', 'PIX', '', '408.866.078-17', '457.246.228-31', 238),
+(234, '71', '100.00', '2023-04-20', '2023-04-25', 'PIX', '', '408.866.078-17', '457.246.228-31', 239),
+(235, '71', '100.00', '2023-04-04', '2023-04-25', 'PIX', '', '057.588.738-96', '457.246.228-31', 240),
+(236, '71', '100.00', '2023-04-11', '2023-04-25', 'PIX', '', '057.588.738-96', '457.246.228-31', 241),
+(237, '71', '100.00', '2023-04-13', '2023-04-25', 'PIX', '', '057.588.738-96', '457.246.228-31', 242),
+(238, '71', '100.00', '2023-04-17', '2023-04-25', 'PIX', '', '057.588.738-96', '457.246.228-31', 243),
+(239, '71', '100.00', '2023-04-18', '2023-04-25', 'PIX', '', '057.588.738-96', '457.246.228-31', 244),
+(240, '53', '200.00', '2023-04-25', '2023-04-25', 'Dinheiro', '', '049.591.168-20', '457.246.228-31', 245),
+(241, '73', '200.00', '2023-04-20', NULL, NULL, NULL, '000.000.000-00', '026.587.812-88', 246),
+(243, '72', '200.00', '2023-04-25', NULL, NULL, NULL, '000.000.000-00', '026.587.812-88', 248),
+(244, '54', '150.00', '2023-01-10', NULL, NULL, NULL, '124.457.858-47', '457.246.228-31', 249),
+(245, '56', '180.00', '2023-01-10', NULL, NULL, NULL, '049.591.168-20', '457.246.228-31', 250),
+(246, '53', '200.00', '2023-05-04', NULL, NULL, NULL, '006.188.908-31', '457.246.228-31', 251),
+(247, '53', '200.00', '2023-05-04', NULL, NULL, NULL, '112.946.818-69', '457.246.228-31', 252),
+(248, '53', '200.00', '2023-05-09', '2023-06-05', 'PIX', '', '112.946.818-69', '457.246.228-31', 253),
+(249, '53', '200.00', '2023-05-09', '2023-06-05', 'PIX', '', '006.188.908-31', '457.246.228-31', 254),
+(250, '53', '200.00', '2023-05-09', '2023-06-05', 'PIX', '', '558.166.128-67', '457.246.228-31', 255),
+(251, '53', '200.00', '2023-05-11', '2023-06-05', 'PIX', '', '112.946.818-69', '457.246.228-31', 256),
+(252, '53', '200.00', '2023-05-11', '2023-06-05', 'PIX', '', '006.188.908-31', '457.246.228-31', 257),
+(253, '53', '200.00', '2023-05-16', '2023-06-05', 'PIX', '', '124.457.858-47', '457.246.228-31', 258),
+(254, '53', '200.00', '2023-05-16', '2023-06-05', 'PIX', '', '006.188.908-31', '457.246.228-31', 259),
+(255, '53', '200.00', '2023-05-16', '2023-06-05', 'PIX', '', '112.946.818-69', '457.246.228-31', 260),
+(256, '53', '200.00', '2023-05-18', '2023-06-05', 'PIX', '', '112.946.818-69', '457.246.228-31', 261),
+(257, '53', '200.00', '2023-05-18', '2023-06-05', 'PIX', '', '006.188.908-31', '457.246.228-31', 262),
+(258, '53', '200.00', '2023-05-23', '2023-06-05', 'PIX', '', '049.591.168-20', '457.246.228-31', 263),
+(259, '53', '200.00', '2023-05-23', '2023-06-05', 'PIX', '', '124.457.858-47', '457.246.228-31', 264),
+(260, '53', '200.00', '2023-05-23', '2023-06-05', 'PIX', '', '006.188.908-31', '457.246.228-31', 265),
+(261, '53', '200.00', '2023-05-23', '2023-06-05', 'PIX', '', '558.166.128-67', '457.246.228-31', 266),
+(262, '53', '200.00', '2023-05-23', '2023-06-05', 'PIX', '', '112.946.818-69', '457.246.228-31', 267),
+(263, '53', '200.00', '2023-05-25', '2023-06-05', 'PIX', '', '112.946.818-69', '457.246.228-31', 268),
+(264, '53', '200.00', '2023-05-25', '2023-06-05', 'PIX', '', '049.591.168-20', '457.246.228-31', 269),
+(265, '53', '200.00', '2023-05-30', '2023-06-05', 'PIX', '', '049.591.168-20', '457.246.228-31', 270),
+(266, '53', '200.00', '2023-05-30', '2023-06-05', 'PIX', '', '558.166.128-67', '457.246.228-31', 271),
+(267, '53', '200.00', '2023-05-30', '2023-06-05', 'PIX', '', '112.946.818-69', '457.246.228-31', 272),
+(268, '53', '200.00', '2023-05-30', '2023-06-05', 'PIX', '', '124.457.858-47', '457.246.228-31', 273);
 
 -- --------------------------------------------------------
 
@@ -310,8 +415,120 @@ CREATE TABLE `exercicios_pacientes` (
 
 INSERT INTO `exercicios_pacientes` (`id`, `nome_exercicio`, `repeticoes`, `series`, `obs`, `feito`, `id_paciente`, `id_medico`) VALUES
 (31, 'Agachamento', '10', '3', 'fazer a contração perineal quando for abaixar, realizando a expiração', 'Sim', 156, 41),
-(32, 'Agachamento', '10', '3', 'fazer a contração perineal quando for abaixar, realizando a expiração', 'Não', 156, 41),
-(33, 'Assoalho Pélvico.', '15', '3', 'contrações rápidas (3 x dia)', 'Não', 156, 41);
+(32, 'Agachamento', '10', '3', 'fazer a contração perineal quando for abaixar, realizando a expiração', 'Sim', 156, 41),
+(33, 'Assoalho Pélvico.', '15', '3', 'contrações rápidas (3 x dia)', 'Sim', 156, 41);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `ficha_ortopedia`
+--
+
+CREATE TABLE `ficha_ortopedia` (
+  `fkcpf` varchar(220) NOT NULL,
+  `nome` varchar(220) NOT NULL,
+  `historia_molestia_progressa_ortopedia` varchar(220) DEFAULT NULL,
+  `historia_molestia_atual_ortopedia` varchar(220) DEFAULT NULL,
+  `historia_molestia_sintomas_ortopedia` varchar(220) DEFAULT NULL,
+  `inspecao_ortopedia` varchar(220) DEFAULT NULL,
+  `obs_inspecao_ortopedia` varchar(220) DEFAULT NULL,
+  `ombro_flexaoD_ortopedia` varchar(220) DEFAULT NULL,
+  `ombro_flexaoE_ortopedia` varchar(220) DEFAULT NULL,
+  `ombro_extensaoE_ortopedia` varchar(220) DEFAULT NULL,
+  `ombro_extensaoD_ortopedia` varchar(220) DEFAULT NULL,
+  `ombro_abducaoE_ortopedia` varchar(220) DEFAULT NULL,
+  `ombro_abducaoD_ortopedia` varchar(220) DEFAULT NULL,
+  `ombro_aducaoE_ortopedia` varchar(220) DEFAULT NULL,
+  `ombro_aducaoD_ortopedia` varchar(220) DEFAULT NULL,
+  `ombro_rotacaoInternaE_ortopedia` varchar(220) DEFAULT NULL,
+  `ombro_rotacaoInternaD_ortopedia` varchar(220) DEFAULT NULL,
+  `ombro_rotacaoExternaE_ortopedia` varchar(220) DEFAULT NULL,
+  `ombro_rotacaoExternaD_ortopedia` varchar(220) DEFAULT NULL,
+  `cotovelo_flexaoE_ortopedia` varchar(220) DEFAULT NULL,
+  `cotovelo_flexaoD_ortopedia` varchar(220) DEFAULT NULL,
+  `cotovelo_extensaoE_ortopedia` varchar(220) DEFAULT NULL,
+  `cotovelo_extensaoD_ortopedia` varchar(220) DEFAULT NULL,
+  `cotovelo_pronocaoE_ortopedia` varchar(220) DEFAULT NULL,
+  `cotovelo_pronocaoD_ortopedia` varchar(220) DEFAULT NULL,
+  `cotovelo_supinacaoE_ortopedia` varchar(220) DEFAULT NULL,
+  `cotovelo_supinacaoD_ortopedia` varchar(220) DEFAULT NULL,
+  `punho_flexaoE_ortopedia` varchar(220) DEFAULT NULL,
+  `punho_flexaoD_ortopedia` varchar(220) DEFAULT NULL,
+  `punho_extensaoE_ortopedia` varchar(220) DEFAULT NULL,
+  `punho_extensaoD_ortopedia` varchar(220) DEFAULT NULL,
+  `punho_desvioUlnarE_ortopedia` varchar(220) DEFAULT NULL,
+  `punho_desvioUlnarD_ortopedia` varchar(220) DEFAULT NULL,
+  `punho_desvioRadialE_ortopedia` varchar(220) DEFAULT NULL,
+  `punho_desvioRadialD_ortopedia` varchar(220) DEFAULT NULL,
+  `tronco_flexaoE_ortopedia` varchar(220) DEFAULT NULL,
+  `tronco_flexaoD_ortopedia` varchar(220) DEFAULT NULL,
+  `tronco_rotacaoE_ortopedia` varchar(220) DEFAULT NULL,
+  `tronco_rotacaoD_ortopedia` varchar(220) DEFAULT NULL,
+  `tronco_extensaoE_ortopedia` varchar(220) DEFAULT NULL,
+  `tronco_extensaoD_ortopedia` varchar(220) DEFAULT NULL,
+  `quadril_flexaoE_ortopedia` varchar(220) DEFAULT NULL,
+  `quadril_flexaoD_ortopedia` varchar(220) DEFAULT NULL,
+  `quadril_extensaoE_ortopedia` varchar(220) DEFAULT NULL,
+  `quadril_extensaoD_ortopedia` varchar(220) DEFAULT NULL,
+  `quadril_abducaoE_ortopedia` varchar(220) DEFAULT NULL,
+  `quadril_abducaoD_ortopedia` varchar(220) DEFAULT NULL,
+  `quadril_aducaoE_ortopedia` varchar(220) DEFAULT NULL,
+  `quadril_aducaoD_ortopedia` varchar(220) DEFAULT NULL,
+  `quadril_rotacaoInternaE_ortopedia` varchar(220) DEFAULT NULL,
+  `quadril_rotacaoInternaD_ortopedia` varchar(220) DEFAULT NULL,
+  `quadril_rotacaoExternaE_ortopedia` varchar(220) DEFAULT NULL,
+  `quadril_rotacaoExternaD_ortopedia` varchar(220) DEFAULT NULL,
+  `joelho_flexaoE_ortopedia` varchar(220) DEFAULT NULL,
+  `joelho_flexaoD_ortopedia` varchar(220) DEFAULT NULL,
+  `joelho_extensaoE_ortopedia` varchar(220) DEFAULT NULL,
+  `joelho_extensaoD_ortopedia` varchar(220) DEFAULT NULL,
+  `tornozelo_dorsiflexaoE_ortopedia` varchar(220) DEFAULT NULL,
+  `tornozelo_dorsiflexaoD_ortopedia` varchar(220) DEFAULT NULL,
+  `tornozelo_plantiflexaoE_ortopedia` varchar(220) DEFAULT NULL,
+  `tornozelo_plantiflexaoD_ortopedia` varchar(220) DEFAULT NULL,
+  `estilrradialE_ortopedia` varchar(220) DEFAULT NULL,
+  `estilrradialD_ortopedia` varchar(220) DEFAULT NULL,
+  `bicipitalE_ortopedia` varchar(220) DEFAULT NULL,
+  `bicipitalD_ortopedia` varchar(220) DEFAULT NULL,
+  `tricipitalE_ortopedia` varchar(220) DEFAULT NULL,
+  `tricipitalD_ortopedia` varchar(220) DEFAULT NULL,
+  `patelarE_ortopedia` varchar(220) DEFAULT NULL,
+  `patelarD_ortopedia` varchar(220) DEFAULT NULL,
+  `aquileuE_ortopedia` varchar(220) DEFAULT NULL,
+  `aquileuD_ortopedia` varchar(220) DEFAULT NULL,
+  `babisnkiE_ortopedia` varchar(220) DEFAULT NULL,
+  `babisnkiD_ortopedia` varchar(220) DEFAULT NULL,
+  `cutaneoAbdominalE_ortopedia` varchar(220) DEFAULT NULL,
+  `cutaneoAbdominalD_ortopedia` varchar(220) DEFAULT NULL,
+  `sinaisDeAutotismoMedularE_ortopedia` varchar(220) DEFAULT NULL,
+  `sinaisDeAutotismoMedularD_ortopedia` varchar(220) DEFAULT NULL,
+  `impulsoExtensorE_ortopedia` varchar(220) DEFAULT NULL,
+  `impulsoExtensorD_ortopedia` varchar(220) DEFAULT NULL,
+  `tripliceFlexaoE_ortopedia` varchar(220) DEFAULT NULL,
+  `tripliceFlexaoD_ortopedia` varchar(220) DEFAULT NULL,
+  `sincinesiasE_ortopedia` varchar(220) DEFAULT NULL,
+  `sincinesiasD_ortopedia` varchar(220) DEFAULT NULL,
+  `decubito1_ortopedia` varchar(220) DEFAULT NULL,
+  `decubito2_ortopedia` varchar(220) DEFAULT NULL,
+  `decubito3_ortopedia` varchar(220) DEFAULT NULL,
+  `decubito4_ortopedia` varchar(220) DEFAULT NULL,
+  `decubito5_ortopedia` varchar(220) DEFAULT NULL,
+  `cardiopulmonar_ortopedia` varchar(220) DEFAULT NULL,
+  `genitoUrinaria_ortopedia` varchar(220) DEFAULT NULL,
+  `outros_ortopedia` varchar(220) DEFAULT NULL,
+  `examesComplementares_ortopedia` varchar(220) DEFAULT NULL,
+  `objetivo_ortopedia` varchar(220) DEFAULT NULL,
+  `conduta_ortopedia` varchar(220) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci ROW_FORMAT=DYNAMIC;
+
+--
+-- Dumping data for table `ficha_ortopedia`
+--
+
+INSERT INTO `ficha_ortopedia` (`fkcpf`, `nome`, `historia_molestia_progressa_ortopedia`, `historia_molestia_atual_ortopedia`, `historia_molestia_sintomas_ortopedia`, `inspecao_ortopedia`, `obs_inspecao_ortopedia`, `ombro_flexaoD_ortopedia`, `ombro_flexaoE_ortopedia`, `ombro_extensaoE_ortopedia`, `ombro_extensaoD_ortopedia`, `ombro_abducaoE_ortopedia`, `ombro_abducaoD_ortopedia`, `ombro_aducaoE_ortopedia`, `ombro_aducaoD_ortopedia`, `ombro_rotacaoInternaE_ortopedia`, `ombro_rotacaoInternaD_ortopedia`, `ombro_rotacaoExternaE_ortopedia`, `ombro_rotacaoExternaD_ortopedia`, `cotovelo_flexaoE_ortopedia`, `cotovelo_flexaoD_ortopedia`, `cotovelo_extensaoE_ortopedia`, `cotovelo_extensaoD_ortopedia`, `cotovelo_pronocaoE_ortopedia`, `cotovelo_pronocaoD_ortopedia`, `cotovelo_supinacaoE_ortopedia`, `cotovelo_supinacaoD_ortopedia`, `punho_flexaoE_ortopedia`, `punho_flexaoD_ortopedia`, `punho_extensaoE_ortopedia`, `punho_extensaoD_ortopedia`, `punho_desvioUlnarE_ortopedia`, `punho_desvioUlnarD_ortopedia`, `punho_desvioRadialE_ortopedia`, `punho_desvioRadialD_ortopedia`, `tronco_flexaoE_ortopedia`, `tronco_flexaoD_ortopedia`, `tronco_rotacaoE_ortopedia`, `tronco_rotacaoD_ortopedia`, `tronco_extensaoE_ortopedia`, `tronco_extensaoD_ortopedia`, `quadril_flexaoE_ortopedia`, `quadril_flexaoD_ortopedia`, `quadril_extensaoE_ortopedia`, `quadril_extensaoD_ortopedia`, `quadril_abducaoE_ortopedia`, `quadril_abducaoD_ortopedia`, `quadril_aducaoE_ortopedia`, `quadril_aducaoD_ortopedia`, `quadril_rotacaoInternaE_ortopedia`, `quadril_rotacaoInternaD_ortopedia`, `quadril_rotacaoExternaE_ortopedia`, `quadril_rotacaoExternaD_ortopedia`, `joelho_flexaoE_ortopedia`, `joelho_flexaoD_ortopedia`, `joelho_extensaoE_ortopedia`, `joelho_extensaoD_ortopedia`, `tornozelo_dorsiflexaoE_ortopedia`, `tornozelo_dorsiflexaoD_ortopedia`, `tornozelo_plantiflexaoE_ortopedia`, `tornozelo_plantiflexaoD_ortopedia`, `estilrradialE_ortopedia`, `estilrradialD_ortopedia`, `bicipitalE_ortopedia`, `bicipitalD_ortopedia`, `tricipitalE_ortopedia`, `tricipitalD_ortopedia`, `patelarE_ortopedia`, `patelarD_ortopedia`, `aquileuE_ortopedia`, `aquileuD_ortopedia`, `babisnkiE_ortopedia`, `babisnkiD_ortopedia`, `cutaneoAbdominalE_ortopedia`, `cutaneoAbdominalD_ortopedia`, `sinaisDeAutotismoMedularE_ortopedia`, `sinaisDeAutotismoMedularD_ortopedia`, `impulsoExtensorE_ortopedia`, `impulsoExtensorD_ortopedia`, `tripliceFlexaoE_ortopedia`, `tripliceFlexaoD_ortopedia`, `sincinesiasE_ortopedia`, `sincinesiasD_ortopedia`, `decubito1_ortopedia`, `decubito2_ortopedia`, `decubito3_ortopedia`, `decubito4_ortopedia`, `decubito5_ortopedia`, `cardiopulmonar_ortopedia`, `genitoUrinaria_ortopedia`, `outros_ortopedia`, `examesComplementares_ortopedia`, `objetivo_ortopedia`, `conduta_ortopedia`) VALUES
+('016.527.298-87', 'Absalão Pereira de Araújo', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '(I) Independente.', '(I) Independente.', '(I) Independente.', '(I) Independente.', '(I) Independente.', '', '', '', '', '', ''),
+('844.065.188-00', 'Cândido de Castro Santos', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''),
+('044.200.656-05', 'Carolina Costa', '', '', '', 'Coluna Vertical', '', '(0) Ausencia de Contração.', '(0) Ausencia de Contração.', '(0) Ausencia de Contração.', '(0) Ausencia de Contração.', '(0) Ausencia de Contração.', '(0) Ausencia de Contração.', '(0) Ausencia de Contração.', '(0) Ausencia de Contração.', '(0) Ausencia de Contração.', '(0) Ausencia de Contração.', '(0) Ausencia de Contração.', '(0) Ausencia de Contração.', '(0) Ausencia de Contração.', '(0) Ausencia de Contração.', '(0) Ausencia de Contração.', NULL, '', '(0) Ausencia de Contração.', '(0) Ausencia de Contração.', '(0) Ausencia de Contração.', '(0) Ausencia de Contração.', '(0) Ausencia de Contração.', '(0) Ausencia de Contração.', '(0) Ausencia de Contração.', '(0) Ausencia de Contração.', '(0) Ausencia de Contração.', '(0) Ausencia de Contração.', '(0) Ausencia de Contração.', '(0) Ausencia de Contração.', '(0) Ausencia de Contração.', '(0) Ausencia de Contração.', '(0) Ausencia de Contração.', '(0) Ausencia de Contração.', '(0) Ausencia de Contração.', '(0) Ausencia de Contração.', '(0) Ausencia de Contração.', '(0) Ausencia de Contração.', '(0) Ausencia de Contração.', '(0) Ausencia de Contração.', '(0) Ausencia de Contração.', '(0) Ausencia de Contração.', '(0) Ausencia de Contração.', '(0) Ausencia de Contração.', '(0) Ausencia de Contração.', '(0) Ausencia de Contração.', '(0) Ausencia de Contração.', '(0) Ausencia de Contração.', '(0) Ausencia de Contração.', '(0) Ausencia de Contração.', '(0) Ausencia de Contração.', '(0) Ausencia de Contração.', '(0) Ausencia de Contração.', '(0) Ausencia de Contração.', '(0) Ausencia de Contração.', '(A) Aumentado: hiperreflexia.', '(A) Aumentado: hiperreflexia.', '(A) Aumentado: hiperreflexia.', '(A) Aumentado: hiperreflexia.', '(A) Aumentado: hiperreflexia.', '(A) Aumentado: hiperreflexia.', '(A) Aumentado: hiperreflexia.', '(A) Aumentado: hiperreflexia.', '(A) Aumentado: hiperreflexia.', '(A) Aumentado: hiperreflexia.', '(A) Aumentado: hiperreflexia.', '(A) Aumentado: hiperreflexia.', '(A) Aumentado: hiperreflexia.', '(A) Aumentado: hiperreflexia.', '(A) Aumentado: hiperreflexia.', '(A) Aumentado: hiperreflexia.', '(A) Aumentado: hiperreflexia.', '(A) Aumentado: hiperreflexia.', '(A) Aumentado: hiperreflexia.', '(A) Aumentado: hiperreflexia.', '(A) Aumentado: hiperreflexia.', '(A) Aumentado: hiperreflexia.', '(I) Independente.', '(I) Independente.', '(I) Independente.', '(I) Independente.', '(I) Independente.', '', '', '', '', '', '');
 
 -- --------------------------------------------------------
 
@@ -371,15 +588,20 @@ CREATE TABLE `ficha_proctologia` (
   `outros_dados_proc` varchar(300) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci ROW_FORMAT=DYNAMIC;
 
-
-
 --
 -- Dumping data for table `ficha_proctologia`
 --
 
 INSERT INTO `ficha_proctologia` (`fkcpf`, `nome`, `queixa_prin_proc`, `antecedentes_pessoais_proc`, `antecedentes_cirurgicos_proc`, `antecedentes_familiares_proc`, `historia_proctologica`, `tempo_sintomas`, `tempo_ajuda`, `sintomas_estado`, `perdas_proc`, `frequencia_dos_acidentes`, `quantidade_da_perda`, `protecoes_proc`, `frequencia_evacuatoria`, `manobra_evacuar`, `medicacoes_em_uso_proc`, `partos_proc`, `complicacoes_puerperais_proc`, `cirurgias_ginecologicas_proc`, `antecedentes_urologicos_proc`, `habitos_vida_proc`, `uso_frequente_proc`, `restricao_do_consumo_de_liquidos_proc`, `renda_familiar`, `cicatrizes_proc`, `trofismo_perianal`, `trofismo_mmii_proc`, `contracao_voluntaria_proc`, `abertura_vulvo_vaginal_proc`, `abertura_anal_proc`, `apneia_proc`, `contracao_do_eae`, `corpo_perineal_proc`, `tonus_do_eae_proc`, `puborretal_proc`, `mmii_proc`, `fibrose_proc`, `afa_proc`, `perfect_proc`, `elasticidade_proc`, `coordenacao_proc`, `relaxamento_do_pr_a_manobra_de_evacuacao_proc`, `pontos_dolorosos_proc`, `teste_de_esforco_proc`, `reflexo_clitoriano_bulbocavernoso_proc`, `reflexo_ceigel_cremasterico`, `marcha_proc`, `outros_dados_proc`) VALUES
+('000.000.000-00', 'Valdinar Melo', '', '', '', '', '', '', '', 'está igual', '', '', '', '', '', '', '', '', '', '', '', '', '', 'Sim', '', '', '', '', 'Presente', '0', '0', 'presente', 'a tosse', 'Normal', 'Normal', 'Normal', 'Normal', '', '', '', '', 'presente', '', '', 'sem perdas', '', '', '', ''),
 ('006.188.908-31', 'Antonio Souza de Queiroz', '', '', '', '', '', '', '', 'está igual', '', '', '', '', '', '', '', '', '', '', '', '', '', 'Sim', '', '', '', '', 'Presente', '0', '0', 'presente', 'a tosse', 'Normal', 'Normal', 'Normal', 'Normal', '', '', '', '', 'presente', '', '', 'sem perdas', '', '', '', ''),
+('016.527.298-87', 'Absalão Pereira de Araújo', '', '', '', '', '', '', '', 'está igual', '', '', '', '', '', '', '', '', '', '', '', '', '', 'Sim', '', '', '', '', 'Presente', '0', '0', 'presente', 'a tosse', 'Normal', 'Normal', 'Normal', 'Normal', '', '', '', '', 'presente', '', '', 'sem perdas', '', '', '', ''),
+('026.587.812-88', 'Valdinar Melo', '', '', '', '', '', '', '', 'está igual', '', '', '', '', '', '', '', '', '', '', '', '', '', 'Sim', '', '', '', '', 'Presente', '0', '0', 'presente', 'a tosse', 'Normal', 'Normal', 'Normal', 'Normal', '', '', '', '', 'presente', NULL, '', 'sem perdas', '', '', '', ''),
+('033.138.361-60', 'Taynara Nascimento Canedo', '', '', '', '', '', '', '', 'está igual', '', '', '', '', '', '', '', '', '', '', '', '', '', 'Sim', '', '', '', '', 'Presente', '0', '0', 'presente', 'a tosse', 'Normal', 'Normal', 'Normal', 'Normal', '', '', '', '', 'presente', NULL, '', 'sem perdas', '', '', '', ''),
+('044.200.656-05', 'Carolina Costa', '', '', '', '', '', '', '', 'está igual', '', '', '', '', '', '', '', '', '', '', '', '', '', 'Sim', '', '', '', '', 'Presente', '0', '0', 'presente', 'a tosse', 'Normal', 'Normal', 'Normal', 'Normal', '', '', '', '', 'presente', '', '', 'sem perdas', '', '', '', ''),
 ('049.591.168-20', 'Walter Joaquim', '', '', '', '', '', '', NULL, 'está igual', '', '', '', '', '', '', '', '', '', '', '', '', '', 'Sim', '', '', '', '', 'Presente', '0', '0', 'presente', 'a tosse', 'Normal', 'Normal', 'Normal', 'Normal', '', '', '', '', 'presente', '', '', 'sem perdas', '', '', '', ''),
+('057.588.738-96', 'Regis Siola de Souza', '', '', '', '', '', '', '', 'está igual', '', '', '', '', '', '', '', '', '', '', '', '', '', 'Sim', '', '', '', '', 'Presente', '0', '0', 'presente', 'a tosse', 'Normal', 'Normal', 'Normal', 'Normal', '', '', '', '', 'presente', NULL, '', 'sem perdas', '', '', '', ''),
+('060.654.707-08', 'NANY SANT\'ANNA ARAÚJO', '', '', '', '', '', '', '', 'está igual', '', '', '', '', '', '', '', '', '', '', '', '', '', 'Sim', '', '', '', '', 'Presente', '0', '0', 'presente', 'a tosse', 'Normal', 'Normal', 'Normal', 'Normal', '', '', '', '', 'presente', NULL, '', 'sem perdas', '', '', '', ''),
 ('074.474.128-99', 'Nivea', '', '', '', '', '', '', '', 'está igual', '', '', '', '', '', '', '', '', '', '', '', '', '', 'Sim', '', '', '', '', 'Presente', '0', '0', 'presente', 'a tosse', 'Normal', 'Normal', 'Normal', 'Normal', '', '', '', '', 'presente', NULL, '', 'sem perdas', '', '', '', ''),
 ('112.946.818-69', 'Paulo Jorge de Oliveira', '', '', '', '', '', '', '', 'está igual', '', '', '', '', '', '', '', '', '', '', '', '', '', 'Sim', '', '', '', '', 'Presente', '0', '0', 'presente', 'a tosse', 'Normal', 'Normal', 'Normal', 'Normal', '', '', '', '', 'presente', '', '', 'sem perdas', '', '', '', ''),
 ('124.457.858-47', 'Roberto Alves de Almeida', '', '', '', '', '', '', NULL, 'está igual', '', '', '', '', '', '', '', '', '', '', '', '', '', 'Sim', '', '', '', '', 'Presente', '0', '0', 'presente', 'a tosse', 'Normal', 'Normal', 'Normal', 'Normal', '', '', '', '', 'presente', '', '', 'sem perdas', '', '', '', ''),
@@ -467,8 +689,15 @@ CREATE TABLE `ficha_uroginecologia` (
 --
 
 INSERT INTO `ficha_uroginecologia` (`fkcpf`, `nome`, `queixa_prin_urogine`, `antecedentes_pessoais_urogine`, `antecedentes_cirurgicos_urogine`, `antecedentes_familiares_urogine`, `fase_de_enchimento_urogine`, `fase_de_esvaziamento_urogine`, `outros_fase_de_esvaziamento_urogine`, `sensibilidade_fase_de_esvaziamento_urogine`, `itu_fase_de_esvaziamento_urogine`, `perdas_urogine`, `outras_circunstancias_perdas_urogine`, `perdas_durante_o_esforco_urogine`, `outras_perdas_durante_o_esforco_urogine`, `qualidade_da_perda_urinariao_urogine`, `quanto_tempo_iniciou_os_sintomas_urogine`, `quanto_tempo_demorou_para_procurar_ajuda_medica_urogine`, `desde_que_comecaram_os_sintomas_o_seu_estado_urogine`, `frequencia_urinaria_urogine`, `protecoes_urogine`, `numero_de_trocas_urogine`, `corpo_perineal_uroginecologia`, `tonus_do_eae_uroginecologia`, `puborretal_uroginecologia`, `mmii_uroginecologia`, `fibrose_uroginecologia`, `afa_uroginecologia`, `perfect_uroginecologia`, `elasticidade_uroginecologia`, `coordenacao_uroginecologia`, `relaxamento_do_pr_a_manobra_de_evacuacao_uroginecologia`, `pontos_dolorosos_uroginecologia`, `gestacoes_uroginecologia`, `partos_uroginecologia`, `abortos_uroginecologia`, `parto1_uroginecologia`, `idade_materna1_uroginecologia`, `peso_da_crianca1_uroginecologia`, `parto2_uroginecologia`, `idade_materna2_uroginecologia`, `peso_da_crianca2_uroginecologia`, `parto3_uroginecologia`, `idade_materna3_uroginecologia`, `peso_da_crianca3_uroginecologia`, `realizou_episiotomia_uroginecologia`, `forceps_uroginecologia`, `complicacoes_obstetricas_uroginecologia`, `data_da_ultima_menstruacao_uroginecologia`, `data_da_ultima_menstruação_uroginecologia`, `menopausa_uroginecologia`, `metodo_anticoncepcional_uroginecologia`, `terapia_de_reposicao_hormonal_uroginecologia`, `complicacoes_ginecologicas_uroginecologia`, `realizou_cirurgia_ginecologica_uroginecologia`, `auto_conhecimento_vaginal_uroginecologia`, `vida_sexual_uroginecologia`, `perdeu_a_virgindade_uroginecologia`, `com_quem_perdeu_a_virgindade_uroginecologia`, `experiencia_a_virgindade_uroginecologia`, `abuso_sexual_uroginecologia`, `permissao_abuso_sexual_uroginecologia`, `relato_abuso_sexual_uroginecologia`) VALUES
+('000.000.000-00', 'Valdinar Melo', '', '', '', '', 'urgencia', 'hesitacao', '', '', '', 'Não se aplica', '', 'Não se aplica', NULL, '', '', '', 'Não se aplica', '', 'Não se aplica', '', 'Normal', 'Normal', 'Normal', 'Normal', '', '', '', '', 'presente', 'sim', '', '', '', '', '', '', '', '', '', '', '', '', '', 'sim', 'sim', 'laceração', '', NULL, '', '', '', '', '', 'sim', '', '', '', '', 'sim', 'sim', ''),
 ('006.188.908-31', 'Antonio Souza de Queiroz', 'Teste2', 'Teste2', 'Teste2', 'Teste2', 'urgencia', 'hesitacao', 'Teste2', 'Teste2', 'Teste2', 'urge-incontinencia', 'Teste2', 'defasadas', NULL, 'Teste2', 'Teste2', 'Teste2', 'piorou', 'Teste2', 'Não se aplica', '', 'Hipertonico', 'Hipotonico', 'Normal', 'Hipertonico', 'Teste2', 'Teste2', 'Teste2', '', 'presente', 'sim', 'Teste2', 'Teste2', 'Teste2Teste2', 'Teste2', 'Teste2', 'Teste2', 'Teste2', 'Teste2', 'Teste2', 'Teste2', 'Teste2', 'Teste2', 'Teste2', '', '', '', '2023-03-07', NULL, '2023-03-03', '', '', '', 'Teste2', 'nao', '', 'Teste2', 'Teste2', 'Teste2', 'nao', 'nao', 'Teste2'),
+('016.527.298-87', 'Absalão Pereira de Araújo', '', '', '', '', 'urgencia', 'hesitacao', '', '', '', 'Não se aplica', '', 'Não se aplica', NULL, '', '', '', 'Não se aplica', '', 'Não se aplica', '', 'Normal', 'Normal', 'Normal', 'Normal', '', '', '', '', 'presente', 'sim', '', '', '', '', '', '', '', '', '', '', '', '', '', 'sim', 'sim', 'laceração', '', NULL, '', '', '', '', '', 'sim', '', '', '', '', 'sim', 'sim', ''),
+('026.587.812-88', 'Valdinar Melo', '', '', '', '', 'urgencia', 'hesitacao', '', '', '', 'Não se aplica', '', 'Não se aplica', NULL, '', '', '', 'Não se aplica', '', 'Não se aplica', '', 'Normal', 'Normal', 'Normal', 'Normal', '', '', '', '', 'presente', 'sim', '', '', '', '', '', '', '', '', '', '', '', '', '', 'sim', 'sim', 'laceração', '', NULL, '', '', '', '', '', 'sim', '', '', '', '', 'sim', 'sim', ''),
+('033.138.361-60', 'Taynara Nascimento Canedo', 'DOR PELVE IRRADIA PAR PERNA ESQUERDA', 'G2P1C0N1', '', '', 'urgencia', 'hesitacao', '', '', '', 'Não se aplica', '', 'aumento das perdas no período menstrua', NULL, '', 'A PARTIR DE 20 SEM', '', 'Não se aplica', '1X NOTURNA', 'Não se aplica', '', 'Normal', 'Normal', 'Normal', 'Normal', '', '', '', '', 'presente', 'sim', '', '2', '1', '0', 'NORMAL', '', '', '', '', '', '', '', '', 'nao', 'nao', 'laceração', 'NOV DE 2022', NULL, 'NAO', '', '', '10 MESES SEM ATIVIDADE FISICA ', '', 'sim', '', '', '', '', 'nao', 'nao', ''),
+('044.200.656-05', 'Carolina Costa', '', '', '', '', 'urgencia', 'hesitacao', '', '', '', 'Não se aplica', '', 'Não se aplica', NULL, '', '', '', 'Não se aplica', '', 'Não se aplica', '', 'Normal', 'Normal', 'Normal', 'Normal', '', '', '', '', 'presente', 'sim', '', '', '', '', '', '', '', '', '', '', '', '', '', 'sim', 'sim', 'laceração', '', NULL, '', '', '', '', '', 'sim', '', '', '', '', 'sim', 'sim', ''),
 ('049.591.168-20', 'Walter Joaquim', '', '', '', '', 'urgencia', 'hesitacao', '', '', '', 'Não se aplica', '', 'Não se aplica', NULL, '', '', '', 'Não se aplica', '', 'Não se aplica', '', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+('057.588.738-96', 'Regis Siola de Souza', '', '', '', '', 'urgencia', 'hesitacao', '', '', '', 'Não se aplica', '', 'Não se aplica', NULL, '', '', '', 'Não se aplica', '', 'Não se aplica', '', 'Normal', 'Normal', 'Normal', 'Normal', '', '', '', '', 'presente', 'sim', '', '', '', '', '', '', '', '', '', '', '', '', '', 'sim', 'sim', 'laceração', '', NULL, '', '', '', '', '', 'sim', '', '', '', '', 'sim', 'sim', ''),
+('060.654.707-08', 'NANY SANT\'ANNA ARAÚJO', 'DOR NO PREVENTIVO E NAS RELAÇÕES SEXUAIS', '', '', '', 'urgencia', 'hesitacao', '', '', 'NÃO', 'Não se aplica', '', 'Não se aplica', NULL, '', '', '', 'Não se aplica', '', 'Não se aplica', '', 'Hipertonico', 'Normal', 'Normal', 'Normal', 'NÃO', '3', '3/5/8//8 +++', '', 'presente', 'sim', 'SIM, AP LADO D', '', '', '', '', '', '', '', '', '', '', '', '', 'sim', 'sim', 'laceração', '2023-01-28', NULL, '', 'NÃO', 'NÃO', 'DGPP', 'NÃO', 'sim', 'ATIVA', '', '', '', 'nao', 'sim', ''),
 ('112.946.818-69', 'Paulo Jorge de Oliveira', '', '', '', '', '', '', '', '', '', '', '', '', NULL, '', '', '', 'Não se aplica', '', 'Não se aplica', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '0001-01-01', NULL, '0001-01-01', '', '', '', '', '', '', '', '', '', '', '', ''),
 ('124.457.858-47', 'Roberto Alves de Almeida', '', '', '', '', 'urgencia', 'hesitacao', '', '', '', 'Não se aplica', '', 'Não se aplica', NULL, '', '', '', 'Não se aplica', '', 'Não se aplica', '', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 ('351.088.028-54', 'Jacqueline Félix ', '', '', '', '', 'urgencia', 'hesitacao', '', '', '', 'Não se aplica', '', 'Não se aplica', NULL, '', '', '', 'Não se aplica', '', 'Não se aplica', '', 'Normal', 'Normal', 'Normal', 'Normal', '', '', '', '', 'presente', 'sim', '', '', '', '', '', '', '', '', '', '', '', '', '', 'sim', 'sim', 'laceração', '', NULL, '', '', '', '', '', 'sim', '', '', '', '', 'sim', 'sim', ''),
@@ -479,115 +708,6 @@ INSERT INTO `ficha_uroginecologia` (`fkcpf`, `nome`, `queixa_prin_urogine`, `ant
 ('891.234.902-18', 'Francemir F Silva', '', '', '', '', 'urgencia', 'hesitacao', '', '', '', 'Não se aplica', '', 'Não se aplica', NULL, '', '', '', 'Não se aplica', '', 'Não se aplica', '', 'Normal', 'Normal', 'Normal', 'Normal', '', '', '', '', 'presente', 'sim', '', '', '', '', '', '', '', '', '', '', '', '', '', 'sim', 'sim', 'laceração', '', NULL, '', '', '', '', '', 'sim', '', '', '', '', 'sim', 'sim', '');
 
 -- --------------------------------------------------------
-
-CREATE TABLE `ficha_ortopedia` (
-  `fkcpf` varchar(300) NOT NULL,
-  `nome` varchar(300) NOT NULL,
-  `historia_molestia_progressa_ortopedia` varchar(300) DEFAULT NULL,
-  `historia_molestia_atual_ortopedia` varchar(300) DEFAULT NULL,
-  `historia_molestia_sintomas_ortopedia` varchar(300) DEFAULT NULL,
-  `inspecao_ortopedia` varchar(300) DEFAULT NULL,
-  `obs_inspecao_ortopedia` varchar(300) DEFAULT NULL,
-  `ombro_flexaoD_ortopedia` varchar(300) DEFAULT NULL,
-  `ombro_flexaoE_ortopedia` varchar(300) DEFAULT NULL,
-  `ombro_extensaoE_ortopedia` varchar(300) DEFAULT NULL,
-  `ombro_extensaoD_ortopedia` varchar(300) DEFAULT NULL,
-  `ombro_abducaoE_ortopedia` varchar(300) DEFAULT NULL,
-  `ombro_abducaoD_ortopedia` varchar(300) DEFAULT NULL,
-  `ombro_aducaoE_ortopedia` varchar(300) DEFAULT NULL,
-  `ombro_aducaoD_ortopedia` varchar(300) DEFAULT NULL,
-  `ombro_rotacaoInternaE_ortopedia` varchar(300) DEFAULT NULL,
-  `ombro_rotacaoInternaD_ortopedia` varchar(300) DEFAULT NULL,
-  `ombro_rotacaoExternaE_ortopedia` varchar(300) DEFAULT NULL,
-  `ombro_rotacaoExternaD_ortopedia` varchar(300) DEFAULT NULL,
-  `cotovelo_flexaoE_ortopedia` varchar(300) DEFAULT NULL,
-  `cotovelo_flexaoD_ortopedia` varchar(300) DEFAULT NULL,
-  `cotovelo_extensaoE_ortopedia` varchar(300) DEFAULT NULL,
-  `cotovelo_extensaoD_ortopedia` varchar(300) DEFAULT NULL,
-  `cotovelo_pronocaoE_ortopedia` varchar(300) DEFAULT NULL,
-  `cotovelo_pronocaoD_ortopedia` varchar(300) DEFAULT NULL,
-  `cotovelo_supinacaoE_ortopedia` varchar(300) DEFAULT NULL,
-  `cotovelo_supinacaoD_ortopedia` varchar(300) DEFAULT NULL,
-  `punho_flexaoE_ortopedia` varchar(300) DEFAULT NULL,
-  `punho_flexaoD_ortopedia` varchar(300) DEFAULT NULL,
-  `punho_extensaoE_ortopedia` varchar(300) DEFAULT NULL,
-  `punho_extensaoD_ortopedia` varchar(300) DEFAULT NULL,
-  `punho_desvioUlnarE_ortopedia` varchar(300) DEFAULT NULL,
-  `punho_desvioUlnarD_ortopedia` varchar(300) DEFAULT NULL,
-  `punho_desvioRadialE_ortopedia` varchar(300) DEFAULT NULL,
-  `punho_desvioRadialD_ortopedia` varchar(300) DEFAULT NULL,
-  `tronco_flexaoE_ortopedia` varchar(300) DEFAULT NULL,
-  `tronco_flexaoD_ortopedia` varchar(300) DEFAULT NULL,
-  `tronco_rotacaoE_ortopedia` varchar(300) DEFAULT NULL,
-  `tronco_rotacaoD_ortopedia` varchar(300) DEFAULT NULL,
-  `tronco_extensaoE_ortopedia` varchar(300) DEFAULT NULL, 
-  `tronco_extensaoD_ortopedia` varchar(300) DEFAULT NULL, 
-  `quadril_flexaoE_ortopedia` varchar(300) DEFAULT NULL, 
-  `quadril_flexaoD_ortopedia` varchar(300) DEFAULT NULL, 
-  `quadril_extensaoE_ortopedia` varchar(300) DEFAULT NULL, 
-  `quadril_extensaoD_ortopedia` varchar(300) DEFAULT NULL, 
-  `quadril_abducaoE_ortopedia` varchar(300) DEFAULT NULL, 
-  `quadril_abducaoD_ortopedia` varchar(300) DEFAULT NULL, 
-  `quadril_aducaoE_ortopedia` varchar(300) DEFAULT NULL, 
-  `quadril_aducaoD_ortopedia` varchar(300) DEFAULT NULL, 
-  `quadril_rotacaoInternaE_ortopedia` varchar(300) DEFAULT NULL, 
-  `quadril_rotacaoInternaD_ortopedia` varchar(300) DEFAULT NULL, 
-  `quadril_rotacaoExternaE_ortopedia` varchar(300) DEFAULT NULL, 
-  `quadril_rotacaoExternaD_ortopedia` varchar(300) DEFAULT NULL, 
-  `joelho_flexaoE_ortopedia` varchar(300) DEFAULT NULL, 
-  `joelho_flexaoD_ortopedia` varchar(300) DEFAULT NULL, 
-  `joelho_extensaoE_ortopedia` varchar(300) DEFAULT NULL, 
-  `joelho_extensaoD_ortopedia` varchar(300) DEFAULT NULL, 
-  `tornozelo_dorsiflexaoE_ortopedia` varchar(300) DEFAULT NULL, 
-  `tornozelo_dorsiflexaoD_ortopedia` varchar(300) DEFAULT NULL, 
-  `tornozelo_plantiflexaoE_ortopedia` varchar(300) DEFAULT NULL, 
-  `tornozelo_plantiflexaoD_ortopedia` varchar(300) DEFAULT NULL, 
-  `estilrradialE_ortopedia` varchar(300) DEFAULT NULL, 
-  `estilrradialD_ortopedia` varchar(300) DEFAULT NULL, 
-  `bicipitalE_ortopedia` varchar(300) DEFAULT NULL, 
-  `bicipitalD_ortopedia` varchar(300) DEFAULT NULL, 
-  `tricipitalE_ortopedia` varchar(300) DEFAULT NULL, 
-  `tricipitalD_ortopedia` varchar(300) DEFAULT NULL, 
-  `patelarE_ortopedia` varchar(300) DEFAULT NULL, 
-  `patelarD_ortopedia` varchar(300) DEFAULT NULL, 
-  `aquileuE_ortopedia` varchar(300) DEFAULT NULL, 
-  `aquileuD_ortopedia` varchar(300) DEFAULT NULL, 
-  `babisnkiE_ortopedia` varchar(300) DEFAULT NULL, 
-  `babisnkiD_ortopedia` varchar(300) DEFAULT NULL, 
-  `cutaneoAbdominalE_ortopedia` varchar(300) DEFAULT NULL, 
-  `cutaneoAbdominalD_ortopedia` varchar(300) DEFAULT NULL, 
-  `sinaisDeAutotismoMedularE_ortopedia` varchar(300) DEFAULT NULL, 
-  `sinaisDeAutotismoMedularD_ortopedia` varchar(300) DEFAULT NULL, 
-  `impulsoExtensorE_ortopedia` varchar(300) DEFAULT NULL, 
-  `impulsoExtensorD_ortopedia` varchar(300) DEFAULT NULL, 
-  `tripliceFlexaoE_ortopedia` varchar(300) DEFAULT NULL, 
-  `tripliceFlexaoD_ortopedia` varchar(300) DEFAULT NULL, 
-  `sincinesiasE_ortopedia` varchar(300) DEFAULT NULL, 
-  `sincinesiasD_ortopedia` varchar(300) DEFAULT NULL, 
-  `decubito1_ortopedia` varchar(300) DEFAULT NULL, 
-  `decubito2_ortopedia` varchar(300) DEFAULT NULL, 
-  `decubito3_ortopedia` varchar(300) DEFAULT NULL, 
-  `decubito4_ortopedia` varchar(300) DEFAULT NULL, 
-  `decubito5_ortopedia` varchar(300) DEFAULT NULL, 
-  `cardiopulmonar_ortopedia` varchar(300) DEFAULT NULL, 
-  `genitoUrinaria_ortopedia` varchar(300) DEFAULT NULL, 
-  `outros_ortopedia` varchar(300) DEFAULT NULL, 
-  `examesComplementares_ortopedia` varchar(300) DEFAULT NULL, 
-  `objetivo_ortopedia` varchar(300) DEFAULT NULL, 
-  `conduta_ortopedia` varchar(300) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci ROW_FORMAT=DYNAMIC;
-
-
-
-
-
-
-
-
-
-
-
-
 
 --
 -- Table structure for table `fornecedores`
@@ -643,7 +763,11 @@ INSERT INTO `funcionarios` (`id`, `nome`, `cpf`, `telefone`, `email`, `cargo`) V
 (75, 'Beatriz', '296.189.138-80', '(11) 98740-2488', 'bia.n2012@hotmail.com', 'Medico'),
 (76, 'Rute', '095.426.836-93', '(62) 99181-8730', 'rute_frc@hotmail.com', 'Medico'),
 (77, 'Wanderson Feitosa da Silva', '123.890.389-92', '(61) 99999-9999', 'wanderson.feitosa211@gmail.com', 'Medico'),
-(78, 'Ane Gleice', '041.857.865-65', '(71) 99133-8715', 'anegleice.souza@gmail.com', 'Medico');
+(78, 'Ane Gleice', '041.857.865-65', '(71) 99133-8715', 'anegleice.souza@gmail.com', 'Medico'),
+(79, 'João Vítor', '026.587.812-88', '(95) 98111-6721', 'drjoaovitormagalhaes@gmail.com', 'Medico'),
+(80, 'marcos gomes de mattos', '378.260.928-09', '(19) 98442-6583', 'marcos_mattos10@hotmail.com', 'Medico'),
+(81, 'DEBORA SANTOS ATAIDE', '019.995.781-98', '(62) 98193-0007', 'deborataide@hotmail.com', 'Medico'),
+(82, 'Carolina Costa', '044.200.656-05', '(62) 98414-7776', 'fisiopelvicapravoce@gmail.com', 'Medico');
 
 -- --------------------------------------------------------
 
@@ -756,7 +880,14 @@ INSERT INTO `medicos` (`id`, `nome`, `especialidade`, `crm`, `cpf`, `telefone`, 
 (77, 'Rute', '1', '323827-F', '095.426.836-93', '(62) 99181-8730', 'rute_frc@hotmail.com', NULL, 'n', NULL, NULL, 'Rua 6-A, 340, Setor Aeroporto. Goiânia-GO'),
 (78, 'Adriana Azevedo ', '1', '255364', '801.726.015-68', '(71) 99340-4690', 'adriana.azevedo.fisio@gmail.com', NULL, 'n', NULL, NULL, 'Tv da esperança , centro , Candeias/BA'),
 (79, 'Wanderson Feitosa da Silva', '1', '2', '123.890.389-92', '(61) 99999-9999', 'wanderson.feitosa211@gmail.com', NULL, 'n', NULL, NULL, 'Casa do caralhjo'),
-(80, 'Ane Gleice', '1', '217441', '041.857.865-65', '(71) 99133-8715', 'anegleice.souza@gmail.com', NULL, 'n', NULL, NULL, 'Salvador ');
+(80, 'Ane Gleice', '1', '217441', '041.857.865-65', '(71) 99133-8715', 'anegleice.souza@gmail.com', NULL, 'n', NULL, NULL, 'Salvador '),
+(81, 'João Vítor', '1', '317921.1.F', '026.587.812-88', '(95) 98111-6721', 'drjoaovitormagalhaes@gmail.com', NULL, 'n', NULL, NULL, 'Rua Amajari 660 São Vicente '),
+(82, 'marcos gomes de mattos', '1', '247333-F', '378.260.928-09', '(19) 98442-6583', 'marcos_mattos10@hotmail.com', NULL, 'n', NULL, NULL, 'rua 18 particular'),
+(83, 'Marcia Arosteguy', '1', '345577F', '035.953.757-00', '(21) 97620-7536', 'dramarcia.fisiopelvica@gmail.com', NULL, 'n', NULL, NULL, 'RUA DOZE DE FEVEREIRO 357 S 208'),
+(84, 'DEBORA SANTOS ATAIDE', '1', '155799', '019.995.781-98', '(62) 98193-0007', 'deborataide@hotmail.com', NULL, 'n', NULL, NULL, 'RUA 261 B N500 APTO 2701 SETOR LESTE UNIVERSITARIO'),
+(85, 'Robson ', '1', '123456', '123.456.789-01', '(11) 99999-9999', 'roliveira.nascimento82@gmail.com', NULL, 'n', NULL, NULL, 'Verão 50'),
+(86, 'Jhonny', '1', NULL, NULL, NULL, 'Jhonny@gmail.com', NULL, 's', NULL, NULL, NULL),
+(87, 'Carolina Costa', '1', 'Crefito 53434F', '044.200.656-05', '(62) 98414-7776', 'fisiopelvicapravoce@gmail.com', NULL, 'n', NULL, NULL, 'Rua 66 n. 84 Apto 1302');
 
 -- --------------------------------------------------------
 
@@ -825,7 +956,52 @@ INSERT INTO `movimentacoes` (`id`, `tipo`, `movimento`, `aguardando_pagamento`, 
 (115, 'Entrada', 'Consulta', 'Nao', '200.00', '457.246.228-31', '006.188.908-31', '2023-04-06', 213),
 (116, 'Entrada', 'Consulta', 'Nao', '200.00', '457.246.228-31', '049.591.168-20', '2023-04-20', 214),
 (117, 'Entrada', 'Consulta', 'Sim', '100.00', '123.890.389-92', '891.234.902-18', '2023-04-21', 218),
-(118, 'Entrada', 'Consulta', 'Nao', '100.00', '123.890.389-92', '891.234.902-18', '2023-04-21', 218);
+(118, 'Entrada', 'Consulta', 'Nao', '100.00', '123.890.389-92', '891.234.902-18', '2023-04-21', 218),
+(119, 'Entrada', 'Consulta', 'Nao', '180.00', '457.246.228-31', '124.457.858-47', '2023-04-25', 219),
+(120, 'Entrada', 'Consulta', 'Nao', '180.00', '457.246.228-31', '124.457.858-47', '2023-04-25', 220),
+(121, 'Entrada', 'Consulta', 'Nao', '180.00', '457.246.228-31', '124.457.858-47', '2023-04-25', 221),
+(122, 'Entrada', 'Consulta', 'Nao', '200.00', '457.246.228-31', '112.946.818-69', '2023-04-25', 226),
+(123, 'Entrada', 'Consulta', 'Nao', '200.00', '457.246.228-31', '049.591.168-20', '2023-04-25', 222),
+(124, 'Entrada', 'Consulta', 'Nao', '200.00', '457.246.228-31', '006.188.908-31', '2023-04-25', 223),
+(125, 'Entrada', 'Consulta', 'Nao', '200.00', '457.246.228-31', '006.188.908-31', '2023-04-25', 224),
+(126, 'Entrada', 'Consulta', 'Nao', '200.00', '457.246.228-31', '112.946.818-69', '2023-04-25', 225),
+(127, 'Entrada', 'Consulta', 'Nao', '200.00', '457.246.228-31', '112.946.818-69', '2023-04-25', 227),
+(128, 'Entrada', 'Consulta', 'Nao', '200.00', '457.246.228-31', '112.946.818-69', '2023-04-25', 228),
+(129, 'Entrada', 'Consulta', 'Nao', '200.00', '457.246.228-31', '558.166.128-67', '2023-04-25', 229),
+(130, 'Entrada', 'Consulta', 'Nao', '200.00', '457.246.228-31', '558.166.128-67', '2023-04-25', 230),
+(131, 'Entrada', 'Consulta', 'Nao', '100.00', '457.246.228-31', '408.866.078-17', '2023-04-25', 231),
+(132, 'Entrada', 'Consulta', 'Nao', '100.00', '457.246.228-31', '408.866.078-17', '2023-04-25', 232),
+(133, 'Entrada', 'Consulta', 'Nao', '100.00', '457.246.228-31', '408.866.078-17', '2023-04-25', 233),
+(134, 'Entrada', 'Consulta', 'Nao', '100.00', '457.246.228-31', '408.866.078-17', '2023-04-25', 234),
+(135, 'Entrada', 'Consulta', 'Sim', '100.00', '457.246.228-31', '057.588.738-96', '2023-04-25', 235),
+(136, 'Entrada', 'Consulta', 'Nao', '100.00', '457.246.228-31', '057.588.738-96', '2023-04-25', 235),
+(137, 'Entrada', 'Consulta', 'Nao', '100.00', '457.246.228-31', '057.588.738-96', '2023-04-25', 236),
+(138, 'Entrada', 'Consulta', 'Nao', '100.00', '457.246.228-31', '057.588.738-96', '2023-04-25', 237),
+(139, 'Entrada', 'Consulta', 'Nao', '100.00', '457.246.228-31', '057.588.738-96', '2023-04-25', 238),
+(140, 'Entrada', 'Consulta', 'Nao', '100.00', '457.246.228-31', '057.588.738-96', '2023-04-25', 239),
+(141, 'Entrada', 'Consulta', 'Nao', '200.00', '457.246.228-31', '049.591.168-20', '2023-04-25', 240),
+(142, 'Entrada', 'Consulta', 'Nao', '200.00', '457.246.228-31', '112.946.818-69', '2023-06-05', 248),
+(143, 'Entrada', 'Consulta', 'Nao', '200.00', '457.246.228-31', '006.188.908-31', '2023-06-05', 249),
+(144, 'Entrada', 'Consulta', 'Nao', '200.00', '457.246.228-31', '558.166.128-67', '2023-06-05', 250),
+(145, 'Entrada', 'Consulta', 'Nao', '200.00', '457.246.228-31', '112.946.818-69', '2023-06-05', 251),
+(146, 'Entrada', 'Consulta', 'Nao', '200.00', '457.246.228-31', '006.188.908-31', '2023-06-05', 252),
+(147, 'Entrada', 'Consulta', 'Nao', '200.00', '457.246.228-31', '124.457.858-47', '2023-06-05', 253),
+(148, 'Entrada', 'Consulta', 'Nao', '200.00', '457.246.228-31', '006.188.908-31', '2023-06-05', 254),
+(149, 'Entrada', 'Consulta', 'Nao', '200.00', '457.246.228-31', '112.946.818-69', '2023-06-05', 255),
+(150, 'Entrada', 'Consulta', 'Nao', '200.00', '457.246.228-31', '112.946.818-69', '2023-06-05', 256),
+(151, 'Entrada', 'Consulta', 'Nao', '200.00', '457.246.228-31', '006.188.908-31', '2023-06-05', 257),
+(152, 'Entrada', 'Consulta', 'Nao', '200.00', '457.246.228-31', '049.591.168-20', '2023-06-05', 258),
+(153, 'Entrada', 'Consulta', 'Nao', '200.00', '457.246.228-31', '124.457.858-47', '2023-06-05', 259),
+(154, 'Entrada', 'Consulta', 'Nao', '200.00', '457.246.228-31', '006.188.908-31', '2023-06-05', 260),
+(155, 'Entrada', 'Consulta', 'Nao', '200.00', '457.246.228-31', '558.166.128-67', '2023-06-05', 261),
+(156, 'Entrada', 'Consulta', 'Nao', '200.00', '457.246.228-31', '112.946.818-69', '2023-06-05', 262),
+(157, 'Entrada', 'Consulta', 'Nao', '200.00', '457.246.228-31', '112.946.818-69', '2023-06-05', 263),
+(158, 'Entrada', 'Consulta', 'Nao', '200.00', '457.246.228-31', '049.591.168-20', '2023-06-05', 264),
+(159, 'Entrada', 'Consulta', 'Nao', '200.00', '457.246.228-31', '049.591.168-20', '2023-06-05', 265),
+(160, 'Entrada', 'Consulta', 'Nao', '200.00', '457.246.228-31', '049.591.168-20', '2023-06-05', 265),
+(161, 'Entrada', 'Consulta', 'Nao', '200.00', '457.246.228-31', '558.166.128-67', '2023-06-05', 266),
+(162, 'Entrada', 'Consulta', 'Nao', '200.00', '457.246.228-31', '112.946.818-69', '2023-06-05', 267),
+(163, 'Entrada', 'Consulta', 'Nao', '200.00', '457.246.228-31', '124.457.858-47', '2023-06-05', 268);
 
 -- --------------------------------------------------------
 
@@ -914,7 +1090,14 @@ INSERT INTO `pacientes` (`id`, `nome`, `cpf`, `rg`, `telefone`, `email`, `data_n
 (164, 'Mariana Lacivita de Goes Coelho', '558.166.128-67', '', '', 'tamara.lgoes@gmail.com', '2013-02-22', 10, 'Solteiro', NULL, '', 'hipoatividade detrusor', 'Erika Cristina Pedros', '', '', '', '', '', '', '', '', '', '', 'Não se aplica', 'Não se aplica', 'Não se aplica', '', 'nenhum', '', '22-25 Sem Disfunção Eréti', '', NULL, 'Não se aplica', '', '', NULL, 'Presente', 'Abdominais', 'Normal', 'Normal', 'Normal', '', NULL, 'Normal', 'Normal', 'Normal', 'Normal', '', '', '', '', 'presente', 'sim', '', 'Muito Baixa', 'Quase nunca ou nunca', 'Quase nunca ou nunca', 'Extremamente difícil', 'Quase nunca ou nunca', '', '', '', '', 'Não se aplica', ''),
 (165, 'Paulo Jorge de Oliveira', '112.946.818-69', '18.353.162-01', '(11) 96267-4604', 'paulo28jorge08@gmail.com', '1968-08-28', 54, 'Casado', NULL, '', '', 'Erika Cristina Pedros', '', '', '', 'Dr. Filipe', 'Prostatectomia Radical', 'Pré cirúrgico', '', '', '', '', 'Não se aplica', 'Não se aplica', 'Não se aplica', '', 'nenhum', '', '22-25 Sem Disfunção Eréti', '', NULL, 'Não se aplica', '', '', NULL, 'Presente', 'Abdominais', 'Normal', 'Normal', 'Normal', '', NULL, 'Normal', 'Normal', 'Normal', 'Normal', '', '', '', '', 'presente', 'sim', '', 'Muito Baixa', 'Quase nunca ou nunca', 'Quase nunca ou nunca', 'Extremamente difícil', 'Quase nunca ou nunca', 'Hetero', 'masculino', 'ele/dele', '', 'Não se aplica', ''),
 (175, 'Jacqueline Félix ', '351.088.028-54', '', '', '', '1987-12-08', 35, 'Casado', NULL, '', 'Pre op. Endometriose.\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n', 'Beatriz', '', '167', 'BP', 'Dr Rogers', '', '', '', '', '', '', 'Não se aplica', 'Não se aplica', 'Não se aplica', '', 'nenhum', '', '22-25 Sem Disfunção Eréti', '', NULL, 'Não se aplica', '', '', '', 'Presente', 'Abdominais', 'Normal', 'Normal', 'Normal', '', '', 'Normal', 'Normal', 'Normal', 'Normal', '', '', '', '', 'presente', 'sim', '', 'Muito Baixa', 'Quase nunca ou nunca', 'Quase nunca ou nunca', 'Extremamente difícil', 'Quase nunca ou nunca', 'Hetero ', 'Fem', 'Ela', '', 'Não se aplica', ''),
-(176, 'Francemir F Silva', '891.234.902-18', '89.273.711-09', '(61) 99201-9155', '32dplay@gmail.com', '2001-09-18', 21, 'Viúvo', NULL, 'Quadra 204 Conjunto 6', '', 'Wanderson Feitosa da Silva', '40', '190', 'BP', '', '', '', '', '', '', '', 'Não se aplica', 'Não se aplica', 'Não se aplica', '', 'nenhum', '', '22-25 Sem Disfunção Eréti', '', NULL, 'Não se aplica', '', '', '', 'Presente', 'Abdominais', 'Normal', 'Normal', 'Normal', '', '', 'Normal', 'Normal', 'Normal', 'Normal', '', '', '', '', 'presente', 'sim', '', 'Muito Baixa', 'Quase nunca ou nunca', 'Quase nunca ou nunca', 'Extremamente difícil', 'Quase nunca ou nunca', 'Gay', '', '', '', 'Não se aplica', '');
+(176, 'Francemir F Silva', '891.234.902-18', '89.273.711-09', '(61) 99201-9155', '32dplay@gmail.com', '2001-09-18', 21, 'Viúvo', NULL, 'Quadra 204 Conjunto 6', '', 'Wanderson Feitosa da Silva', '40', '190', 'BP', '', '', '', '', '', '', '', 'Não se aplica', 'Não se aplica', 'Não se aplica', '', 'nenhum', '', '22-25 Sem Disfunção Eréti', '', NULL, 'Não se aplica', '', '', '', 'Presente', 'Abdominais', 'Normal', 'Normal', 'Normal', '', '', 'Normal', 'Normal', 'Normal', 'Normal', '', '', '', '', 'presente', 'sim', '', 'Muito Baixa', 'Quase nunca ou nunca', 'Quase nunca ou nunca', 'Extremamente difícil', 'Quase nunca ou nunca', 'Gay', '', '', '', 'Não se aplica', ''),
+(177, 'Regis Siola de Souza', '057.588.738-96', '', '(11) 99987-3331', '', '1963-04-16', 60, 'Casado', NULL, '', 'Tendinopatia (cotovelo de tenista)', 'Erika Cristina Pedros', '', '', 'BP', '', '', '', '', '', '', '', 'Não se aplica', 'Não se aplica', 'Não se aplica', '', 'nenhum', '', '22-25 Sem Disfunção Eréti', '', NULL, 'Não se aplica', '', '', '', 'Presente', 'Abdominais', 'Normal', 'Normal', 'Normal', '', '', 'Normal', 'Normal', 'Normal', 'Normal', '', '', '', '', 'presente', 'sim', '', 'Muito Baixa', 'Quase nunca ou nunca', 'Quase nunca ou nunca', 'Extremamente difícil', 'Quase nunca ou nunca', 'Hetero', 'masculino', 'ele/dele', '', 'Não se aplica', ''),
+(178, 'João Vítor ', '026.587.812-88', '', '', '', '1999-02-25', 24, 'Solteiro', NULL, '', '', 'João Vítor', '', '', 'BP', '', '', '', '', '', '', '', 'Não se aplica', 'Não se aplica', 'Não se aplica', '', 'nenhum', '', '22-25 Sem Disfunção Eréti', '', NULL, 'Não se aplica', '', '', '', 'Presente', 'Abdominais', 'Normal', 'Normal', 'Normal', '', '', 'Normal', 'Normal', 'Normal', 'Normal', '', '', '', '', 'presente', 'sim', '', 'Muito Baixa', 'Quase nunca ou nunca', 'Quase nunca ou nunca', 'Extremamente difícil', 'Quase nunca ou nunca', '', '', '', '', 'Não se aplica', ''),
+(179, 'Valdinar Melo ', '000.000.000-00', '', '(95) 98116-6155', '', '2023-04-25', 0, 'Casado', NULL, '', 'Disfunção Erétil + IU de urgência. Pós Prostatectomia (2 meses), dando sequência a fisioterapia pélvica iniciada no local da cirurgia. ', 'João Vítor', '', '', '', 'Thiago Silva', 'Prostatectomia por laparoscopia ', 'Disfunção Erétil ', '', '', '', '', 'Urgencia', 'Não se aplica', 'Não se aplica', '', 'nenhum', 'Ativa ', ' não se aplica', '', NULL, 'Não se aplica', '', '', NULL, 'Presente', 'Ausente', 'Normal', 'Normal', 'Normal', 'Grau 4 com fibrilação em 3s', NULL, 'Normal', 'Normal', 'Normal', 'Normal', '', '', '', '', 'presente', 'sim', '', 'Muito Baixa', 'Quase nunca ou nunca', 'Quase nunca ou nunca', 'Extremamente difícil', 'Quase nunca ou nunca', 'Hétero ', 'Masculino ', 'Ele ', '', 'Não se aplica', ''),
+(180, 'NANY SANT\'ANNA ARAÚJO', '060.654.707-08', '', '(21) 96520-1191', 'nanyaraujo@id.uff.br', '1991-07-11', 31, 'Casado', NULL, 'RUA CABO CLODOALDO URSOLANO 20 JARDIM BANGU', '\"DOR DURANTE O PREVENTIVO E AS RELAÇÕES SEXUAIS', 'Marcia Arosteguy', '73', '1,62', 'S', 'DRA CARLA', '', '', '', '', '', '', 'Não se aplica', 'Não se aplica', 'Não se aplica', '', 'nenhum', '', '22-25 Sem Disfunção Eréti', '', NULL, 'Não se aplica', '', '', '', 'Presente', 'Abdominais', 'Normal', 'Normal', 'Normal', '', '', 'Normal', 'Normal', 'Normal', 'Normal', '', '', '', '', 'presente', 'sim', '', 'Muito Baixa', 'Quase nunca ou nunca', 'Quase nunca ou nunca', 'Extremamente difícil', 'Quase nunca ou nunca', 'HETERO', 'FEMININO', 'ELA', '', 'Não se aplica', ''),
+(181, 'Absalão Pereira de Araújo', '016.527.298-87', '', '(11) 43621-381', '', '1931-04-18', 92, 'Casado', NULL, '', '', 'Erika Cristina Pedros', '', '', '', '', '', 'Incontinência Urinária', 'braquioterapia ', '', 'Paciente queixa-se de quando vem a vontade de urinar, não consegue segurar.\r\nInforma que o medico cardiologista orientou a tomar pouca água por conta de inchaço e (agua no pulmão) está fazendo uso de lasix\r\nvascular: ', '', 'Não se aplica', 'Não se aplica', 'Não se aplica', '', 'nenhum', '', '22-25 Sem Disfunção Eréti', '', NULL, 'Não se aplica', '', '', NULL, 'Presente', 'Abdominais', 'Normal', 'Normal', 'Normal', '', NULL, 'Normal', 'Normal', 'Normal', 'Normal', '', '', '', '', 'presente', 'sim', '', 'Muito Baixa', 'Quase nunca ou nunca', 'Quase nunca ou nunca', 'Extremamente difícil', 'Quase nunca ou nunca', 'Hetero', 'masculino', 'ele/dele', '', 'Não se aplica', ''),
+(183, 'Cândido de Castro Santos', '844.065.188-00', '', '(77) 99131-4523', '', '1948-04-14', 75, 'Solteiro', NULL, 'BA-172 Km10 São Félix Coribe-BA', 'IU pós-PRT', 'Saúde Pelve', '75', '175', '', 'Dr. Urano', 'PTR', '', '', '', '', '', 'Não se aplica', 'Não se aplica', 'Não se aplica', '', 'nenhum', '', '22-25 Sem Disfunção Eréti', '', NULL, 'Não se aplica', '', '', NULL, 'Presente', 'Abdominais', 'Normal', 'Normal', 'Normal', '', NULL, 'Normal', 'Normal', 'Normal', 'Normal', '', '', '', '', 'presente', 'sim', '', 'Muito Baixa', 'Quase nunca ou nunca', 'Quase nunca ou nunca', 'Extremamente difícil', 'Quase nunca ou nunca', 'heterossexual ', 'Masculino ', 'ele ', '', 'Não se aplica', ''),
+(184, 'Carolina Costa', '044.200.656-05', '', '', '', '1979-02-13', 44, 'Casado', NULL, '', 'Incontinência Urinária', 'Carolina Costa', '', '', '', '', '', '', '', '', '', '', 'Não se aplica', 'Não se aplica', 'Não se aplica', '', 'nenhum', '', '22-25 Sem Disfunção Eréti', '', NULL, 'Não se aplica', '', '', NULL, 'Presente', 'Abdominais', 'Normal', 'Normal', 'Normal', '', NULL, 'Normal', 'Normal', 'Normal', 'Normal', '', '', '', '', 'presente', 'sim', '', 'Muito Baixa', 'Quase nunca ou nunca', 'Quase nunca ou nunca', 'Extremamente difícil', 'Quase nunca ou nunca', 'Hetero', '', '', '', 'Não se aplica', '');
 
 -- --------------------------------------------------------
 
@@ -960,7 +1143,8 @@ INSERT INTO `prescricao` (`id`, `id_consulta`, `data_evolucao`, `evolucao`) VALU
 (41, 217, '2023-04-04', 'fortalecimento (kots) 20\' intensidade 30 , laser perineal 2J (infra), biofeedback e radiofrequencia'),
 (42, 219, '2023-04-04', 'Realizada EENM parasacral, 10 hZ, 700us, 20\' + biofeedback'),
 (43, 218, '2023-04-04', 'neuromodulação sacral 10hz, 250us, 20\' - fortalecimento kots 10\' - radiofrequência perineal '),
-(44, 220, '2023-04-06', 'fortalecimento (kots) 20\' intensidade 30 , laser perineal 2J (infra), biofeedback');
+(44, 220, '2023-04-06', 'fortalecimento (kots) 20\' intensidade 30 , laser perineal 2J (infra), biofeedback'),
+(45, 224, '2023-04-18', 'fortalecimento kots 10\' - radiofrequência perineal ');
 
 -- --------------------------------------------------------
 
@@ -1092,7 +1276,11 @@ INSERT INTO `tesoureiros` (`id`, `nome`, `cpf`, `telefone`, `email`) VALUES
 (32, 'Beatriz', '296.189.138-80', '(11) 98740-2488', 'bia.n2012@hotmail.com'),
 (33, 'Rute', '095.426.836-93', '(62) 99181-8730', 'rute_frc@hotmail.com'),
 (34, 'Wanderson Feitosa da Silva', '123.890.389-92', '(61) 99999-9999', 'wanderson.feitosa211@gmail.com'),
-(35, 'Ane Gleice', '041.857.865-65', '(71) 99133-8715', 'anegleice.souza@gmail.com');
+(35, 'Ane Gleice', '041.857.865-65', '(71) 99133-8715', 'anegleice.souza@gmail.com'),
+(36, 'João Vítor', '026.587.812-88', '(95) 98111-6721', 'drjoaovitormagalhaes@gmail.com'),
+(37, 'marcos gomes de mattos', '378.260.928-09', '(19) 98442-6583', 'marcos_mattos10@hotmail.com'),
+(38, 'DEBORA SANTOS ATAIDE', '019.995.781-98', '(62) 98193-0007', 'deborataide@hotmail.com'),
+(39, 'Carolina Costa', '044.200.656-05', '(62) 98414-7776', 'fisiopelvicapravoce@gmail.com');
 
 -- --------------------------------------------------------
 
@@ -1133,10 +1321,10 @@ CREATE TABLE `usuarios` (
 --
 
 INSERT INTO `usuarios` (`id`, `nome`, `usuario`, `senha`, `senha_original`, `data_inicio_acesso`, `data_fim_acesso`, `renovado`, `nivel`) VALUES
-(355, 'Erika Cristina Pedros', 'erikapedros@hotmail.com', '872592f305ab665df7d08f489849ec9e', 'rafa141518', '2023-03-17', '2023-08-20', 'Sim', 'Medico'),
+(355, 'Erika Cristina Pedros', 'erikapedros@hotmail.com', '872592f305ab665df7d08f489849ec9e', 'rafa141518', '2023-03-17', '2023-12-20', 'Sim', 'Medico'),
 (367, 'Gilmar Frimaio', 'gilmar@sealtech.com.br', 'aada8253db52460053db34c5927f2b5d', '57475490815', '2023-03-17', NULL, 'Paciente', 'Paciente'),
-(369, 'Juliana', 'profjulianadonascimento@gmail.com', '0c54fc31a3aa17d8b32e65037ab44f9b', 'Cadu2017', '2023-03-17', '2023-05-05', 'Sim', 'Medico'),
-(370, 'André Luiz', 'amgohn@hotmail.com', '4297f44b13955235245b2497399d7a93', '123123', '2023-03-17', '2023-05-05', 'Sim', 'Medico'),
+(369, 'Juliana', 'profjulianadonascimento@gmail.com', '0c54fc31a3aa17d8b32e65037ab44f9b', 'Cadu2017', '2023-03-17', '2023-07-05', 'Sim', 'Medico'),
+(370, 'André Luiz', 'amgohn@hotmail.com', '4297f44b13955235245b2497399d7a93', '123123', '2023-03-17', '2023-06-05', 'Sim', 'Medico'),
 (373, 'Adminstrador de Acesso', 'acesso@ortopelve.com.br', '21232f297a57a5a743894a0e4a801fc3', 'admin', '2023-03-17', '2023-02-17', 'Nao', 'Acesso'),
 (386, 'Suporte - Admin', 'suporte@4wsites.com.br', 'd3b1d8fed081c63125a77fd876168a74', 'admin@ortopelve', NULL, NULL, NULL, 'admin'),
 (394, 'Saúde Pelve', 'thaiscristine@saudepelve.com.br', 'ba7f8456541d707dfe2a881624097ba5', 'thais123', '2023-04-11', '2023-12-11', 'Sim', 'Medico'),
@@ -1154,7 +1342,13 @@ INSERT INTO `usuarios` (`id`, `nome`, `usuario`, `senha`, `senha_original`, `dat
 (408, 'Beatriz', 'bia.n2012@hotmail.com', '7778dec03f4ef27573bb4968db57691c', 'bia2903', '2023-04-20', '2023-06-20', 'Nao', 'Medico'),
 (409, 'Rute', 'rute_frc@hotmail.com', '6cad086aca15f7861bd048a791013488', '240115', '2023-04-20', '2023-06-20', 'Nao', 'Medico'),
 (410, 'Adriana Azevedo ', 'adriana.azevedo.fisio@gmail.com', 'df83a2fcc497b09668d81003506c39c5', 'doisfilhos', '2023-04-20', '2023-06-20', 'Nao', 'Medico'),
-(412, 'Ane Gleice', 'anegleice.souza@gmail.com', 'cc054614767fa60a677f1e997fc9393f', '91338715', '2023-04-21', '2023-06-21', 'Nao', 'Medico');
+(412, 'Ane Gleice', 'anegleice.souza@gmail.com', 'cc054614767fa60a677f1e997fc9393f', '91338715', '2023-04-21', '2023-06-21', 'Nao', 'Medico'),
+(413, 'João Vítor', 'drjoaovitormagalhaes@gmail.com', 'ff6e62203e0da7874571dba2330d4999', '@PelvicFloor47699900', '2023-04-25', '2023-06-25', 'Nao', 'Medico'),
+(414, 'marcos gomes de mattos', 'marcos_mattos10@hotmail.com', 'b06c3f5e4e7eb615da32f127bbe2de7e', 'Alegria1011%', '2023-04-26', '2023-06-26', 'Nao', 'Medico'),
+(415, 'Marcia Arosteguy', 'dramarcia.fisiopelvica@gmail.com', 'a8e584699152895df920bb2b65816f1e', 'M@rshy50', '2023-04-28', '2023-06-28', 'Nao', 'Medico'),
+(416, 'DEBORA SANTOS ATAIDE', 'deborataide@hotmail.com', '5203ad3485c5d608e0b9a023f70acbec', 'herma1988', '2023-05-03', '2023-07-03', 'Nao', 'Medico'),
+(417, 'Robson ', 'roliveira.nascimento82@gmail.com', 'eb5a790b34e06e2ce3346fa2ca5d6abb', '123456*', '2023-05-03', '2023-07-03', 'Nao', 'Medico'),
+(419, 'Carolina Costa', 'fisiopelvicapravoce@gmail.com', '32a226c1b4cac51fd5cb9cb9b388e47d', 'ca13ro14fra24', '2023-05-23', '2023-07-23', 'Nao', 'Medico');
 
 --
 -- Indexes for dumped tables
@@ -1337,7 +1531,7 @@ ALTER TABLE `usuarios`
 -- AUTO_INCREMENT for table `atendimentos`
 --
 ALTER TABLE `atendimentos`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=71;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=77;
 
 --
 -- AUTO_INCREMENT for table `cargos`
@@ -1349,7 +1543,7 @@ ALTER TABLE `cargos`
 -- AUTO_INCREMENT for table `consultas`
 --
 ALTER TABLE `consultas`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=224;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=274;
 
 --
 -- AUTO_INCREMENT for table `contas_pagar`
@@ -1361,7 +1555,7 @@ ALTER TABLE `contas_pagar`
 -- AUTO_INCREMENT for table `contas_receber`
 --
 ALTER TABLE `contas_receber`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=219;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=269;
 
 --
 -- AUTO_INCREMENT for table `entradas_remedios`
@@ -1397,7 +1591,7 @@ ALTER TABLE `fornecedores`
 -- AUTO_INCREMENT for table `funcionarios`
 --
 ALTER TABLE `funcionarios`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=79;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=83;
 
 --
 -- AUTO_INCREMENT for table `horarios`
@@ -1409,19 +1603,19 @@ ALTER TABLE `horarios`
 -- AUTO_INCREMENT for table `medicos`
 --
 ALTER TABLE `medicos`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=81;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=88;
 
 --
 -- AUTO_INCREMENT for table `movimentacoes`
 --
 ALTER TABLE `movimentacoes`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=119;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=164;
 
 --
 -- AUTO_INCREMENT for table `pacientes`
 --
 ALTER TABLE `pacientes`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=177;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=185;
 
 --
 -- AUTO_INCREMENT for table `pagamentos`
@@ -1433,7 +1627,7 @@ ALTER TABLE `pagamentos`
 -- AUTO_INCREMENT for table `prescricao`
 --
 ALTER TABLE `prescricao`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=45;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=46;
 
 --
 -- AUTO_INCREMENT for table `receitas`
@@ -1469,7 +1663,7 @@ ALTER TABLE `saidas_remedios`
 -- AUTO_INCREMENT for table `tesoureiros`
 --
 ALTER TABLE `tesoureiros`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=36;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=40;
 
 --
 -- AUTO_INCREMENT for table `triagens`
@@ -1481,7 +1675,7 @@ ALTER TABLE `triagens`
 -- AUTO_INCREMENT for table `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=413;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=420;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

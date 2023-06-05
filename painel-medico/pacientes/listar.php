@@ -54,8 +54,7 @@ echo '
 			foreach ($dados[$i] as $key => $value) {
 			}
 
-			//$id = openssl_encrypt($dados[$i]['id'], "BF-CBC", $senhaEncrypt);
-			$id = $dados[$i]['id'];
+			$id = openssl_encrypt($dados[$i]['id'], "BF-CBC", $senhaEncrypt);
 			$nome = $dados[$i]['nome'];
 			$cpf = $dados[$i]['cpf'];
 			$telefone = $dados[$i]['telefone'];
